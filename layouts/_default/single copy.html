@@ -1,0 +1,149 @@
+{{ define "main" }}
+<div class="relative rounded-xl mx-auto py-4 grid grid-cols-1  lg:grid-cols-12 gap-4">
+  <!-- Artikel Utama -->
+
+  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+  {{ $dateHuman := .Date.Format "Mon, 02 Jan 2006 — 03:04 PM" }}
+
+  <main class="col-span-12 lg:col-span-8 w-full">
+    <article class="prose lg:prose-xl max-w-none w-full">
+      <h1 class="text-2xl mb-2 post-title md:mb-2">{{ .Title }}</h1>
+      {{ $path := .RelPermalink }}
+      {{ if not (in (slice "/about-us/" "/contact/" "/privacy-policy/" "/terms-of-service/" "/disclaimer/") $path) }}
+      <div
+        class="text-lg flex flex-row items-end justify-between font-light dark:font-extralight  text-gray-700 dark:text-gray-600 mb-4">
+
+        <div class="flex w-fit flex-col justify-start items-start">
+          <label class="flex flex-row text-sm items-center ">
+            <h2 class="flex justify-between gap-4 flex-1 line-clamp-1 uppercase">
+              {{ range .Params.categories }}
+              <a href="{{ " categories/" | relLangURL }}{{ . | urlize }}"
+                class="hover:underline  hover:text-conime-400 dark:hover:text-conime-500">
+                {{ . }}
+              </a>
+              {{ end }}
+            </h2>
+          </label>
+          <div class="flex flex-row w-full mx-0 text-sm px-0 gap-2 justify-between items-center">
+            <span class="flex flex-row justify-center items-center gap-2">
+              <span>{{ partial "author.html" . }}</span>
+              <span class="hidden md:inline-block">|</span>
+              {{ partial "date.html" . }}
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+      <div class=" border-b border-gray-300 dark:border-gray-800/50 ">
+      {{ partial "share-modal.html" . }}
+      {{ end }}</div>
+
+      {{ $path := .RelPermalink }}
+      {{ if not (in (slice "/about-us/" "/contact/" "/privacy-policy/" "/terms-of-service/" "/disclaimer/") $path) }}
+
+
+
+      <!-- RINGKASAN / SINOPSIS -->
+      {{ if .Page.Params.synopsis }}
+   <!--   <h2 class="font-medium uppercase tracking-wide hidden">
+        Sinopsis
+        {{ with .Page.Params.nameAnime }}{{ . }}:{{ end }}
+        {{ with .Page.Params.nameComic }}{{ . }}:{{ end }}
+        {{ with .Page.Params.nameGame }}{{ . }}:{{ end }}
+        {{ with .Page.Params.nameMovie }}{{ . }}:{{ end }}
+      </h2> -->
+      <div class="italic font-normal dark:font-light leading-8 [&>p]:my-3 mb-4">
+       <p>  {{ .Page.Params.synopsis | safeHTML }}</p>
+      </div>
+      {{ end }}
+
+
+      <!-- Gambar Utama -->
+      {{ with .Params.image }}
+      <figure class="w-full flex flex-col mb-4 bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm rounded-3xl">
+        <img src="{{ . | relURL }}" alt="Gambar {{ $.Title }}" data-tippy-content="Gambar {{ $.Title }}"
+          class="post-img h-96 sm:h-auto w-full rounded-3xl object-cover" />
+
+        <figcaption class="text-sm font-light dark:font-extralight text-left italic flex flex-wrap gap-2 px-4 py-4">
+          {{ with $.Params.imageSources }}
+          <span>
+            Image:
+            {{ $total := len . }}
+            {{ range $index, $source := . }}
+            {{ if gt $index 0 }}, {{ end }}
+            <a href="{{ $source.url }}" data-tippy-content="{{ $source.url }}"
+              class="hover:underline underline-offset-4 hover:text-conime-400 hover:dark:text-conime-500 inline" target="_blank"
+              rel="noopener noreferrer">{{ $source.name }}</a>
+            {{ end }}
+            {{ with (index . 0).studio }}
+            Image © {{ . }}. Used for editorial purposes only.
+            {{ else }}. Used for editorial purposes only.
+            {{ end }}
+            {{ else }}
+            Image used for illustration purposes only.</span>
+          {{ end }}
+
+        </figcaption>
+      </figure>
+      {{ end }}
+      {{ end }}
+
+
+
+
+      <div class="flex flex-col">
+        <div class="content-article leading-8 font-normal dark:font-light mb-6">
+          {{ .Content }}
+        </div>
+      </div>
+      <div class="pb-4 mb-2">
+        {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}</div>
+
+
+
+      <!-- Artikel panjang lainnya -->
+      <!-- Tombol untuk membuka modal -->
+      {{ $path := .RelPermalink }}
+      {{ if not (in (slice "/about-us/" "/contact/" "/privacy-policy/" "/terms-of-service/" "/disclaimer/") $path) }}
+<div class=" border-t border-gray-300 dark:border-gray-800/50 ">
+      {{ partial "share-modal.html" . }}
+      {{ end }}</div>
+    </article>
+
+    <!-- Bagian Bawah Artikel -->
+    {{ $path := .RelPermalink }}
+    {{ if not (in (slice "/about-us/" "/contact/" "/privacy-policy/" "/terms-of-service/" "/disclaimer/") $path) }}
+    <section class="mt-4 md:mt-6 w-full pt-6">
+
+      <!--Kolom Komentar-->
+      {{ partial "comments.html" . }}
+
+      <!-- Related Articles -->
+      {{ partial "related-articles.html" . }}
+    </section>
+    {{ end }}
+  </main>
+
+  <!-- Sidebar -->
+  <aside class="col-span-12 w-full lg:col-span-4 space-y-8 py-6 md:py-0">
+    <!-- Berita yang baru dilihat -->
+    {{ partial "last-viewed.html" . }}
+    <!-- Berita Populer -->
+    {{ partial "popular.html" . }}
+    <!-- SUGGESTED ARTICLES -->
+    {{ partial "suggested.html" . }}
+    <!-- Kategori -->
+    {{ partial "categories.html" . }}
+    <!-- Tags Popular -->
+    {{ partial "popular-tags.html" . }}
+    <!-- Newsletter -->
+    {{ partial "newsletter.html" . }}
+  </aside>
+</div>
+<script>
+  const slug = "{{ .RelPermalink }}";
+  localStorage.setItem("notif-read:" + slug, "true");
+</script>
+
+{{ end }}

@@ -1,0 +1,11 @@
+<div id="notifData" class="hidden">
+  {{ range where .Site.RegularPages "Section" "posts" }}
+    {{ $postDate := .Date }}
+    {{ $slug := .RelPermalink }}
+    <div class="post-notif hidden"
+         data-title="{{ .Title }}"
+         data-url="{{ $slug }}"
+         data-date="{{ $postDate.Format "2006-01-02T15:04:05Z07:00" }}">
+    </div>
+  {{ end }}
+</div>

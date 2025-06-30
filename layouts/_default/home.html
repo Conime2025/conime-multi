@@ -1,0 +1,942 @@
+{{ define "main" }}
+
+
+
+<div class="flex flex-col w-full h-fit ">
+  <!-- Section Hero -->
+  <section class="flex justify-center items-center h-[780px] lg:h-[600px] relative">
+    {{ $recommendedPages := where .Site.RegularPages "Params.tags" "intersect" (slice "Recommended") }}
+    {{ $sortedRecommended := sort $recommendedPages "Date" "desc" }}
+
+    {{ $positions := slice
+
+    (dict "position" "top-24 left-1/2 -translate-x-1/2 z-30" "rotate" "rotate-0")
+    (dict "position" "top-10 md:top-12 left-0 md:-left-8 lg:-left-10 z-20" "rotate" "rotate-0 md:-rotate-6")
+    (dict "position" "-top-4 md:top-4 right-0 md:-right-8 lg:-right-10 z-10" "rotate" "rotate-0 md:rotate-6")
+    }}
+
+    {{ range $i, $rec := first 3 $sortedRecommended }}
+    {{ $style := index $positions $i }}
+    {{ partial "recommended-card.html" (dict "page" $rec "position" $style.position "rotate" $style.rotate) }}
+    {{ end }}
+  </section>
+
+  <!--
+ <div id="popular-news" class="mt-8 col-span-12 hidden"></div>
+
+<section id="recommended-fallback" class="w-full relative col-span-4 lg:col-span-12 hidden flex-col lg:flex-row items-center rounded-3xl h-fit mt-10">
+  {{ partial "popular.html" . }}
+</section> -->
+
+  <!-- Section Latest Posts -->
+  <section class="relative w-full col-span-4 lg:col-span-12 flex flex-col  items-center rounded-3xl h-fit mt-10 lg:mt-10">
+    <h2 data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" class="text-center text-xl p-1 uppercase tracking-[.6em] lg:tracking-[1.5em]">Latest Posts
+    </h2>
+    <div
+      class="grid grid-cols-1 lg:grid-cols-3 lg:[&>*:nth-child(1)]:col-span-2 lg:[&>*:nth-child(7)]:col-span-2 lg:[&>*:nth-child(11)]:col-span-2 gap-3  py-2 w-full h-fit">
+      {{ $sections := slice "anime" "movies" "comics" "games" "review" }}
+      {{ $all := slice }}
+
+      {{ range $sections }}
+      {{ $section := . }}
+      {{ $temp := slice }}
+
+      {{ range site.RegularPages }}
+      {{ $path := replace .File.Path "\\" "/" }}
+      {{ if strings.HasPrefix $path (printf "posts/%s/" $section) }}
+      {{ $temp = $temp | append . }}
+      {{ end }}
+      {{ end }}
+
+      {{ $sorted := sort $temp "Date" "desc" }}
+      {{ range first 3 $sorted }}
+      {{ $all = $all | append . }}
+      {{ end }}
+      {{ end }}
+
+      {{ range $i, $post := sort $all "Date" "desc" }}
+  {{ $categories := $post.Params.categories }}
+  {{ $isReview := in $categories "Review" }}
+
+  {{/* Tentukan label kategori utama */}}
+  {{ $label := "" }}
+  {{ if $isReview }}
+    {{ $label = "Review" }}
+  {{ else }}
+    {{ $path := replace $post.File.Path "\\" "/" }}
+    {{ $label = index (split $path "/") 1 }}
+  {{ end }}
+
+  <div
+    data-aos="fade-up"
+    data-aos-delay="{{ mul $i 150 }}"
+    data-aos-duration="1600"
+    class="relative group flex flex-col justify-center w-full h-auto">
+    {{ partial "card-latest.html" (dict "page" $post "index" $i) }}
+
+  </div>
+{{ end }}
+
+    </div>
+    <a href="/posts/" data-aos="fade-up" data-aos-delay="800" data-aos-duration="2000"
+      class="inline-flex group items-center gap-2 text-sm font-medium text-gray-800 dark:text-gray-300 hover:text-gray-950 hover:dark:text-white border-b border-gray-800 dark:border-gray-400 hover:border-gray-950 hover:dark:border-white transition">
+      <!-- + dengan efek rotate saat hover -->
+      <span data-aos="fade-up" class="inline-block transition-transform duration-300 group-hover:rotate-90">+</span>
+      <!-- hanya teks yang di-underline -->
+      <span data-aos="fade-up" class="">View All Posts</span>
+    </a>
+  </section>
+
+
+  <!-- Section Popular -->
+  <section class="relative w-full col-span-4 lg:col-span-12 flex flex-col  items-center rounded-3xl h-fit mt-10">
+    <h2 data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" class="text-center text-xl p-1 uppercase tracking-[.6em] lg:tracking-[1.5em]">Popular Posts
+    </h2>
+    <div
+      class="grid grid-cols-1 lg:grid-cols-3 lg:[&>*:nth-child(1)]:col-span-2 lg:[&>*:nth-child(7)]:col-span-2 lg:[&>*:nth-child(11)]:col-span-2 gap-3  py-2 w-full h-fit">
+
+      {{ $recommendedPages := where .Site.RegularPages "Params.tags" "intersect" (slice "Recommended") }}
+      {{ $sortedRecommended := sort $recommendedPages "Date" "desc" }}
+      {{ $subset := first 5 $sortedRecommended }}
+
+      {{ if gt (len $subset) 0 }}
+      {{ range $i, $page := $subset }}
+      <ul class="relative group flex flex-col justify-center w-full h-auto">
+        <li data-aos="fade-up" data-aos-delay="{{ mul $i 200 }}" data-aos-duration="2000"
+  class="relative popular-html flex flex-col  w-full h-full bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-950/20 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out  ">
+
+          <a href="{{ .RelPermalink }}"
+            class=" bg-cover w-full h-full  overflow-hidden transition duration-500 ease-in-out">
+
+            <img loading="lazy" {{ with .Params.image }} src="{{ . }}" {{ else }}
+            {{ end }} alt="Gambar {{ .Title }}"
+              class="w-full h-[360px]  object-cover rounded-t-xl    brightness-75  hover:brightness-100 transition  duration-300    ease-in-out" />
+
+
+          </a>
+
+          <!-- Bagian teks -->
+          <div data-aos="fade-up" data-aos-delay="{{ mul $i 200 }}" data-aos-duration="2000"
+  class="w-full lg:w-[70%] h-[60%] lg:h-[70%] group absolute bottom-0  left-0 rounded-tr-3xl   transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
+
+            <h2 class="w-fit inline-block lg:hidden"> —0{{ add $i 1 }}</h2>
+            <h2
+              class="w-[80%] lg:w-full h-fit text-2xl line-clamp-3  opacity-100 lg:opacity-0 group-hover:lg:opacity-100 group-hover:z-10 transition duration-500 ease-in-out">
+              <a href="{{ .RelPermalink }}" class="hover:underline  break-words" data-tippy-content="{{ .Title }}">{{ .Title }}</a>
+            </h2>
+            <h2
+              class="flex justify-between   opacity-100 lg:opacity-0 group-hover:lg:opacity-100  group-hover:z-10 transition duration-500 ease-in-out  gap-4 text-sm line-clamp-1 uppercase">
+              {{ range .Params.categories }}
+              <a href="{{ " categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">
+                {{ . }}
+              </a>
+              {{ end }}
+            </h2>
+            <p
+              class="bottom-4 items-end justify-end w-full left-6 z-10 text-xl h-full flex-1  flex gap-0   opacity-100 lg:opacity-0 group-hover:lg:opacity-100  group-hover:z-10 transition duration-500 ease-in-out">
+              <span>—</span>{{ partial
+              "dateNew.html" . }}
+            </p>
+            <h2
+              class="absolute inset-0 text-gray-500 dark:text-gray-900 text-5xl w-1 h-1 lg:w-full lg:h-full flex items-center justify-center font-bold opacity-0 lg:opacity-100 dark:lg:opacity-100 group-hover:lg:opacity-0 group-hover:-z-10 transition duration-500 ease-in-out">
+              #{{ add $i 1 }}
+            </h2>
+          </div>
+        </li>
+      </ul>
+      {{ end }}
+      {{ end }}
+    </div>
+  </section>
+
+
+
+  <!-- Section Discover More -->
+  <section class="relative w-full col-span-4 lg:col-span-12 flex flex-col  items-center rounded-3xl h-fit mt-10">
+    <h2 data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000" class="text-center text-xl p-1 uppercase tracking-[.6em] lg:tracking-[1.5em]">Discover More
+    </h2>
+    <!-- Scrollable horizontal list gabungan 3 terbaru dari tiap kategori -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-3  py-2 w-full h-fit">
+      {{ $posts := slice }}
+      {{ range site.RegularPages }}
+      {{ $path := replace .File.Path "\\" "/" }}
+      {{ if strings.HasPrefix $path "posts/anime/" }}
+      {{ $posts = $posts | append . }}
+      {{ end }}
+      {{ end }}
+
+      {{ $posts = sort $posts "Date" "desc" }}
+
+      {{ if gt (len $posts) 3 }}
+      {{ $discoverPosts := first 4 $posts }}
+
+      {{ $img0 := index $discoverPosts 0 }}
+      {{ $img1 := index $discoverPosts 1 }}
+      {{ $img2 := index $discoverPosts 2 }}
+      {{ $img3 := index $discoverPosts 3 }}
+      {{ $discoverPage := site.GetPage "section" "posts/anime" }}
+      <div class="relative group flex flex-col justify-center left-10 w-[90%] h-auto">
+        <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+          class="relative flex flex-col w-full h-[360px] rounded-3xl z-10 bg-gray-300 dark:bg-gray-950/50 shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20">
+
+          <!-- Bagian gambar -->
+          <a href="{{ $discoverPage.RelPermalink }}" class="w-full h-full absolute left-4 bg-cover" >
+            <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+              class="w-[98%] h-[95%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-6">
+              <img loading="lazy" src="{{ $img3.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img3.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000"
+              class="w-[98%] h-[85%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-10">
+              <img loading="lazy" src="{{ $img2.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img2.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="700" data-aos-duration="2000"
+              class="w-[98%] h-[75%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-14">
+              <img loading="lazy" src="{{ $img1.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img1.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="800" data-aos-duration="2000"
+              class="w-[98%] h-[65%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-16">
+              <img loading="lazy" src="{{ $img0.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img0.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+          </a>
+          <!-- Bagian teks -->
+          <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000"
+            class="w-full h-[55%] absolute z-10 flex flex-col justify-between bottom-0 -left-8 right-8 rounded-t-[32px] font-light dark:font-extralight   bg-white hover:bg-gray-300 dark:bg-gray-950 hover:dark:bg-gray-900">
+            <h2 data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000" class="w-full h-full text-2xl p-4 line-clamp-4 lg:line-clamp-4">
+              <a href="{{ $discoverPage.RelPermalink }}" data-tippy-content="Show all {{ $discoverPage.Title }}" class="hover:underline uppercase break-words">{{ $discoverPage.Title }}</a>
+            </h2>
+            <a href="{{ $discoverPage.RelPermalink }}"
+              class="flex flex-col group items-end justify-end gap-2 w-full h-fit px-4 py-0  text-sm font-medium text-gray-800 dark:text-gray-300 hover:text-gray-950 hover:dark:text-white">
+              <!-- + dengan efek rotate saat hover -->
+              <h2
+                class="mb-4  border-b border-gray-800 dark:border-gray-400 hover:border-gray-950 hover:dark:border-white transition">
+                <span class="inline-block transition-transform duration-300 group-hover:rotate-90">+</span>
+                <!-- hanya teks yang di-underline -->
+                <span class="">View All</span>
+              </h2>
+            </a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+
+      {{ $posts := slice }}
+      {{ range site.RegularPages }}
+      {{ $path := replace .File.Path "\\" "/" }}
+      {{ if strings.HasPrefix $path "posts/comics/" }}
+      {{ $posts = $posts | append . }}
+      {{ end }}
+      {{ end }}
+
+      {{ $posts = sort $posts "Date" "desc" }}
+
+      {{ if gt (len $posts) 3 }}
+      {{ $discoverPosts := first 4 $posts }}
+
+      {{ $img0 := index $discoverPosts 0 }}
+      {{ $img1 := index $discoverPosts 1 }}
+      {{ $img2 := index $discoverPosts 2 }}
+      {{ $img3 := index $discoverPosts 3 }}
+      {{ $discoverPage := site.GetPage "section" "posts/comics" }}
+      <div class="relative group flex flex-col justify-center left-10 w-[90%] h-auto">
+        <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+          class="relative flex flex-col w-full h-[360px] rounded-3xl z-10 bg-gray-300 dark:bg-gray-950/50 shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20">
+
+          <!-- Bagian gambar -->
+          <a href="{{ $discoverPage.RelPermalink }}" class="w-full h-full absolute left-4 bg-cover" >
+            <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+              class="w-[98%] h-[95%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-6">
+              <img loading="lazy" src="{{ $img3.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img3.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000"
+              class="w-[98%] h-[85%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-10">
+              <img loading="lazy" src="{{ $img2.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img2.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="700" data-aos-duration="2000"
+              class="w-[98%] h-[75%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-14">
+              <img loading="lazy" src="{{ $img1.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img1.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="800" data-aos-duration="2000"
+              class="w-[98%] h-[65%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-16">
+              <img loading="lazy" src="{{ $img0.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img0.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+          </a>
+          <!-- Bagian teks -->
+          <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000"
+            class="w-full h-[55%] absolute z-10 flex flex-col justify-between bottom-0 -left-8 right-8 rounded-t-[32px] font-light dark:font-extralight   bg-white hover:bg-gray-300 dark:bg-gray-950 hover:dark:bg-gray-900">
+            <h2 data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000" class="w-full h-full text-2xl p-4 line-clamp-4 lg:line-clamp-4">
+              <a href="{{ $discoverPage.RelPermalink }}" data-tippy-content="Show all {{ $discoverPage.Title }}" class="hover:underline uppercase break-words">{{ $discoverPage.Title }}</a>
+            </h2>
+            <a href="{{ $discoverPage.RelPermalink }}"
+              class="flex flex-col group items-end justify-end gap-2 w-full h-fit px-4 py-0  text-sm font-medium text-gray-800 dark:text-gray-300 hover:text-gray-950 hover:dark:text-white">
+              <!-- + dengan efek rotate saat hover -->
+              <h2
+                class="mb-4  border-b border-gray-800 dark:border-gray-400 hover:border-gray-950 hover:dark:border-white transition">
+                <span class="inline-block transition-transform duration-300 group-hover:rotate-90">+</span>
+                <!-- hanya teks yang di-underline -->
+                <span class="">View All</span>
+              </h2>
+            </a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+
+      {{ $posts := slice }}
+      {{ range site.RegularPages }}
+      {{ $path := replace .File.Path "\\" "/" }}
+      {{ if strings.HasPrefix $path "posts/movies/" }}
+      {{ $posts = $posts | append . }}
+      {{ end }}
+      {{ end }}
+
+      {{ $posts = sort $posts "Date" "desc" }}
+
+      {{ if gt (len $posts) 3 }}
+      {{ $discoverPosts := first 4 $posts }}
+
+      {{ $img0 := index $discoverPosts 0 }}
+      {{ $img1 := index $discoverPosts 1 }}
+      {{ $img2 := index $discoverPosts 2 }}
+      {{ $img3 := index $discoverPosts 3 }}
+      {{ $discoverPage := site.GetPage "section" "posts/movies" }}
+     <div class="relative group flex flex-col justify-center left-10 w-[90%] h-auto">
+        <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+          class="relative flex flex-col w-full h-[360px] rounded-3xl z-10 bg-gray-300 dark:bg-gray-950/50 shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20">
+
+          <!-- Bagian gambar -->
+          <a href="{{ $discoverPage.RelPermalink }}" class="w-full h-full absolute left-4 bg-cover" >
+            <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+              class="w-[98%] h-[95%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-6">
+              <img loading="lazy" src="{{ $img3.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img3.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000"
+              class="w-[98%] h-[85%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-10">
+              <img loading="lazy" src="{{ $img2.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img2.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="700" data-aos-duration="2000"
+              class="w-[98%] h-[75%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-14">
+              <img loading="lazy" src="{{ $img1.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img1.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="800" data-aos-duration="2000"
+              class="w-[98%] h-[65%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-16">
+              <img loading="lazy" src="{{ $img0.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img0.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+          </a>
+          <!-- Bagian teks -->
+          <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000"
+            class="w-full h-[55%] absolute z-10 flex flex-col justify-between bottom-0 -left-8 right-8 rounded-t-[32px] font-light dark:font-extralight   bg-white hover:bg-gray-300 dark:bg-gray-950 hover:dark:bg-gray-900">
+            <h2 data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000" class="w-full h-full text-2xl p-4 line-clamp-4 lg:line-clamp-4">
+              <a href="{{ $discoverPage.RelPermalink }}" data-tippy-content="Show all {{ $discoverPage.Title }}" class="hover:underline uppercase break-words">{{ $discoverPage.Title }}</a>
+            </h2>
+            <a href="{{ $discoverPage.RelPermalink }}"
+              class="flex flex-col group items-end justify-end gap-2 w-full h-fit px-4 py-0  text-sm font-medium text-gray-800 dark:text-gray-300 hover:text-gray-950 hover:dark:text-white">
+              <!-- + dengan efek rotate saat hover -->
+              <h2
+                class="mb-4  border-b border-gray-800 dark:border-gray-400 hover:border-gray-950 hover:dark:border-white transition">
+                <span class="inline-block transition-transform duration-300 group-hover:rotate-90">+</span>
+                <!-- hanya teks yang di-underline -->
+                <span class="">View All</span>
+              </h2>
+            </a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+
+      {{ $posts := slice }}
+      {{ range site.RegularPages }}
+      {{ $path := replace .File.Path "\\" "/" }}
+      {{ if strings.HasPrefix $path "posts/games/" }}
+      {{ $posts = $posts | append . }}
+      {{ end }}
+      {{ end }}
+
+      {{ $posts = sort $posts "Date" "desc" }}
+
+      {{ if gt (len $posts) 3 }}
+      {{ $discoverPosts := first 4 $posts }}
+
+      {{ $img0 := index $discoverPosts 0 }}
+      {{ $img1 := index $discoverPosts 1 }}
+      {{ $img2 := index $discoverPosts 2 }}
+      {{ $img3 := index $discoverPosts 3 }}
+      {{ $discoverPage := site.GetPage "section" "posts/games" }}
+       <div class="relative group flex flex-col justify-center left-10 w-[90%] h-auto">
+        <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+          class="relative flex flex-col w-full h-[360px] rounded-3xl z-10 bg-gray-300 dark:bg-gray-950/50 shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20">
+
+          <!-- Bagian gambar -->
+          <a href="{{ $discoverPage.RelPermalink }}" class="w-full h-full absolute left-4 bg-cover" >
+            <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+              class="w-[98%] h-[95%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-6">
+              <img loading="lazy" src="{{ $img3.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img3.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000"
+              class="w-[98%] h-[85%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-10">
+              <img loading="lazy" src="{{ $img2.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img2.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="700" data-aos-duration="2000"
+              class="w-[98%] h-[75%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-14">
+              <img loading="lazy" src="{{ $img1.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img1.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="800" data-aos-duration="2000"
+              class="w-[98%] h-[65%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-16">
+              <img loading="lazy" src="{{ $img0.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img0.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+          </a>
+          <!-- Bagian teks -->
+          <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000"
+            class="w-full h-[55%] absolute z-10 flex flex-col justify-between bottom-0 -left-8 right-8 rounded-t-[32px] font-light dark:font-extralight   bg-white hover:bg-gray-300 dark:bg-gray-950 hover:dark:bg-gray-900">
+            <h2 data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000" class="w-full h-full text-2xl p-4 line-clamp-4 lg:line-clamp-4">
+              <a href="{{ $discoverPage.RelPermalink }}" data-tippy-content="Show all {{ $discoverPage.Title }}" class="hover:underline uppercase break-words">{{ $discoverPage.Title }}</a>
+            </h2>
+            <a href="{{ $discoverPage.RelPermalink }}"
+              class="flex flex-col group items-end justify-end gap-2 w-full h-fit px-4 py-0  text-sm font-medium text-gray-800 dark:text-gray-300 hover:text-gray-950 hover:dark:text-white">
+              <!-- + dengan efek rotate saat hover -->
+              <h2
+                class="mb-4  border-b border-gray-800 dark:border-gray-400 hover:border-gray-950 hover:dark:border-white transition">
+                <span class="inline-block transition-transform duration-300 group-hover:rotate-90">+</span>
+                <!-- hanya teks yang di-underline -->
+                <span class="">View All</span>
+              </h2>
+            </a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+
+      {{ $posts := slice }}
+      {{ range site.RegularPages }}
+      {{ if in .Params.categories "reviews" }}
+      {{ $posts = $posts | append . }}
+      {{ end }}
+      {{ end }}
+
+      {{ $posts = sort $posts "Date" "desc" }}
+
+      {{ if gt (len $posts) 3 }}
+      {{ $discoverPosts := first 4 $posts }}
+
+      {{ $img0 := index $discoverPosts 0 }}
+      {{ $img1 := index $discoverPosts 1 }}
+      {{ $img2 := index $discoverPosts 2 }}
+      {{ $img3 := index $discoverPosts 3 }}
+      {{ $discoverPage := site.GetPage (printf "/categories/%s" "reviews") }}
+
+      <div class="relative group flex flex-col justify-center left-10 w-[90%] h-auto">
+        <div data-aos="fade-up" data-aos-delay="1300" data-aos-duration="2000"
+          class="relative flex flex-col w-full h-[360px] rounded-3xl z-10 bg-gray-300 dark:bg-gray-950/50 shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20">
+
+          <!-- Bagian gambar -->
+          <a href="{{ $discoverPage.RelPermalink }}" class="w-full h-full absolute left-4 bg-cover ">
+            <div
+              class="w-[98%] h-[95%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-6">
+              <img loading="lazy" src="{{ $img3.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img3.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+            <div
+              class="w-[98%] h-[85%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-10">
+              <img loading="lazy" src="{{ $img2.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img2.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+            <div
+              class="w-[98%] h-[75%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-14">
+              <img loading="lazy" src="{{ $img1.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img1.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+            <div
+              class="w-[98%] h-[65%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-16">
+              <img loading="lazy" src="{{ $img0.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img0.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+          </a>
+          <!-- Bagian teks -->
+          <div
+            class="w-full h-[55%] absolute z-10 flex flex-col justify-between bottom-0 -left-8 right-8 rounded-t-[32px] font-light dark:font-extralight   bg-white hover:bg-gray-300 dark:bg-gray-950 hover:dark:bg-gray-900">
+            <h2 class="w-full h-full text-2xl p-4 line-clamp-4 lg:line-clamp-4">
+              <a href="{{ $discoverPage.RelPermalink }}" data-tippy-content="Show all {{ $discoverPage.Title }}" class="hover:underline uppercase break-words">{{
+                $discoverPage.Title
+                }}</a>
+            </h2>
+            <a href="{{ $discoverPage.RelPermalink }}"
+              class="flex flex-col group items-end justify-end gap-2 w-full h-fit px-4 py-0  text-sm font-medium text-gray-800 dark:text-gray-300 hover:text-gray-950 hover:dark:text-white">
+              <!-- + dengan efek rotate saat hover -->
+              <h2
+                class="mb-4  border-b border-gray-800 dark:border-gray-400 hover:border-gray-950 hover:dark:border-white transition">
+                <span class="inline-block transition-transform duration-300 group-hover:rotate-90">+</span>
+                <!-- hanya teks yang di-underline -->
+                <span class="">View All</span>
+              </h2>
+            </a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+
+
+      {{ $discoverPosts := slice }}
+      {{ range site.RegularPages }}
+      {{ $lowerCategories := slice }}
+      {{ range .Params.categories }}
+      {{ $lowerCategories = $lowerCategories | append (lower .) }}
+      {{ end }}
+      {{ if in $lowerCategories "review" }}
+      {{ $discoverPosts = $discoverPosts | append . }}
+      {{ end }}
+      {{ end }}
+
+      {{ $discoverPosts = sort $discoverPosts "Date" "desc" }}
+
+      {{ if ge (len $discoverPosts) 4 }}
+      {{ $img0 := index $discoverPosts 0 }}
+      {{ $img1 := index $discoverPosts 1 }}
+      {{ $img2 := index $discoverPosts 2 }}
+      {{ $img3 := index $discoverPosts 3 }}
+      {{ $discoverPage := site.GetPage "/categories/review" }}
+ <div class="relative group flex flex-col justify-center left-10 w-[90%] h-auto">
+        <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+          class="relative flex flex-col w-full h-[360px] rounded-3xl z-10 bg-gray-300 dark:bg-gray-950/50 shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20">
+
+          <!-- Bagian gambar -->
+          <a href="{{ $discoverPage.RelPermalink }}" class="w-full h-full absolute left-4 bg-cover" >
+            <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+              class="w-[98%] h-[95%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-6">
+              <img loading="lazy" src="{{ $img3.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img3.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000"
+              class="w-[98%] h-[85%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-10">
+              <img loading="lazy" src="{{ $img2.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img2.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="700" data-aos-duration="2000"
+              class="w-[98%] h-[75%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-14">
+              <img loading="lazy" src="{{ $img1.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img1.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+            <div data-aos="fade-up" data-aos-delay="800" data-aos-duration="2000"
+              class="w-[98%] h-[65%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-16">
+              <img loading="lazy" src="{{ $img0.Params.image | default " /images/default.png" }}"
+                alt="Gambar {{ $img0.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </div>
+          </a>
+          <!-- Bagian teks -->
+          <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000"
+            class="w-full h-[55%] absolute z-10 flex flex-col justify-between bottom-0 -left-8 right-8 rounded-t-[32px] font-light dark:font-extralight   bg-white hover:bg-gray-300 dark:bg-gray-950 hover:dark:bg-gray-900">
+            <h2 data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000" class="w-full h-full text-2xl p-4 line-clamp-4 lg:line-clamp-4">
+              <a href="{{ $discoverPage.RelPermalink }}" data-tippy-content="Show all {{ $discoverPage.Title }}" class="hover:underline uppercase break-words">{{ $discoverPage.Title }}</a>
+            </h2>
+            <a href="{{ $discoverPage.RelPermalink }}"
+              class="flex flex-col group items-end justify-end gap-2 w-full h-fit px-4 py-0  text-sm font-medium text-gray-800 dark:text-gray-300 hover:text-gray-950 hover:dark:text-white">
+              <!-- + dengan efek rotate saat hover -->
+              <h2
+                class="mb-4  border-b border-gray-800 dark:border-gray-400 hover:border-gray-950 hover:dark:border-white transition">
+                <span class="inline-block transition-transform duration-300 group-hover:rotate-90">+</span>
+                <!-- hanya teks yang di-underline -->
+                <span class="">View All</span>
+              </h2>
+            </a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+
+    </div>
+
+  </section>
+
+
+
+
+  {{ if not (strings.HasPrefix .Site.BaseURL "https://conime.id/") }}
+  <!-- Section Comic -->
+  {{ $posts := slice }}
+  {{ range site.RegularPages }}
+  {{ $path := replace .File.Path "\\" "/" }}
+  {{ if strings.HasPrefix $path "posts/comics/" }}
+  {{ $posts = $posts | append . }}
+  {{ end }}
+  {{ end }}
+
+  {{ $posts = sort $posts "Date" "desc" }}
+
+  {{ if gt (len $posts) 0 }}
+  <section class="relative col-span-4 lg:col-span-12 flex flex-col lg:flex-row items-center rounded-3xl h-fit mt-10">
+
+    <h2
+      class="h-full flex justify-center items-center text-xl uppercase tracking-[1em] lg:tracking-[3em] [writing-mode:horizontal] lg:[writing-mode:vertical-rl] rotate-0 lg:rotate-180">
+      <a href="/posts/comics" class="hover:underline flex group items-center gap-2">
+        Comic<svg
+          class="rotate-90 lg:rotate-180 group-hover:translate-x-4 group-hover:translate-y-0 lg:group-hover:translate-x-0 lg:group-hover:translate-y-4 transition duration-500 ease-in-out"
+          width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.9201 15.0499L13.4001 8.52989C12.6301 7.75989 11.3701 7.75989 10.6001 8.52989L4.08008 15.0499"
+            stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+    </h2>
+    <!-- Scrollable horizontal list gabungan 3 terbaru dari tiap kategori -->
+    <div
+      class="grid grid-cols-12 gap-2 lg:gap-0 [&>*:nth-child(2)]:col-span-12 lg:[&>*:nth-child(2)]:col-span-8  py-4 w-full h-fit overflow-x-auto scrollbar-hide scroll-smooth">
+      {{ range $i, $post := first 5 (sort $posts "Date" "desc") }}
+      {{ $isSpecial := or (eq $i 0) (eq $i 3) }}
+
+      <div class="relative col-span-12 lg:col-span-4 group justify-center p-2">
+        <div
+          class="relative  flex flex-col h-fit w-full rounded-3xl overflow-hidden z-10 shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40">
+
+          <!-- Bagian gambar -->
+          <div class="w-full flex-1">
+            <a href="{{ .RelPermalink }}">
+              <img src="{{ .Params.image }}" alt="Gambar {{ .Title }}"
+                class="w-full h-[300px] object-cover rounded-3xl brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </a>
+          </div>
+
+
+          <!-- Bagian teks -->
+          <div
+            class="absolute bottom-0 left-auto top-0 right-0 w-[60%] h-full {{ if $isSpecial }} opacity-100 group-hover:opacity-0 {{ else }} opacity-100 lg:opacity-0 group-hover:opacity-100 group-hover:z-50 {{ end }}  transition duration-500 ease-in-out  flex-1 font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 ">
+            <h2 class="w-full h-fit text-2xl line-clamp-4 lg:line-clamp-4">
+              <a href="{{ .RelPermalink }}" class="hover:underline break-words">{{ .Title }}</a>
+            </h2>
+            <h2 class="flex justify-between gap-4 text-sm line-clamp-1 uppercase">
+              {{ range .Params.categories }}
+              <a href="{{ " categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">
+                {{ . }}
+              </a>
+              {{ end }}
+            </h2>
+            <p class="justify-end w-full items-end z-10 text-xl h-full flex-1 flex gap-0"><span>—</span>{{ partial
+              "dateNew.html" . }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+
+  <!-- Section Movie -->
+  {{ $posts := slice }}
+  {{ range site.RegularPages }}
+  {{ $path := replace .File.Path "\\" "/" }}
+  {{ if strings.HasPrefix $path "posts/movies/" }}
+  {{ $posts = $posts | append . }}
+  {{ end }}
+  {{ end }}
+
+  {{ $posts = sort $posts "Date" "desc" }}
+
+  {{ if gt (len $posts) 0 }}
+  <section class="relative col-span-4 lg:col-span-12 flex flex-col lg:flex-row items-center rounded-3xl h-fit mt-10">
+
+    <h2
+      class="h-full flex justify-center items-center text-xl uppercase tracking-[1em] lg:tracking-[3em] [writing-mode:horizontal] lg:[writing-mode:vertical-rl] rotate-0 lg:rotate-180">
+      <a href="/posts/movies" class="hover:underline flex group items-center gap-2">
+        Movie<svg
+          class="rotate-90 lg:rotate-180 group-hover:translate-x-4 group-hover:translate-y-0 lg:group-hover:translate-x-0 lg:group-hover:translate-y-4 transition duration-500 ease-in-out"
+          width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.9201 15.0499L13.4001 8.52989C12.6301 7.75989 11.3701 7.75989 10.6001 8.52989L4.08008 15.0499"
+            stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+    </h2>
+    <!-- Scrollable horizontal list gabungan 3 terbaru dari tiap kategori -->
+    <div
+      class="grid grid-cols-12 gap-2 lg:gap-0 [&>*:nth-child(1)]:col-span-12  lg:[&>*:nth-child(1)]:col-span-8  py-4 w-full h-fit overflow-x-auto scrollbar-hide scroll-smooth">
+      {{ range $i, $post := first 5 (sort $posts "Date" "desc") }}
+      {{ $isSpecial := or (eq $i 1) (eq $i 2) }}
+
+      <div class="relative col-span-12 lg:col-span-4 group justify-center p-2">
+        <div
+          class="relative flex flex-col h-fit w-full rounded-3xl overflow-hidden z-10 shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40">
+
+          <!-- Bagian gambar -->
+          <div
+            class="w-full h-[40%] lg:h-full flex-1 {{ if $isSpecial }} inset-0 opacity-100 lg:opacity-0 group-hover:opacity-100 group-hover:z-50 {{ end }} transition duration-500 ease-in-out">
+            <a href="{{ .RelPermalink }}">
+              <img src="{{ .Params.image }}" alt="Gambar {{ .Title }}"
+                class="w-full h-[300px] object-cover rounded-3xl brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </a>
+          </div>
+
+
+          <!-- Bagian teks -->
+          <div
+            class="absolute  w-full h-[70%] lg:h-full {{ if $isSpecial }}   opacity-100 hover:opacity-0 {{ else }}opacity-100 lg:opacity-0 group-hover:opacity-100 group-hover:z-50 {{ end }}   inset-0 transition duration-500 ease-in-out  flex-1 font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 ">
+            <h2 class="w-full h-fit text-2xl line-clamp-3 lg:line-clamp-4">
+              <a href="{{ .RelPermalink }}" class="hover:underline break-words">{{ .Title }}</a>
+            </h2>
+            <h2 class="flex justify-between gap-4 text-sm line-clamp-1 uppercase">
+              {{ range .Params.categories }}
+              <a href="{{ " categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">
+                {{ . }}
+              </a>
+              {{ end }}
+            </h2>
+            <p class="justify-end w-full items-end z-10 text-xl h-full flex-1 flex gap-0"><span>—</span>{{ partial
+              "dateNew.html" . }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+
+
+
+
+  <!-- Section Game -->
+  {{ $posts := slice }}
+  {{ range site.RegularPages }}
+  {{ $path := replace .File.Path "\\" "/" }}
+  {{ if strings.HasPrefix $path "posts/games/" }}
+  {{ $posts = $posts | append . }}
+  {{ end }}
+  {{ end }}
+
+  {{ $posts = sort $posts "Date" "desc" }}
+
+  {{ if gt (len $posts) 0 }}
+  <section class="relative col-span-4 lg:col-span-12 flex flex-col lg:flex-row items-center rounded-3xl h-fit mt-10">
+
+    <h2
+      class="h-full flex justify-center items-center text-xl uppercase tracking-[1em] lg:tracking-[3em] [writing-mode:horizontal] lg:[writing-mode:vertical-rl] rotate-0 lg:rotate-180">
+
+      <a href="/posts/games" class="hover:underline flex group items-center gap-2">
+        Game<svg
+          class="rotate-90 lg:rotate-180 group-hover:translate-x-4 group-hover:translate-y-0 lg:group-hover:translate-x-0 lg:group-hover:translate-y-4 transition duration-500 ease-in-out"
+          width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.9201 15.0499L13.4001 8.52989C12.6301 7.75989 11.3701 7.75989 10.6001 8.52989L4.08008 15.0499"
+            stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+    </h2>
+    <!-- Scrollable horizontal list gabungan 3 terbaru dari tiap kategori -->
+    <div
+      class="grid grid-cols-12 gap-2 lg:gap-0 [&>*:nth-child(1)]:col-span-12  lg:[&>*:nth-child(1)]:col-span-8  py-4 w-full h-fit overflow-x-auto scrollbar-hide scroll-smooth">
+      {{ range $i, $post := first 5 (sort $posts "Date" "desc") }}
+      {{ $isSpecial := or (eq $i 1) (eq $i 2) }}
+
+      <div class="relative col-span-12 lg:col-span-4 group justify-center p-2">
+        <div
+          class="relative  flex flex-col h-fit w-full rounded-3xl overflow-hidden z-10 shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40">
+
+          <!-- Bagian gambar -->
+          <div class="w-full flex-1">
+            <a href="{{ .RelPermalink }}">
+              <img src="{{ .Params.image }}" alt="Gambar {{ .Title }}"
+                class="w-full h-[300px] object-cover rounded-3xl brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </a>
+          </div>
+          <!-- Bagian teks -->
+          <div
+            class="absolute bottom-0 left-auto lg:left-[20%] top-0 right-0 w-full lg:w-[80%] h-[80%] lg:h-full {{ if $isSpecial }} opacity-100 group-hover:opacity-0 {{ else }} opacity-100 lg:opacity-0 group-hover:opacity-100 group-hover:z-50 {{ end }}  transition duration-500 ease-in-out  flex-1 font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 ">
+            <h2 class="w-full h-fit text-2xl line-clamp-3 lg:line-clamp-4">
+              <a href="{{ .RelPermalink }}" class="hover:underline break-words">{{ .Title }}</a>
+            </h2>
+            <h2 class="flex justify-between gap-4 text-sm line-clamp-1 uppercase">
+              {{ range .Params.categories }}
+              <a href="{{ " categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">
+                {{ . }}
+              </a>
+              {{ end }}
+            </h2>
+            <p class="justify-end w-full items-end z-10 text-xl h-full flex-1 flex gap-0"><span>—</span>{{ partial
+              "dateNew.html" . }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+
+
+  <!-- Section Review -->
+  {{/* Ambil semua posts yang memiliki kategori "Review" */}}
+  {{ $posts := where site.RegularPages "Params.categories" "intersect" (slice "Review") }}
+
+  {{ if gt (len $posts) 0 }}
+  <!-- Section Review -->
+  <section class="relative col-span-4 lg:col-span-12 flex flex-col lg:flex-row items-center rounded-3xl h-fit mt-10">
+
+    <h2
+      class="h-full flex justify-center items-center text-xl uppercase tracking-[1em] lg:tracking-[3em] [writing-mode:horizontal] lg:[writing-mode:vertical-rl] rotate-0 lg:rotate-180">
+      <a href="/categories/review" class="hover:underline flex group items-center gap-2">
+        Review<svg
+          class="rotate-90 lg:rotate-180 group-hover:translate-x-4 group-hover:translate-y-0 lg:group-hover:translate-x-0 lg:group-hover:translate-y-4 transition duration-500 ease-in-out"
+          width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.9201 15.0499L13.4001 8.52989C12.6301 7.75989 11.3701 7.75989 10.6001 8.52989L4.08008 15.0499"
+            stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+    </h2>
+    <!-- Scrollable horizontal list gabungan 3 terbaru dari tiap kategori -->
+
+
+    <div class="grid grid-cols-12  lg:grid-rows-2 gap-2 lg:gap-0 py-4 w-full h-fit lg:h-[600px]">
+      {{ range $i, $post := first 5 (sort $posts "Date" "desc") }}
+
+      {{ if eq $i 0 }}
+      <!-- Post 0: besar di tengah -->
+      <div
+        class="col-span-12 h-[300px] lg:h-full lg:col-span-6 row-span-1 lg:row-span-2 relative group justify-center p-2 ">
+        <!-- Card besar -->
+        <div
+          class="relative w-full h-full flex flex-col rounded-3xl overflow-hidden z-10 shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40">
+          <div class="w-full h-full transition duration-500 ease-in-out flex-1">
+            <a href="{{ .RelPermalink }}">
+              <img src="{{ .Params.image }}" alt="Gambar {{ .Title }}"
+                class="w-full h-full object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </a>
+          </div>
+          <!-- Teks -->
+          <div
+            class="w-[80%] absolute inset-0 flex-1 font-light dark:font-extralight flex group-hover:-translate-x-full transition duration-500 ease-in-out flex-col items-start justify-between gap-2 p-6 bg-gradient-to-br from-white dark:from-gray-900 via-gray-50 dark:via-gray-950 to-gray-300 dark:to-gray-950">
+            <h2 class="text-2xl lg:text-4xl w-full font-light dark:font-extralight line-clamp-3 lg:line-clamp-6">
+              <a href="{{ .RelPermalink }}" class="hover:underline break-words">{{ .Title }}</a>
+            </h2>
+            <h2 class="flex justify-between gap-4 text-sm line-clamp-1 uppercase">
+              {{ range .Params.categories }}
+              <a href="{{ " categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">
+                {{ . }}
+              </a>
+              {{ end }}
+            </h2>
+            <p class="justify-end w-full items-end z-10 text-xl h-full flex-1 flex gap-0"><span>—</span>{{ partial
+              "dateNew.html" . }}</p>
+          </div>
+
+        </div>
+      </div>
+
+      {{ else if or (eq $i 1) (eq $i 2) }}
+      <!-- Post 1 dan 2: kecil di kiri -->
+      <div
+        class="order-first h-[300px] lg:h-full col-span-12 lg:col-span-3 row-span-1 relative group justify-center p-2">
+        <!-- Card kecil -->
+        <div
+          class="relative w-full h-full flex flex-col rounded-3xl overflow-hidden z-10 shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 ">
+          <div
+            class="w-full h-full opacity-100 lg:group-hover:opacity-0 absolute inset-0 transition duration-500 ease-in-out flex-1">
+            <a href="{{ .RelPermalink }}">
+              <img src="{{ .Params.image }}" alt="Gambar {{ .Title }}"
+                class="w-full h-full object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </a>
+          </div>
+          <div
+            class="relative w-[80%] lg:w-full h-full opacity-100 lg:opacity-0 group-hover:opacity-100 group-hover:z-50 inset-0 transition duration-500 ease-in-out flex-1 font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-gradient-to-br from-white dark:from-gray-900 via-gray-50 dark:via-gray-950 to-gray-300 dark:to-gray-950">
+            <h2 class="w-full h-fit text-2xl line-clamp-3 lg:line-clamp-4">
+              <a href="{{ .RelPermalink }}" class="hover:underline break-words">{{ .Title }}</a>
+            </h2>
+            <h2 class="flex justify-between gap-4 text-sm line-clamp-1 uppercase">
+              {{ range .Params.categories }}
+              <a href="{{ " categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">
+                {{ . }}
+              </a>
+              {{ end }}
+            </h2>
+            <p class="justify-end w-full items-end z-10 text-xl h-full flex-1 flex gap-0"><span>—</span>{{ partial
+              "dateNew.html" . }}</p>
+          </div>
+        </div>
+      </div>
+
+      {{ else if or (eq $i 3) (eq $i 4) }}
+      <!-- Post 3 dan 4: kecil di kanan -->
+      <div
+        class="order-last h-[300px] lg:h-full col-span-12 lg:col-span-3 row-span-1 relative group justify-center p-2">
+        <!-- Card kecil -->
+        <div
+          class="relative w-full h-full flex flex-col rounded-3xl overflow-hidden z-10 shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40">
+          <div
+            class="w-full h-full opacity-100 group-hover:opacity-0 absolute inset-0 transition duration-500 ease-in-out flex-1">
+            <a href="{{ .RelPermalink }}">
+              <img src="{{ .Params.image }}" alt="Gambar {{ .Title }}"
+                class="w-full h-full object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </a>
+          </div>
+          <div
+            class="relative w-[80%] lg:w-full h-full opacity-100 lg:opacity-0 group-hover:opacity-100 group-hover:z-50 inset-0 transition duration-500 ease-in-out flex-1 font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-gradient-to-br from-white dark:from-gray-900 via-gray-50 dark:via-gray-950 to-gray-300 dark:to-gray-950">
+            <h2 class="w-full h-fit text-2xl line-clamp-3 lg:line-clamp-4">
+              <a href="{{ .RelPermalink }}" class="hover:underline break-words">{{ .Title }}</a>
+            </h2>
+            <h2 class="flex justify-between gap-4 text-sm line-clamp-1 uppercase">
+              {{ range .Params.categories }}
+              <a href="{{ " categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">
+                {{ . }}
+              </a>
+              {{ end }}
+            </h2>
+            <p class="justify-end w-full items-end z-10 text-xl h-full flex-1 flex gap-0"><span>—</span>{{ partial
+              "dateNew.html" . }}</p>
+          </div>
+        </div>
+      </div>
+
+      {{ end }}
+      {{ end }}
+
+    </div>
+
+
+  </section>
+  {{ end }}
+  {{ end }}
+
+</div>
+
+
+
+
+
+{{ end }}

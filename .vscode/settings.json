@@ -1,0 +1,51 @@
+{
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "tsconfig.json": "tsconfig.*.json, env.d.ts",
+    "vite.config.*": "jsconfig*, vitest.config.*, cypress.config.*, playwright.config.*",
+    "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .oxlint*, oxlint*, .prettier*, prettier*, .editorconfig"
+  },
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+
+  "tailwindCSS.includeLanguages": {
+    "gohtml": "html",
+    "html": "html",
+    "plaintext": "html"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.experimental.classRegex": [
+    "{{\\s*([^}]*)\\s*}}",
+    "class\\s*=\\s*\"([^\"]*)\"",
+    "class:\\s*'([^']*)'",
+    "class:\\s*\"([^\"]*)\"",
+    "tw\\`([^`]*)\\`"
+  ],
+  "tailwindCSS.classFunctions": [
+    "tw",
+    "clsx",
+    "tw\\.[a-z]+"
+  ],
+
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+
+  "prettier.enableDebugLogs": false,
+  "prettier.requireConfig": false,
+  "prettier.trailingComma": "es5",
+    "prettier.singleQuote": true,
+
+  "editor.formatOnSave": false,
+  "editor.minimap.enabled": false,
+  "editor.smoothScrolling": true,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "files.trimTrailingWhitespace": true
+}

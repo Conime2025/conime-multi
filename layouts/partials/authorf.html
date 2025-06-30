@@ -1,0 +1,11 @@
+{{ with .Params.author }}
+  {{ $authors := . }}
+  {{ if eq (printf "%T" $authors) "string" }}
+    {{ $authors = slice $authors }}
+  {{ end }}
+  {{ range $index, $author := $authors }}
+    <a href="{{ "authors/" | relURL }}{{ $author | urlize }}" class="hover:underline font-light dark:font-extralight text-xl mr-2">
+      {{ $author }}
+    </a>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,49 @@
+{{ with . }}
+
+<div id="popular-news" class="mt-8">
+  <p class="text-sm text-gray-500 dark:text-gray-400">Memuat data dari pengunjung asli...</p>
+</div>
+
+<!-- Fallback dari Hugo: konten dengan tag Recommended -->
+<div id="recommended-fallback" class="hidden">
+  {{ $recommendedPages := where .Site.RegularPages "Params.tags" "intersect" (slice "Recommended") }}
+  {{ $sortedRecommended := sort $recommendedPages "Date" "desc" }}
+  {{ $subset := first 3 $sortedRecommended }}
+  {{ if gt (len $subset) 0 }}
+  <h2 class="text-xl uppercase font-medium border-b border-gray-300 dark:border-gray-800/50 pb-2 mb-4">
+    Popular News
+  </h2>
+  <ul class="flex flex-col gap-4">
+    {{ range $i, $page := $subset }}
+    <li class="relative flex flex-col col-span-2 w-full h-full bg-white dark:bg-gray-950  overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out">
+      <a href="{{ .RelPermalink }}" class="bg-cover w-full h-full overflow-hidden transition duration-500 ease-in-out">
+        {{ with .Params.image }}
+        <img loading="lazy" src="{{ . }}" alt="Gambar {{ $.Title }}" class="w-full h-[360px] object-cover rounded-t-xl brightness-75 hover:brightness-100 transition duration-300 ease-in-out" />
+        {{ end }}
+      </a>
+      <div class="w-[70%] h-[70%] group absolute bottom-0 left-0 rounded-tr-3xl transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 ">
+        <h2 class="w-full h-fit text-2xl line-clamp-3 opacity-0 group-hover:opacity-100 group-hover:z-10 transition duration-500 ease-in-out">
+          <a href="{{ .RelPermalink }}" class="hover:underline break-words">{{ .Title }}</a>
+        </h2>
+        <h2 class="flex justify-between opacity-0 group-hover:opacity-100 group-hover:z-10 transition duration-500 ease-in-out gap-4 text-sm line-clamp-1 uppercase">
+          {{ range .Params.categories }}
+          <a href="{{ " categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">
+            {{ . }}
+          </a>
+          {{ end }}
+        </h2>
+        <p class="bottom-4 items-end justify-end w-full left-6 z-10 text-xl h-full flex-1 flex gap-0 opacity-0 group-hover:opacity-100 group-hover:z-10 transition duration-500 ease-in-out">
+          <span>—</span>{{ partial "dateNew.html" . }}
+        </p>
+        <h2 class="absolute inset-0 text-transparent text-stroke-gray-950 dark:text-stroke-white text-5xl w-full h-full flex items-center justify-center font-bold opacity-80 dark:opacity-20 group-hover:opacity-0 group-hover:-z-10 transition duration-500 ease-in-out">
+          #{{ add $i 1 }}
+        </h2>
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</div>
+
+
+{{ end }}

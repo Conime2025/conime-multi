@@ -1,0 +1,272 @@
+baseURL = 'https://conime.id/'
+languageCode = 'en-us'
+title = 'CoNime'
+
+[[menus.main]]
+name = 'Home'
+identifier = 'homeBtn'
+pageRef = '/'
+weight = 1
+[menus.main.params]
+  svg = """<svg class="w-6 h-6 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.02 2.84004L3.63 7.04004C2.73 7.74004 2 9.23004 2 10.36V17.77C2 20.09 3.89 21.99 6.21 21.99H17.79C20.11 21.99 22 20.09 22 17.78V10.5C22 9.29004 21.19 7.74004 20.2 7.05004L14.02 2.72004C12.62 1.74004 10.37 1.79004 9.02 2.84004Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 17.99V14.99" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+"""
+
+
+[[menus.main]]
+name = 'Search'
+identifier = 'searchBtn'
+weight = 2
+[menus.main.params]
+  svg = """<svg class="w-6 h-6 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 20C15.9706 20 20 15.9706 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.9299 20.6898C19.4599 22.2898 20.6699 22.4498 21.5999 21.0498C22.4499 19.7698 21.8899 18.7198 20.3499 18.7198C19.2099 18.7098 18.5699 19.5998 18.9299 20.6898Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+"""
+
+[[menus.main]]
+name = 'Anime'
+identifier = 'animeBtn'
+pageRef = '/posts/anime'
+url = '/posts/anime'
+weight = 3
+[menus.main.params]
+  svg = """<svg class="w-6 h-6 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 20H7C4 20 2 18 2 15V9C2 6 4 4 7 4H17C20 4 22 6 22 9V15C22 18 20 20 17 20Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.4001 9.50006L13.9001 11.0001C14.8001 11.6001 14.8001 12.5001 13.9001 13.1001L11.4001 14.6001C10.4001 15.2001 9.6001 14.7001 9.6001 13.6001V10.6001C9.6001 9.30006 10.4001 8.90006 11.4001 9.50006Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+"""
+
+
+
+[[menus.main]]
+name = 'Comics'
+identifier = 'comicBtn'
+pageRef = '/posts/comics'
+weight = 4
+[menus.main.params]
+  svg = """<svg class="w-6 h-6 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 16.7399V4.66994C22 3.46994 21.02 2.57994 19.83 2.67994H19.77C17.67 2.85994 14.48 3.92994 12.7 5.04994L12.53 5.15994C12.24 5.33994 11.76 5.33994 11.47 5.15994L11.22 5.00994C9.44 3.89994 6.26 2.83994 4.16 2.66994C2.97 2.56994 2 3.46994 2 4.65994V16.7399C2 17.6999 2.78 18.5999 3.74 18.7199L4.03 18.7599C6.2 19.0499 9.55 20.1499 11.47 21.1999L11.51 21.2199C11.78 21.3699 12.21 21.3699 12.47 21.2199C14.39 20.1599 17.75 19.0499 19.93 18.7599L20.26 18.7199C21.22 18.5999 22 17.6999 22 16.7399Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 5.48999V20.49" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.75 8.48999H5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.5 11.49H5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+"""
+
+
+[[menus.main]]
+name = 'Movies'
+identifier = 'movieBtn3'
+pageRef = '/posts/movies'
+weight = 5
+[menus.main.params]
+  svg = """<svg class="w-6 h-6 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.52002 7.11011H21.48" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.52002 2.11011V6.97011" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.48 2.11011V6.52011" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.75 14.4501V13.2501C9.75 11.7101 10.84 11.0801 12.17 11.8501L13.21 12.4501L14.25 13.0501C15.58 13.8201 15.58 15.0801 14.25 15.8501L13.21 16.4501L12.17 17.0501C10.84 17.8201 9.75 17.1901 9.75 15.6501V14.4501V14.4501Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>"""
+
+[[menus.main]]
+name = 'Games'
+identifier = 'gameBtn'
+pageRef = '/posts/games'
+weight = 6
+[menus.main.params]
+  svg = """<svg class="w-6 h-6 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.57002 12.46L6.52002 15.51" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.55005 12.49L9.60005 15.54" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.53 14H13.54" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.47 14H17.48" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.5 15.98V15.96" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.5 12.04V12.02" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 22H15C20 22 22 20 22 15V13C22 8 20 6 15 6H9C4 6 2 8 2 13V15C2 20 4 22 9 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.01 2L13 3.01C12.99 3.56 12.55 4 12 4H11.97C11.42 4 10.98 4.45 10.98 5C10.98 5.55 11.43 6 11.98 6H12.98" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+"""
+
+[[menus.main]]
+name = 'Reviews'
+identifier = 'reviewBtn'
+pageRef = '/categories/review/'
+weight = 7
+[menus.main.params]
+  svg = """<svg class="w-6 h-6 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.5 19H8C4 19 2 18 2 13V8C2 4 4 2 8 2H16C20 2 22 4 22 8V13C22 17 20 19 16 19H15.5C15.19 19 14.89 19.15 14.7 19.4L13.2 21.4C12.54 22.28 11.46 22.28 10.8 21.4L9.3 19.4C9.14 19.18 8.77 19 8.5 19Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7 8H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7 13H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+"""
+
+
+[[menus.main]]
+name = 'Notification'
+identifier = 'notifBtn'
+weight = 8
+[menus.main.params]
+  svg = """<svg class="w-6 h-6 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.02 2.90991C8.70997 2.90991 6.01997 5.59991 6.01997 8.90991V11.7999C6.01997 12.4099 5.75997 13.3399 5.44997 13.8599L4.29997 15.7699C3.58997 16.9499 4.07997 18.2599 5.37997 18.6999C9.68997 20.1399 14.34 20.1399 18.65 18.6999C19.86 18.2999 20.39 16.8699 19.73 15.7699L18.58 13.8599C18.28 13.3399 18.02 12.4099 18.02 11.7999V8.90991C18.02 5.60991 15.32 2.90991 12.02 2.90991Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+<path d="M13.87 3.19994C13.56 3.10994 13.24 3.03994 12.91 2.99994C11.95 2.87994 11.03 2.94994 10.17 3.19994C10.46 2.45994 11.18 1.93994 12.02 1.93994C12.86 1.93994 13.58 2.45994 13.87 3.19994Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.02 19.0601C15.02 20.7101 13.67 22.0601 12.02 22.0601C11.2 22.0601 10.44 21.7201 9.90002 21.1801C9.36002 20.6401 9.02002 19.8801 9.02002 19.0601" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+</svg>
+"""
+
+[[menus.main]]
+name = 'More'
+identifier = 'moreMenu'
+weight = 9
+[menus.main.params]
+  svg = """<svg class="w-6 h-6 md:w-6 md:h-6"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 19C10 20.1 10.9 21 12 21C13.1 21 14 20.1 14 19C14 17.9 13.1 17 12 17C10.9 17 10 17.9 10 19Z" stroke="currentColor" stroke-width="1.5"/>
+<path d="M10 5C10 6.1 10.9 7 12 7C13.1 7 14 6.1 14 5C14 3.9 13.1 3 12 3C10.9 3 10 3.9 10 5Z" stroke="currentColor" stroke-width="1.5"/>
+<path d="M10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10C10.9 10 10 10.9 10 12Z" stroke="currentColor" stroke-width="1.5"/>
+</svg>"""
+
+
+
+[[menus.header]]
+name = 'About Us'
+pageRef = '/legal/about-us'
+weight = 1
+[menus.header.params]
+  svg = """<svg class="w-6 h-6 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.75 2.44995C11.45 1.85995 12.58 1.85995 13.26 2.44995L14.84 3.79995C15.14 4.04995 15.71 4.25995 16.11 4.25995H17.81C18.87 4.25995 19.74 5.12995 19.74 6.18995V7.88995C19.74 8.28995 19.95 8.84995 20.2 9.14995L21.55 10.7299C22.14 11.4299 22.14 12.5599 21.55 13.2399L20.2 14.8199C19.95 15.1199 19.74 15.6799 19.74 16.0799V17.7799C19.74 18.8399 18.87 19.7099 17.81 19.7099H16.11C15.71 19.7099 15.15 19.9199 14.85 20.1699L13.27 21.5199C12.57 22.1099 11.44 22.1099 10.76 21.5199L9.18001 20.1699C8.88001 19.9199 8.31 19.7099 7.92 19.7099H6.17C5.11 19.7099 4.24 18.8399 4.24 17.7799V16.0699C4.24 15.6799 4.04 15.1099 3.79 14.8199L2.44 13.2299C1.86 12.5399 1.86 11.4199 2.44 10.7299L3.79 9.13995C4.04 8.83995 4.24 8.27995 4.24 7.88995V6.19995C4.24 5.13995 5.11 4.26995 6.17 4.26995H7.9C8.3 4.26995 8.86 4.05995 9.16 3.80995L10.75 2.44995Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 8.13V12.96" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.9945 16H12.0035" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+"""
+
+[[menus.header]]
+name = 'Contact'
+identifier = 'contact'
+pageRef = '/contact'
+weight = 2
+[menus.header.params]
+  svg = """<svg class="w-6 h-6 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.98 10.79V14.79C17.98 15.05 17.97 15.3 17.94 15.54C17.71 18.24 16.12 19.58 13.19 19.58H12.79C12.54 19.58 12.3 19.7 12.15 19.9L10.95 21.5C10.42 22.21 9.56 22.21 9.03 21.5L7.82999 19.9C7.69999 19.73 7.41 19.58 7.19 19.58H6.79001C3.60001 19.58 2 18.79 2 14.79V10.79C2 7.86001 3.35001 6.27001 6.04001 6.04001C6.28001 6.01001 6.53001 6 6.79001 6H13.19C16.38 6 17.98 7.60001 17.98 10.79Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.98 6.79001V10.79C21.98 13.73 20.63 15.31 17.94 15.54C17.97 15.3 17.98 15.05 17.98 14.79V10.79C17.98 7.60001 16.38 6 13.19 6H6.79004C6.53004 6 6.28004 6.01001 6.04004 6.04001C6.27004 3.35001 7.86004 2 10.79 2H17.19C20.38 2 21.98 3.60001 21.98 6.79001Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.4955 13.25H13.5045" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.9955 13.25H10.0045" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.4955 13.25H6.5045" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+"""
+
+[[menus.footer]]
+name = 'About Us'
+pageRef = '/legal/about-us'
+weight = 1
+
+
+[[menus.footer]]
+name = 'Contact'
+pageRef = '/contact'
+weight = 2
+
+[[menus.footer]]
+name = 'Privacy Policy'
+pageRef = '/legal/privacy-policy'
+weight = 3
+
+[[menus.footer]]
+name = 'Terms of Service'
+pageRef = '/legal/terms-of-service'
+weight = 4
+
+[[menus.footer]]
+name = 'Disclaimer'
+pageRef = '/legal/disclaimer'
+weight = 5
+
+
+[[menus.footer]]
+name = 'Tags'
+pageRef = '/tags'
+weight = 6
+
+
+[params]
+
+  [[params.share]]
+  name = "Facebook"
+  link = "https://www.facebook.com/sharer/sharer.php?u="
+  svg = """<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M13.25 6.125V9.75H16.5C16.75 9.75 16.875 10 16.875 10.25L16.375 12.625C16.375 12.75 16.125 12.875 16 12.875H13.25V22H9.5V13H7.375C7.125 13 7 12.875 7 12.625V10.25C7 10 7.125 9.875 7.375 9.875H9.5V5.75C9.5 3.625 11.125 2 13.25 2H16.625C16.875 2 17 2.125 17 2.375V5.375C17 5.625 16.875 5.75 16.625 5.75H13.625C13.375 5.75 13.25 5.875 13.25 6.125Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+</svg>"""
+
+  [[params.share]]
+  name = "WhatsApp"
+  link = "https://wa.me/?text="
+  svg = """<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6.9 20.6C8.4 21.5 10.2 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 13.8 2.5 15.5 3.3 17L2.44 20.31C2.25 21.05 2.94 21.73 3.68 21.52L6.9 20.6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M16.5 14.85C16.5 15.01 16.46 15.18 16.39 15.34C16.31 15.5 16.21 15.65 16.08 15.8C15.86 16.04 15.62 16.22 15.34 16.33C15.07 16.44 14.78 16.5 14.46 16.5C14 16.5 13.51 16.39 12.99 16.17C12.48 15.95 11.96 15.65 11.44 15.28C10.93 14.9 10.43 14.48 9.97 14.02C9.5 13.55 9.08 13.06 8.71 12.55C8.34 12.04 8.04 11.52 7.82 11.01C7.61 10.5 7.5 10.01 7.5 9.54C7.5 9.24 7.55 8.94 7.66 8.67C7.77 8.4 7.94 8.15 8.18 7.92C8.47 7.64 8.78 7.5 9.12 7.5C9.24 7.5 9.37 7.53 9.48 7.58C9.6 7.63 9.7 7.71 9.78 7.83L10.83 9.3C10.91 9.42 10.97 9.52 11.01 9.62C11.05 9.71 11.07 9.81 11.07 9.89C11.07 10 11.04 10.11 10.98 10.21C10.92 10.32 10.83 10.43 10.73 10.53L10.38 10.89C10.33 10.94 10.31 11 10.31 11.07C10.31 11.1 10.32 11.14 10.33 11.17C10.34 11.21 10.35 11.23 10.36 11.26C10.44 11.41 10.58 11.6 10.78 11.84C10.98 12.07 11.2 12.31 11.43 12.55C11.68 12.79 11.91 13.01 12.15 13.21C12.39 13.41 12.58 13.54 12.73 13.62C12.75 13.63 12.78 13.65 12.81 13.66C12.85 13.67 12.89 13.68 12.93 13.68C13 13.68 13.06 13.65 13.11 13.6L13.45 13.26C13.57 13.15 13.67 13.07 13.78 13.01C13.88 12.95 13.99 12.92 14.1 12.92C14.18 12.92 14.27 12.94 14.37 12.98C14.47 13.02 14.58 13.08 14.69 13.15L16.18 14.21C16.3 14.29 16.38 14.38 16.43 14.5C16.47 14.61 16.5 14.72 16.5 14.85Z" stroke="currentColor" stroke-width="1.5"/>
+</svg>"""
+
+  [[params.share]]
+  name = "Telegram"
+  link = "https://t.me/share/url?url="
+  svg = """<svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+  <path d="M21.43 2.62 2.99 10.54c-1.24.52-1.23 1.25-.22 1.57l4.65 1.45 2.18 6.7c.27.83.49.93 1.01.93.66 0 .93-.3 1.29-.65l3.09-3.01 4.91 3.64c.9.5 1.55.24 1.78-.84l3.22-15.18c.28-1.3-.5-1.8-1.57-1.33Z"/>
+  <path d="m7.73 13.56 10.6-8.1c.5-.35.97-.15.59.2L10.3 16.4"/>
+</svg>"""
+
+  [[params.share]]
+  name = "X"
+  link = "https://twitter.com/intent/tweet?url="
+  svg = """<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 4C22 4 21.3 6.1 20 7.4C21.6 17.4 10.6 24.7 2 19C4.2 19.1 6.4 18.4 8 17C3 15.5 0.5 9.6 3 5C5.2 7.6 8.6 9.1 12 9C11.1 4.8 16 2.4 19 5.2C20.1 5.2 22 4 22 4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>"""
+
+  [[params.share]]
+  name = "Email"
+  link = "mailto:?subject="
+  svg = """<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M2 8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5H7" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M2 16.5H8" stroke="currentColor" stroke-width="1.5"/>
+  <path d="M2 12.5H5" stroke="currentColor" stroke-width="1.5"/>
+</svg>"""
+
+
+
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+author = "authors"
+
+defaultContentLanguage = "id"
+timeZone = "Asia/Jakarta"
+
+
+[related]
+threshold = 80
+includeNewer = true
+toLower = true
+
+[[related.indices]]
+name = "tags"
+weight = 100
+
+[[related.indices]]
+name = "categories"
+weight = 80
+
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"
+
+ [outputs]
+home = ["HTML"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+aliases = ["/_safelist"]

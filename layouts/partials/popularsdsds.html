@@ -1,0 +1,55 @@
+
+<div id="popular-news" class="mt-8">
+  <h2 class="text-xl uppercase font-medium border-b border-gray-300 dark:border-gray-800/50 pb-2 mb-4">
+    Popular News
+  </h2>
+  <p class="text-sm text-gray-500 dark:text-gray-400">Memuat data dari pengunjung asli...</p>
+</div>
+
+<script>
+  const popularContainer = document.getElementById("popular-news");
+
+  fetch("https://counter.dev/api?id=8297bb50-9fb6-4f3c-9c6e-a80ccc1fe2d1&limit=10")
+    .then(res => res.json())
+    .then(data => {
+      const popular = data
+        .filter(p => p.pathname.includes("/posts/")) // hanya post, sesuaikan dengan struktur URL-mu
+        .sort((a, b) => b.count - a.count) // urut dari yang paling banyak dilihat
+        .slice(0, 3); // ambil 3 teratas
+
+      if (popular.length === 0) return;
+
+      let html = `
+        <h2 class="text-xl uppercase font-medium border-b border-gray-300 dark:border-gray-800/50 pb-2 mb-4">
+          Popular News
+        </h2>
+        <ul class="flex flex-col gap-4">`;
+
+      popular.forEach((item, index) => {
+        const slug = item.pathname;
+        const title = slug
+          .replace("/posts/", "")
+          .replace(/[-/]/g, " ")
+          .replace(/\b\w/g, c => c.toUpperCase()); // ubah jadi kapital
+
+        html += `
+          <li class="relative flex flex-row justify-start items-center gap-x-0 w-full h-full bg-white dark:bg-gray-900/20 border border-gray-300 dark:border-gray-800/50">
+            <h2 class="text-2xl w-14 text-center text-gray-500 dark:text-gray-800/90 font-medium">
+              #${index + 1}
+            </h2>
+            <div class="px-2 py-2 h-full min-h-[60px] w-full flex flex-col justify-center items-start">
+              <a href="${slug}" class="hover:underline transition duration-300 ease-in-out h-fit line-clamp-3 text-xl font-light dark:font-extralight">
+                ${title}
+              </a>
+            </div>
+          </li>`;
+      });
+
+      html += `</ul>`;
+      popularContainer.innerHTML = html;
+    })
+    .catch(err => {
+      popularContainer.innerHTML = "<p class='text-red-500 text-sm'>Gagal memuat popular news.</p>";
+      console.error("Gagal ambil data popular:", err);
+    });
+</script>

@@ -1,0 +1,128 @@
+ 
+    <div class="hidden">
+      <svg id="svg-conime" class="w-auto h-16 opacity-0 transition-opacity duration-1000 ease-in-out"
+        viewBox="0 0 336 336" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M266.658 48L181.98 168H5.66016L90.3379 48H266.658Z" fill="#A00123" />
+        <path d="M330.34 288L245.661 168H5.66016L90.3389 288H330.34Z" fill="#CF012B" />
+      </svg>
+    </div>
+    <div id="container-scroll"
+      class="overflow-hidden  opacity-0 transition-opacity duration-1000 ease-in-out h-8 font-medium  flex flex-col items-center justify-start">
+      <div id="animate-scroll"
+        class="inline-block font-ysabeu transition-transform duration-1000 ease-in-out   text-xl uppercase">
+        <span class="mx-2 h-8 opacity-0 block">Conime</span>
+        <span class="mx-2 h-8 block">Anime</span>
+        <span class="mx-2 h-8 block">Comic</span>
+        <span class="mx-2 h-8 block">Movie</span>
+        <span class="mx-2 h-8 block">Game</span>
+        <span class="mx-2 h-8 block">Review</span>
+        <span class="mx-2 h-8 block">Conime</span>
+
+      </div>
+    </div>
+
+
+    
+<!--
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const isHome = window.location.pathname === "/" || window.location.pathname === "/index.html";
+        const preloader = document.querySelector("#preloader");
+        const header = document.querySelector("header");
+        const menuKiri = document.querySelector("#main-menu");
+        const menuBawah = document.querySelector("#menu-bawah");
+        const main = document.querySelector("main");
+        const footer = document.querySelector("footer");
+
+        const svgConime = document.querySelector("#svg-conime");
+        const containerScroll = document.querySelector("#container-scroll");
+        const animateScroll = document.querySelector("#animate-scroll");
+
+        if (isHome) {
+            const alreadyShown = sessionStorage.getItem("shownPreloader");
+
+            if (!alreadyShown) {
+                // Tampilkan preloader
+                preloader.classList.remove("hidden");
+                preloader.classList.add("flex", "transition-transform", "duration-500");
+
+                // Sembunyikan elemen lain
+                header?.classList.add("hidden");
+                menuKiri?.classList.add("md:hidden");
+                menuBawah?.classList.add("hidden");
+                main?.classList.add("hidden");
+                footer?.classList.add("hidden");
+                header?.classList.remove("flex");
+                menuKiri?.classList.remove("flex");
+                menuBawah?.classList.remove("flex");
+                footer?.classList.remove("flex");
+
+                // Fade-in svg-conime dan container-scroll
+                setTimeout(() => {
+                    svgConime?.classList.remove("opacity-0");
+                    containerScroll?.classList.remove("opacity-0");
+
+                    // Tambahkan animasi scroll setelah 1 detik
+                    setTimeout(() => {
+                        svgConime?.classList.add("opacity-100");
+                        containerScroll?.classList.add("opacity-100");
+                        animateScroll?.classList.add("animate-scroll");
+                    }, 1000);
+                }, 1000);
+
+                // Setelah 8 detik, sembunyikan preloader secara bertahap
+                setTimeout(() => {
+                    svgConime?.classList.add("opacity-0");
+                    containerScroll?.classList.add("opacity-0");
+
+                    // Tunda translate-y agar animasi smooth
+                    setTimeout(() => {
+                        preloader.classList.add("-translate-y-full");
+
+                        // Setelah translate selesai, sembunyikan preloader
+                        setTimeout(() => {
+                            preloader.classList.remove("flex");
+                            preloader.classList.add("hidden");
+                        }, 500);
+                    }, 1500); // delay sebelum geser ke atas
+
+                    // Tampilkan elemen utama
+                    header?.classList.remove("hidden");
+                    header?.classList.add("flex");
+                    menuKiri?.classList.remove("md:hidden");
+                    menuKiri?.classList.add("md:flex");
+                    menuBawah?.classList.remove("hidden");
+                    menuBawah?.classList.add("flex");
+                    footer?.classList.remove("hidden");
+                    footer?.classList.add("flex");
+                    main?.classList.remove("hidden");
+
+                    sessionStorage.setItem("shownPreloader", "true");
+                }, 12000);
+            } else {
+                // Jika preloader sudah ditampilkan sebelumnya
+                preloader.classList.add("hidden");
+
+                header?.classList.remove("hidden");
+                header?.classList.add("flex");
+                menuKiri?.classList.remove("md:hidden");
+                menuKiri?.classList.add("md:flex");
+                menuBawah?.classList.remove("hidden");
+                menuBawah?.classList.add("flex");
+                main?.classList.remove("hidden");
+                footer?.classList.remove("hidden");
+                footer?.classList.add("flex");
+
+                // Tampilkan langsung animasi scroll
+                svgConime?.classList.remove("opacity-0");
+                containerScroll?.classList.remove("opacity-0");
+                containerScroll?.classList.add("animate-scroll");
+            }
+        } else {
+            preloader.classList.add("hidden");
+        }
+    });
+</script>
+-->
+
+

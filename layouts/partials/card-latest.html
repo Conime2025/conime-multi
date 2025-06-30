@@ -1,0 +1,61 @@
+{{ $page := .page }}
+{{ $i := .index }}
+
+<div
+    class="relative flex flex-col w-full h-[360px] p-[2px] rounded-3xl overflow-hidden z-10 shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20">
+    <div
+        class="absolute inset-0 bg-gradient-to-br hidden from-conime-400 via-white to-conime-400 dark:from-conime-500 dark:via-gray-900 dark:to-conime-500 animate-spin delay-500 transition ease-in-out !duration-[10000s] z-0">
+    </div>
+    <div class="label-new hidden opacity-0 w-fit h-fit transition duration-300 ease-in-out absolute left-0 top-0 z-20"
+        data-url="{{ $page.RelPermalink }}">
+        <div
+            class="absolute tracking-[.6em] lg:tracking-[.5em] -left-20 top-4 shadow-xl shadow-gray-950/20 dark:shadow-gray-950/30 w-60 bg-conime-500 dark:bg-conime-500 text-white p-2 text-xl uppercase font-light flex items-center justify-center z-20 -rotate-45">
+            New</div>
+    </div>
+    <div class="fire-new hidden opacity-0 absolute transition duration-300 ease-in-out right-4 top-4 z-20 bg-gray-950 dark:bg-gray-950 rounded-xl w-fit h-fit p-2"
+        data-url="{{ $page.RelPermalink }}">
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000" class="flex items-center justify-center relative" data-tippy-content="New">
+            <!-- SVG -->
+             <svg class="svg1 opacity-0 animate-flicker origin-top w-8 h-8" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.08276 7.34631C4.42101 10.2201 3.04884 21.1185 12.3482 22.2846C12.542 22.3089 12.7452 22.3112 12.9393 22.2889C17.0071 21.8218 19.4146 19.0421 19.775 16.6944C20.2591 13.5414 17.8068 10.5333 17.984 8.86273C17.9882 8.82288 17.9643 8.78431 17.9243 8.78284C17.3363 8.76127 16.382 10.5641 16.2107 11.2938C16.0681 11.9008 15.9136 11.8145 15.8542 11.6955C14.8829 9.83786 17.9367 4.82458 11.4455 2.34518C11.3793 2.31987 11.3133 2.3904 11.3403 2.45598C13.138 6.82601 9.08983 5.37561 8.99454 10.6133C8.99326 10.6838 8.91054 10.7234 8.86406 10.6704C8.12853 9.83194 8.10712 8.27747 8.20896 7.42276C8.21744 7.35158 8.13915 7.30206 8.08276 7.34631Z" fill="#FE5C15"></path>
+            </svg>
+            <svg class="svg3 opacity-0 animate-flicker origin-top absolute bottom-0 w-8 h-8" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.19933 12.0787C6.63969 13.975 6.82872 20.1146 12.5813 21.6431C12.8815 21.7229 13.198 21.7437 13.5052 21.6976C16.354 21.2701 18.0385 19.2806 18.2969 17.593C18.6571 15.2399 18.67 14.2568 17.5666 12.8141C17.5565 12.8008 17.5419 12.7905 17.5258 12.7862C17.121 12.6789 17.054 13.1135 16.7112 13.5908C16.4934 13.8941 16.2692 14.0302 16.0694 14.076C15.6072 14.1819 15.1763 13.7646 14.9299 13.3595C13.7955 11.4943 15.7462 7.99004 13.452 5.53191C13.4094 5.48631 13.3318 5.50854 13.315 5.56861C12.0538 10.0755 9.40844 8.25651 9.88282 14.3756C9.88853 14.4493 9.8027 14.4967 9.75133 14.4435C9.16803 13.8402 8.46769 12.7786 8.36744 12.1411C8.35541 12.0646 8.24852 12.0189 8.19933 12.0787Z" fill="#FE9514"></path>
+            </svg>
+            <svg class="svg5 opacity-0 animate-flicker origin-top absolute bottom-0 w-8 h-8" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.06972 14.8652C8.0085 18.4854 10.8548 20.3187 12.4106 20.7829C13.1476 20.7166 14.7492 20.0369 15.2602 17.8489C16.1311 14.1193 12.1158 12.9756 12.1158 9.79297C9.31538 11.7821 11.5263 14.716 10.7893 15.7603C10.1997 16.5958 9.39726 15.5117 9.06972 14.8652Z" fill="#FFD13A"></path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Bagian gambar -->
+    <a data-aos="fade-up" data-aos-delay="{{ mul $i 150 }}" data-aos-duration="2000"  href="{{ $page.RelPermalink }}" class="w-full h-[45%] rounded-xl z-10 overflow-hidden bg-cover">
+        {{ $img := $page.Params.image | default "/images/default.png" }}
+        <div class="w-full h-full">
+            <img loading="lazy" src="{{ $img }}" alt="Gambar {{ $page.Title }}"
+                class="w-full h-full left-0 top-0  object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+        </div>
+    </a>
+
+    <!-- Bagian teks -->
+    <div
+        class="w-full h-[55%] z-10 font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white hover:bg-gray-300 dark:bg-gray-950 hover:dark:bg-gray-900">
+
+        <h2 data-aos="fade-up" data-aos-delay="{{ mul $i 150 }}" data-aos-duration="2000" class="w-full h-fit line-clamp-3">
+            <a href="{{ $page.RelPermalink }}" class="hover:underline break-words h-50 text-2xl"
+                data-tippy-content="{{ $page.Title }}">{{ $page.Title }}</a>
+        </h2>
+
+        <h2 data-aos="fade-up" data-aos-delay="{{ mul $i 160 }}" data-aos-duration="2000" class="flex flex-wrap justify-between gap-4 text-sm line-clamp-1 uppercase">
+            {{ range $page.Params.categories }}
+            <a href="{{ " categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">
+                {{ . }}
+            </a>
+            {{ end }}
+        </h2>
+
+        <p data-aos="fade-up" data-aos-delay="{{ mul $i 170 }}" data-aos-duration="2000" class="absolute w-full bottom-4 pr-4 left-0 text-right justify-end z-10 text-xl h-fit flex gap-0">
+            <span>—</span>{{ partial "timeago.html" $page }}
+        </p>
+    </div>
+</div>

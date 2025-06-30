@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="{{ if .Site.Params.darkMode }}dark{{ end }}" lang="{{ .Site.LanguageCode | default "en" }}">
+
+
+<head>
+  {{ partial "head.html" . }}
+</head>
+
+<body data-page-type="{{ .Kind }}" class="flex flex-col demo-3
+  font-poppins text-base font-normal dark:font-light
+  inset-0 w-screen min-h-screen h-full
+  bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300
+  {{ if eq .Kind " 404" }} overflow-hidden {{ else }} overflow-y-auto overscroll-y-auto overflow-style-custom-y overflow-x-hidden {{ end }}
+  transition duration-300 ease-in-out">
+
+
+  {{ if eq .Kind "404" }}
+  {{ block "main" . }}{{ end }}
+  {{ else }}
+
+
+  {{ if eq .RelPermalink "/" }}
+  <!--Loading Animasi-->
+  <div id="loading-screen"
+    class="fixed inset-0 z-[999999] h-screen w-screen flex transition-opacity opacity-100 duration-1000 ease-in-out items-center justify-center bg-gray-100 dark:bg-gray-950">
+    <div class="gooey-container fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div class="dot dot1"></div>
+      <div class="dot dot2"></div>
+      <div class="dot dot3"></div>
+    </div>
+
+
+    <svg>
+      <filter id="gooey">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0
+              0 1 0 0 0
+              0 0 1 0 0
+              0 0 0 20 -10" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+      </filter>
+    </svg>
+  </div>
+  <!--Loading Animasi end-->
+  {{ end }}
+
+  <header
+    class="w-full z-[1000] max-h-20 h-20 {{ if .IsHome }}hidden{{ else }}flex{{ end }} fixed left-0 top-0 right-0  bg-white/50 dark:bg-gray-900/70   lg:bg-white/50 lg:dark:bg-gray-900/80 backdrop-blur-lg  text-gray-800 dark:text-gray-300 transition duration-300 ease-in-out px-6 sm:24 lg:px-[15%] py-2 lg:py-4 flex-row justify-between items-center">
+    {{ partial "header.html" . }}
+  </header>
+
+  <div class="flex gap-2 w-screen h-auto relative">
+    <!-- Main menu -->
+    <div id="main-menu" class="fixed lg:top-20 bottom-0 left-0 z-[999]
+         lg:w-[20%] xl:w-[15%] w-full h-fit lg:h-[calc(100vh-theme(space.40))]
+         bg-white/50 dark:bg-gray-900/70 lg:bg-white/50 lg:dark:bg-gray-900/80
+         backdrop-blur-lg lg:backdrop-blur-none
+         border-r border-gray-300 dark:border-gray-800/50
+         flex flex-row lg:flex-col justify-center items-center
+         {{ if .IsHome }}hidden{{ else }}flex{{ end }}">
+
+      {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+      {{ partial "notif-modal.html" . }}
+      {{ partial "notif-modal copy.html" . }}
+    </div>
+    <!-- Konten Utama -->
+    <main
+      class="overflow-hidden relative mt-20 ml-0 lg:ml-[20%] xl:ml-[15%] p-3 sm:px-16 md:px-16 lg:px-20 h-fit min-h-screen-20 w-full lg:w-[85%]">
+
+      <div id="fb-root"></div>
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0"
+        nonce="YourNonceValue"></script>
+      {{ block "main" . }}{{ end }}
+
+    </main>
+  </div>
+
+
+  <!-- SearchModal -->
+  {{ partial "search-modal.html" . }}
+
+
+  {{ if .IsHome }}
+  <script type="application/json" id="post-metadata">
+[
+{{- $pages := where .Site.RegularPages "Section" "posts" -}}
+{{- range $i, $page := $pages }}
+  {{- if gt $i 0 }},{{ end }}
+  {
+    "permalink": "{{ $page.RelPermalink }}",
+    "title": {{ $page.Title | jsonify }},
+    "image": "{{ $page.Params.image | default "/images/default.png" }}"
+  }
+{{- end }}
+]
+</script>
+  {{ end }}
+
+  <footer
+  class="text-sm ml-0 sm:ml-auto mx-auto lg:ml-[20%] xl:ml-[15%] mt-12 sm:mt-6 {{ if .IsHome }}hidden{{ else }}block{{ end }} relative text-gray-800 dark:text-gray-300 transition duration-300 ease-in-out px-4 sm:px-6 lg:px-32">
+
+  <div class="z-10 border-t border-conime-400 dark:border-conime-500 py-6 sm:py-8">
+
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-6">
+
+      <!-- Menu -->
+      <div class="lg:col-span-2">
+        <div class="flex flex-col space-y-1">
+          {{ partial "menu-footer.html" (dict "menuID" "main" "page" .) }}
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" class="lg:col-span-2">
+        <p class="text-start max-w-prose">
+          All names, logos, images, and trademarks belong to their respective owners.
+          Images used on this site are for informational and editorial purposes only.
+          No copyright infringement intended.
+        </p>
+      </div>
+
+    </div>
+
+    {{ partial "footer.html" . }}
+
+  </div>
+</footer>
+
+
+  {{ end }}
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!--RELATED AUTO-->
+{{ $currentPage := .Page }}
+
+{{ $categories := slice }}
+{{ with $currentPage.Params.categories }}
+{{ $categories = . }}
+{{ end }}
+
+{{ $tags := slice }}
+{{ with $currentPage.Params.tags }}
+{{ $tags = . }}
+{{ end }}
+
+{{ $relatedByCat := slice }}
+{{ $relatedByTag := slice }}
+
+{{ if gt (len $categories) 0 }}
+{{ $relatedByCat = where site.RegularPages "Params.categories" "intersect" $categories }}
+{{ end }}
+
+{{ if gt (len $tags) 0 }}
+{{ $relatedByTag = where site.RegularPages "Params.tags" "intersect" $tags }}
+{{ end }}
+
+{{ $relatedCombined := union $relatedByCat $relatedByTag | uniq }}
+{{ $relatedFiltered := where $relatedCombined "RelPermalink" "ne" $currentPage.RelPermalink }}
+
+{{ if ge (len $relatedFiltered) 2 }}
+<div class="border-l-4 border-conime-500 dark:border-conime-500 pl-4 text-gray-700 dark:text-gray-300 my-4">
+  <div class="h-full p-0">
+    <p class="font-medium my-0">Also read:</p>
+    {{ $second := index $relatedFiltered 1 }}
+    <a href="{{ $second.RelPermalink }}" data-tippy-content="Baca juga: '{{ $second.Title }}'"
+      class="text-conime-400 dark:text-conime-500 font-normal dark:font-light hover:underline line-clamp-2">
+      {{ $second.Title }}
+    </a>
+  </div>
+</div>
+{{ end }}
+
+
+
+<!-- KESIMPULAN -->
+{{ with .Page.Params.conclusion }}
+<h2 class="font-medium uppercase tracking-wide">Kesimpulan :</h2>
+<div class="border-l-4 border-gray-400 dark:border-gray-600 pl-4 italic text-gray-700 dark:text-gray-300 my-4 [&>p]:my-3">
+  {{ . | safeHTML }}
+</div>
+{{ end }}
+
+{{ $categories := .Page.Params.categories }}
+{{ $name := "" }}
+{{ $action := "" }}
+
+
+{{ if in $categories "Anime" }}
+  {{ $name = .Page.Params.nameAnime }}
+  {{ $action = "tonton" }}
+{{ else if in $categories "Film" }}
+  {{ $name = .Page.Params.nameMovie }}
+  {{ $action = "tonton" }}
+{{ else if in $categories "Game" }}
+  {{ $name = .Page.Params.nameGame }}
+  {{ $action = "mainkan" }}
+{{ else if in $categories "Manga" }}
+  {{ $name = .Page.Params.nameComic }}
+  {{ $action = "baca" }}
+{{ else if in $categories "Komik" }}
+  {{ $name = .Page.Params.nameComic }}
+  {{ $action = "baca" }}
+{{ else }}
+  {{ $name = "" }}
+  {{ $action = "" }}
+{{ end }}
+
+{{ if and $action $name }}
+<p class="my-4 font-medium dark:font-light">
+  Ikuti terus <span class="text-conime-500">{{ .Site.Title }}</span> untuk berita dan ulasan terbaru, dan {{ $action }} <span class="italic">{{ $name }}</span> di platform resmi favoritmu!
+</p>
+{{ else }}
+<p class="my-4 font-medium dark:font-light">
+  Ikuti terus <span class="text-conime-500">{{ .Site.Title }}</span> untuk berita dan ulasan terbaru, dan nikmati konten favoritmu di platform resmi pilihanmu!
+</p>
+{{ end }}
+
+
+{{ with .Page.Params.sources }}
+<p class="mb-4 italic font-normal dark:font-light">
+  Beberapa informasi dalam ulasan ini merujuk pada
+  {{ $total := len . }}
+  {{ range $index, $source := . }}
+  {{ if gt $index 0 }}
+  {{ if eq $index (sub $total 1) }} dan {{ else }}, {{ end }}
+  {{ end }}
+  <a href="{{ $source.url }}" target="_blank" data-tippy-content="{{ $source.url }}"
+    class="hover:underline underline-offset-4 hover:text-conime-400 hover:dark:text-conime-500 inline" rel="noopener noreferrer">{{ $source.name }}</a>
+  {{ end }}.
+</p>
+{{ end }}
+
+<!-- VIDEO TERKAIT -->
+{{ with .Page.Params.videos }}
+{{ range . }}
+<div class="w-full h-fit flex flex-col mb-4 bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm rounded-3xl">
+  <iframe width="auto" height="315px" src="{{ .url | safeURL }}" data-tippy-content="Tonton {{ .title | default "YouTube video player" }}" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  </iframe>
+  {{ with .title }}
+  <p class="text-sm text-left font-light dark:font-extralight italic noMy mt-2 px-4">{{ . }}</p>
+  {{ end }}
+  {{ with .source }}
+  <p class="text-sm text-left font-light dark:font-extralight italic noMy mb-2 px-4">Source Video: {{ . }}</p>
+  {{ end }}
+</div>
+{{ end }}
+{{ end }}

@@ -1,0 +1,32 @@
+{{- $page := .page }}
+{{- range .menuEntries }}
+{{- $attrs := dict "href" .URL }}
+{{- if $page.IsMenuCurrent .Menu . }}
+{{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
+{{- else if $page.HasMenuCurrent .Menu . }}
+{{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
+{{- end }}
+
+{{- $name := .Name }}
+{{- with .Identifier }}
+{{- with T . }}
+{{- $name = . }}
+{{- end }}
+{{- end }}
+
+<li data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000" class="group relative w-full flex justify-start items-center m-0 md:m-1">
+  <a class="bg-white/0 text-gray-700 dark:text-gray-400 transition-colors duration-500 ease-in-out"
+    {{- range $k, $v :=$attrs }} {{- with $v }} {{- printf " %s=%q" $k $v | safeHTMLAttr }} {{- end }} {{- end }}>
+    <span
+      class="w-fit p-2 text-sm text-gray-700 dark:text-gray-400 group-hover:text-conime-400 group-hover:dark:text-conime-500 transition duration-500 ease-in-out">
+      {{ $name }}
+    </span>
+  </a>
+
+  {{- with .Children }}
+  <ul>
+    {{- partial "inline/menu/walkfooter.html" (dict "page" $page "menuEntries" .) }}
+  </ul>
+  {{- end }}
+</li>
+{{- end }}

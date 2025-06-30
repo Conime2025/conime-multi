@@ -1,0 +1,5 @@
+{{ $date := or .Date .PublishDate .Lastmod }}
+
+<time class="font-light dark:font-extralight text-xl uppercase" datetime="{{ $date | time.Format "2006-01-02T15:04:05-07:00" }}">
+  {{ $date.Format "02.01.2006" }}
+</time>

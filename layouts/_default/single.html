@@ -1,0 +1,154 @@
+{{ define "main" }}
+{{ $path := .RelPermalink }}
+{{ $isPage := in (slice "/about-us/" "/contact/" "/privacy-policy/" "/terms-of-service/" "/disclaimer/") $path }}
+
+{{ if $isPage }}
+  <!-- Layout untuk halaman statis (About, Contact, dll.) -->
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <article class="prose lg:prose-xl max-w-none w-full">
+      <h1 class="text-3xl mb-4">{{ .Title }}</h1>
+      <div class="content-article leading-8 font-normal dark:font-light">
+        {{ .Content }}
+      </div>
+    </article>
+  </main>
+
+{{ else }}
+  <!-- Layout untuk posts (artikel berita/review) -->
+  <div class="relative rounded-xl mx-auto py-4 grid grid-cols-1 lg:grid-cols-12 gap-4">
+
+    <main class="col-span-12 lg:col-span-8 w-full">
+      <article class="prose lg:prose-xl max-w-none w-full">
+        <h1 class="text-2xl mb-2 post-title md:mb-2">{{ .Title }}</h1>
+
+        <!-- Info Meta Artikel -->
+        <div class="text-lg flex flex-row items-end justify-between font-light dark:font-extralight text-gray-700 dark:text-gray-600 mb-4">
+          <div class="flex w-fit flex-col justify-start items-start">
+            <label class="flex flex-row text-sm items-center">
+              <h2 class="flex justify-between gap-4 flex-1 line-clamp-1 uppercase">
+                {{ range .Params.categories }}
+                  <a href="{{ "categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline hover:text-conime-400 dark:hover:text-conime-500">
+                    {{ . }}
+                  </a>
+                {{ end }}
+              </h2>
+            </label>
+            <div class="flex flex-row w-full text-sm gap-2 justify-between items-center">
+              <span class="flex flex-row justify-center items-center gap-2">
+                <span>{{ partial "author.html" . }}</span>
+                <span class="hidden md:inline-block">|</span>
+                {{ partial "date.html" . }}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Share Modal -->
+        <div class="border-b border-gray-300 dark:border-gray-800/50">
+          {{ partial "share-modal.html" . }}
+        </div>
+
+        <!-- SINOPSIS / RINGKASAN -->
+        {{ if .Page.Params.synopsis }}
+          <div class="italic font-normal dark:font-light leading-8 [&>p]:my-3 mb-4">
+            <p>{{ .Page.Params.synopsis | safeHTML }}</p>
+          </div>
+        {{ end }}
+
+        <!-- Gambar Utama -->
+        {{ with .Params.image }}
+          <figure class="w-full flex-col mb-4 bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm rounded-3xl">
+            <img src="{{ . | relURL }}" alt="Gambar {{ $.Title }}" class="post-img h-96 sm:h-auto w-full rounded-3xl object-cover" />
+            <figcaption class="text-sm font-light dark:font-extralight text-left italic flex flex-wrap gap-2 px-4 py-4">
+              {{ with $.Params.imageSources }}
+              <span>
+                Image:
+                {{ $total := len . }}
+                {{ range $index, $source := . }}
+                  {{ if and (gt $index 0) (eq $index (sub $total 1)) }} and {{ else if gt $index 0 }},             {{ end }}
+                  <a href="{{ $source.url }}" class="hover:underline underline-offset-4             hover:text-conime-400 hover:dark:text-conime-500 inline" target="_blank" rel="noopener             noreferrer">{{ $source.name }}</a>
+                {{ end }}. Used for editorial purposes only.
+                {{ else }}
+                  <span>Image used for illustration purposes only.</span>
+        {{ end }}
+
+            </figcaption>
+          </figure>
+        {{ end }}
+
+
+<div class="mt-4 mb-6 w-full">
+  {{ with .Params.twitterEmbed }}
+    {{ $tw := trim . " " }}
+    {{ if ne $tw "" }}
+      {{ with $.Params.twitterEmbedTitle }}
+        {{ $twTitle := trim . " " }}
+        {{ if ne $twTitle "" }}
+          <h3 class="mb-2">{{ $twTitle }}</h3>
+        {{ end }}
+      {{ end }}
+      <blockquote class="twitter-tweet">
+        <a href="{{ $tw }}"></a>
+      </blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    {{ end }}
+  {{ end }}
+
+  {{ with .Params.instagramEmbed }}
+    {{ $ig := trim . " " }}
+    {{ if ne $ig "" }}
+      {{ with $.Params.instagramEmbedTitle }}
+        {{ $igTitle := trim . " " }}
+        {{ if ne $igTitle "" }}
+          <h3 class="mb-2">{{ $igTitle }}</h3>
+        {{ end }}
+      {{ end }}
+      <blockquote class="instagram-media" data-instgrm-permalink="{{ $ig }}" data-instgrm-version="14"></blockquote>
+      <script async defer src="//www.instagram.com/embed.js"></script>
+    {{ end }}
+  {{ end }}
+</div>
+
+
+        <!-- Konten Artikel -->
+        <div class="flex flex-col">
+          <div class="content-article leading-8 font-normal dark:font-light mb-6">
+            {{ .Content }}
+          </div>
+        </div>
+
+        <!-- Terms -->
+        <div class="pb-4 mb-2">
+          {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+        </div>
+
+        <!-- Share Modal bawah -->
+        <div class="border-t border-gray-300 dark:border-gray-800/50">
+          {{ partial "share-modal.html" . }}
+        </div>
+      </article>
+
+      <!-- Komentar & Related -->
+      <section class="mt-4 md:mt-6 w-full pt-6">
+        {{ partial "comments.html" . }}
+        {{ partial "related-articles.html" . }}
+      </section>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="col-span-12 w-full lg:col-span-4 space-y-8 py-6 md:py-0">
+      {{ partial "last-viewed.html" . }}
+      {{ partial "popular.html" . }}
+      {{ partial "suggested.html" . }}
+      {{ partial "categories.html" . }}
+      {{ partial "popular-tags.html" . }}
+      {{ partial "newsletter.html" . }}
+    </aside>
+  </div>
+{{ end }}
+
+<script>
+  const slug = "{{ .RelPermalink }}";
+  localStorage.setItem("notif-read:" + slug, "true");
+</script>
+{{ end }}

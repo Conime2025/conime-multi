@@ -1,0 +1,76 @@
+<!-- Charset & Viewport -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+
+<!-- Theme Color -->
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+<!-- Meta Description & Robots -->
+<meta name="description" content="{{ with .Params.summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+<meta name="robots" content="index, follow">
+
+<!-- Title -->
+<title>
+  {{ if .IsHome }}
+  {{ site.Title }} - Portal Berita Pop Culture Indonesia
+  {{ else }}
+  {{ .Title }} - {{ site.Title }}
+  {{ end }}
+</title>
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }} - Portal Berita Pop Culture Indonesia{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}">
+<meta property="og:description" content="{{ with .Params.summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+<meta property="og:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "/images/logo_conime.og.png" | absURL }}{{ end }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }} - Portal Berita Pop Culture Indonesia{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}">
+<meta name="twitter:description" content="{{ with .Params.summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+<meta name="twitter:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "/images/logo_conime.og.png" | absURL }}{{ end }}">
+<meta name="twitter:url" content="{{ .Permalink }}">
+
+<!-- Dark mode class preload -->
+<script>
+  try {
+    const darkPref = localStorage.getItem("darkmode");
+    if (darkPref === null || darkPref === "true") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  } catch (e) {}
+</script>
+
+
+<!-- CSS -->
+{{ $css := resources.Get "css/main.css" }}
+{{ if $css }}
+  {{ if eq hugo.Environment "development" }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  {{ else }}
+    {{ $css = $css | resources.PostCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+  {{ end }}
+{{ else }}
+  {{ warnf "❌ File css/main.css tidak ditemukan!" }}
+{{ end }}
+
+<!-- Ikon -->
+<link rel="icon" href="/images/logo_conime_square.png" type="image/png">
+<link rel="apple-touch-icon" href="/images/logo_conime_square.png">
+<link rel="shortcut icon" href="/images/logo_conime_square.png">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+
+

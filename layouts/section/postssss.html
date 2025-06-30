@@ -1,0 +1,20 @@
+
+{{ define "main" }}
+<!-- layouts/section/posts.html -->
+<h1 class="text-2xl font-bold mb-4">📰 Semua Artikel</h1>
+
+{{ $posts := where site.RegularPages "Section" "posts"  }}
+{{ $sorted := sort $posts "Date" "desc" }}
+
+<p>Total ditemukan: {{ len $sorted }}</p>
+
+<ul class="space-y-6">
+  {{ range $sorted }}
+    <li>
+      <a href="{{ .RelPermalink }}" class="text-lg font-medium hover:underline">{{ .Title }}</a>
+      <p class="text-sm text-gray-500">{{ .Section }} · {{ .Date.Format "02 Jan 2006" }}</p>
+    </li>
+  {{ end }}
+</ul> 
+
+{{ end }} 

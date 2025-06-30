@@ -1,0 +1,14 @@
+{{ with . }}
+
+ <div
+        class="except mt-8 fb-comments-wrapper h-fit w-full bg-white dark:bg-gray-900/30 md:dark:bg-gray-950/50 backdrop-blur-sm md:dark:bg-gray-950    border p-4 rounded">
+
+        <h2 class="text-xl uppercase font-medium mb-4">Komentar</h2>
+        <!-- Komentar (placeholder) -->
+        <div class="fb-comments text-gray-600 italic mt-8   w-full h-fit" data-href="{{ .Permalink }}"
+          data-width="100%" data-numposts="5">
+        </div>
+
+      </div>
+
+{{ end }}

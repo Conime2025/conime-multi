@@ -1,0 +1,25 @@
+{{ with . }}
+<div class="flex text-gray-800 dark:text-gray-300 justify-evenly items-center gap-4 md:gap-3 px-2 my-2">
+  {{ range site.Params.share }}
+  {{ $url := "" }}
+  {{ if eq .name "Facebook" }}
+    {{ $url = printf "%s%s" .link ($.Permalink | urlquery) }}
+  {{ else if eq .name "WhatsApp" }}
+    {{ $url = printf "%s%s%%0A%s" .link ($.Title | urlquery) ($.Permalink | urlquery) }}
+  {{ else if eq .name "Telegram" }}
+    {{ $url = printf "%s%s&text=%s" .link ($.Permalink | urlquery) ($.Title | urlquery) }}
+  {{ else if eq .name "X" }}
+    {{ $url = printf "%s%s&text=%s" .link ($.Permalink | urlquery) ($.Title | urlquery) }}
+  {{ else if eq .name "Email" }}
+    {{ $url = printf "%s%s&body=%s" .link ($.Title | urlquery) ($.Permalink | urlquery) }}
+  {{ end }}
+
+
+    <a href="{{ $url }}" target="_blank" rel="noopener" class="flex flex-col items-center text-xs" data-tippy-content="Share to {{ .name }}">
+      <div class="relative p-3 group  group/tooltip  bg-gray-200/0 hover:bg-gray-300 dark:bg-gray-950/0 hover:dark:bg-gray-800/50 backdrop-blur-sm   transition duration-500 ease-in-out rounded-xl hover:text-conime-500 text-gray-700 dark:text-gray-400 hover:dark:text-conime-500">
+       <div class="group-hover:scale-110 transition duration-500 ease-in-out"> {{ .svg | safeHTML }}</div>
+      </div> 
+    </a>
+  {{ end }}
+</div>
+{{ end }}

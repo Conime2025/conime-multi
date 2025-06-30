@@ -1,0 +1,32 @@
+{{- $image := .Get "src" -}}
+{{- $alt := .Get "alt" | default "Gambar" -}}
+{{- $sources := .Get "sources" | default "" -}}
+{{- $studio := .Get "studio" | default "" -}}
+
+<figure class="w-full flex flex-col my-4 bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm rounded-3xl overflow-hidden">
+  {{ if not $image }}
+    <img src="/images/default.png" alt="{{ $alt }}" class="post-img h-96 w-full rounded-t-3xl object-cover" />
+  {{ end }}
+  <img src="{{ $image | relURL }}" alt="{{ $alt }}" class="post-img  h-96 w-full rounded-3xl  object-cover" />
+  <figcaption class="text-sm font-light dark:font-extralight text-left italic flex gap-2 px-4 py-4">
+    Image:
+    {{ if $sources }}
+      {{ $list := split $sources ";" }}
+      {{ range $index, $item := $list }}
+        {{ $pair := split $item "," }}
+        {{ $name := index $pair 0 }}
+        {{ $url := index $pair 1 }}
+        {{ if gt $index 0 }}, {{ end }}
+        <span>
+        <a href="{{ $url }}" target="_blank" data-tippy-content="{{ $url }}"
+          class="hover:underline underline-offset-4 hover:text-conime-400 hover:dark:text-conime-500 inline"
+          rel="noopener noreferrer">{{ $name }}</a> {{ end }}
+    {{ end }}.
+    {{ if $studio }}
+      Image © Studio {{ $studio }}.
+    {{ end }}
+    Used for editorial purposes only.
+    </span>
+  </figcaption>
+
+</figure>

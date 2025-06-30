@@ -1,0 +1,19 @@
+{{ $current := .Page }}
+{{ $duplicates := where (where site.RegularPages "Slug" $current.Slug) "Permalink" "ne" $current.Permalink }}
+
+{{ if gt (len $duplicates) 0 }}
+  <div class="border border-rose-600 p-4 text-rose-600 m-4" >
+    ⚠️ Warning: Duplicate slug detected!
+    <br>
+    Current slug: <strong>{{ $current.Slug }}</strong>
+    <br>
+    Found {{ len $duplicates }} duplicate(s):
+    <ul>
+      {{ range $duplicates }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a> ({{ .File.Path }})</li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ else }}
+  <p>Semua aman</p>
+{{ end }}

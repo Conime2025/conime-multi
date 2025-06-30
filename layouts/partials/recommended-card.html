@@ -1,0 +1,41 @@
+{{ with .page }}
+<div class="absolute group flex hover:z-[99] transform transition duration-700 ease-in-out hover:scale-105 {{ $.position }} {{ $.rotate }} justify-center w-full lg:w-[680px] h-[680px] lg:h-[500px] py-4">
+
+  <div
+    class="w-[80%] z-0 h-12 bg-gray-950/50 group-hover:bg-gray-950/70 group-hover:dark:bg-gray-950 transform transition duration-500 ease-in-out blur-lg rounded-full overflow-hidden absolute bottom-1 left-1/2 -translate-x-1/2">
+  </div>
+  <div data-aos="slide-up" data-aos-delay="500" data-aos-duration="2000" class="flex flex-col w-full lg:w-[680px] h-full rounded-3xl overflow-hidden z-10">
+    <!-- Bagian gambar -->
+    <a href="{{ .RelPermalink }}" class="h-[60%] w-full overflow-hidden bg-cover">
+      {{ $img1 := .Params.image | default "/images/default.png" | relURL }}
+      {{ $img2 := .Params.image2 | default $img1 | relURL }}
+      <div class="h-full w-full overflow-hidden bg-cover" data-image1="{{ $img1 }}"
+        data-image2="{{ $img2 }}">
+        <img src="{{ $img1 }}" alt="Gambar {{ .Title }}"
+          class="w-full h-full left-0 top-0  image-distor image1 object-cover brightness-75 hover:brightness-100 transition duration-300"/>
+
+      </div>
+    </a>
+
+    <!-- Bagian teks -->
+    <div
+      class="relative h-[40%] font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-gradient-to-br from-white dark:from-gray-900 from-0% via-gray-50 dark:via-gray-950 via-70% to-gray-300 dark:to-gray-950 to-100%">
+      <h2 data-aos="fade-up" data-aos-delay="600" data-aos-duration="1600" class="w-full">
+        <a href="{{ .RelPermalink }}" class="hover:underline text-2xl md:text-3xl line-clamp-4" data-tippy-content="{{ .Title }}">{{
+          .Title }}</a>
+      </h2>
+      <h2 data-aos="fade-up" data-aos-delay="800" data-aos-duration="2000" class="flex justify-between h-full gap-4 text-sm line-clamp-1 uppercase">
+        {{ range .Params.categories }}
+        <a href="{{ " categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">
+          {{ . }}
+        </a>
+        {{ end }}
+      </h2>
+      <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" class="absolute bottom-4 right-6 z-10 text-xl h-fit flex gap-0"><span>—</span>{{ partial "dateNew.html" . }}
+      </p>
+
+    </div>
+  </div>
+</div>
+
+{{ end }}

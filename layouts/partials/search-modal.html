@@ -1,0 +1,33 @@
+{{ with . }}
+
+ <div id="searchModal"
+    class="fixed  hidden    left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-white dark:bg-gray-900 text-gray-800 dark:text-white p-6 md:p-12 rounded-2xl w-[320px] md:w-[440px] shadow-none md:shadow-xl  shadow-gray-950/10 lg:shadow-gray-950/20   ">
+
+
+    <!-- Kolom link dan salin -->
+    <div id="searchModalContent"
+      class="flex  text-gray-300  bg-white dark:bg-gray-950  rounded-lg overflow-hidden">
+      <input type="text" id="searchInput" placeholder="Search..."
+        class="bg-gray-300 dark:bg-gray-900 placeholder:text-gray-700 placeholder:dark:text-gray-300 text-gray-900  dark:text-white px-3 py-2 w-full text-sm outline-none " />
+      <button id="letsSearch" onclick="search()" class="bg-conime-400 dark:bg-conime-500 hover:dark:bg-conime-500 text-white hover:bg-conime-600 text-sm px-2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11 20C15.9706 20 20 15.9706 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20Z"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M18.9299 20.6898C19.4599 22.2898 20.6699 22.4498 21.5999 21.0498C22.4499 19.7698 21.8899 18.7198 20.3499 18.7198C19.2099 18.7098 18.5699 19.5998 18.9299 20.6898Z"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+      </button>
+    </div>
+    <div class="mt-2 p-2">
+      Search results...
+      <div id="searchResults" class="flex flex-col font-normal gap-2 mt-2 ">
+
+      </div>
+    </div>
+
+  </div>
+
+{{ end }}

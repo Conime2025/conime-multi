@@ -1,0 +1,38 @@
+{{ $currentPage := .Page }}
+
+{{ $categories := slice }}
+{{ with $currentPage.Params.categories }}
+  {{ $categories = . }}
+{{ end }}
+
+{{ $tags := slice }}
+{{ with $currentPage.Params.tags }}
+  {{ $tags = . }}
+{{ end }}
+
+{{ $relatedByCat := slice }}
+{{ $relatedByTag := slice }}
+
+{{ if gt (len $categories) 0 }}
+  {{ $relatedByCat = where site.RegularPages "Params.categories" "intersect" $categories }}
+{{ end }}
+
+{{ if gt (len $tags) 0 }}
+  {{ $relatedByTag = where site.RegularPages "Params.tags" "intersect" $tags }}
+{{ end }}
+
+{{ $relatedCombined := union $relatedByCat $relatedByTag | uniq }}
+{{ $relatedFiltered := where $relatedCombined "RelPermalink" "ne" $currentPage.RelPermalink }}
+
+{{ if gt (len $relatedFiltered) 0 }}
+  <div class="border-l-4 border-conime-500 dark:border-conime-500 pl-4 text-gray-700 dark:text-gray-300 my-4">
+    <div class="h-full p-0">
+      <p class="font-medium my-0">Also read:</p>
+    {{ range first 1 $relatedFiltered }}
+      <a href="{{ .RelPermalink }}"  data-tippy-content="Baca juga: '{{ .Title }}'" class="text-conime-400 dark:text-conime-500 font-normal dark:font-light hover:underline line-clamp-2">
+        {{ .Title }}
+      </a>
+    {{ end }}
+    </div>
+  </div>
+{{ end }}

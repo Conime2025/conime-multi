@@ -1,0 +1,9 @@
+{{- /* Renders the 'footer' menu. Usage: {{ partial "menu-footer.html" (dict
+"page" .) }} */}} {{- $page := .page }} {{- with site.Menus.footer }}
+<nav>
+  <ul class="grid grid-cols-2 md:grid-cols-3 gap-2 py-2 md:gap-0">
+    {{- partial "inline/menu/walkfooter.html" (dict "page" $page "menuEntries"
+    .) }}
+  </ul>
+</nav>
+{{- end }}

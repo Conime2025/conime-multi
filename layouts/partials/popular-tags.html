@@ -1,0 +1,21 @@
+{{ with . }}
+
+{{ if gt (len site.Taxonomies.tags) 0 }}
+<div>
+  <h2 class="text-xl uppercase tracking-[.3em] lg:tracking-[.4em]  border-b border-gray-300 dark:border-gray-800/50 pb-2 mb-4">
+    Tags Populer
+  </h2>
+  <ul class="flex flex-wrap gap-2 justify-start items-center">
+    {{ range first 10 site.Taxonomies.tags.ByCount }}
+    <li class="mb-2">
+      <a href="{{ "/tags/" | relLangURL }}{{ .Name | urlize }}"
+        class="capitalize px-2 py-1 text-conime-400 dark:text-conime-500 bg-conime-100 dark:bg-gray-950/20 rounded hover:underline text-lg font-light dark:font-extralight transition duration-300 ease-in-out">
+        {{ .Name }} ({{ .Count }})
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
+
+{{ end }}

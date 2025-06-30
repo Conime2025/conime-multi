@@ -1,0 +1,48 @@
+{{ $type := "" }}
+{{ $sections := slice "anime" "movies" "comics" "games" }}
+
+{{ with .File }}
+  {{ $path := replace .Path "\\" "/" }}
+  {{ range $sections }}
+    {{ if strings.HasPrefix $path (printf "posts/%s/" .) }}
+      {{ $type = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if $type }}
+  {{ $basePath := printf "images/%s" $type }}
+  {{ $fullPath := printf "static/%s" $basePath }}
+  {{ $imgURL := printf "/%s" $basePath }}
+
+  {{ with readDir $fullPath }}
+    {{ if gt (len .) 0 }}
+      <!-- SLIDESHOW -->
+      <div class="relative w-full h-[420px] overflow-hidden slideshow transition duration-500 ease-in-out">
+        {{ range . }}
+          <img src="{{ printf "%s/%s" $imgURL .Name | safeURL }}" alt="Gambar {{ $.Title }}"
+               class="absolute w-full h-full object-cover slide-img opacity-0 group-hover:opacity-0 translate-x-full transition-all duration-700" />
+        {{ end }}
+        <div class="absolute w-full h-full inset-0 bg-gradient-to-t from-white dark:from-gray-900 via-transparent to-white/70 dark:to-gray-900/70 z-10"></div>
+      </div>
+    {{ else }}
+      <!-- FOLDER ADA TAPI KOSONG -->
+      <div class="relative w-full h-[420px] overflow-hidden transition duration-500 ease-in-out">
+        <img src="/images/default.png" alt="Gambar default" class="w-full h-full  object-cover" />
+        <div class="absolute w-full h-full inset-0 bg-gradient-to-t from-white dark:from-gray-900 via-transparent to-white/70 dark:to-gray-900/70 z-10"></div>
+      </div>
+    {{ end }}
+  {{ else }}
+    <!-- FOLDER TIDAK ADA -->
+    <div class="relative w-full h-[420px] overflow-hidden transition duration-500 ease-in-out">
+      <img src="/images/default.png" alt="Gambar default" class="w-full h-full object-cover" />
+      <div class="absolute w-full h-full inset-0 bg-gradient-to-t from-white dark:from-gray-900 via-transparent to-white/70 dark:to-gray-900/70 z-10"></div>
+    </div>
+  {{ end }}
+{{ else }}
+  <!-- BUKAN DARI SECTION TERDETEKSI -->
+  <div class="relative w-full h-[420px] overflow-hidden transition duration-500 ease-in-out">
+    <img src="/images/default.png" alt="Gambar default" class="w-full h-full object-cover" />
+    <div class="absolute w-full h-full inset-0 bg-gradient-to-t from-white dark:from-gray-900 via-transparent to-white/70 dark:to-gray-900/70 z-10"></div>
+  </div>
+{{ end }}

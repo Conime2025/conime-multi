@@ -1,0 +1,176 @@
+<div data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000" class="col-span-1 col-span-2 p-4 w-full text-center border-t border-gray-300 dark:border-gray-800/50 mb-[16%] lg:mb-[5%]">
+  <p>&copy; Copyright {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
+</div>
+{{ if ne .Kind "404" }}
+  {{ partial "notif-data.html" . }}
+{{ end }}
+
+{{ if eq hugo.Environment "development" }}
+  {{ partial "_safelist.html" . }}
+{{ end }}
+
+<noscript>
+  <style>
+    .divDistortion::before {
+      content: "⚠️ Hover effect nonaktif (JavaScript diperlukan)";
+      display: block;
+      padding: 1rem;
+      color: #999;
+      font-size: 0.9rem;
+      text-align: center;
+      background: #f0f0f0;
+    }
+    .divDistortion img, [data-aos] {
+      opacity: 1 !important;
+      transform: none !important;
+      filter: none !important;
+    }
+  </style>
+</noscript>
+
+<!-- Umami Analytics -->
+<script defer src="https://cloud.umami.is/script.js" data-website-id="fabe1eb6-5122-4712-b095-5ec2ab778540"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+  duration: 1200,  // semua elemen default 1200ms
+  delay: 0,
+  once: true,
+});
+
+</script>
+
+
+<!-- ============= LIBRARY EXTERNAL ============= -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script defer>
+  tippy('[data-tippy-content]');
+</script>
+
+{{ $three := resources.Get "js/three.min.js" | resources.Minify }}
+<script src="{{ $three.RelPermalink }}" defer></script>
+
+{{ $gsap := resources.Get "js/gsap.min.js" | resources.Minify }}
+<script src="{{ $gsap.RelPermalink }}" defer></script>
+
+{{ $hoverUMD := resources.Get "js/hover-effect.umd.js" | resources.Minify }}
+<script src="{{ $hoverUMD.RelPermalink }}" defer></script>
+
+
+<!-- ============= MAIN BUNDLE UNTUK SEMUA HALAMAN ============= -->
+{{ $main := resources.Get "js/main.js" | resources.Minify }}
+<script src="{{ $main.RelPermalink }}" defer></script>
+
+{{ $notif := resources.Get "js/notif.js" | resources.Minify }}
+<script src="{{ $notif.RelPermalink }}" defer></script>
+
+{{ $last := resources.Get "js/last-view.js" | resources.Minify }}
+<script src="{{ $last.RelPermalink }}" defer></script>
+
+
+<!-- ============= KHUSUS HOMEPAGE ============= -->
+{{ if eq .RelPermalink "/" }}
+  {{ $loading := resources.Get "js/loading-animation.js" | resources.Minify }}
+  <script src="{{ $loading.RelPermalink }}" defer></script>
+
+
+{{ end }}
+ {{ $hoverInit := resources.Get "js/hover-init.js" | resources.Minify }}
+  <script src="{{ $hoverInit.RelPermalink }}" defer></script>
+
+<!-- Inisialisasi Tippy untuk SEMUA elemen -->
+<script>
+  tippy('[data-tippy-content]');
+</script>
+{{ if hugo.IsServer }}
+<!--
+
+<script>
+ const postData = document.getElementById('post-metadata');
+const posts = postData ? JSON.parse(postData.textContent.replace(/\\\//g, '/')) : [];
+
+const getMetadata = (path) => {
+  const match = posts.find(p => p.permalink === path);
+  if (!match) console.warn("❌ Metadata tidak ditemukan untuk:", path);
+  return match;
+};
+
+const popularContainer = document.getElementById("popular-news");
+const fallbackContent = document.getElementById("recommended-fallback");
+
+const getLast7DaysRange = () => {
+  const end = new Date();
+  const start = new Date();
+  start.setDate(end.getDate() - 7);
+  return {
+    start: start.toISOString().split('T')[0],
+    end: end.toISOString().split('T')[0]
+  };
+};
+
+const renderPopular = (items, label = "Popular This Week", isFallback = false) => {
+  let html = `
+    <h2 class="text-xl uppercase font-medium border-b pb-2 mb-4">${label}</h2>
+    <ul class="flex flex-row gap-4">`;
+
+  items.forEach((item, i) => {
+    const meta = getMetadata(item.url || item.permalink) || item;
+    const title = meta.title || "No Title";
+    const image = meta.image || "/images/default.png";
+    const link = meta.permalink || item.url || "#";
+
+    html += `
+      <li class="relative popular-html flex flex-col col-span-2 w-full h-full bg-gradient-to-br from-white dark:from-gray-900 via-gray-50 dark:via-gray-950 to-gray-300 dark:to-gray-950 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out">
+        <a href="${link}" class="bg-cover w-full h-full overflow-hidden transition duration-500 ease-in-out">
+          <img loading="lazy" src="${image}" alt="Gambar ${title}" class="w-full h-[360px] object-cover rounded-t-xl brightness-75 hover:brightness-100 transition duration-300 ease-in-out" />
+        </a>
+        <div class="w-[70%] h-[70%] absolute bottom-0 left-0 rounded-tr-3xl transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-gradient-to-br from-white dark:from-gray-900 via-gray-50 dark:via-gray-950 to-gray-300 dark:to-gray-950">
+          <h2 class="w-full h-fit text-2xl line-clamp-3 ${isFallback ? '' : 'opacity-0 group-hover:opacity-100 group-hover:z-10'} transition duration-500 ease-in-out">
+            <a href="${link}" class="hover:underline break-words">${title}</a>
+          </h2>
+          <p class="text-sm text-zinc-600 dark:text-zinc-300 ${isFallback ? '' : 'opacity-0 group-hover:opacity-100 group-hover:z-10'}">— ${label}</p>
+        </div>
+      </li>`;
+  });
+
+  html += `</ul>`;
+  popularContainer.innerHTML = html;
+};
+
+// Main
+if (popularContainer && posts.length > 0) {
+  const { start, end } = getLast7DaysRange();
+  const websiteId = "fabe1eb6-5122-4712-b095-5ec2ab778540";
+  const apiKey = "api_XcrHJ2uDyFNEodCAgoSdRaLC8ybFf0XO";
+
+  fetch(`https://cloud.umami.is/api/websites/${websiteId}/stats/pages?start=${start}&end=${end}`, {
+    headers: { Authorization: `Bearer ${apiKey}` }
+  })
+    .then(res => res.json())
+    .then(data => {
+      const filtered = (data?.data || [])
+        .filter(p => p.url.startsWith("/posts/"))
+        .sort((a, b) => b.visits - a.visits)
+        .slice(0, 5);
+
+      if (!filtered.length) throw new Error("⚠️ Data kosong");
+
+      renderPopular(filtered);
+      fallbackContent?.classList.add("hidden");
+      console.log("✅ Popular posts ditampilkan dari Umami.");
+    })
+    .catch(err => {
+      console.warn("💥 Gagal ambil dari Umami, pakai fallback:", err);
+      renderPopular(posts.slice(0, 4), "Recommended", true);
+      fallbackContent?.classList.add("flex");
+    });
+} else {
+  console.warn("🚫 Elemen popular-news tidak ditemukan atau metadata kosong.");
+}
+
+</script>
+-->
+
+{{ end }}

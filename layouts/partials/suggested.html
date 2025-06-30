@@ -1,0 +1,51 @@
+{{ with . }}
+
+
+{{ $recommended := where .Site.RegularPages "Params.tags" "intersect" (slice "Recommended") }}
+{{ $sorted := sort $recommended "Date" "desc" }}
+{{ $subset := first 4 (after 1 $sorted) }} <!-- Index 1 sampai 3 -->
+
+{{ if gt (len $subset) 0 }}
+<section class="col-span-12 w-full lg:col-span-4 space-y-6 px-0 md:px-0">
+  <div>
+    <h2 class="text-xl uppercase tracking-[.1em] lg:tracking-[.1em]  border-b border-gray-300 dark:border-gray-800/50 pb-2 mb-4">
+      Suggested Articles
+    </h2>
+
+    <ul class="flex flex-col gap-4 md:gap-3">
+      {{ range $subset }}
+         <li class="relative group  flex flex-col h-fit w-full rounded-3xl overflow-hidden z-10 shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40">
+
+          <!-- Bagian gambar -->
+          <div class="w-full flex-1">
+            <a href="{{ .RelPermalink }}">
+              <img src="{{ .Params.image | default "/images/default.png" }}" alt="Gambar {{ .Title }}"
+                class="w-full h-[300px] object-cover rounded-3xl brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+            </a>
+          </div>
+
+
+          <!-- Bagian teks -->
+         <div class="absolute bottom-0 left-auto top-0 right-0 w-[70%] h-full opacity-100 transition duration-500 ease-in-out  flex-1 font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
+        <h2 class="w-full h-fit text-2xl line-clamp-4">
+          <a href="{{ .RelPermalink }}" class="hover:underline break-words" data-tippy-content="{{ .Title }}">{{ .Title }}</a>
+        </h2>
+        <h2 class="flex justify-between gap-4 text-sm line-clamp-1 uppercase">
+          {{ range .Params.categories }}
+            <a href="{{ "categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">
+              {{ . }}
+            </a>
+            {{ end }}
+          </h2>
+        <p class="bottom-4 flex-1 items-end justify-end w-full left-6 z-10 text-xl h-fit flex gap-0"><span>—</span>{{ partial "dateNew.html" . }}</p>
+      </div>
+        </li>
+
+
+      {{ end }}
+    </ul>
+  </div>
+</section>
+{{ end }}
+
+{{ end }}
