@@ -366,12 +366,6 @@
   .left-\[15\%\] {
     left: 15%;
   }
-  .left-\[22px\] {
-    left: 22px;
-  }
-  .left-\[24px\] {
-    left: 24px;
-  }
   .left-\[28px\] {
     left: 28px;
   }
@@ -2361,11 +2355,6 @@
   .lg\:top-3 {
     @media (width >= 64rem) {
       top: calc(var(--spacing) * 3);
-    }
-  }
-  .lg\:top-5 {
-    @media (width >= 64rem) {
-      top: calc(var(--spacing) * 5);
     }
   }
   .lg\:top-20 {

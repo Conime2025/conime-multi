@@ -34,10 +34,6 @@ url = "https://www.crunchyroll.com/news/latest/2025/6/28/demon-slayer-kimetsu-no
 name = "Crunchyroll"
 url = "https://www.crunchyroll.com/news/latest/2025/6/28/demon-slayer-kimetsu-no-yaiba-infinity-castle-first-movie-releases-main-trailer"
 
-[[videos]]
-url = "https://www.youtube.com/embed/ZfIXXgqxVn8"
-title = "Trailer Utama “Demon Slayer: Infinity Castle” Chapter 1 - Kembalinya Akaza"
-source = " YouTube / Aniplex Channel"
 +++
 
 
@@ -53,6 +49,11 @@ Aniplex dan Ufotable resmi merilis **trailer utama** untuk *Demon Slayer: Kimets
 {{< related-auto >}}
 
 Trailer berdurasi sekitar 1 menit lebih ini memamerkan visual memukau dan tensi tinggi saat Tanjiro, Nezuko, dan kawan-kawan menghadapi malam penentuan di markas Infinity Castle. Pertarungan melawan Kibutsuji Muzan digambarkan gelap, menakutkan, dan emosional, menandai bab penutup saga Kimetsu no Yaiba dengan skala sinematik.
+
+{{< youtube
+url = "https://www.youtube.com/embed/ZfIXXgqxVn8"
+title = "Trailer Utama “Demon Slayer: Infinity Castle” Chapter 1 - Kembalinya Akaza"
+source = " YouTube / Aniplex Channel" >}}
 
 Penggemar dapat mengikuti pembaruan lebih lanjut melalui situs resmi dan akun media sosial resmi *Demon Slayer* untuk informasi jadwal tayang dan penjualan tiket internasional.
 
