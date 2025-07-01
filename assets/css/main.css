@@ -8,6 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-purple-500: oklch(62.7% 0.265 303.9);
     --color-purple-600: oklch(55.8% 0.288 302.321);
     --color-rose-600: oklch(58.6% 0.253 17.585);
@@ -510,6 +511,12 @@
   .ml-4 {
     margin-left: calc(var(--spacing) * 4);
   }
+  .\!line-clamp-3 {
+    overflow: hidden !important;
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-line-clamp: 3 !important;
+  }
   .line-clamp-1 {
     overflow: hidden;
     display: -webkit-box;
@@ -561,6 +568,9 @@
   .\!h-fit {
     height: fit-content !important;
   }
+  .\!h-full {
+    height: 100% !important;
+  }
   .h-1 {
     height: calc(var(--spacing) * 1);
   }
@@ -591,6 +601,9 @@
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
+  .h-40 {
+    height: calc(var(--spacing) * 40);
+  }
   .h-48 {
     height: calc(var(--spacing) * 48);
   }
@@ -611,6 +624,9 @@
   }
   .h-\[45\%\] {
     height: 45%;
+  }
+  .h-\[50\%\] {
+    height: 50%;
   }
   .h-\[50px\] {
     height: 50px;
@@ -695,6 +711,9 @@
   }
   .\!w-fit {
     width: fit-content !important;
+  }
+  .\!w-full {
+    width: 100% !important;
   }
   .w-1 {
     width: calc(var(--spacing) * 1);
@@ -1072,6 +1091,9 @@
     border-left-style: var(--tw-border-style);
     border-left-width: 4px;
   }
+  .border-blue-500 {
+    border-color: var(--color-blue-500);
+  }
   .border-conime-400 {
     border-color: var(--color-conime-400);
   }
@@ -1093,6 +1115,9 @@
   .border-rose-600 {
     border-color: var(--color-rose-600);
   }
+  .border-white {
+    border-color: var(--color-white);
+  }
   .\!bg-white {
     background-color: var(--color-white) !important;
   }
@@ -1110,6 +1135,9 @@
   }
   .bg-\[\#f21d1d\] {
     background-color: #f21d1d;
+  }
+  .bg-blue-500 {
+    background-color: var(--color-blue-500);
   }
   .bg-conime-100 {
     background-color: var(--color-conime-100);

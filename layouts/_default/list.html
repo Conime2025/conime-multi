@@ -27,29 +27,29 @@
         <div class="relative col-span-1 lg:col-span-1 flex flex-col w-full h-[360px] rounded-3xl overflow-hidden z-10 shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20">
 
           {{/* Gambar Artikel */}}
-          <a href="{{ .RelPermalink }}" class="w-full h-[45%] overflow-hidden bg-cover">
+          <a href="{{ .RelPermalink }}" class="w-full h-full overflow-hidden bg-cover">
             {{ $img := .Params.image | default "/images/default.png" }}
-            <div class="w-full h-ful">
+            <div class="w-full h-full bg-cover">
               <img src="{{ $img }}" alt="Gambar {{ .Title }}"
-                   class="w-full h-full lg:w-full lg:h-full left-0 top-0 object-cover image-distor image1 image2 brightness-75 hover:brightness-100 transition duration-500 ease-in-out"
-                   onerror="this.classList.remove('sm:w-[0.1px]', 'sm:h-[0.1px]')" />
+                   class="!w-full !h-full inset-0 object-cover brightness-75 hover:brightness-100 transition duration-500 ease-in-out"
+                    />
             </div>
           </a>
 
           {{/* Teks Artikel */}}
-          <div class="w-full h-[55%] font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
-            <h2 class="w-full h-fit">
-              <a href="{{ .RelPermalink }}" class="hover:underline break-words min-h-50 h-50 text-2xl line-clamp-3">{{ .Title }}</a>
-            </h2>
-            <h2 class="flex flex-wrap justify-between gap-4 text-sm line-clamp-1 uppercase">
-              {{ range .Params.categories }}
-                <a href="{{ " categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">{{ . }}</a>
-              {{ end }}
-            </h2>
-            <p class="absolute w-full bottom-4 pr-4 left-0 text-right justify-end z-10 text-xl h-fit flex gap-0">
-              <span>—</span>{{ partial "timeago.html" . }}
-            </p>
-          </div>
+         <div class="w-[70%] h-[60%] absolute bottom-0 left-0 rounded-tr-3xl transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
+              <h2 class="w-full h-fit text-2xl">
+                <a href="{{ .RelPermalink }}" data-tippy-content="{{ .Title }}" class="hover:underline break-words line-clamp-4">{{ .Title }}</a>
+              </h2>
+              <h2 class="justify-start h-fit w-full flex gap-4 text-sm line-clamp-1 uppercase">
+                {{ range .Params.categories }}
+                  <a href="{{ "categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">{{ . }}</a>
+                {{ end }}
+              </h2>
+              <p class="bottom-4 items-end justify-end w-full left-6 z-10 text-xl h-full flex-1 flex gap-0 transition duration-500 ease-in-out">
+                <span>—</span>{{ partial "dateNew.html" . }}
+              </p>
+            </div>
 
         </div>
       {{ end }}
