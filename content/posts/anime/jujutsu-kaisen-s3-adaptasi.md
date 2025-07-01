@@ -25,10 +25,6 @@ url = "https://www.theflagshipeclipse.com/2024/12/21/jujutsu-kaisen-season-3-deb
 name = "Jujutsu Kaisen Official Site News"
 url = "https://jujutsukaisen.jp/news/"
 
-[[videos]]
-url = "https://www.youtube.com/embed/ACFg5XX9XQw"
-title = " Jujutsu Kaisen TV Anime “Culling Game” Sequel Production Decision Video"
-source = "YouTube / TOHO animation"
 +++
 
 TOHO animation dan situs resmi *jujutsukaisen.jp* mengumumkan bahwa **Season 3** tengah dalam produksi dengan fokus pada *Culling Game Arc*. Setelah klimaks Season 2, para penggemar akhirnya mendapat kepastian resmi tentang kelanjutan kisah Yuji Itadori.
@@ -43,6 +39,11 @@ TOHO animation dan situs resmi *jujutsukaisen.jp* mengumumkan bahwa **Season 3**
 
 ### Cuplikan Teaser Resmi
 Teaser PV menampilkan adegan panel manga animasi, sorot wajah Itadori yang tertekan, siluet Sukuna, dan Kenjaku dengan senyum misterius. Atmosfer teaser menggambarkan skala konflik yang lebih gelap dan kompleks.
+
+{{< youtube
+url = "https://www.youtube.com/embed/ACFg5XX9XQw"
+title = " Jujutsu Kaisen TV Anime “Culling Game” Sequel Production Decision Video"
+source = "YouTube / TOHO animation" >}}
 
 > “Aku tidak bisa bersama kalian lagi.” — Kutipan dalam teaser PV.
 
