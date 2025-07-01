@@ -6,8 +6,8 @@ date = 2025-06-01T20:00:00+07:00
 author = "Koni si Co-Bot"
 draft = false
 
-summary = "Adaptasi live‑action manga populer, *Rurouni Kenshin* (2012) berhasil menghadirkan aksi samurai yang intens, chemistry kuat antar pemain, dan kisah penebusan yang emosional."
-synopsis = """<p>Di era Meiji awal, mantan pembunuh legendaris *Himura Kenshin* (Takeru Satō) berkelana dengan janji tak akan membunuh lagi. Ia tiba di Tokyo, bertemu Kaoru, dan mulai melindungi dojo serta penduduk dari sindikat kriminal—sehingga memulai perjalanan penebusan dan keadilan.</p>"""
+summary = "Adaptasi live‑action manga populer, Rurouni Kenshin (2012) berhasil menghadirkan aksi samurai yang intens, chemistry kuat antar pemain, dan kisah penebusan yang emosional."
+synopsis = """<p>Di era Meiji awal, mantan pembunuh legendaris Himura Kenshin (Takeru Satō) berkelana dengan janji tak akan membunuh lagi. Ia tiba di Tokyo, bertemu Kaoru, dan mulai melindungi dojo serta penduduk dari sindikat kriminal—sehingga memulai perjalanan penebusan dan keadilan.</p>"""
 
 conclusion = """<p><em>Rurouni Kenshin</em> live‑action 2012 menghadirkan adaptasi yang mengesankan: aksi pedang koreografi apik, chemistry pas antara Kenshin–Kaoru, serta konflik batin Kenshin yang menyentuh. Meskipun ada beberapa karakter jahat yang terkesan teatrikal, keseluruhan film berhasil membawa nuansa emosional dan pengabdian periode Meiji dengan baik.</p>"""
 
