@@ -30,19 +30,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const fireEl = document.querySelector(`.fire-new[data-url="${slug}"]`);
     const labelEl = document.querySelector(`.label-new[data-url="${slug}"]`);
-    if (diff < 10800 && !isRead) {
+    if (diff < 86400 && !isRead) {
       fireEl?.classList.remove("opacity-0", "hidden");
     } else {
       fireEl?.classList.add("opacity-0", "hidden");
     }
 
-    if (diff < 10800) {
+    if (diff < 86400) {
       labelEl?.classList.remove("opacity-0", "hidden");
     } else {
       labelEl?.classList.add("opacity-0", "hidden");
     }
 
-    if (diff < 10800) {
+    if (diff < 86400) {
       const isUnread = !isRead;
       if (isUnread) unreadCount++;
       const badgeClass = isUnread ? "bg-conime-500 dark:bg-conime-500" : "bg-gray-600 dark:bg-gray-700";
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const isRead = localStorage.getItem(`notif-read:${post.dataset.url}`) === "true";
       const diff = (now - new Date(post.dataset.date)) / 1000;
 
-      if (diff < 10800 && !isRead) {
+      if (diff < 86400 && !isRead) {
         hasRecentUnread = true;
       }
     });
@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
     notifContainer?.querySelectorAll(".notif-item").forEach(item => {
       const slug = item.dataset.url;
       const fireEl = document.querySelector(`.fire-new[data-url="${slug}"]`);
-      const isOld = (now - new Date(item.dataset.date)) / 1000 > 10800;
+      const isOld = (now - new Date(item.dataset.date)) / 1000 > 86400;
       if (newToggle === "true") {
         localStorage.setItem(`notif-read:${slug}`, "true");
         item.classList.add("opacity-75", "dark:opacity-50");
