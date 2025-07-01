@@ -369,6 +369,12 @@
   .left-\[22px\] {
     left: 22px;
   }
+  .left-\[24px\] {
+    left: 24px;
+  }
+  .left-\[28px\] {
+    left: 28px;
+  }
   .left-auto {
     left: auto;
   }
@@ -2352,6 +2358,16 @@
       position: relative;
     }
   }
+  .lg\:top-3 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * 3);
+    }
+  }
+  .lg\:top-5 {
+    @media (width >= 64rem) {
+      top: calc(var(--spacing) * 5);
+    }
+  }
   .lg\:top-20 {
     @media (width >= 64rem) {
       top: calc(var(--spacing) * 20);
@@ -2385,6 +2401,11 @@
   .lg\:left-\[20\%\] {
     @media (width >= 64rem) {
       left: 20%;
+    }
+  }
+  .lg\:left-\[22px\] {
+    @media (width >= 64rem) {
+      left: 22px;
     }
   }
   .lg\:col-span-1 {

@@ -76,7 +76,7 @@ Renders a menu for the given menu ID.
       class="{{ if eq .Identifier "notifBtn" }}hidden lg:flex{{ else }} flex {{ end }} h-fit w-fit lg:w-auto text-[.6rem] lg:text-base justify-center items-start lg:items-center transition duration-1000 ease-in-out ">{{
       $name }}</span>
     {{ if eq .Identifier "notifBtn" }}
-    <div id="notifBadge" class="absolute hidden top-4 left-[22px]">
+    <div id="notifBadge" class="absolute hidden top-4 lg:top-3 left-[28px] lg:left-[22px]">
       <div class="flex justify-center items-center">
         <div class="w-3 h-3 opacity-0 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
         <div
