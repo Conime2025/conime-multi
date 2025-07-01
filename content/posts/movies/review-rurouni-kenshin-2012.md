@@ -9,9 +9,11 @@ draft = false
 summary = "Adaptasi live‑action manga populer, *Rurouni Kenshin* (2012) berhasil menghadirkan aksi samurai yang intens, chemistry kuat antar pemain, dan kisah penebusan yang emosional."
 synopsis = """<p>Di era Meiji awal, mantan pembunuh legendaris *Himura Kenshin* (Takeru Satō) berkelana dengan janji tak akan membunuh lagi. Ia tiba di Tokyo, bertemu Kaoru, dan mulai melindungi dojo serta penduduk dari sindikat kriminal—sehingga memulai perjalanan penebusan dan keadilan.</p>"""
 
-conclusion = """<p>*Rurouni Kenshin* live‑action 2012 menghadirkan adaptasi yang mengesankan: aksi pedang koreografi apik, chemistry pas antara Kenshin–Kaoru, serta konflik batin Kenshin yang menyentuh. Meskipun ada beberapa karakter jahat yang terkesan teatrikal, keseluruhan film berhasil membawa nuansa emosional dan pengabdian periode Meiji dengan baik.</p>"""
+conclusion = """<p><em>Rurouni Kenshin</em> live‑action 2012 menghadirkan adaptasi yang mengesankan: aksi pedang koreografi apik, chemistry pas antara Kenshin–Kaoru, serta konflik batin Kenshin yang menyentuh. Meskipun ada beberapa karakter jahat yang terkesan teatrikal, keseluruhan film berhasil membawa nuansa emosional dan pengabdian periode Meiji dengan baik.</p>"""
 
 image = "/images/movies/rurouni_kenshin_2012.webp"
+imageTitle = "Poster Resmi Rurouni Kenshin (2012)"
+
 
 tags = ["Rurouni Kenshin", "Live‑Action", "Samurai", "Takeru Satō", "Emi Takei", "Review"]
 categories = ["Review", "Film"]
@@ -37,10 +39,10 @@ studio = "Warner Bros. Japan"
   - Himura Kenshin – Takeru Satō
   - Kaoru Kamiya – Emi Takei
   - Sanosuke Sagara – Munetaka Aoki
-  - Koni si Co-Bot Takani – Yū Aoi
+  - Megumi Takani – Yū Aoi
 - Durasi: 135 menit
 - Rilis Jepang: 25 Agustus 2012
-- Pendapatan Dunia: ± \$37,7 juta
+- Pendapatan Dunia: ± $37,7 juta
 - Rating IMDb: 7.4/10 (30.000+ penilaian)
 
 ### Kelebihan Film
@@ -63,7 +65,7 @@ Kenshin yang berjuang menebus masa lalunya sebagai Battōsai membawa beban emosi
 Beberapa karakter seperti Takeda Kanryū atau Jin-e terasa agak berlebihan, dengan gaya bicara dan tampilan yang dramatis.
 
 - Karakter Pendukung Kurang Mendalam
-Akibat keterbatasan durasi, latar belakang karakter pendukung seperti Koni si Co-Bot atau Sanosuke terasa lebih tipis dibanding versi manga/anime.
+Akibat keterbatasan durasi, latar belakang karakter pendukung seperti Megumi atau Sanosuke terasa lebih tipis dibanding versi manga/anime.
 
 ### Kutipan Penonton
 

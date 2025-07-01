@@ -12,6 +12,7 @@ synopsis = "Anime <strong>Kagurabachi</strong> resmi diumumkan sebagai proyek ad
 
 
 image = "/images/anime/kagurabachi-anime-announcement.webp"
+imageTitle = "Kagurabachi Anime Official Announcement Visual"
 
 tags = ["Kagurabachi", "Anime Baru", "Recommended", "CyberAgent", "Shochiku", "CygamesPictures", "Shonen Jump", "Adaptasi Anime"]
 categories = ["Berita", "Anime"]

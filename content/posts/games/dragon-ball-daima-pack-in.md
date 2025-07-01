@@ -12,6 +12,7 @@ synopsis = "Dragon Ball Xenoverse 2 merilis DAIMA Pack dengan dua karakter tran
 conclusion = """<p>Dengan kehadiran <strong>Super Saiyan 4 Goku (DAIMA)</strong> dan <strong>Super Saiyan 3 Vegeta (DAIMA)</strong>, serta berbagai bahan tambahan seperti kostum, Super Souls, dan Parallel Quests, <strong>Dragon Ball Xenoverse 2</strong> mendapat dorongan konten baru yang cukup signifikan. Update ini semakin memperkaya pengalaman Time Patroller dan mendukung komunitasnya terus berkembang.</p>"""
 
 image = "/images/games/featured-image-dragon-ball-xenoverse-2-alt-art.webp"
+imageTitle = "Dragon Ball Xenoverse 2 DAIMA Pack Official Visual"
 
 tags = ["Dragon Ball", "Xenoverse 2", "Dragon Ball DAIMA", "DLC", "Bandai Namco", "Time Patrol", "Game Fighting"]
 categories = ["Berita", "Game"]

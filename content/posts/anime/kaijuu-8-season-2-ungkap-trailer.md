@@ -12,6 +12,7 @@ synopsis = """<p><strong>Kaiju No. 8 Season 2</strong> berfokus pada Kafka Hibin
 
 
 image = "/images/anime/kaiju-no-8-season-2.webp"
+imageTitle = "Official Teaser Visual for Kaiju No. 8 Season 2"
 
 tags = ["Kaiju No. 8", "Anime Baru", "Production I.G", "Gen Narumi", "Crunchyroll", "Trailer", "Recommended", "Anime Musim Mendatang"]
 categories = ["Berita", "Anime"]
@@ -69,6 +70,7 @@ Season 2 juga mengumumkan opening theme berjudul “You Can’t Run From Yoursel
 {{< image-caption
   src="/images/anime/aurora.webp"
   alt="Foto Aurora"
+  title="Official Artist Photo of AURORA for Kaiju No. 8 Opening Theme"
   sources="Kaiju No. 8 Official Site Website,https://kaiju-no8.net/music/season2.html#opening"
 >}}
 

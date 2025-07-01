@@ -13,6 +13,7 @@ synopsis = "Dr. Stone Volume 27 menghadirkan tantangan ambisius membangun mesin 
 conclusion = "Dengan eksplorasi ilmiah yang mendalam dan ilustrasi memukau, Dr. Stone Volume 27 menandai langkah besar Senku dan timnya menuju misteri baru yang menegangkan."
 
 image = "/images/comics/dr-stone-vol27.webp"
+imageTitle = "Dr. Stone Volume 27 Official Cover Art"
 tags = ["Dr. Stone", "Manga Baru", "VIZ Media", "Riichiro Inagaki", "Boichi", "Petualangan", "Sains", "Rilis Manga"]
 categories = ["Berita", "Manga"]
 

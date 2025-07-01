@@ -13,11 +13,12 @@ synopsis = "Anime Gachiakuta siap menembus pasar global lewat pemutaran perdana 
 
 
 image = "/images/anime/gachiakuta-world-takeover.webp"
+imageTitle = "Official Teaser Visual untuk Gachiakuta Anime"
 tags = ["Gachiakuta", "Anime Baru", "Bones", "Paledusk", "DUSTCELL", "Recommended", "Pemutaran Global", "Anime Musim Panas 2025"]
 categories = ["Berita", "Anime"]
 
 [[imageSources]]
-name = "Gachiakuta Official Website"
+name = "Gachiakuta Anime Official - Teaser Visual"
 url = "https://gachiakuta-anime.com/news/detail/?id=1125461"
 
 [[sources]]
@@ -71,12 +72,13 @@ Kampanye global ini juga mencakup:
 - Graffiti video "Here Comes Gachiakuta!" multibahasa
 - Wawancara kreator "Behind Gachiakuta"
 - Web tool interaktif: [Gachiakuta Graffiti Maker](https://graffiti-maker.gachiakuta-anime.com)
-
 {{< image-caption
   src="/images/anime/gachiakuta-grafiti.webp"
-  alt="Graffiti Maker Gachuakuta"
-  sources="Gachiakuta Official Website,https://gachiakuta-anime.com/news/detail/?id=1125461"
+  alt="Gachiakuta Anime Official - Graffiti Visual"
+  title="Official Graffiti Visual untuk Gachiakuta Anime"
+  sources="Gachiakuta Anime Official - Graffiti Visual Website,https://gachiakuta-anime.com/news/detail/?id=1125461"
 >}}
+
 
 *Gachiakuta* bukan sekadar anime aksi, tetapi juga refleksi sosial tentang ketimpangan dan keberanian menghadapi sistem yang membuangmu. Pastikan untuk menontonnya musim panas ini!
 

@@ -13,6 +13,7 @@ synopsis = "Trailer Superman memperlihatkan konflik batin Clark Kent dalam menye
 conclusion = """<p>Trailer terbaru <em>Superman</em> memberikan berbagai petunjuk mengenai <strong>alur cerita, karakter pendukung, dan konflik utama</strong> yang akan hadir dalam film ini. Dengan wawancara emosional antara Lois dan Clark, aksi menegangkan dari Engineer dan Krypto, serta referensi tersembunyi yang menghubungkan film ini dengan sejarah panjang DC Universe, antusiasme terhadap film <em>Superman</em> semakin tinggi.</p>"""
 
 image = "/images/movies/superman-trailer-breakdown.webp"
+imageTitle = "DC Studios Superman Official Trailer Visual"
 
 tags = ["Superman", "DC Studios", "Lois Lane", "Krypto", "Engineer", "Film Superhero"]
 categories = ["Berita", "Film"]
@@ -35,6 +36,7 @@ Chemistry antara David Corenswet dan Rachel Brosnahan menciptakan kedalaman emos
 {{< image-caption
   src="/images/movies/20250514_DC_News_Interview.webp"
   alt="Wawancara Lois dan Clark"
+  title="Lois & Clark Interview Scene from DC Official Trailer"
   sources="DC Official Site,https://www.dc.com/blog/2025/05/14/all-the-amazing-things-we-found-in-the-superman-trailer"
 >}}
 

@@ -14,6 +14,7 @@ conclusion = "Adaptasi ini menjanjikan pengalaman musikal yang menyentuh dan pen
 
 
 image = "/images/anime/toritsukare-otoko.webp"
+imageTitle = "Toritsukare Otoko Official Teaser Visual"
 tags = ["Toritsukare Otoko", "Adaptasi Anime", "Film Musikal", "Berita Anime", "Recommended"]
 categories = ["Berita", "Anime"]
 

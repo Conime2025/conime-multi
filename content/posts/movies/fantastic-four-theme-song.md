@@ -13,7 +13,7 @@ synopsis = """<p><strong>The Fantastic Four: First Steps Main Theme</strong> ada
 conclusion = """<p>Dengan aransemen yang megah dan atmosfer yang khas, <strong>The Fantastic Four: First Steps Main Theme</strong> membawa pendengar ke dunia penuh petualangan dan inovasi. Lagu ini tersedia untuk streaming di berbagai platform digital, sementara versi vinyl <em>Galactic Blue</em> dapat dipesan sebelum rilis pada 25 Juli.</p>"""
 
 image = "/images/movies/fantastic-four-first-steps-main-theme.webp"
-
+imageTitle = "Marvel Studios The Fantastic Four: First Steps Official Main Theme Visual"
 tags = ["Fantastic Four", "Marvel Studios", "Michael Giacchino", "Film Superhero", "Soundtrack", "Hollywood Records"]
 categories = ["Berita", "Film"]
 

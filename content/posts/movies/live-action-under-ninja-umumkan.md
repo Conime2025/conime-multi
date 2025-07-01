@@ -14,6 +14,7 @@ synopsis = """<p>Di dunia modern yang tampak damai, organisasi ninja rahasia mas
 conclusion = """<p>Dengan jajaran cast papan atas dan tim produksi berpengalaman, adaptasi ini terlihat menjanjikan. Penonton yang menikmati anime atau manga <em>Under Ninja</em> pasti tak sabar menantikan aksi ninja modern di layar lebar. Nantikan update selanjutnya—terutama trailer dan BTS akting para pemain!</p>"""
 
 image = "/images/movies/underninja_.webp"
+imageTitle = "Under Ninja Live-Action Official Visual"
 
 tags = ["Under Ninja", "Live-Action", "Live‑Action", "Kento Yamazaki", "Minami Hamabe", "Yuichi Fukuda"]
 categories = ["Berita", "Film", "Live-Action"]
@@ -60,12 +61,14 @@ Menurut situs resmi *Under Ninja*, film live-action ini diproduksi dari manga ka
 {{< image-caption
   src="/images/movies/under-ninja-trailer.webp"
   alt="Under Ninja Cast"
+   title="Under Ninja Live-Action Official Trailer Visual"
   sources="Under Ninja Official Site,https://underninja-mv.com/news/index.html"
 >}}
 
 {{< image-caption
   src="/images/movies/underninja.webp"
   alt="Under Ninja Cast"
+  title="Under Ninja Live-Action Main Visual"
   sources="Under Ninja Official Site,https://underninja-mv.com/news/index.html"
 >}}
 

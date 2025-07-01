@@ -11,6 +11,7 @@ synopsis = """<p><strong>Chiure: Child of the Sea</strong> adalah film animasi o
 
 
 image = "/images/anime/chiure-child-of-the-sea.webp"
+imageTitle = "Chiure: Child of the Sea Official Teaser Visual"
 
 tags = ["Chiure", "Child of the Sea", "Anime Baru", "Film Animasi", "Daisuke Igarashi", "N-Lite", "Pengumuman"]
 categories = ["Berita", "Anime"]

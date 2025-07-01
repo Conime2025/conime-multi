@@ -14,6 +14,7 @@ conclusion = "Dengan ilustrasi khas dan cerita intens, volume ke-18 menjadi titi
 
 
 image = "/images/comics/chainsaw-man-vol18.webp"
+imageTitle = "Chainsaw Man Volume 18 Official Cover Visual"
 tags = ["Chainsaw Man", "Manga Baru", "VIZ Media", "Tatsuki Fujimoto", "Aksi", "Horor", "Rilis Manga"]
 categories = ["Berita", "Manga"]
 

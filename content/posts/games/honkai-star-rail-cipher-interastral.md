@@ -13,6 +13,7 @@ synopsis = "Episode khusus Honkai: Star Rail berjudul Cipher: Kaya Raya dari Seg
 conclusion = """<p>Dengan gaya humor khas dan presentasi seperti variety show, episode <strong>“Mendekati Star Rail”</strong> memperkenalkan Cipher dengan cara yang berbeda dan menghibur. Meski kalah telak dalam 'pertandingan aerodinamika' melawan Bartholos, kehadiran Cipher menjadi sorotan dalam versi terbaru <strong>Honkai: Star Rail</strong>.</p>"""
 
 image = "/images/games/honkai-star-rail-cipher-entertainment.webp"
+imageTitle = "Honkai: Star Rail Official Episode Visual"
 
 tags = ["Honkai Star Rail", "Cipher", "Interastral Peace Entertainment", "HoYoverse", "Bartholos", "Lore", "Episode Spesial"]
 categories = ["Berita", "Game"]

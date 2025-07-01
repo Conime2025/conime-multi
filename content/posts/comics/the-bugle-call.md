@@ -13,6 +13,7 @@ synopsis = "The Bugle Call: Song of War Vol. 1 menghadirkan Luca, bugler muda ya
 conclusion = "Dengan visual memukau dan dunia yang penuh intrik, The Bugle Call: Song of War Vol. 1 menghadirkan kisah fantasi epik tentang pengorbanan, musik, dan pertarungan demi masa depan."
 
 image = "/images/comics/bugle-call-song-of-war-vol1.webp"
+imageTitle = "The Bugle Call: Song of War Vol. 1 Official Cover Art"
 
 tags = ["The Bugle Call", "Manga Baru", "VIZ Media", "Mozuku Sora", "Higoro Toumori", "Fantasi", "Rilis Manga"]
 categories = ["Berita", "Manga"]

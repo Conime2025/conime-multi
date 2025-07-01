@@ -12,7 +12,7 @@ synopsis = """<p>Di tengah hujan pagi Tokyo, Takao, seorang siswa SMA yang berci
 conclusion = """<p><em>Kotonoha no Niwa</em> bukan sekadar film romantis, melainkan potret keheningan yang menyembuhkan. Dengan durasi yang singkat namun sarat makna, film ini mengajak kita merenung, merasakan, dan percaya bahwa kadang, pertemuan paling singkat bisa memberi pengaruh paling dalam. Ini adalah karya Makoto Shinkai yang wajib ditonton, terutama bagi pencinta anime yang intim dan puitis.</p>"""
 
 image = "/images/anime/kotonoha_no_niwa.webp"
-
+imageTitle = "Kotonoha no Niwa Official Movie Visual"
 tags = ["Makoto Shinkai", "Romantis", "Drama", "Kana Hanazawa", "Puisi", "Review"]
 categories = ["Review", "Anime"]
 
@@ -21,7 +21,7 @@ name = "Wikipedia – Kotonoha no Niwa"
 url = "https://id.wikipedia.org/wiki/Kotonoha_no_Niwa"
 
 [[imageSources]]
-name = "CoMix Wave Films – Official Still"
+name = "CoMix Wave Films – Official Scene"
 url = "https://www.imdb.com/title/tt2591814/"
 studio = "CoMix Wave Films"
 
@@ -52,8 +52,9 @@ Melalui puisi tanka klasik yang disisipkan Yukari, Takao perlahan menyadari bahw
 
 {{< image-caption
   src="/images/anime/kotonoha_no_niwa2.webp"
-  alt="Kotonoha no Niwa - Still 1"
-  sources="CoMix Wave Films – Official Still Website,https://www.imdb.com/title/tt2591814/"
+  alt="Kotonoha no Niwa - Scene 1"
+  title="Kotonoha no Niwa Official Scene 1"
+  sources="CoMix Wave Films – Official Scene Website,https://www.imdb.com/title/tt2591814/"
 >}}
 
 {{< related-auto >}}
@@ -64,14 +65,16 @@ Detail visual dalam *Kotonoha no Niwa* sungguh luar biasa. Dari tetesan hujan, d
 
 {{< image-caption
   src="/images/anime/kotonoha_no_niwa3.webp"
-  alt="Kotonoha no Niwa - Still 2"
-  sources="CoMix Wave Films – Official Still Website,https://www.imdb.com/title/tt2591814/"
+  alt="Kotonoha no Niwa - Scene 2"
+  title="Kotonoha no Niwa Official Scene 2"
+  sources="CoMix Wave Films – Official Scene Website,https://www.imdb.com/title/tt2591814/"
 >}}
 
 {{< image-caption
   src="/images/anime/kotonoha_no_niwa4.webp"
-  alt="Kotonoha no Niwa - Still 3"
-  sources="CoMix Wave Films – Official Still Website,https://www.imdb.com/title/tt2591814/"
+  alt="Kotonoha no Niwa - Scene 3"
+  title="Kotonoha no Niwa Official Scene 3"
+  sources="CoMix Wave Films – Official Scene Website,https://www.imdb.com/title/tt2591814/"
 >}}
 
 ### Musik dan Suara yang Mengikat Emosi

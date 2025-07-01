@@ -15,6 +15,8 @@ conclusion = """<p>Lewat DLC <strong>Dragon Ball DAIMA Pack 1</strong>, <strong>
 
 image = "/images/games/dbsz-DAIMA-DLC2.webp"
 
+imageTitle = "Dragon Ball: Sparking! ZERO DAIMA Pack 1 Official Visual"
+
 tags = ["Dragon Ball", "Sparking ZERO", "Dragon Ball DAIMA", "DLC", "Bandai Namco", "Spike Chunsoft", "Game Fighting"]
 categories = ["Berita", "Game"]
 

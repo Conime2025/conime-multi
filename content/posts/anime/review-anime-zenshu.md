@@ -17,6 +17,7 @@ conclusion = """<p>Dengan kombinasi cerita yang mendalam, desain karakter yang u
 
 
 image = "/images/anime/Zenshuu-review.webp"
+imageTitle = "Zenshuu Official Key Visual"
 
 tags = ["Zenshuu", "Anime Baru", "Crunchyroll", "MAPPA", "Review", "Kimiko Ueno", "Mitsue Yamazaki", "Drama", "Fantasi", "Romance", "Review Anime"]
 categories = ["Review", "Anime"]

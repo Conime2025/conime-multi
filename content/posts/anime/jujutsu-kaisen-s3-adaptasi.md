@@ -11,6 +11,7 @@ summary = "Jujutsu Kaisen resmi mengumumkan adaptasi Season 3 yang akan mengangk
 synopsis = """<p><strong>Jujutsu Kaisen Season 3</strong> dipastikan mengadaptasi <em>Culling Game Arc</em>. Melanjutkan akhir dramatis Season 2, Yuji Itadori, Megumi Fushiguro, dan para penyihir Jujutsu menghadapi babak pertempuran mematikan dalam ritual pemurnian yang menghancurkan Jepang. Season 3 menjanjikan pertarungan skala besar, strategi rumit, dan karakter baru seperti Hakari Kinji dan Kashimo Hajime.</p>"""
 
 image = "/images/anime/jujutsu-kaisen-season-3-teaser.webp"
+imageTitle = "Jujutsu Kaisen Season 3 Official Teaser Visual"
 
 tags = ["Jujutsu Kaisen", "Anime Baru", "MAPPA", "Culling Game", "Gege Akutami", "Anime Musim Mendatang", "Recommended"]
 categories = ["Berita", "Anime"]

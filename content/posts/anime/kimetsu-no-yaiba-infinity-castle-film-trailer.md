@@ -13,6 +13,8 @@ synopsis = "Trailer resmi memperlihatkan adegan menegangkan saat Tanjiro, Nezuko
 conclusion = "Trilogi film 'Infinity Castle' menjanjikan adaptasi klimaks yang memuaskan, memadukan aksi intens dan emosi mendalam yang dinantikan penggemar Demon Slayer di seluruh dunia."
 
 image = "/images/anime/kny-infinity-castle-trailer.webp"
+imageTitle = "Kimetsu no Yaiba Infinity Castle Official Main Trailer Visual"
+
 tags = ["Demon Slayer", "Kimetsu no Yaiba", "Recommended", "Infinity Castle", "Anime Movie", "Berita Anime"]
 categories = ["Berita", "Anime"]
 twitterEmbed = "https://twitter.com/kimetsu_off/status/1938961332654744059"

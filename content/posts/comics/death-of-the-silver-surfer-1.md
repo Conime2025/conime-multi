@@ -14,6 +14,7 @@ conclusion = "Dengan visual memukau dan ketegangan yang terjaga, Death of the Si
 
 
 image = "/images/comics/death-of-the-silver-surfer-1.webp"
+imageTitle = "Death of the Silver Surfer #1 Official Cover Art"
 tags = ["Death of the Silver Surfer", "Marvel Comics", "Silver Surfer", "Greg Pak", "Sumit Kumar", "Galactus", "Fantastic Four", "Rilis Komik"]
 categories = ["Berita", "Komik"]
 

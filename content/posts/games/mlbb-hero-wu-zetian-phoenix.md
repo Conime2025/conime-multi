@@ -13,6 +13,7 @@ synopsis = "Wu Zetian hadir di Mobile Legends: Bang Bang sebagai mage Phoenix Em
 conclusion = """<p>Kehadiran <strong>Wu Zetian</strong> sebagai hero mage terbaru memperkuat peran kontrol area dan sihir burst di Land of Dawn. Dengan kisah yang menyentuh dan skill ultimate berskala global, Wu Zetian tak hanya tampil megah dalam gameplay, tapi juga sebagai simbol kekuatan dan kebangkitan dalam semesta MLBB.</p>"""
 
 image = "/images/games/mlbb-wu-zetian.webp"
+imageTitle = "Mobile Legends: Bang Bang Wu Zetian Official Key Visual"
 
 tags = ["Mobile Legends", "MLBB", "Wu Zetian", "Hero Baru", "Mage", "Moonton", "Event 696"]
 categories = ["Berita", "Game"]

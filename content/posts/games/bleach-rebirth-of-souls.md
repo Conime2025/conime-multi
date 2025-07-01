@@ -13,6 +13,7 @@ synopsis = "Bleach: Rebirth of Souls menambah Ranked Mode dan DLC Ichigo Kurosak
 conclusion = """<p>Dengan hadirnya mode <strong>Ranked Matchmaking</strong> dan DLC <strong>Ichigo Kurosaki</strong>, <strong>Bleach: Rebirth of Souls</strong> semakin memperkuat posisinya sebagai game fighting berbasis anime yang kompetitif. Pemain kini bisa menguji kemampuan mereka dalam pertarungan online, sementara penggemar <strong>Bleach</strong> dapat menikmati karakter terbaru dengan kekuatan penuh.</p>"""
 
 image = "/images/games/bleach-rebirth-of-souls-ranked-mode-dlc.webp"
+imageTitle = "Bleach: Rebirth of Souls Ranked Mode and DLC Official Visual"
 
 tags = ["Bleach", "Rebirth of Souls", "Recommended", "Ichigo Kurosaki", "DLC", "Bandai Namco", "Tamsoft", "Game Fighting", "Ranked Mode"]
 categories = ["Berita", "Game"]

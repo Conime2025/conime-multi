@@ -13,7 +13,7 @@ synopsis = """<p><strong>Belle</strong> adalah kisah tentang Suzu Naito, seorang
 conclusion = """<p><em>Belle</em> adalah pengalaman sinematik yang mendalam — bukan sekadar visual CGI dan musik yang enak didengar, tetapi kisah tentang kerentanan, solidaritas, dan cinta—baik itu persahabatan maupun asmara. Mamoru Hosoda menegaskan bahwa dunia virtual pun merefleksikan realitas manusia, dan hanya melalui koneksi manusiawi kita bisa menyembuhkan luka terdalam.</p>"""
 
 image = "/images/anime/BellePosterBlank.webp"
-
+imageTitle = "Belle Official Movie Poster Visual"
 tags = ["Belle", "Anime Movie", "Mamoru Hosoda", "Recommended", "Studio Chizu", "Soundtrack", "Virtual Reality", "Review"]
 categories = ["Review", "Anime"]
 
