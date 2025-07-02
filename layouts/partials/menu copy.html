@@ -14,7 +14,7 @@ Renders a menu for the given menu ID.
 <nav id="navMenuLeft"
   class="w-full h-full overflow-y-hidden overflow-x-hidden  px-0 lg:px-4 py-2 lg:py-0 mx-4 lg:mx-0 rounded-xl">
   <ul id="navList"
-    class="flex flex-row lg:flex-col gap-1 lg:gap-[2px] h-full justify-center lg:justify-evenly items-center lg:items-center [&>*:nth-child(2)]:hidden [&>*:nth-child(4)]:hidden [&>*:nth-child(5)]:hidden [&>*:nth-child(6)]:hidden [&>*:nth-child(9)]:flex [&>*:nth-child(5)]:lg:flex [&>*:nth-child(6)]:lg:flex [&>*:nth-child(7)]:lg:flex [&>*:nth-child(9)]:lg:flex">
+    class="flex flex-row lg:flex-col gap-1 lg:gap-[2px] h-full justify-between lg:justify-evenly items-center lg:items-center [&>*:nth-child(2)]:hidden [&>*:nth-child(5)]:lg:flex [&>*:nth-child(6)]:lg:flex [&>*:nth-child(7)]:lg:flex [&>*:nth-child(8)]: [&>*:nth-child(9)]:hidden">
     {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
   </ul>
 </nav>
@@ -46,20 +46,34 @@ Renders a menu for the given menu ID.
   data-aos-duration="1600"
   once="true"
   class="
-  group pointer-events-auto max-w-14 w-full h-full flex justify-center items-center relative">
+  group pointer-events-auto min-w-12 w-full h-full flex justify-center items-center
+  {{ if eq $entry.Identifier "notifBtn" }}
+  fixed bottom-20 right-4 sm:bottom-24 right-6
+  !w-fit !h-fit !rounded-full lg:!text-gray-700 lg:dark:!text-gray-400
+  !bg-white dark:!bg-gray-800
+
+  lg:relative
+  lg:bottom-auto
+  lg:right-auto
+  lg:!w-full
+  lg:!h-fit
+  lg:!rounded-none
+  lg:!bg-white/0 lg:dark:!bg-gray-950/0
+{{ else }}
+  relative
+{{ end }}">
 
 
-<a class="min-w-15 min-h-14 max-w-15 lg:max-w-full max-h-14 px-2 py-2 lg:px-3 sm:py-3 h-full lg:h-fit flex flex-col lg:flex-row gap-0 lg:gap-4 w-full justify-center lg:justify-start items-center hover:shadow hover:bg-gray-300 hover:dark:bg-gray-800/50 {{ if or $isActive $isAncestor }}bg-conime-500 dark:bg-conime-500 group-hover:bg-conime-500 group-hover:dark:bg-conime-500 text-white dark:text-white group-hover:text-white group-hover:dark:text-white{{ else }}bg-white/0 dark:bg-gray-950/0 text-gray-700 dark:text-gray-400  group-hover:text-conime-400  dark:group-hover:text-conime-500{{ end }} backdrop-blur-sm   transition duration-500 ease-in-out rounded-xl"
+<a class="px-2 py-1 lg:px-3 sm:py-3 h-full lg:h-fit flex flex-col lg:flex-row gap-0 lg:gap-4 w-full justify-center {{ if eq .Identifier "notifBtn" }}!backdrop-blur-none !rounded-full lg:!backdrop-blur-sm lg:!rounded-xl !px-3 !py-2 lg:px-3 sm:py-3{{ end }} lg:justify-start items-center hover:shadow hover:bg-gray-300 hover:dark:bg-gray-800/50 {{ if or $isActive $isAncestor }}bg-conime-500 dark:bg-conime-500 group-hover:bg-conime-500 group-hover:dark:bg-conime-500 text-white dark:text-white group-hover:text-white group-hover:dark:text-white{{ else }}bg-white/0 dark:bg-gray-950/0 text-gray-700 dark:text-gray-400  group-hover:text-conime-400  dark:group-hover:text-conime-500{{ end }} backdrop-blur-sm   transition duration-500 ease-in-out rounded-xl"
     {{- with .Identifier }} id="{{ . }}" {{- end }} {{- range $k, $v :=$attrs }} {{- with $v }} {{- printf " %s=%q" $k
     $v | safeHTMLAttr }} {{- end }} {{- end -}}>
-    <span class="block h-fit py-1  group-hover:scale-110 transition duration-500 ease-in-out">
+    <span class="block h-fit py-1 {{ if eq $entry.Identifier "notifBtn" }}[&>svg]:!w-8 [&>svg]:!h-8 [&>svg]:lg:!h-6 [&>svg]:lg:!w-6{{ end }} group-hover:scale-110 transition duration-500 ease-in-out">
       {{ with .Params.svg }}
       {{ . | safeHTML }}
       {{ end }}
     </span>
-
     <span
-      class="flex h-fit w-fit lg:w-auto text-[.6rem] lg:text-base justify-center items-start lg:items-center transition duration-1000 ease-in-out ">{{
+      class="{{ if eq .Identifier "notifBtn" }}hidden lg:flex{{ else }} flex {{ end }} h-fit w-fit lg:w-auto text-[.6rem] lg:text-base justify-center items-start lg:items-center transition duration-1000 ease-in-out ">{{
       $name }}</span>
     {{ if eq .Identifier "notifBtn" }}
     <div id="notifBadge" class="absolute hidden top-4 lg:top-3 left-[28px] lg:left-[22px]">

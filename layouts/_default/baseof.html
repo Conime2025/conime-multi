@@ -45,7 +45,7 @@
   {{ end }}
 
   <header
-    class="w-full z-[1000] max-h-20 h-20 {{ if .IsHome }}hidden{{ else }}flex{{ end }} fixed left-0 top-0 right-0  bg-white/50 dark:bg-gray-900/70   lg:bg-white/50 lg:dark:bg-gray-900/80 backdrop-blur-lg  text-gray-800 dark:text-gray-300 transition duration-300 ease-in-out px-6 sm:24 lg:px-[15%] py-2 lg:py-4 flex-row justify-between items-center">
+    class="w-full z-[1000] min-h-12 max-h-20 h-20 {{ if .IsHome }}hidden{{ else }}flex{{ end }} fixed left-0 top-0 right-0  bg-white/50 dark:bg-gray-900/70   lg:bg-white/50 lg:dark:bg-gray-900/80 backdrop-blur-lg  text-gray-800 dark:text-gray-300 transition duration-300 ease-in-out px-6 sm:24 lg:px-[15%] py-2 lg:py-4 flex-row justify-between items-center">
     {{ partial "header.html" . }}
   </header>
 
@@ -61,7 +61,7 @@
 
       {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
       {{ partial "notif-modal.html" . }}
-      {{ partial "notif-modal copy.html" . }}
+
     </div>
     <!-- Konten Utama -->
     <main

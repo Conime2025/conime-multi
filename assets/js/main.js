@@ -75,6 +75,50 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 2000);
   });
 
+
+
+// ========== Menu Expand ==========
+const moreBtn = document.getElementById('moreBtn');
+const navList = document.getElementById('navList');
+
+let expanded = false;
+
+moreBtn.addEventListener('click', () => {
+  expanded = !expanded;
+
+  if (expanded) {
+    // Expand: tampilkan semua
+    navList.classList.remove(
+      'flex-row',
+      'lg:flex-col',
+      'justify-between',
+      '[&>*:nth-child(2)]:hidden',
+      '[&>*:nth-child(4)]:hidden',
+      '[&>*:nth-child(5)]:hidden',
+      '[&>*:nth-child(6)]:hidden'
+    );
+    navList.classList.add('flex-wrap', 'justify-start');
+
+
+  } else {
+    // Collapse: sembunyikan lagi
+    navList.classList.remove('flex-wrap', 'justify-start');
+    navList.classList.add('flex-row', 'justify-between');
+
+    navList.classList.add(
+      '[&>*:nth-child(2)]:hidden',
+      '[&>*:nth-child(4)]:hidden',
+      '[&>*:nth-child(5)]:hidden',
+      '[&>*:nth-child(6)]:hidden'
+    );
+
+
+  }
+});
+
+
+
+
 // ========== NONAKTIFKAN FITUR LAIN (DIBIARKAN UNTUK REFERENSI) ==========
 
 // ====== AUTO SCROLL ======
