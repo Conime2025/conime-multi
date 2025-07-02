@@ -92,7 +92,6 @@ moreBtn.addEventListener('click', () => {
       'flex-row',
       'lg:flex-col',
       'justify-between',
-      '[&>*:nth-child(2)]:hidden',
       '[&>*:nth-child(4)]:hidden',
       '[&>*:nth-child(5)]:hidden',
       '[&>*:nth-child(6)]:hidden'
@@ -106,7 +105,6 @@ moreBtn.addEventListener('click', () => {
     navList.classList.add('flex-row', 'justify-between');
 
     navList.classList.add(
-      '[&>*:nth-child(2)]:hidden',
       '[&>*:nth-child(4)]:hidden',
       '[&>*:nth-child(5)]:hidden',
       '[&>*:nth-child(6)]:hidden'
