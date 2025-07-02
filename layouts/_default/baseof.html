@@ -51,7 +51,7 @@
 
   <div class="flex gap-2 w-screen h-auto relative">
     <!-- Main menu -->
-    <div id="main-menu" class="fixed lg:top-20 bottom-0 left-0 z-[999]
+    <div id="main-menu" class="fixed pb-[env(safe-area-inset-bottom)] lg:top-20 bottom-0 left-0 z-[999]
          lg:w-[20%] xl:w-[15%] w-full h-fit lg:h-[calc(100vh-theme(space.40))]
          bg-white/50 dark:bg-gray-900/70 lg:bg-white/50 lg:dark:bg-gray-900/80
          backdrop-blur-lg lg:backdrop-blur-none
@@ -97,7 +97,7 @@
   {{ end }}
 
   <footer
-  class="text-sm ml-0 sm:ml-auto mx-auto lg:ml-[20%] xl:ml-[15%] mt-12 sm:mt-6 {{ if .IsHome }}hidden{{ else }}block{{ end }} relative text-gray-800 dark:text-gray-300 transition duration-300 ease-in-out px-4 sm:px-6 lg:px-12">
+  class="pb-[env(safe-area-inset-bottom)] text-sm ml-0 sm:ml-auto mx-auto lg:ml-[20%] xl:ml-[15%] mt-12 sm:mt-6 {{ if .IsHome }}hidden{{ else }}block{{ end }} relative text-gray-800 dark:text-gray-300 transition duration-300 ease-in-out px-4 sm:px-6 lg:px-12">
 
   <div class="z-10 border-t border-conime-500 dark:border-conime-500 pt-6 sm:pt-6">
 
