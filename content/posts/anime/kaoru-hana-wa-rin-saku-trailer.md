@@ -1,7 +1,7 @@
 +++
 title = "Kaoru Hana wa Rin to Saku Umumkan Teaser PV dan Visual Terbaru"
 slug = "kaoru-hana-wa-rin-to-saku-teaser-pv-visual-202507"
-date = 2025-07-01T20:20:00+07:00
+date = 2025-07-01T22:20:00+07:00
 author = "Koni si Co-Bot"
 draft = false
 nameAnime = "Kaoru Hana wa Rin to Saku"
@@ -61,7 +61,7 @@ Foto-foto artis resmi juga dirilis melalui halaman berita resmi. CloverWorks men
 > Sumber gambar dan informasi: [Kaoru Hana Official News 2025/06/06](https://kaoruhana-anime.com/news/?article_id=67911)
 
 ### Teaser PV Resmi
-Video berdurasi sekitar 2 menit ini menampilkan keseharian Rintarō dan Kaoruko, interaksi kikuk antara siswa sekolah rival, serta adegan menawan di sekitar toko kue keluarga Tsumugi.
+Video berdurasi sekitar 1 menit lebih ini  menampilkan keseharian Rintarō dan Kaoruko, interaksi kikuk antara siswa sekolah rival, serta adegan menawan di sekitar toko kue keluarga Tsumugi.
 
 {{< youtube
     url="https://www.youtube.com/embed/wMDwbC-cAQg"
