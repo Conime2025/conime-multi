@@ -12,7 +12,7 @@ Renders a menu for the given menu ID.
 
 {{- with index site.Menus $menuID }}
 <nav id="navMenuLeft"
-  class="w-full h-full overflow-y-hidden overflow-x-hidden  px-0 lg:px-4 py-2 lg:py-0 mx-4 lg:mx-0 rounded-xl">
+  class="w-full h-full overflow-y-hidden overflow-x-hidden px-0 lg:px-4 py-2 lg:py-0 mx-[15px] lg:mx-0 rounded-xl">
   <ul id="navList"
     class="flex flex-row lg:flex-col gap-1 lg:gap-[2px] h-full justify-center lg:justify-evenly items-center lg:items-center [&>*:nth-child(3)]:hidden [&>*:nth-child(4)]:hidden [&>*:nth-child(5)]:hidden [&>*:nth-child(3)]:lg:flex [&>*:nth-child(4)]:lg:flex [&>*:nth-child(5)]:lg:flex [&>*:nth-child(8)]:lg:hidden">
     {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
