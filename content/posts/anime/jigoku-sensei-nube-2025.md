@@ -31,10 +31,6 @@ name = "公式ぬ～べ～アニメ公式サイト"
 url = "https://nube-anime.com/news/"
 
 [[sources]]
-name = "公式X / @nube_ani"
-url = "https://x.com/nube_ani"
-
-[[sources]]
 name = "YouTube 東映アニメーション公式"
 url = "https://www.youtube.com/watch?v=s94P7jmEspQ"
 +++
@@ -77,6 +73,5 @@ Penggemar dapat mengikuti pembaruan terbaru melalui situs resmi dan akun X untuk
 
 Untuk info lengkap, kunjungi:
 - Situs resmi: [nube-anime.com](https://nube-anime.com/news/)
-- X resmi: [@nube_ani](https://x.com/nube_ani)
 
 {{< content-end >}}
