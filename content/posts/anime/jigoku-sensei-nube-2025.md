@@ -17,8 +17,8 @@ imageTitle = "Key Visual Resmi Jigoku Sensei Nube 2025"
 
 tags = ["Jigoku Sensei Nube", "Horror", "Supernatural", "Anime Summer 2025", "Berita Anime"]
 categories = ["Berita", "Anime"]
-twitterEmbed = "https://x.com/nube_ani/status/1803654743542529075"
-twitterEmbedTitle = "Pengumuman Resmi Jadwal Tayang dan Trailer Baru"
+twitterEmbed = ""
+twitterEmbedTitle = ""
 instagramEmbed = ""
 instagramEmbedTitle = ""
 
