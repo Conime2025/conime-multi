@@ -14,7 +14,7 @@ Renders a menu for the given menu ID.
 <nav id="navMenuLeft"
   class="w-full h-full overflow-y-hidden overflow-x-hidden  px-0 lg:px-4 py-2 lg:py-0 mx-4 lg:mx-0 rounded-xl">
   <ul id="navList"
-    class="flex flex-row lg:flex-col gap-1 lg:gap-[2px] h-full justify-center lg:justify-evenly items-center lg:items-center [&>*:nth-child(2)]:hidden [&>*:nth-child(4)]:hidden [&>*:nth-child(5)]:hidden [&>*:nth-child(6)]:hidden [&>*:nth-child(9)]:flex [&>*:nth-child(5)]:lg:flex [&>*:nth-child(6)]:lg:flex [&>*:nth-child(7)]:lg:flex [&>*:nth-child(9)]:lg:flex">
+    class="flex flex-row lg:flex-col gap-1 lg:gap-[2px] h-full justify-center lg:justify-evenly items-center lg:items-center [&>*:nth-child(3)]:hidden [&>*:nth-child(4)]:hidden [&>*:nth-child(5)]:hidden [&>*:nth-child(3)]:lg:flex [&>*:nth-child(4)]:lg:flex [&>*:nth-child(5)]:lg:flex [&>*:nth-child(8)]:lg:hidden">
     {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
   </ul>
 </nav>
@@ -45,11 +45,19 @@ Renders a menu for the given menu ID.
   data-aos-delay="{{ mul $index 1 }}"
   data-aos-duration="1600"
   once="true"
-  class="
-  group pointer-events-auto max-w-14 w-full h-full flex justify-center items-center relative">
+  class=" {{ if eq $entry.Identifier "animeBtn" }}{{ printf " order-1 md:order-none" }}
+    {{ else if eq $entry.Identifier "comicBtn" }}{{ printf " order-2 md:order-none" }}
+    {{ else if eq $entry.Identifier "movieBtn" }}{{ printf " order-3 md:order-none" }}
+    {{ else if eq $entry.Identifier "homeBtn" }}{{ printf " order-5 md:order-none" }}
+    {{ else if eq $entry.Identifier "gameBtn" }}{{ printf " order-6 md:order-none" }}
+    {{ else if eq $entry.Identifier "reviewBtn" }}{{ printf " order-4 md:order-none" }}
+    {{ else if eq $entry.Identifier "notifBtn" }}{{ printf " order-7 md:order-none" }}
+    {{ else if eq $entry.Identifier "moreBtn" }}{{ printf " order-8 md:order-none" }}
+    {{ end }}
+  group pointer-events-auto max-w-16 lg:max-w-[100%] lg:w-full h-full flex justify-center items-center lg:justify-start lg:gap-4 relative">
 
 
-<a class="min-w-15 min-h-14 max-w-15 lg:max-w-full max-h-14 px-2 py-2 lg:px-3 sm:py-3 h-full lg:h-fit flex flex-col lg:flex-row gap-0 lg:gap-4 w-full justify-center lg:justify-start items-center hover:shadow hover:bg-gray-300 hover:dark:bg-gray-800/50 {{ if or $isActive $isAncestor }}bg-conime-500 dark:bg-conime-500 group-hover:bg-conime-500 group-hover:dark:bg-conime-500 text-white dark:text-white group-hover:text-white group-hover:dark:text-white{{ else }}bg-white/0 dark:bg-gray-950/0 text-gray-700 dark:text-gray-400  group-hover:text-conime-400  dark:group-hover:text-conime-500{{ end }} backdrop-blur-sm   transition duration-500 ease-in-out rounded-xl"
+<a class="min-w-16 min-h-16 max-w-16 lg:max-w-full max-h-16 lg:max-h-full px-2 py-2 lg:px-3 sm:py-3 h-full lg:h-fit flex flex-col lg:flex-row gap-0 lg:gap-4 w-full justify-center lg:justify-start items-center hover:shadow hover:bg-gray-300 hover:dark:bg-gray-800/50 {{ if or $isActive $isAncestor }}bg-conime-500 dark:bg-conime-500 group-hover:bg-conime-500 group-hover:dark:bg-conime-500 text-white dark:text-white group-hover:text-white group-hover:dark:text-white{{ else }}bg-white/0 dark:bg-gray-950/0 text-gray-700 dark:text-gray-400  group-hover:text-conime-400  dark:group-hover:text-conime-500{{ end }} backdrop-blur-sm   transition duration-500 ease-in-out rounded-xl"
     {{- with .Identifier }} id="{{ . }}" {{- end }} {{- range $k, $v :=$attrs }} {{- with $v }} {{- printf " %s=%q" $k
     $v | safeHTMLAttr }} {{- end }} {{- end -}}>
     <span class="block h-fit py-1  group-hover:scale-110 transition duration-500 ease-in-out">
