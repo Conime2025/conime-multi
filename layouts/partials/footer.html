@@ -35,13 +35,11 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
-  duration: 1200,  // semua elemen default 1200ms
-  delay: 0,
-  once: true,
-});
-
+    duration: 1200,
+    delay: 0,
+    once: true,
+  });
 </script>
-
 
 <!-- ============= LIBRARY EXTERNAL ============= -->
 <script src="https://unpkg.com/@popperjs/core@2"></script>
@@ -50,43 +48,61 @@
   tippy('[data-tippy-content]');
 </script>
 
-{{ $three := resources.Get "js/three.min.js" | resources.Minify }}
-<script src="{{ $three.RelPermalink }}" defer></script>
+{{ with resources.Get "js/three.min.js" }}
+  {{ $min := . | resources.Minify }}
+  <script src="{{ $min.RelPermalink }}" defer></script>
+{{ end }}
 
-{{ $gsap := resources.Get "js/gsap.min.js" | resources.Minify }}
-<script src="{{ $gsap.RelPermalink }}" defer></script>
+{{ with resources.Get "js/gsap.min.js" }}
+  {{ $min := . | resources.Minify }}
+  <script src="{{ $min.RelPermalink }}" defer></script>
+{{ end }}
 
-{{ $hoverUMD := resources.Get "js/hover-effect.umd.js" | resources.Minify }}
-<script src="{{ $hoverUMD.RelPermalink }}" defer></script>
-
+{{ with resources.Get "js/hover-effect.umd.js" }}
+  {{ $min := . | resources.Minify }}
+  <script src="{{ $min.RelPermalink }}" defer></script>
+{{ end }}
 
 <!-- ============= MAIN BUNDLE UNTUK SEMUA HALAMAN ============= -->
-{{ $main := resources.Get "js/main.js" | resources.Minify }}
-<script src="{{ $main.RelPermalink }}" defer></script>
+{{ with resources.Get "js/main.js" }}
+  {{ $min := . | resources.Minify }}
+  <script src="{{ $min.RelPermalink }}" defer></script>
+{{ end }}
 
-{{ $notif := resources.Get "js/notif.js" | resources.Minify }}
-<script src="{{ $notif.RelPermalink }}" defer></script>
+{{ with resources.Get "js/notif.js" }}
+  {{ $min := . | resources.Minify }}
+  <script src="{{ $min.RelPermalink }}" defer></script>
+{{ end }}
 
-{{ $last := resources.Get "js/last-view.js" | resources.Minify }}
-<script src="{{ $last.RelPermalink }}" defer></script>
+{{ with resources.Get "js/last-view.js" }}
+  {{ $min := . | resources.Minify }}
+  <script src="{{ $min.RelPermalink }}" defer></script>
+{{ end }}
 
-{{ $popular := resources.Get "js/popular-umami.js" | resources.Minify }}
-<script src="{{ $popular.RelPermalink }}" defer></script>
+{{ with resources.Get "js/popular-umami.js" }}
+  {{ $min := . | resources.Minify }}
+  <script src="{{ $min.RelPermalink }}" defer></script>
+{{ end }}
 
 <!-- ============= KHUSUS HOMEPAGE ============= -->
 {{ if eq .RelPermalink "/" }}
-  {{ $loading := resources.Get "js/loading-animation.js" | resources.Minify }}
-  <script src="{{ $loading.RelPermalink }}" defer></script>
-
-
+  {{ with resources.Get "js/loading-animation.js" }}
+    {{ $min := . | resources.Minify }}
+    <script src="{{ $min.RelPermalink }}" defer></script>
+  {{ end }}
 {{ end }}
- {{ $hoverInit := resources.Get "js/hover-init.js" | resources.Minify }}
-  <script src="{{ $hoverInit.RelPermalink }}" defer></script>
+
+{{ with resources.Get "js/hover-init.js" }}
+  {{ $min := . | resources.Minify }}
+  <script src="{{ $min.RelPermalink }}" defer></script>
+{{ end }}
 
 <!-- Inisialisasi Tippy untuk SEMUA elemen -->
 <script>
   tippy('[data-tippy-content]');
 </script>
+
+
 {{ if hugo.IsServer }}
 <!--
 
