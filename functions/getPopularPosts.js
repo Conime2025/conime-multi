@@ -1,5 +1,4 @@
 export async function handler(event, context) {
-  // Umami API config
   const websiteId = '22aa83cf-a325-47ce-824c-ba05044bbcd1';
   const apiKey = 'api_GUqKESZbrRmdfPPFcGpaNARWhPckYMvQ';
   const limit = 3;
@@ -16,7 +15,7 @@ export async function handler(event, context) {
     if (!res.ok) {
       return {
         statusCode: res.status,
-        body: JSON.stringify({ error: 'Failed to fetch Umami API' })
+        body: JSON.stringify({ error: 'Failed to fetch Umami API', details: await res.text() })
       };
     }
 
