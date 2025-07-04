@@ -70,6 +70,8 @@
 {{ $last := resources.Get "js/last-view.js" | resources.Minify }}
 <script src="{{ $last.RelPermalink }}" defer></script>
 
+{{ $popular := resources.Get "js/popular-umami.js" | resources.Minify }}
+<script src="{{ $popular.RelPermalink }}" defer></script>
 
 <!-- ============= KHUSUS HOMEPAGE ============= -->
 {{ if eq .RelPermalink "/" }}
