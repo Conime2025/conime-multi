@@ -113,7 +113,7 @@
             {{ $total := len . }}
             {{ range $index, $source := . }}
             {{ if and (gt $index 0) (eq $index (sub $total 1)) }} and {{ else if gt $index 0 }}, {{ end }}
-            <a href="{{ $source.url }}"
+            <a href="{{ $source.url }}" data-tippy-content="{{ $source.url }}"
               class="hover:underline underline-offset-4             hover:text-conime-400 hover:dark:text-conime-500 inline"
               target="_blank" rel="noopener             noreferrer">{{ $source.name }}</a>
             {{ end }}. Used for editorial purposes only.

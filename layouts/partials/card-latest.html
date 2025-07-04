@@ -2,7 +2,7 @@
 {{ $i := .index }}
 
 <div
-    class="relative flex flex-col w-full h-[360px] p-[2px] rounded-3xl overflow-hidden z-10 shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20">
+    class="relative flex flex-col w-full h-[360px] p-[0px] rounded-3xl overflow-hidden z-10 shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20">
     <div
         class="absolute inset-0 bg-gradient-to-br hidden from-conime-400 via-white to-conime-400 dark:from-conime-500 dark:via-gray-900 dark:to-conime-500 animate-spin delay-500 transition ease-in-out !duration-[10000s] z-0">
     </div>
@@ -29,7 +29,7 @@
     </div>
 
     <!-- Bagian gambar -->
-    <a data-aos="fade-up" data-aos-delay="{{ mul $i 150 }}" data-aos-duration="2000"  href="{{ $page.RelPermalink }}" class="w-full h-[45%] rounded-xl z-10 overflow-hidden bg-cover">
+    <a data-aos="fade-up" data-aos-delay="{{ mul $i 150 }}" data-aos-duration="2000"  href="{{ $page.RelPermalink }}" class="w-full h-[45%] rounded-t-xl z-10 overflow-hidden bg-cover">
         {{ $img := $page.Params.image | default "/images/default.png" }}
         <div class="w-full h-full">
             <img loading="lazy" src="{{ $img }}" alt="Gambar {{ $page.Title }}"
