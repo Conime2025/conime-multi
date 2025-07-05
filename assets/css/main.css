@@ -1574,9 +1574,6 @@
   .text-rose-600 {
     color: var(--color-rose-600);
   }
-  .text-transparent {
-    color: transparent;
-  }
   .text-white {
     color: var(--color-white);
   }
@@ -3260,11 +3257,6 @@
   .dark\:text-zinc-300 {
     &:where(.dark, .dark *) {
       color: var(--color-zinc-300);
-    }
-  }
-  .dark\:opacity-20 {
-    &:where(.dark, .dark *) {
-      opacity: 20%;
     }
   }
   .dark\:opacity-50 {
