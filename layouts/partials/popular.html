@@ -4,21 +4,35 @@
 {{ $popularPages := slice }}
 
 {{ range $popularPaths }}
-  {{ $page := site.GetPage . }}
-  {{ if $page }}
-    {{ $popularPages = $popularPages | append $page }}
-  {{ else }}
-    <p class="text-red-500 text-sm">⚠️ Tidak ketemu di Hugo: {{ . }}</p>
+  {{ $target := trim . "/" }}
+  {{ $found := false }}
+
+  {{/* --- Filter hanya jika path cocok pola posts/category/slug --- */}}
+  {{ $segments := split $target "/" }}
+  {{ if and (eq (index $segments 0) "posts") (gt (len $segments) 2) }}
+
+    {{ range site.RegularPages }}
+      {{ if eq (trim .RelPermalink "/") $target }}
+        {{ $popularPages = $popularPages | append . }}
+        {{ $found = true }}
+      {{ end }}
+    {{ end }}
+
+    {{ if not $found }}
+      <p class="text-red-500 text-sm">⚠️ Tidak ketemu di Hugo: {{ . }}</p>
+    {{ end }}
   {{ end }}
 {{ end }}
 
-{{ if gt (len $popularPages) 0 }}
+{{ $subset := first 3 $popularPages }}
+
+{{ if gt (len $subset) 0 }}
 <div class="w-full h-fit">
   <h2 class="text-xl uppercase tracking-[.3em] lg:tracking-[.4em] border-b border-gray-300 dark:border-gray-800/50 pb-2 mb-4">
     Popular News
   </h2>
   <ul class="flex flex-col gap-4">
-    {{ range $i, $page := $popularPages }}
+    {{ range $i, $page := $subset }}
       <li class="relative popular-html flex flex-col col-span-2 w-full h-full bg-white hover:bg-gray-300 dark:bg-gray-950/60 hover:dark:bg-gray-800/50 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out">
         <a href="{{ $page.RelPermalink }}" class="bg-cover w-full h-full overflow-hidden transition duration-500 ease-in-out">
           {{ with $page.Params.image }}

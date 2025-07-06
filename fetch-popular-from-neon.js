@@ -26,7 +26,7 @@ async function getPopularPages() {
         AND url_path IS NOT NULL
       GROUP BY url
       ORDER BY visits DESC
-      LIMIT 10
+      LIMIT 20
     `;
 
     const result = await client.query(query);
