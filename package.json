@@ -1,13 +1,19 @@
 {
   "name": "conime",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch\" \"hugo server\"",
+
+    "predev": "node fetch-popular-from-neon.js",
+    "dev": "concurrently \"npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch\" \"hugo server -D\"",
+
+    "prebuild": "node fetch-popular-from-neon.js",
+    "build": "hugo --minify",
+
     "dev:hugo": "hugo server -D",
-    "dev:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch",
-    "dev2": "concurrently -k \"npm run dev:hugo\" \"npm run dev:css\""
+    "dev:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +32,5 @@
     "pg": "^8.16.3",
     "three": "0.177.0",
     "tippy.js": "^6.3.7"
-  },
-  "description": ""
+  }
 }
