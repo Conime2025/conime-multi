@@ -14,14 +14,14 @@
 <!-- Title -->
 <title>
   {{ if .IsHome }}
-  {{ site.Title }} - Portal Berita Pop Culture Indonesia
+  {{ site.Title }} | Portal Berita Pop Culture Indonesia
   {{ else }}
   {{ .Title }} | {{ site.Title }}
   {{ end }}
 </title>
 
 <!-- Open Graph -->
-<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }} - Portal Berita Pop Culture Indonesia{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }} | Portal Berita Pop Culture Indonesia{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}">
 <meta property="og:description" content="{{ with .Params.summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 <meta property="og:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "/images/logo_conime.og.png" | absURL }}{{ end }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
@@ -30,7 +30,7 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }} - Portal Berita Pop Culture Indonesia{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }} | Portal Berita Pop Culture Indonesia{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}">
 <meta name="twitter:description" content="{{ with .Params.summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 <meta name="twitter:image" content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ "/images/logo_conime.og.png" | absURL }}{{ end }}">
 <meta name="twitter:url" content="{{ .Permalink }}">
@@ -77,8 +77,9 @@
 
 
 <!-- Google Fonts -->
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"></noscript>
+
 
 <!-- AOS -->
 {{ if .IsHome }}
