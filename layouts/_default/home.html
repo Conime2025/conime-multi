@@ -25,7 +25,7 @@
 
   <!-- Section Latest Posts -->
   <section class="relative w-full col-span-4 lg:col-span-12 flex flex-col  items-center rounded-3xl h-fit mt-10 lg:mt-10">
-    <h2 data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" class="text-center text-xl p-1 uppercase tracking-[.6em] lg:tracking-[1.5em]">Latest Posts
+    <h2 data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000" class="text-center text-xl p-1 uppercase tracking-[.6em] lg:tracking-[1.5em]">Latest Posts
     </h2>
     <div
       class="grid grid-cols-1 lg:grid-cols-3 lg:[&>*:nth-child(1)]:col-span-2 lg:[&>*:nth-child(7)]:col-span-2 lg:[&>*:nth-child(11)]:col-span-2 gap-3  py-2 w-full h-fit">
@@ -89,7 +89,7 @@
 
 <!-- Section Popular -->
 <section class="relative w-full col-span-4 lg:col-span-12 flex flex-col items-center rounded-3xl h-fit mt-10">
-  <h2 data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" class="text-center text-xl p-1 uppercase tracking-[.6em] lg:tracking-[1.5em]">
+  <h2 data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000" class="text-center text-xl p-1 uppercase tracking-[.6em] lg:tracking-[1.5em]">
     Popular Posts
   </h2>
 
@@ -124,7 +124,7 @@
     {{ if gt (len $subset) 0 }}
       {{ range $i, $page := $subset }}
       <ul class="relative group flex flex-col justify-center w-full h-auto">
-        <li data-aos="fade-up" data-aos-delay="{{ mul $i 200 }}" data-aos-duration="2000"
+        <li data-aos="fade-up" data-aos-delay="{{ mul $i 100 }}" data-aos-duration="2000"
           class="relative popular-html flex flex-col w-full h-full bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-950/20 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out">
 
           <a href="{{ $page.RelPermalink }}" class="bg-cover w-full h-full overflow-hidden transition duration-500 ease-in-out">
@@ -135,7 +135,7 @@
           </a>
 
           <!-- Bagian teks -->
-          <div data-aos="fade-up" data-aos-delay="{{ mul $i 200 }}" data-aos-duration="2000"
+          <div data-aos="fade-up" data-aos-delay="{{ mul $i 100 }}" data-aos-duration="2000"
             class="w-full lg:w-[70%] h-[60%] lg:h-[70%] group absolute bottom-0 left-0 rounded-tr-3xl transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
 
             <h2 class="w-fit inline-block lg:hidden"> —0{{ add $i 1 }}</h2>
@@ -169,7 +169,7 @@
 {{ if site.IsServer }}
 <!-- Section Popular -->
 <section class="relative w-full col-span-4 lg:col-span-12 flex flex-col items-center rounded-3xl h-fit mt-10">
-  <h2 data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" class="text-center text-xl p-1 uppercase tracking-[.6em] lg:tracking-[1.5em]">
+  <h2 data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000" class="text-center text-xl p-1 uppercase tracking-[.6em] lg:tracking-[1.5em]">
     Popular Posts
   </h2>
 
@@ -204,7 +204,7 @@
     {{ if gt (len $subset) 0 }}
       {{ range $i, $page := $subset }}
       <ul class="relative group flex flex-col justify-center w-full h-auto">
-        <li data-aos="fade-up" data-aos-delay="{{ mul $i 200 }}" data-aos-duration="2000"
+        <li data-aos="fade-up" data-aos-delay="{{ mul $i 100 }}" data-aos-duration="2000"
           class="relative popular-html flex flex-col w-full h-full bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-950/20 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out">
 
           <a href="{{ $page.RelPermalink }}" class="bg-cover w-full h-full overflow-hidden transition duration-500 ease-in-out">
@@ -215,7 +215,7 @@
           </a>
 
           <!-- Bagian teks -->
-          <div data-aos="fade-up" data-aos-delay="{{ mul $i 200 }}" data-aos-duration="2000"
+          <div data-aos="fade-up" data-aos-delay="{{ mul $i 100 }}" data-aos-duration="2000"
             class="w-full lg:w-[70%] h-[60%] lg:h-[70%] group absolute bottom-0 left-0 rounded-tr-3xl transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
 
             <h2 class="w-fit inline-block lg:hidden"> —0{{ add $i 1 }}</h2>
@@ -245,7 +245,7 @@
 
   <!-- Section Popular -->
   <section class="relative w-full col-span-4 lg:col-span-12 hidden flex-col  items-center rounded-3xl h-fit mt-10">
-    <h2 data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" class="text-center text-xl p-1 uppercase tracking-[.6em] lg:tracking-[1.5em]">Popular Posts
+    <h2 data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000" class="text-center text-xl p-1 uppercase tracking-[.6em] lg:tracking-[1.5em]">Popular Posts
     </h2>
     <div
       class="grid grid-cols-1 lg:grid-cols-3 lg:[&>*:nth-child(1)]:col-span-2 lg:[&>*:nth-child(7)]:col-span-2 lg:[&>*:nth-child(11)]:col-span-2 gap-3  py-2 w-full h-fit">
@@ -257,7 +257,7 @@
       {{ if gt (len $subset) 0 }}
       {{ range $i, $page := $subset }}
       <ul class="relative group flex flex-col justify-center w-full h-auto">
-        <li data-aos="fade-up" data-aos-delay="{{ mul $i 200 }}" data-aos-duration="2000"
+        <li data-aos="fade-up" data-aos-delay="{{ mul $i 100 }}" data-aos-duration="2000"
   class="relative popular-html flex flex-col  w-full h-full bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-950/20 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out  ">
 
           <a href="{{ .RelPermalink }}"
@@ -271,7 +271,7 @@
           </a>
 
           <!-- Bagian teks -->
-          <div data-aos="fade-up" data-aos-delay="{{ mul $i 200 }}" data-aos-duration="2000"
+          <div data-aos="fade-up" data-aos-delay="{{ mul $i 100 }}" data-aos-duration="2000"
   class="w-full lg:w-[70%] h-[60%] lg:h-[70%] group absolute bottom-0  left-0 rounded-tr-3xl   transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
 
             <h2 class="w-fit inline-block lg:hidden"> —0{{ add $i 1 }}</h2>
@@ -308,7 +308,7 @@
 
   <!-- Section Discover More -->
   <section class="relative w-full col-span-4 lg:col-span-12 flex flex-col  items-center rounded-3xl h-fit mt-10">
-    <h2 data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000" class="text-center text-xl p-1 uppercase tracking-[.6em] lg:tracking-[1.5em]">Discover More
+    <h2 data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000" class="text-center text-xl p-1 uppercase tracking-[.6em] lg:tracking-[1.5em]">Discover More
     </h2>
     <!-- Scrollable horizontal list gabungan 3 terbaru dari tiap kategori -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-3  py-2 w-full h-fit">
@@ -331,12 +331,12 @@
       {{ $img3 := index $discoverPosts 3 }}
       {{ $discoverPage := site.GetPage "section" "posts/anime" }}
       <div class="relative group flex flex-col justify-center left-10 w-[90%] h-auto">
-        <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+        <div data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000"
           class="relative flex flex-col w-full h-[360px] rounded-3xl z-10 bg-gray-300 dark:bg-gray-950/50 shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20">
 
           <!-- Bagian gambar -->
           <a href="{{ $discoverPage.RelPermalink }}" class="w-full h-full absolute left-4 bg-cover" >
-            <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+            <div data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000"
               class="w-[98%] h-[95%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-6">
               <img loading="lazy" src="{{ $img3.Params.image | default " /images/default.png" }}"
                 alt="Gambar {{ $img3.Title }}"
@@ -362,7 +362,7 @@
             </div>
           </a>
           <!-- Bagian teks -->
-          <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000"
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000"
             class="w-full h-[55%] absolute z-10 flex flex-col justify-between bottom-0 -left-8 right-8 rounded-t-[32px] font-light dark:font-extralight   bg-white hover:bg-gray-300 dark:bg-gray-950 hover:dark:bg-gray-900">
             <h2 data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000" class="w-full h-full text-2xl p-4 line-clamp-4 lg:line-clamp-4">
               <a href="{{ $discoverPage.RelPermalink }}" data-tippy-content="Show all {{ $discoverPage.Title }}" class="hover:underline uppercase break-words">{{ $discoverPage.Title }}</a>
@@ -401,12 +401,12 @@
       {{ $img3 := index $discoverPosts 3 }}
       {{ $discoverPage := site.GetPage "section" "posts/comics" }}
       <div class="relative group flex flex-col justify-center left-10 w-[90%] h-auto">
-        <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+        <div data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000"
           class="relative flex flex-col w-full h-[360px] rounded-3xl z-10 bg-gray-300 dark:bg-gray-950/50 shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20">
 
           <!-- Bagian gambar -->
           <a href="{{ $discoverPage.RelPermalink }}" class="w-full h-full absolute left-4 bg-cover" >
-            <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+            <div data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000"
               class="w-[98%] h-[95%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-6">
               <img loading="lazy" src="{{ $img3.Params.image | default " /images/default.png" }}"
                 alt="Gambar {{ $img3.Title }}"
@@ -432,7 +432,7 @@
             </div>
           </a>
           <!-- Bagian teks -->
-          <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000"
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000"
             class="w-full h-[55%] absolute z-10 flex flex-col justify-between bottom-0 -left-8 right-8 rounded-t-[32px] font-light dark:font-extralight   bg-white hover:bg-gray-300 dark:bg-gray-950 hover:dark:bg-gray-900">
             <h2 data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000" class="w-full h-full text-2xl p-4 line-clamp-4 lg:line-clamp-4">
               <a href="{{ $discoverPage.RelPermalink }}" data-tippy-content="Show all {{ $discoverPage.Title }}" class="hover:underline uppercase break-words">{{ $discoverPage.Title }}</a>
@@ -471,12 +471,12 @@
       {{ $img3 := index $discoverPosts 3 }}
       {{ $discoverPage := site.GetPage "section" "posts/movies" }}
      <div class="relative group flex flex-col justify-center left-10 w-[90%] h-auto">
-        <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+        <div data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000"
           class="relative flex flex-col w-full h-[360px] rounded-3xl z-10 bg-gray-300 dark:bg-gray-950/50 shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20">
 
           <!-- Bagian gambar -->
           <a href="{{ $discoverPage.RelPermalink }}" class="w-full h-full absolute left-4 bg-cover" >
-            <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+            <div data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000"
               class="w-[98%] h-[95%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-6">
               <img loading="lazy" src="{{ $img3.Params.image | default " /images/default.png" }}"
                 alt="Gambar {{ $img3.Title }}"
@@ -502,7 +502,7 @@
             </div>
           </a>
           <!-- Bagian teks -->
-          <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000"
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000"
             class="w-full h-[55%] absolute z-10 flex flex-col justify-between bottom-0 -left-8 right-8 rounded-t-[32px] font-light dark:font-extralight   bg-white hover:bg-gray-300 dark:bg-gray-950 hover:dark:bg-gray-900">
             <h2 data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000" class="w-full h-full text-2xl p-4 line-clamp-4 lg:line-clamp-4">
               <a href="{{ $discoverPage.RelPermalink }}" data-tippy-content="Show all {{ $discoverPage.Title }}" class="hover:underline uppercase break-words">{{ $discoverPage.Title }}</a>
@@ -541,12 +541,12 @@
       {{ $img3 := index $discoverPosts 3 }}
       {{ $discoverPage := site.GetPage "section" "posts/games" }}
        <div class="relative group flex flex-col justify-center left-10 w-[90%] h-auto">
-        <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+        <div data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000"
           class="relative flex flex-col w-full h-[360px] rounded-3xl z-10 bg-gray-300 dark:bg-gray-950/50 shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20">
 
           <!-- Bagian gambar -->
           <a href="{{ $discoverPage.RelPermalink }}" class="w-full h-full absolute left-4 bg-cover" >
-            <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+            <div data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000"
               class="w-[98%] h-[95%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-6">
               <img loading="lazy" src="{{ $img3.Params.image | default " /images/default.png" }}"
                 alt="Gambar {{ $img3.Title }}"
@@ -572,7 +572,7 @@
             </div>
           </a>
           <!-- Bagian teks -->
-          <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000"
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000"
             class="w-full h-[55%] absolute z-10 flex flex-col justify-between bottom-0 -left-8 right-8 rounded-t-[32px] font-light dark:font-extralight   bg-white hover:bg-gray-300 dark:bg-gray-950 hover:dark:bg-gray-900">
             <h2 data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000" class="w-full h-full text-2xl p-4 line-clamp-4 lg:line-clamp-4">
               <a href="{{ $discoverPage.RelPermalink }}" data-tippy-content="Show all {{ $discoverPage.Title }}" class="hover:underline uppercase break-words">{{ $discoverPage.Title }}</a>
@@ -685,12 +685,12 @@
       {{ $img3 := index $discoverPosts 3 }}
       {{ $discoverPage := site.GetPage "/categories/review" }}
  <div class="relative group flex flex-col justify-center left-10 w-[90%] h-auto">
-        <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+        <div data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000"
           class="relative flex flex-col w-full h-[360px] rounded-3xl z-10 bg-gray-300 dark:bg-gray-950/50 shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20">
 
           <!-- Bagian gambar -->
           <a href="{{ $discoverPage.RelPermalink }}" class="w-full h-full absolute left-4 bg-cover" >
-            <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
+            <div data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000"
               class="w-[98%] h-[95%] rounded-3xl shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20 overflow-hidden absolute bottom-[2px] right-6">
               <img loading="lazy" src="{{ $img3.Params.image | default " /images/default.png" }}"
                 alt="Gambar {{ $img3.Title }}"
@@ -716,7 +716,7 @@
             </div>
           </a>
           <!-- Bagian teks -->
-          <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000"
+          <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000"
             class="w-full h-[55%] absolute z-10 flex flex-col justify-between bottom-0 -left-8 right-8 rounded-t-[32px] font-light dark:font-extralight   bg-white hover:bg-gray-300 dark:bg-gray-950 hover:dark:bg-gray-900">
             <h2 data-aos="fade-up" data-aos-delay="600" data-aos-duration="2000" class="w-full h-full text-2xl p-4 line-clamp-4 lg:line-clamp-4">
               <a href="{{ $discoverPage.RelPermalink }}" data-tippy-content="Show all {{ $discoverPage.Title }}" class="hover:underline uppercase break-words">{{ $discoverPage.Title }}</a>
