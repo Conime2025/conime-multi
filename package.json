@@ -5,13 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-
     "predev": "node fetch-popular-from-neon.js",
     "dev": "concurrently \"npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch\" \"hugo server -D\"",
-
     "prebuild": "node fetch-popular-from-neon.js",
     "build": "hugo --minify",
-
     "dev:hugo": "hugo server -D",
     "dev:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch"
   },

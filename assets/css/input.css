@@ -351,6 +351,15 @@
     @apply my-0;
   }
 
+.title-popular {
+  @apply text-2xl;
+}
+
+[data-title-size="text-xl"] .title-popular {
+  @apply !text-xl;
+}
+
+
   @keyframes spin1 {
     0% {
       transform: rotate(0deg) translateX(25px) rotate(0deg);

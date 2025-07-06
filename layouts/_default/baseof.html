@@ -64,7 +64,7 @@
 
     </div>
     <!-- Konten Utama -->
-    <main
+    <main data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
       class="overflow-hidden relative mt-20 ml-0 lg:ml-[20%] xl:ml-[15%] p-3 sm:px-16 md:px-16 lg:px-20 h-fit min-h-screen-20 w-full lg:w-[85%]">
 
       <div id="fb-root"></div>
@@ -75,26 +75,6 @@
     </main>
   </div>
 
-
-  <!-- SearchModal -->
-  {{ partial "search-modal.html" . }}
-
-
-  {{ if .IsHome }}
-  <script type="application/json" id="post-metadata">
-[
-{{- $pages := where .Site.RegularPages "Section" "posts" -}}
-{{- range $i, $page := $pages }}
-  {{- if gt $i 0 }},{{ end }}
-  {
-    "permalink": "{{ $page.RelPermalink }}",
-    "title": {{ $page.Title | jsonify }},
-    "image": "{{ $page.Params.image | default "/images/default.png" }}"
-  }
-{{- end }}
-]
-</script>
-  {{ end }}
 
   <footer
   class="pb-[env(safe-area-inset-bottom)] text-sm ml-0 sm:ml-auto mx-auto lg:ml-[20%] xl:ml-[15%] mt-12 sm:mt-6 {{ if .IsHome }}hidden{{ else }}block{{ end }} relative text-gray-800 dark:text-gray-300 transition duration-300 ease-in-out px-4 sm:px-6 lg:px-12">
@@ -122,6 +102,15 @@
     {{ partial "footer.html" . }}
 
   </div>
+
+{{ $rel := trim .RelPermalink "/" }}
+{{ if or .IsHome
+         (and (eq .Section "posts") (ne $rel "posts"))
+         (eq .Kind "term") }}
+{{ partial "popular-metadata.html" . }}
+{{ partial "popular-script.html" . }}
+{{ end }}
+
 </footer>
 
 

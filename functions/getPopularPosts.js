@@ -1,75 +1,63 @@
-export async function handler() {
-  const websiteId = process.env.UMAMI_WEBSITE_ID;
-  const apiKey = process.env.UMAMI_API_KEY;
+const { Client } = require('pg');
 
-  const limit = 10;
-  const url = `https://umami.conime.id/api/websites/${websiteId}/events?limit=${limit}&type=pageview`;
+let cachedResult = null;
+let cachedTimestamp = 0;
+const CACHE_TTL = 1 * 60 * 1000; // 10 menit dalam ms
+
+exports.handler = async (event, context) => {
+  const now = Date.now();
+
+  // kalau cache masih valid
+  if (cachedResult && (now - cachedTimestamp) < CACHE_TTL) {
+    return {
+      statusCode: 200,
+      body: JSON.stringify(cachedResult)
+    };
+  }
+
+  // fresh fetch ke DB
+  const client = new Client({
+    connectionString: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false }
+  });
 
   try {
-    const res = await fetch(url, {
-      headers: {
-        Authorization: `Bearer ${apiKey}`
-      }
-    });
+    await client.connect();
 
-    if (!res.ok) {
-      return {
-        statusCode: res.status,
-        body: JSON.stringify({ error: 'Failed to fetch Umami API', details: await res.text() })
-      };
-    }
+    const websiteId = process.env.UMAMI_WEBSITE_ID;
 
-    const rawData = await res.json();
+    const { rows } = await client.query(`
+      SELECT url_path, MAX(created_at) AS last_date
+      FROM website_event
+      WHERE website_id = $1
+        AND created_at >= NOW() - INTERVAL '7 days'
+        AND url_path ~ '^/posts/[^/]+/[^/]+/?$'
+      GROUP BY url_path
+      ORDER BY COUNT(*) DESC
+      LIMIT 10;
+    `, [websiteId]);
 
-    // ⚡ Filter hanya posts/{category}/{slug}/
-    const filtered = rawData.data
-      .map(item => {
-        let path = item.url;
-        // buang trailing slash
-        path = path.replace(/\/$/, '');
-        return { ...item, path };
-      })
-      .filter(item => {
-        const parts = item.path.split('/').filter(Boolean);
-        return parts.length >= 3 && parts[0] === 'posts';
-      });
+    const popularUrls = rows.map(r => ({
+      url: r.url_path,
+      date: r.last_date
+    }));
 
-    // hapus duplikat path
-    const uniquePaths = Array.from(new Set(filtered.map(item => item.path)));
-
-    // mapping manual untuk gambar
-    const imageMap = {
-      "posts/anime/dandadan-season-2-trailer-jadwal-20250601": "/images/anime/dandadan.jpg",
-      "posts/anime/kimetsu-no-yaiba-infinity-castle-film-trailer-20250630": "/images/anime/kimetsu.jpg",
-      "posts/anime/kaoru-hana-wa-rin-to-saku-teaser-pv-visual-202507": "/images/anime/kaoruhana.jpg",
-      "posts/anime/jigoku-sensei-nube-2025-trailer-jadwal-20250701": "/images/anime/nube.jpg",
-      "posts/anime/anime-gachiakuta-penayangan-global-lagu-tema-karakter-baru-20250630": "/images/anime/gachiakuta.jpg",
-      // tambahkan mapping lain sesuai kontenmu
-    };
-
-    const result = uniquePaths.slice(0, 5).map(path => {
-      const match = filtered.find(item => item.path === path);
-      return {
-        url: `/${path}/`,
-        title: match.title,
-        date: match.createdAt || new Date().toISOString(),
-        image: imageMap[path] || "/images/default.png"
-      };
-    });
+    // simpan ke cache
+    cachedResult = popularUrls;
+    cachedTimestamp = now;
 
     return {
       statusCode: 200,
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': 'Content-Type'
-      },
-      body: JSON.stringify(result)
+      body: JSON.stringify(popularUrls)
     };
 
   } catch (error) {
+    console.error(error);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: error.message })
     };
+  } finally {
+    await client.end();
   }
-}
+};

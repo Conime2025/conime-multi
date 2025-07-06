@@ -45,6 +45,8 @@
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
+    --text-8xl: 6rem;
+    --text-8xl--line-height: 1;
     --font-weight-extralight: 200;
     --font-weight-light: 300;
     --font-weight-normal: 400;
@@ -1963,13 +1965,6 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-conime-600);
-      }
-    }
-  }
-  .hover\:bg-gray-100 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-gray-100);
       }
     }
   }
@@ -4069,6 +4064,14 @@
   }
   .content-article .noMy {
     margin-block: calc(var(--spacing) * 0);
+  }
+  .title-popular {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  [data-title-size="text-xl"] .title-popular {
+    font-size: var(--text-xl) !important;
+    line-height: var(--tw-leading, var(--text-xl--line-height)) !important;
   }
   @keyframes spin1 {
     0% {

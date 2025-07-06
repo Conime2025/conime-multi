@@ -84,16 +84,89 @@
   </section>
 
 
- <section class="relative w-full py-10">
-  <h2 class="text-center text-xl uppercase tracking-[.6em] mb-6">Popular Posts</h2>
-  <div id="popular-container" class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-    <p class="text-gray-400 text-sm">Loading popular posts...</p>
+
+
+
+<!-- Section Popular -->
+<section class="relative w-full col-span-4 lg:col-span-12 flex flex-col items-center rounded-3xl h-fit mt-10">
+  <h2 data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" class="text-center text-xl p-1 uppercase tracking-[.6em] lg:tracking-[1.5em]">
+    Popular Posts
+  </h2>
+
+  <div id="popular-container" class="relative grid grid-cols-1 lg:grid-cols-3 lg:[&>*:nth-child(1)]:col-span-2 gap-3 py-2 w-full h-fit">
+
+    {{ $popularPaths := site.Data.popular }}
+    {{ $popularPages := slice }}
+
+    {{ range $popularPaths }}
+      {{ $target := trim . "/" }}
+      {{ $segments := split $target "/" }}
+
+      {{/* Filter hanya path posts/category/slug/ (len > 2) */}}
+      {{ if and (eq (index $segments 0) "posts") (gt (len $segments) 2) }}
+        {{ $found := false }}
+
+        {{ range site.RegularPages }}
+          {{ if eq (trim .RelPermalink "/") $target }}
+            {{ $popularPages = $popularPages | append . }}
+            {{ $found = true }}
+          {{ end }}
+        {{ end }}
+
+        {{ if not $found }}
+          <p class="text-red-500 text-sm">⚠️ Tidak ketemu di Hugo: {{ . }}</p>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{ $subset := first 5 $popularPages }}
+
+    {{ if gt (len $subset) 0 }}
+      {{ range $i, $page := $subset }}
+      <ul class="relative group flex flex-col justify-center w-full h-auto">
+        <li data-aos="fade-up" data-aos-delay="{{ mul $i 200 }}" data-aos-duration="2000"
+          class="relative popular-html flex flex-col w-full h-full bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-950/20 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out">
+
+          <a href="{{ $page.RelPermalink }}" class="bg-cover w-full h-full overflow-hidden transition duration-500 ease-in-out">
+            {{ with $page.Params.image }}
+            <img loading="lazy" src="{{ . }}" alt="Gambar {{ $page.Title }}"
+              class="w-full h-[360px] object-cover rounded-t-xl brightness-75 hover:brightness-100 transition duration-300 ease-in-out" />
+            {{ end }}
+          </a>
+
+          <!-- Bagian teks -->
+          <div data-aos="fade-up" data-aos-delay="{{ mul $i 200 }}" data-aos-duration="2000"
+            class="w-full lg:w-[70%] h-[60%] lg:h-[70%] group absolute bottom-0 left-0 rounded-tr-3xl transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
+
+            <h2 class="w-fit inline-block lg:hidden"> —0{{ add $i 1 }}</h2>
+            <h2 class="w-[80%] lg:w-full h-fit text-2xl line-clamp-3 opacity-100 lg:opacity-0 group-hover:lg:opacity-100 group-hover:z-10 transition duration-500 ease-in-out">
+              <a href="{{ $page.RelPermalink }}" class="hover:underline break-words" data-tippy-content="{{ $page.Title }}">{{ $page.Title }}</a>
+            </h2>
+            <h2 class="flex justify-between opacity-100 lg:opacity-0 group-hover:lg:opacity-100 group-hover:z-10 transition duration-500 ease-in-out gap-4 text-sm line-clamp-1 uppercase">
+              {{ range $page.Params.categories }}
+              <a href="{{ "categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">
+                {{ . }}
+              </a>
+              {{ end }}
+            </h2>
+            <p class="bottom-4 items-end justify-end w-full left-6 z-10 text-xl h-full flex-1 flex gap-0 opacity-100 lg:opacity-0 group-hover:lg:opacity-100 group-hover:z-10 transition duration-500 ease-in-out">
+              <span>—</span>{{ partial "dateNew.html" $page }}
+            </p>
+            <h2 class="absolute inset-0 text-gray-500 dark:text-gray-900 text-5xl w-1 h-1 lg:w-full lg:h-full flex items-center justify-center font-bold opacity-0 lg:opacity-100 dark:lg:opacity-100 group-hover:lg:opacity-0 group-hover:-z-10 transition duration-500 ease-in-out">
+              #{{ add $i 1 }}
+            </h2>
+          </div>
+        </li>
+      </ul>
+      {{ end }}
+    {{ end }}
   </div>
 </section>
 
 
 
 
+{{ if site.IsServer }}
 <!-- Section Popular -->
 <section class="relative w-full col-span-4 lg:col-span-12 flex flex-col items-center rounded-3xl h-fit mt-10">
   <h2 data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" class="text-center text-xl p-1 uppercase tracking-[.6em] lg:tracking-[1.5em]">
@@ -170,8 +243,6 @@
   </div>
 </section>
 
-
-{{ if site.IsServer }}
   <!-- Section Popular -->
   <section class="relative w-full col-span-4 lg:col-span-12 hidden flex-col  items-center rounded-3xl h-fit mt-10">
     <h2 data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" class="text-center text-xl p-1 uppercase tracking-[.6em] lg:tracking-[1.5em]">Popular Posts

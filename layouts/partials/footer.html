@@ -103,57 +103,8 @@
 </script>
 
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-  const container = document.getElementById('popular-container');
-  if (!container) return;
 
-  fetch('/.netlify/functions/getPopularPosts')
-    .then(res => res.json())
-    .then(data => {
-      container.innerHTML = '';  // Bersihkan kontainer
 
-      let index = 0;
-      data.forEach(item => {
-        // Skip jika hanya /posts/anime/
-        if (item.url === "/posts/anime/") return;
-
-        const wideClass = (index === 0 || index === 6 || index === 10) ? 'lg:col-span-2' : '';
-        const imageSrc = item.image && item.image !== "" ? item.image : "/images/default.png";
-        const date = new Date(item.date).toLocaleDateString('id-ID', {
-          day: '2-digit',
-          month: '2-digit',
-          year: 'numeric'
-        });
-
-        const cardHTML = `
-          <div class="relative popular-html flex flex-col w-full h-full ${wideClass} bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-950/20 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out">
-            <a href="${item.url}" class="bg-cover w-full h-full overflow-hidden transition duration-500 ease-in-out">
-              <img loading="lazy" src="${imageSrc}" alt="Gambar ${item.title}" class="w-full h-[360px] object-cover rounded-t-xl brightness-75 hover:brightness-100 transition duration-300 ease-in-out" />
-            </a>
-            <div class="w-full lg:w-[70%] h-[60%] lg:h-[70%] group absolute bottom-0 left-0 rounded-tr-3xl transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
-              <h2 class="text-2xl line-clamp-3">
-                <a href="${item.url}" class="hover:underline break-words" data-tippy-content="${item.title}">${item.title}</a>
-              </h2>
-              <p class="text-sm text-gray-500">${date}</p>
-            </div>
-          </div>
-        `;
-        container.insertAdjacentHTML('beforeend', cardHTML);
-        index++;
-      });
-
-      if (index === 0) {
-        container.innerHTML = '<p class="text-red-500 text-sm">⚠️ Tidak ada posting populer ditemukan.</p>';
-      }
-    })
-    .catch(err => {
-      console.error('Error fetching popular posts:', err);
-      container.innerHTML = '<p class="text-red-500 text-sm">⚠️ Error loading popular posts.</p>';
-    });
-});
-
-</script>
 
 
 
