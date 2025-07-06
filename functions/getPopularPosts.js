@@ -1,59 +1,68 @@
-import { Client } from 'pg';
-import dotenv from 'dotenv';
+import pg from 'pg';
 
-dotenv.config();
+const { Pool } = pg;
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: { rejectUnauthorized: false },
+});
+
+const UMAMI_WEBSITE_ID = process.env.UMAMI_WEBSITE_ID;
+const UMAMI_API_KEY = process.env.UMAMI_API_KEY;
 
 export async function handler(event, context) {
-  const { DATABASE_URL } = process.env;
-  if (!DATABASE_URL) {
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: 'DATABASE_URL not configured' }),
-    };
-  }
-
-  const client = new Client({ connectionString: DATABASE_URL });
-
   try {
-    await client.connect();
+    // 1️⃣ Fetch popular paths from Umami
+    const umamiResponse = await fetch(
+      `https://umami.conime.id/api/websites/${UMAMI_WEBSITE_ID}/pages?limit=5`,
+      {
+        headers: { Authorization: `Bearer ${UMAMI_API_KEY}` },
+      }
+    );
 
-    // Ubah query sesuai data event / page yang kamu anggap populer
-    const query = `
-      SELECT DISTINCT ON (url_path)
-        url_path, page_title, created_at
-      FROM website_event
-      WHERE event_type = 1
-      ORDER BY url_path, created_at DESC
-      LIMIT 5
-    `;
+    if (!umamiResponse.ok) {
+      return { statusCode: umamiResponse.status, body: 'Umami fetch failed' };
+    }
 
-    const res = await client.query(query);
+    const umamiData = await umamiResponse.json();
+    const paths = umamiData.data.map(item => item.url);
 
-    // Transform ke bentuk yang bisa dipakai di front-end
-    const popular = res.rows
-      .filter(row => row.url_path && row.url_path != '/')
-      .map(row => ({
-        url: row.url_path,
-        title: row.page_title || 'Popular Post',
-        date: row.created_at,
-        image: '/images/default.png'  // kamu bisa upgrade kalau mau ambil dari metadata
-      }));
+    // 2️⃣ For each path, get content data from Neon
+    const results = [];
+    for (const path of paths) {
+      // Skip list page
+      const segments = path.split('/').filter(Boolean);
+      if (segments.length < 3) continue;
+
+      const { rows } = await pool.query(
+        `SELECT url_path, page_title, created_at, image
+         FROM website_event
+         WHERE url_path = $1
+         ORDER BY created_at DESC
+         LIMIT 1`,
+        [path]
+      );
+
+      if (rows.length) {
+        const row = rows[0];
+        results.push({
+          url: row.url_path,
+          title: row.page_title || 'Untitled',
+          date: row.created_at,
+          image: row.image || "/images/default.png",
+        });
+      }
+    }
 
     return {
       statusCode: 200,
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': 'Content-Type',
-      },
-      body: JSON.stringify(popular),
+      headers: { 'Access-Control-Allow-Origin': '*' },
+      body: JSON.stringify(results),
     };
+
   } catch (error) {
-    console.error('Error in getPopularPosts:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: error.message }),
     };
-  } finally {
-    await client.end();
   }
 }
