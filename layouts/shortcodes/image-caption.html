@@ -9,7 +9,7 @@
   {{ if not $image }}
     <img src="/images/default.png" alt="{{ $alt }}" class="post-img h-auto w-full rounded-t-3xl object-cover" />
   {{ end }}
-  <img src="{{ $image | relURL }}" alt="{{ $alt }}" class="post-img  h-auto w-full rounded-3xl  object-cover" />
+  <img loading="lazy" src="{{ $image | relURL }}" alt="{{ $alt }}" class="post-img  h-auto w-full rounded-3xl  object-cover" />
   <figcaption class="text-sm font-light dark:font-extralight text-left italic flex flex-col gap-0 px-4 py-4">
     {{ if $title }}
   <span class="block">{{ $title }}</span>

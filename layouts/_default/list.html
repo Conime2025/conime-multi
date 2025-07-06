@@ -145,7 +145,7 @@
     {{/* -----------------------------------------------------
          Sidebar Area
        ----------------------------------------------------- */}}
-    <aside class="z-10 col-span-12 lg:col-span-4 relative space-y-8 py-0 md:py-4{{ if and (eq .Section "posts") (ne .RelPermalink "/posts/") }}mt-0 lg:mt-60 py-6 md:py-0{{ end }}">
+    <aside data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000"   class="z-10 col-span-12 lg:col-span-4 relative space-y-8 py-0 md:py-4{{ if and (eq .Section "posts") (ne .RelPermalink "/posts/") }}mt-0 lg:mt-60 py-6 md:py-0{{ end }}">
       {{ partial "last-viewed.html" . }}
       {{ partial "popular.html" . }}
       {{ partial "suggested.html" . }}
