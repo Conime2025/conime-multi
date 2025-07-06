@@ -40,11 +40,13 @@ Renders a menu for the given menu ID.
 {{- end }}
 {{- end }}
 
-<li
+<li {{ if $page.IsHome }}
+
   data-aos="fade-up"
   data-aos-delay="{{ mul $index 1 }}"
   data-aos-duration="1600"
   once="true"
+  {{ end }}
   class=" {{ if eq $entry.Identifier "animeBtn" }}{{ printf " order-1 md:order-none" }}
     {{ else if eq $entry.Identifier "comicBtn" }}{{ printf " order-2 md:order-none" }}
     {{ else if eq $entry.Identifier "movieBtn" }}{{ printf " order-3 md:order-none" }}

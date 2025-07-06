@@ -14,7 +14,8 @@
 {{- end }}
 {{- end }}
 
-<li data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000" class="group relative w-full flex justify-start items-start">
+<li  {{ if $page.IsHome }}
+  data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000"{{ end }} class="group relative w-full flex justify-start items-start">
   <a class="bg-white/0 text-gray-700 dark:text-gray-400 transition-colors duration-500 ease-in-out"
     {{- range $k, $v :=$attrs }} {{- with $v }} {{- printf " %s=%q" $k $v | safeHTMLAttr }} {{- end }} {{- end }}>
     <span
