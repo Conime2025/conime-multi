@@ -9,7 +9,7 @@
 <body data-page-type="{{ .Kind }}" class="flex flex-col demo-3
   font-poppins text-base font-normal dark:font-light
   inset-0 w-screen min-h-screen h-full
-  bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300
+  bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100
   {{ if eq .Kind " 404" }} overflow-hidden {{ else }} overflow-y-auto overscroll-y-auto overflow-style-custom-y overflow-x-hidden {{ end }}
   transition duration-300 ease-in-out">
 
@@ -45,7 +45,7 @@
   {{ end }}
 
   <header
-    class="w-full z-[1000] min-h-12 max-h-20 h-20 {{ if .IsHome }}hidden{{ else }}flex{{ end }} fixed left-0 top-0 right-0  bg-white dark:bg-gray-900 lg:bg-white/50 lg:dark:bg-gray-900/80 lg:backdrop-blur  text-gray-800 dark:text-gray-300 transition duration-300 ease-in-out px-6 sm:24 lg:px-[15%] py-2 lg:py-4 flex-row justify-between items-center">
+    class="w-full z-[1000] min-h-12 max-h-20 h-20 {{ if .IsHome }}hidden{{ else }}flex{{ end }} fixed left-0 top-0 right-0  bg-white dark:bg-gray-900 lg:bg-white/50 lg:dark:bg-gray-900/80 lg:backdrop-blur  text-gray-800 dark:text-gray-100 transition duration-300 ease-in-out px-6 sm:24 lg:px-[15%] py-2 lg:py-4 flex-row justify-between items-center">
     {{ partial "header.html" (dict "page" .) }}
 
   </header>
@@ -78,7 +78,7 @@
 
 
   <footer
-  class="pb-[env(safe-area-inset-bottom)] text-sm ml-0 sm:ml-auto mx-auto lg:ml-[20%] xl:ml-[15%] mt-12 sm:mt-6 {{ if .IsHome }}hidden{{ else }}block{{ end }} relative text-gray-800 dark:text-gray-300 transition duration-300 ease-in-out px-4 sm:px-6 lg:px-12">
+  class="pb-[env(safe-area-inset-bottom)] text-sm ml-0 sm:ml-auto mx-auto lg:ml-[20%] xl:ml-[15%] mt-12 sm:mt-6 {{ if .IsHome }}hidden{{ else }}block{{ end }} relative text-gray-800 dark:text-gray-100 transition duration-300 ease-in-out px-4 sm:px-6 lg:px-12">
 
   <div class="z-10 border-t border-conime-500 dark:border-conime-500 pt-6 sm:pt-6">
 
