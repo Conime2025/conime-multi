@@ -1,11 +1,11 @@
 {{ with . }}
 
 {{ if site.IsServer }}
-<div class="rounded">
-            <h2 class="text-xl uppercase  font-medium border-b  border-gray-300  dark:border-gray-800/50  pb-2 mb-4">News
+<div data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000"  class="rounded">
+            <h2 data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000"  class="text-xl uppercase  font-medium border-b  border-gray-300  dark:border-gray-800/50  pb-2 mb-4">News
                 Subscription</h2>
            <div class="flex flex-col gap-4 p-2 text-gray-300 bg-white dark:bg-gray-950/20 backdrop-blur-sm rounded overflow-hidden">
-  <input
+  <input data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
     id="inputSubs"
     type="email"
     placeholder="Your email"
@@ -14,9 +14,9 @@
   />
 
   <!-- Error message -->
-  <p id="errorMsg" class="text-red-500 text-sm hidden">Invalid email address. Please try again.</p>
+  <p  id="errorMsg" class="text-red-500 text-sm hidden">Invalid email address. Please try again.</p>
 
-  <button
+  <button data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000"
     id="letSubs" disabled
     class="bg-conime-500 dark:bg-conime-500 rounded text-white  py-2 w-full"
   >

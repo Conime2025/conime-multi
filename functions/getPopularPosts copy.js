@@ -1,21 +1,6 @@
 const { Client } = require('pg');
 
-let cachedResult = null;
-let cachedTimestamp = 0;
-const CACHE_TTL = 1 * 60 * 1000; // 10 menit dalam ms
-
 exports.handler = async (event, context) => {
-  const now = Date.now();
-
-  // kalau cache masih valid
-  if (cachedResult && (now - cachedTimestamp) < CACHE_TTL) {
-    return {
-      statusCode: 200,
-      body: JSON.stringify(cachedResult)
-    };
-  }
-
-  // fresh fetch ke DB
   const client = new Client({
     connectionString: process.env.DATABASE_URL,
     ssl: { rejectUnauthorized: false }
@@ -26,6 +11,7 @@ exports.handler = async (event, context) => {
 
     const websiteId = process.env.UMAMI_WEBSITE_ID;
 
+    // hanya posts/section/slug/
     const { rows } = await client.query(`
       SELECT url_path, MAX(created_at) AS last_date
       FROM website_event
@@ -41,10 +27,6 @@ exports.handler = async (event, context) => {
       url: r.url_path,
       date: r.last_date
     }));
-
-    // simpan ke cache
-    cachedResult = popularUrls;
-    cachedTimestamp = now;
 
     return {
       statusCode: 200,
