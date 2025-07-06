@@ -20,7 +20,7 @@
       <!-- SLIDESHOW -->
       <div class="relative w-full h-[420px] overflow-hidden group-hover:opacity-0 slideshow transition duration-500 ease-in-out">
         {{ range . }}
-          <img
+          <img loading="lazy"
               src="{{ printf "%s/%s" $imgURL .Name | safeURL }}"
               alt="Gambar {{ $.Title }}"
               class="absolute w-full h-full object-cover slide-img opacity-0 group-hover:opacity-0 transition-all duration-700 data-[active=true]:opacity-50 data-[active=true]:translate-x-0" />

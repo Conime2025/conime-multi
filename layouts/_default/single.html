@@ -100,7 +100,7 @@
       <!-- Gambar Utama -->
       {{ with .Params.image }}
       <figure class="w-full flex-col mb-4 bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm rounded-3xl">
-        <img src="{{ . | relURL }}" alt="Gambar {{ $.Title }}"
+        <img loading="lazy" src="{{ . | relURL }}" alt="Gambar {{ $.Title }}"
           class="post-img h-96 sm:h-auto w-full rounded-3xl object-cover" />
         <figcaption class="text-sm font-light dark:font-extralight text-left italic flex flex-wrap gap-0 px-4 py-4">
           {{ with $.Params.imageTitle }}
@@ -185,7 +185,7 @@
   </main>
 
   <!-- Sidebar -->
-  <aside class="col-span-12 w-full lg:col-span-4 space-y-8 py-6 md:py-0">
+  <aside data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000"   class="col-span-12 w-full lg:col-span-4 space-y-8 py-6 md:py-0">
     {{ partial "last-viewed.html" . }}
     {{ partial "popular.html" . }}
     {{ partial "suggested.html" . }}
