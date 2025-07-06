@@ -1,57 +1,67 @@
 {{ with . }}
 
+{{ $popularPaths := site.Data.popular }}
+{{ $popularPages := slice }}
 
-{{ $recommendedPages := where .Site.RegularPages "Params.tags" "intersect" (slice "Recommended") }}
-{{ $sortedRecommended := sort $recommendedPages "Date" "desc" }}
-{{ $subset := first 3 $sortedRecommended }}
+{{ range $popularPaths }}
+  {{ $target := trim . "/" }}
+  {{ $found := false }}
+
+  {{/* --- Filter hanya jika path cocok pola posts/category/slug --- */}}
+  {{ $segments := split $target "/" }}
+  {{ if and (eq (index $segments 0) "posts") (gt (len $segments) 2) }}
+
+    {{ range site.RegularPages }}
+      {{ if eq (trim .RelPermalink "/") $target }}
+        {{ $popularPages = $popularPages | append . }}
+        {{ $found = true }}
+      {{ end }}
+    {{ end }}
+
+    {{ if not $found }}
+      <p class="text-red-500 text-sm">⚠️ Tidak ketemu di Hugo: {{ . }}</p>
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $subset := first 3 $popularPages }}
 
 {{ if gt (len $subset) 0 }}
 <div class="w-full h-fit">
-  <h2 class="text-xl uppercase tracking-[.3em] lg:tracking-[.4em]   border-b border-gray-300 dark:border-gray-800/50 pb-2 mb-4">
+  <h2 class="text-xl uppercase tracking-[.3em] lg:tracking-[.4em] border-b border-gray-300 dark:border-gray-800/50 pb-2 mb-4">
     Popular News
   </h2>
-  <ul class="flex flex-col gap-4 ">
+  <ul class="flex flex-col gap-4">
     {{ range $i, $page := $subset }}
-            <li
-                class="relative popular-html flex flex-col col-span-2 w-full h-full  bg-white hover:bg-gray-300 dark:bg-gray-950/60 hover:dark:bg-gray-800/50 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out  ">
-                <a href="{{ .RelPermalink }}"
-                    class=" bg-cover w-full h-full  overflow-hidden transition duration-500 ease-in-out">
-                    {{ with .Params.image }}
-                    <img loading="lazy" src="{{ . }}" alt="Gambar {{ $.Title }}"
-                        class="w-full h-[360px]  object-cover rounded-t-xl    brightness-75  hover:brightness-100 transition  duration-300    ease-in-out" />
-                    {{ else }}
-                    {{ end }}
+      <li class="relative popular-html flex flex-col col-span-2 w-full h-full bg-white hover:bg-gray-300 dark:bg-gray-950/60 hover:dark:bg-gray-800/50 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out">
+        <a href="{{ $page.RelPermalink }}" class="bg-cover w-full h-full overflow-hidden transition duration-500 ease-in-out">
+          {{ with $page.Params.image }}
+            <img loading="lazy" src="{{ . }}" alt="Gambar {{ $page.Title }}" class="w-full h-[360px] object-cover rounded-t-xl brightness-75 hover:brightness-100 transition duration-300 ease-in-out" />
+          {{ end }}
+        </a>
 
-                </a>
-
-                <!-- Bagian teks -->
-                 <div
-            class="w-full lg:w-[70%] h-[60%] lg:h-[70%] group absolute bottom-0  left-0 rounded-tr-3xl   transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
-            <h2 class="w-fit inline-block lg:hidden"> —0{{ add $i 1 }}</h2>
-            <h2
-              class="w-[80%] lg:w-full h-fit text-2xl line-clamp-3  opacity-100 lg:opacity-0 group-hover:lg:opacity-100 group-hover:z-10 transition duration-500 ease-in-out">
-              <a href="{{ .RelPermalink }}" class="hover:underline  break-words" data-tippy-content="{{ .Title }}">{{ .Title }}</a>
-            </h2>
-            <h2
-              class="flex justify-between   opacity-100 lg:opacity-0 group-hover:lg:opacity-100  group-hover:z-10 transition duration-500 ease-in-out  gap-4 text-sm line-clamp-1 uppercase">
-              {{ range .Params.categories }}
-              <a href="{{ " categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">
+        <!-- Bagian teks -->
+        <div class="w-full lg:w-[70%] h-[60%] lg:h-[70%] group absolute bottom-0 left-0 rounded-tr-3xl transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
+          <h2 class="w-fit inline-block lg:hidden"> —0{{ add $i 1 }}</h2>
+          <h2 class="w-[80%] lg:w-full h-fit text-2xl line-clamp-3 opacity-100 lg:opacity-0 group-hover:lg:opacity-100 group-hover:z-10 transition duration-500 ease-in-out">
+            <a href="{{ $page.RelPermalink }}" class="hover:underline break-words" data-tippy-content="{{ $page.Title }}">{{ $page.Title }}</a>
+          </h2>
+          <h2 class="flex justify-between opacity-100 lg:opacity-0 group-hover:lg:opacity-100 group-hover:z-10 transition duration-500 ease-in-out gap-4 text-sm line-clamp-1 uppercase">
+            {{ range $page.Params.categories }}
+              <a href="{{ "categories/" | relLangURL }}{{ . | urlize }}" class="hover:underline">
                 {{ . }}
               </a>
-              {{ end }}
-            </h2>
-            <p
-              class="bottom-4 items-end justify-end w-full left-6 z-10 text-xl h-full flex-1  flex gap-0   opacity-100 lg:opacity-0 group-hover:lg:opacity-100  group-hover:z-10 transition duration-500 ease-in-out">
-              <span>—</span>{{ partial
-              "dateNew.html" . }}
-            </p>
-            <h2 class="absolute inset-0 text-gray-500 dark:text-gray-900 text-5xl w-1 h-1 lg:w-full lg:h-full flex items-center justify-center font-bold opacity-0 lg:opacity-100 dark:lg:opacity-100 group-hover:lg:opacity-0 group-hover:-z-10 transition duration-500 ease-in-out">
-              #{{ add $i 1 }}
-            </h2>
-          </div>
-        </li>
-
             {{ end }}
+          </h2>
+          <p class="bottom-4 items-end justify-end w-full left-6 z-10 text-xl h-full flex-1 flex gap-0 opacity-100 lg:opacity-0 group-hover:lg:opacity-100 group-hover:z-10 transition duration-500 ease-in-out">
+            <span>—</span>{{ partial "dateNew.html" $page }}
+          </p>
+          <h2 class="absolute inset-0 text-gray-500 dark:text-gray-900 text-5xl w-1 h-1 lg:w-full lg:h-full flex items-center justify-center font-bold opacity-0 lg:opacity-100 dark:lg:opacity-100 group-hover:lg:opacity-0 group-hover:-z-10 transition duration-500 ease-in-out">
+            #{{ add $i 1 }}
+          </h2>
+        </div>
+      </li>
+    {{ end }}
   </ul>
 </div>
 {{ end }}
