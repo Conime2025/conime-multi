@@ -2,7 +2,7 @@ const { Client } = require('pg');
 
 let cachedResult = null;
 let cachedTimestamp = 0;
-const CACHE_TTL = 1 * 60 * 1000; // 10 menit dalam ms
+const CACHE_TTL = 10 * 60 * 1000; // 10 menit dalam ms
 
 exports.handler = async (event, context) => {
   const now = Date.now();
