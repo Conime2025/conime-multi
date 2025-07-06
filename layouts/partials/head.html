@@ -71,19 +71,22 @@
   "@type": "Organization",
   "name": "CoNime",
   "url": "https://conime.id",
-  "logo": "https://conime.id/images/logo_conime_square.png"
+  "logo": "https://conime.id/images/logo_conime_square300.png"
 }
 </script>
 
 
 <!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"></noscript>
 
 <!-- AOS -->
 {{ if .IsHome }}
+<!--
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
+-->
+<link rel="stylesheet" href="aos.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="aos.css"></noscript>
+
 {{ end }}
 
