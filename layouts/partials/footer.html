@@ -103,56 +103,259 @@
 </script>
 
 
+
+<!--
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+function escapeHtmlAttr(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function cleanJsonString(value) {
+  if (typeof value === 'string') {
+    // Remove extra wrapping quotes if it looks like "\"...\""
+    if (value.startsWith('"') && value.endsWith('"')) {
+      try {
+        return JSON.parse(value);
+      } catch (_) {
+        return value;
+      }
+    }
+    return value;
+  }
+  return value;
+}
+
+function cleanCategories(categories) {
+  if (typeof categories === 'string') {
+    try {
+      return JSON.parse(categories);
+    } catch (_) {
+      return [];
+    }
+  }
+  if (Array.isArray(categories)) {
+    return categories;
+  }
+  return [];
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
   const container = document.getElementById('popular-container');
   if (!container) return;
 
-  fetch('/.netlify/functions/getPopularPosts')
-    .then(res => res.json())
-    .then(data => {
-      container.innerHTML = '';  // Bersihkan kontainer
+  container.innerHTML = '<p class="text-gray-500">Loading popular posts...</p>';
 
-      let index = 0;
-      data.forEach(item => {
-        // Skip jika hanya /posts/anime/
-        if (item.url === "/posts/anime/") return;
+  try {
+    // 1. Fetch popular paths from Netlify Function
+    const res = await fetch('/.netlify/functions/getPopularPosts');
+    const popularRaw = await res.json();
 
-        const wideClass = (index === 0 || index === 6 || index === 10) ? 'lg:col-span-2' : '';
-        const imageSrc = item.image && item.image !== "" ? item.image : "/images/default.png";
-        const date = new Date(item.date).toLocaleDateString('id-ID', {
-          day: '2-digit',
-          month: '2-digit',
-          year: 'numeric'
-        });
+    // 2. Only keep /posts/*/*/
+    const filtered = popularRaw.filter(p => {
+      const segments = p.url.split('/').filter(s => s);
+      return segments.length === 3;
+    }).slice(0, 5);
 
-        const cardHTML = `
-          <div class="relative popular-html flex flex-col w-full h-full ${wideClass} bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-950/20 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out">
-            <a href="${item.url}" class="bg-cover w-full h-full overflow-hidden transition duration-500 ease-in-out">
-              <img loading="lazy" src="${imageSrc}" alt="Gambar ${item.title}" class="w-full h-[360px] object-cover rounded-t-xl brightness-75 hover:brightness-100 transition duration-300 ease-in-out" />
-            </a>
-            <div class="w-full lg:w-[70%] h-[60%] lg:h-[70%] group absolute bottom-0 left-0 rounded-tr-3xl transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
-              <h2 class="text-2xl line-clamp-3">
-                <a href="${item.url}" class="hover:underline break-words" data-tippy-content="${item.title}">${item.title}</a>
-              </h2>
-              <p class="text-sm text-gray-500">${date}</p>
-            </div>
-          </div>
-        `;
-        container.insertAdjacentHTML('beforeend', cardHTML);
-        index++;
-      });
+    // 3. Get Hugo metadata
+    const metadataJSON = document.getElementById('post-metadata').textContent;
+    const metadata = JSON.parse(metadataJSON);
 
-      if (index === 0) {
-        container.innerHTML = '<p class="text-red-500 text-sm">⚠️ Tidak ada posting populer ditemukan.</p>';
-      }
-    })
-    .catch(err => {
-      console.error('Error fetching popular posts:', err);
-      container.innerHTML = '<p class="text-red-500 text-sm">⚠️ Error loading popular posts.</p>';
+    // 4. Join popular data with Hugo metadata
+    const posts = filtered.map(p => {
+      const match = metadata.find(m => m.url === p.url);
+
+      const titleRaw = match ? match.title : p.title;
+      const title = cleanJsonString(titleRaw);
+
+      const categoriesRaw = match ? match.categories : [];
+      const categories = cleanCategories(categoriesRaw);
+
+      const image = match ? match.image : '/images/default.png';
+      const date = match ? match.date : new Date(p.date).toISOString().split('T')[0];
+
+      return {
+        url: p.url,
+        title,
+        image,
+        categories,
+        date
+      };
     });
-});
 
+    // 5. Render with your exact Tailwind layout
+    container.innerHTML = posts.map((post, i) => `
+      <ul class="relative group flex flex-col justify-center w-full h-auto">
+        <li data-aos="fade-up" data-aos-delay="${i * 200}" data-aos-duration="2000"
+          class="relative popular-html flex flex-col w-full h-full bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-950/20 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out">
+
+          <a href="${post.url}" class="bg-cover w-full h-full overflow-hidden transition duration-500 ease-in-out">
+            <img loading="lazy" src="${post.image}" alt="Gambar ${escapeHtmlAttr(post.title)}" class="w-full h-[360px] object-cover rounded-t-xl brightness-75 hover:brightness-100 transition duration-300 ease-in-out" />
+          </a>
+
+          <div data-aos="fade-up" data-aos-delay="${i * 200}" data-aos-duration="2000"
+            class="w-full lg:w-[70%] h-[60%] lg:h-[70%] group absolute bottom-0 left-0 rounded-tr-3xl transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
+
+            <h2 class="w-fit inline-block lg:hidden"> —0${i + 1}</h2>
+            <h2 class="w-[80%] lg:w-full h-fit text-2xl line-clamp-3 opacity-100 lg:opacity-0 group-hover:lg:opacity-100 group-hover:z-10 transition duration-500 ease-in-out">
+              <a href="${post.url}" class="hover:underline break-words" title="${escapeHtmlAttr(post.title)}">${escapeHtmlAttr(post.title)}</a>
+            </h2>
+            <h2 class="flex justify-between opacity-100 lg:opacity-0 group-hover:lg:opacity-100 group-hover:z-10 transition duration-500 ease-in-out gap-4 text-sm line-clamp-1 uppercase">
+              ${post.categories.map(cat => `<a href="/categories/${encodeURIComponent(cat)}" class="hover:underline">${escapeHtmlAttr(cat)}</a>`).join(' ')}
+            </h2>
+            <p class="bottom-4 items-end justify-end w-full left-6 z-10 text-xl h-full flex-1 flex gap-0 opacity-100 lg:opacity-0 group-hover:lg:opacity-100 group-hover:z-10 transition duration-500 ease-in-out">
+              <span>—</span>${escapeHtmlAttr(post.date)}
+            </p>
+            <h2 class="absolute inset-0 text-gray-500 dark:text-gray-900 text-5xl w-1 h-1 lg:w-full lg:h-full flex items-center justify-center font-bold opacity-0 lg:opacity-100 dark:lg:opacity-100 group-hover:lg:opacity-0 group-hover:-z-10 transition duration-500 ease-in-out">
+              #${i + 1}
+            </h2>
+          </div>
+        </li>
+      </ul>
+    `).join('');
+
+  } catch (error) {
+    console.error(error);
+    container.innerHTML = '<p class="text-red-500 text-sm">⚠️ Error loading popular posts.</p>';
+  }
+});
+</script>
+
+-->
+<script>
+function escapeHtmlAttr(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function normalizeUrl(url) {
+  return decodeURIComponent(url || '').replace(/\/$/, '').toLowerCase();
+}
+
+function safeParseCategories(input) {
+  if (Array.isArray(input)) return input;
+  if (typeof input === 'string') {
+    try { return JSON.parse(input); } catch { return []; }
+  }
+  return [];
+}
+
+function cleanTitle(str) {
+  return (str || '').replace(/^"(.*)"$/, '$1').trim();
+}
+
+function formatDate(date) {
+  if (!date) return '';
+  return date.split('T')[0];
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const container = document.getElementById('popular-container');
+  if (!container) return;
+
+  const staticHTML = container.innerHTML;
+
+  // Ambil metadata lokal Hugo (yang lengkap)
+  let metadata = [];
+  try {
+    const metadataJSON = document.getElementById('post-metadata')?.textContent;
+    if (metadataJSON) {
+      metadata = JSON.parse(metadataJSON).map(p => ({
+        ...p,
+        title: cleanTitle(p.title),
+        categories: safeParseCategories(p.categories)
+      }));
+    }
+  } catch (err) {
+    console.error('⚠️ Error parsing local post metadata:', err);
+  }
+
+  // 1️⃣ Coba fetch dari serverless function
+  let popularRaw = null;
+  try {
+    const res = await fetch('/.netlify/functions/getPopularPosts');
+    if (res.ok) {
+      popularRaw = await res.json();
+    } else {
+      console.warn('⚠️ Remote fetch failed with non-200');
+    }
+  } catch (err) {
+    console.warn('⚠️ Remote fetch error:', err);
+  }
+
+  // 2️⃣ Kalau gagal fetch, fallback ke top N dari local metadata
+  if (!popularRaw || !popularRaw.length) {
+    console.warn('⚠️ Using local fallback');
+    popularRaw = metadata
+      .sort((a, b) => b.date.localeCompare(a.date))
+      .slice(0, 5)
+      .map(item => ({ url: item.url, date: item.date }));
+  }
+
+  // 3️⃣ Join popularRaw with metadata to get full info
+  const posts = popularRaw.map(p => {
+    const match = metadata.find(m => normalizeUrl(m.url) === normalizeUrl(p.url));
+    return {
+      url: p.url || match?.url || '#',
+      title: cleanTitle(match?.title || 'Judul Tidak Tersedia'),
+      image: match?.image || '/images/default.png',
+      categories: safeParseCategories(match?.categories || []),
+      date: formatDate(p.date || match?.date || new Date().toISOString())
+    };
+  });
+
+  if (!posts.length) {
+    console.warn('⚠️ No posts to render. Leaving Hugo static.');
+    container.innerHTML = staticHTML;
+    return;
+  }
+
+  // 4️⃣ Render
+  container.innerHTML = posts.map((post, i) => `
+    <ul class="relative group flex flex-col justify-center w-full h-auto">
+      <li data-aos="fade-up" data-aos-delay="${i * 200}" data-aos-duration="2000"
+          class="relative opacity-[1] popular-html flex flex-col w-full h-full bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-950/20 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out">
+
+        <a href="${post.url}" class="bg-cover w-full h-full overflow-hidden transition duration-500 ease-in-out">
+          <img loading="lazy" src="${post.image}" alt="Gambar ${escapeHtmlAttr(post.title)}"
+               class="w-full h-[360px] object-cover rounded-t-xl brightness-75 hover:brightness-100 transition duration-300 ease-in-out" />
+        </a>
+
+        <div data-aos="fade-up" data-aos-delay="${i * 200}" data-aos-duration="2000"
+             class="w-full lg:w-[70%] h-[60%] lg:h-[70%] group absolute bottom-0 left-0 rounded-tr-3xl transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
+
+          <h2 class="w-fit inline-block lg:hidden"> —0${i + 1}</h2>
+          <h2 class="w-[80%] lg:w-full h-fit text-2xl line-clamp-3 opacity-100 lg:opacity-0 group-hover:lg:opacity-100 group-hover:z-10 transition duration-500 ease-in-out">
+            <a href="${post.url}" class="hover:underline break-words" title="${escapeHtmlAttr(post.title)}">
+              ${escapeHtmlAttr(post.title)}
+            </a>
+          </h2>
+          <h2 class="flex justify-between opacity-100 lg:opacity-0 group-hover:lg:opacity-100 group-hover:z-10 transition duration-500 ease-in-out gap-4 text-sm line-clamp-1 uppercase">
+            ${(post.categories || []).map(cat => `
+              <a href="/categories/${encodeURIComponent(cat)}" class="hover:underline">${escapeHtmlAttr(cat)}</a>`).join(' ')}
+          </h2>
+          <p class="bottom-4 items-end justify-end w-full left-6 z-10 text-xl h-full flex-1 flex gap-0 opacity-100 lg:opacity-0 group-hover:lg:opacity-100 group-hover:z-10 transition duration-500 ease-in-out">
+            <span>—</span>${escapeHtmlAttr(post.date)}
+          </p>
+          <h2 class="absolute inset-0 text-gray-500 dark:text-gray-900 text-5xl w-1 h-1 lg:w-full lg:h-full flex items-center justify-center font-bold opacity-0 lg:opacity-100 dark:lg:opacity-100 group-hover:lg:opacity-0 group-hover:-z-10 transition duration-500 ease-in-out">
+            #${i + 1}
+          </h2>
+        </div>
+      </li>
+    </ul>
+  `).join('');
+
+  // 5️⃣ Refresh AOS (if available)
+  if (window.AOS && typeof window.AOS.refresh === 'function') {
+    window.AOS.refresh();
+  }
+});
 </script>
 
 

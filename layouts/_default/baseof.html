@@ -80,20 +80,23 @@
   {{ partial "search-modal.html" . }}
 
 
-  {{ if .IsHome }}
-  <script type="application/json" id="post-metadata">
+  {{ if .IsHome }}<script type="application/json" id="post-metadata">
 [
 {{- $pages := where .Site.RegularPages "Section" "posts" -}}
 {{- range $i, $page := $pages }}
   {{- if gt $i 0 }},{{ end }}
   {
+    "url": "{{ $page.RelPermalink }}",
     "permalink": "{{ $page.RelPermalink }}",
-    "title": {{ $page.Title | jsonify }},
-    "image": "{{ $page.Params.image | default "/images/default.png" }}"
+    "title": {{ $page.Title | plainify | jsonify }},
+    "image": "{{ $page.Params.image }}",
+    "categories": {{ if $page.Params.categories }}{{ $page.Params.categories | jsonify }}{{ else }}[]{{ end }},
+    "date": "{{ $page.Date.Format "2006-01-02" }}"
   }
 {{- end }}
 ]
 </script>
+
   {{ end }}
 
   <footer
