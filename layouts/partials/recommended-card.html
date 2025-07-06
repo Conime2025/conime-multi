@@ -4,7 +4,7 @@
   <div
     class="w-[80%] z-0 h-12 bg-gray-950/50 group-hover:bg-gray-950/70 group-hover:dark:bg-gray-950 transform transition duration-500 ease-in-out blur-lg rounded-full overflow-hidden absolute bottom-1 left-1/2 -translate-x-1/2">
   </div>
-  <div data-aos="slide-up" data-aos-delay="500" data-aos-duration="2000" class="flex flex-col w-full lg:w-[680px] h-full rounded-3xl overflow-hidden z-10">
+  <div data-aos="slide-up" data-aos-delay="250" data-aos-duration="2000" class="flex flex-col w-full lg:w-[680px] h-full rounded-3xl overflow-hidden z-10">
     <!-- Bagian gambar -->
     <a href="{{ .RelPermalink }}" class="h-[60%] w-full overflow-hidden bg-cover">
       {{ $img1 := .Params.image | default "/images/default.png" | relURL }}
@@ -31,7 +31,7 @@
         </a>
         {{ end }}
       </h2>
-      <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000" class="absolute bottom-4 right-6 z-10 text-xl h-fit flex gap-0"><span>—</span>{{ partial "dateNew.html" . }}
+      <p data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000" class="absolute bottom-4 right-6 z-10 text-xl h-fit flex gap-0"><span>—</span>{{ partial "dateNew.html" . }}
       </p>
 
     </div>

@@ -1,4 +1,4 @@
-<a href="/" data-aos="fade-left" data-aos-delay="200" data-aos-duration="2000" data-tippy-content="Logo CoNime" class="flex relative items-center group">
+<a href="/" data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000" data-tippy-content="Logo CoNime" class="flex relative items-center group">
 <div class="flex sm:hidden">  <svg class="w-auto h-12 flex dark:hidden" viewBox="0 0 336 336" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M266.658 48L181.98 168H5.66016L90.3379 48H266.658Z" fill="#FF1545" />
     <path d="M330.34 288L245.661 168H5.66016L90.3389 288H330.34Z" fill="#E9335A" />
@@ -32,7 +32,7 @@
 <nav class="flex justify-center items-center space-x-2 md:space-x-4">
   {{ range .Site.Menus.header }}
  {{ $isActive := eq $.RelPermalink .URL }}
-<a data-aos="fade-left" data-aos-delay="200" data-aos-duration="2000" href="{{ .URL }}" id="{{ .Identifier }}" data-tippy-content="{{ .Name }}"
+<a data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000" href="{{ .URL }}" id="{{ .Identifier }}" data-tippy-content="{{ .Name }}"
   class="p-2 md:p-3 relative justify-center group items-center rounded-xl backdrop-blur-sm transition
     {{ if $isActive }}
       bg-conime-500 dark:bg-conime-500 text-white dark:text-white
@@ -52,7 +52,7 @@
   </a>
   {{ end }}
 
-  <div data-aos="fade-left" data-aos-delay="200" data-aos-duration="2000" id="theme-toggle">
+  <div data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000" id="theme-toggle">
   <div  data-tippy-content="Light Mode" class="p-2 hidden dark:flex md:p-3 group relative justify-center items-center dark:bg-gray-950/0 bg-gray-300/0 hover:bg-gray-300 hover:dark:bg-gray-800/50 backdrop-blur-sm hover:text-conime-400 text-gray-700 dark:text-gray-400 dark:hover:text-conime-500  rounded-xl">  <span class="hidden  dark:flex w-6 h-6 md:w-6 md:h-6 group-hover:text-conime-400 text-gray-700 dark:text-gray-400 dark:group-hover:text-conime-500 justify-center   items-center">
       <svg class="group-hover:scale-110  w-8 h-8 md:w-6 md:h-6 transition duration-500 ease-in-out"   viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
