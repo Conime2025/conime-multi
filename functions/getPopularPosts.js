@@ -1,68 +1,75 @@
-import pg from 'pg';
+export async function handler() {
+  const websiteId = process.env.UMAMI_WEBSITE_ID;
+  const apiKey = process.env.UMAMI_API_KEY;
 
-const { Pool } = pg;
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false },
-});
+  const limit = 10;
+  const url = `https://umami.conime.id/api/websites/${websiteId}/events?limit=${limit}&type=pageview`;
 
-const UMAMI_WEBSITE_ID = process.env.UMAMI_WEBSITE_ID;
-const UMAMI_API_KEY = process.env.UMAMI_API_KEY;
-
-export async function handler(event, context) {
   try {
-    // 1️⃣ Fetch popular paths from Umami
-    const umamiResponse = await fetch(
-      `https://umami.conime.id/api/websites/${UMAMI_WEBSITE_ID}/pages?limit=5`,
-      {
-        headers: { Authorization: `Bearer ${UMAMI_API_KEY}` },
+    const res = await fetch(url, {
+      headers: {
+        Authorization: `Bearer ${apiKey}`
       }
-    );
+    });
 
-    if (!umamiResponse.ok) {
-      return { statusCode: umamiResponse.status, body: 'Umami fetch failed' };
+    if (!res.ok) {
+      return {
+        statusCode: res.status,
+        body: JSON.stringify({ error: 'Failed to fetch Umami API', details: await res.text() })
+      };
     }
 
-    const umamiData = await umamiResponse.json();
-    const paths = umamiData.data.map(item => item.url);
+    const rawData = await res.json();
 
-    // 2️⃣ For each path, get content data from Neon
-    const results = [];
-    for (const path of paths) {
-      // Skip list page
-      const segments = path.split('/').filter(Boolean);
-      if (segments.length < 3) continue;
+    // ⚡ Filter hanya posts/{category}/{slug}/
+    const filtered = rawData.data
+      .map(item => {
+        let path = item.url;
+        // buang trailing slash
+        path = path.replace(/\/$/, '');
+        return { ...item, path };
+      })
+      .filter(item => {
+        const parts = item.path.split('/').filter(Boolean);
+        return parts.length >= 3 && parts[0] === 'posts';
+      });
 
-      const { rows } = await pool.query(
-        `SELECT url_path, page_title, created_at, image
-         FROM website_event
-         WHERE url_path = $1
-         ORDER BY created_at DESC
-         LIMIT 1`,
-        [path]
-      );
+    // hapus duplikat path
+    const uniquePaths = Array.from(new Set(filtered.map(item => item.path)));
 
-      if (rows.length) {
-        const row = rows[0];
-        results.push({
-          url: row.url_path,
-          title: row.page_title || 'Untitled',
-          date: row.created_at,
-          image: row.image || "/images/default.png",
-        });
-      }
-    }
+    // mapping manual untuk gambar
+    const imageMap = {
+      "posts/anime/dandadan-season-2-trailer-jadwal-20250601": "/images/anime/dandadan.jpg",
+      "posts/anime/kimetsu-no-yaiba-infinity-castle-film-trailer-20250630": "/images/anime/kimetsu.jpg",
+      "posts/anime/kaoru-hana-wa-rin-to-saku-teaser-pv-visual-202507": "/images/anime/kaoruhana.jpg",
+      "posts/anime/jigoku-sensei-nube-2025-trailer-jadwal-20250701": "/images/anime/nube.jpg",
+      "posts/anime/anime-gachiakuta-penayangan-global-lagu-tema-karakter-baru-20250630": "/images/anime/gachiakuta.jpg",
+      // tambahkan mapping lain sesuai kontenmu
+    };
+
+    const result = uniquePaths.slice(0, 5).map(path => {
+      const match = filtered.find(item => item.path === path);
+      return {
+        url: `/${path}/`,
+        title: match.title,
+        date: match.createdAt || new Date().toISOString(),
+        image: imageMap[path] || "/images/default.png"
+      };
+    });
 
     return {
       statusCode: 200,
-      headers: { 'Access-Control-Allow-Origin': '*' },
-      body: JSON.stringify(results),
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type'
+      },
+      body: JSON.stringify(result)
     };
 
   } catch (error) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: error.message }),
+      body: JSON.stringify({ error: error.message })
     };
   }
 }
