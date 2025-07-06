@@ -5,3 +5,7 @@
 
 [context.production.environment]
   HUGO_VERSION = "0.130.0"
+  NODE_VERSION = "20"
+
+[dev]
+  functions = "functions"

@@ -103,6 +103,51 @@
 </script>
 
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const popularContainer = document.getElementById('popular-container');
+  if (!popularContainer) return;
+
+  fetch('/.netlify/functions/getPopularPosts')
+    .then(res => res.json())
+    .then(data => {
+      if (!Array.isArray(data)) {
+        popularContainer.innerHTML = "<p class='text-red-500'>No popular posts found.</p>";
+        return;
+      }
+
+      popularContainer.innerHTML = ''; // Clear existing
+
+      data.forEach((item, i) => {
+        const el = document.createElement('div');
+        el.className = "rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 bg-white dark:bg-gray-950";
+
+        el.innerHTML = `
+          <a href="${item.url}" class="block">
+            <img src="${item.image}" alt="${item.title}" class="w-full h-64 object-cover">
+          </a>
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">
+              <a href="${item.url}" class="hover:underline">${item.title}</a>
+            </h3>
+            <p class="text-sm text-gray-500">${item.date ? new Date(item.date).toLocaleDateString() : ''}</p>
+          </div>
+        `;
+
+        popularContainer.appendChild(el);
+      });
+    })
+    .catch(err => {
+      console.error('Error loading popular posts:', err);
+      popularContainer.innerHTML = "<p class='text-red-500'>Error loading popular posts.</p>";
+    });
+});
+</script>
+
+
+
+
+
 {{ if hugo.IsServer }}
 <!--
 
