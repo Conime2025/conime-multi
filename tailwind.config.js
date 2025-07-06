@@ -1,10 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./layouts/**/*.html",
-    "./content/**/*.md",
-    "./**/*.html"
-  ],
+  "./layouts/**/*.html",
+  "./content/**/*.md",
+  "./static/**/*.html"
+],
+
   safelist: [
     {
       pattern: /data-aos/,
