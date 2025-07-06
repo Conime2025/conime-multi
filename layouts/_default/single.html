@@ -100,7 +100,7 @@
       <!-- Gambar Utama -->
       {{ with .Params.image }}
       <figure class="w-full flex-col mb-4 bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm rounded-3xl">
-        <img loading="lazy" src="{{ . | relURL }}"  width="1200" height="800" alt="Gambar {{ $.Title }}"
+        <img  src="{{ . | relURL }}"  width="1200" height="800" alt="Gambar {{ $.Title }}"
           class="post-img h-96 sm:h-auto w-full rounded-3xl object-cover" />
         <figcaption class="text-sm font-light dark:font-extralight text-left italic flex flex-wrap gap-0 px-4 py-4">
           {{ with $.Params.imageTitle }}
