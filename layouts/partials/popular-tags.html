@@ -3,7 +3,7 @@
 {{ if gt (len site.Taxonomies.tags) 0 }}
 <div>
   <h2 class="text-xl uppercase tracking-[.3em] lg:tracking-[.4em]  border-b border-gray-300 dark:border-gray-800/50 pb-2 mb-4">
-    Tags Populer
+    Popular Tags
   </h2>
   <ul class="flex flex-wrap gap-2 justify-start items-center">
     {{ range first 10 site.Taxonomies.tags.ByCount }}
