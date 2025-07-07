@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "predev": "node fetch-popular-from-neon.js",
-    "dev": "concurrently \"npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch\" \"hugo server -D\"",
-    "prebuild": "node fetch-popular-from-neon.js",
-    "build": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --minify && hugo --minify",
-    "dev:hugo": "hugo server -D",
-    "dev:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch"
-  },
+  "predev": "node fetch-popular-from-neon.js",
+  "dev": "concurrently \"npm run dev:css\" \"npm run dev:hugo\"",
+  "dev:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch",
+  "dev:hugo": "hugo server -D",
+  "prebuild": "node fetch-popular-from-neon.js",
+  "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --minify",
+  "build:site": "hugo --minify",
+  "build": "npm run build:css && npm run build:site"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
