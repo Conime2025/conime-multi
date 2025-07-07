@@ -1,34 +1,25 @@
 {
   "name": "conime",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-  "predev": "node fetch-popular-from-neon.js",
-  "dev": "concurrently \"npm run dev:css\" \"npm run dev:hugo\"",
-  "dev:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch",
-  "dev:hugo": "hugo server -D",
-  "prebuild": "node fetch-popular-from-neon.js",
-  "build:css": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --minify",
-  "build:site": "hugo --minify",
-  "build": "npm run build:css && npm run build:site"
-},
+    "dev:css": "postcss assets/css/input.css -o assets/css/main.css --watch",
+    "build:css": "postcss assets/css/input.css -o assets/css/main.css --env production",
+    "dev:hugo": "hugo server -D",
+    "dev": "concurrently \"npm run dev:css\" \"npm run dev:hugo\"",
+    "build:site": "hugo --minify",
+    "build": "npm run build:css && npm run build:site"
+  },
+  "main": "fetch-popular-from-neon.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.11",
+    "@tailwindcss/postcss": "^4.1.11",
     "autoprefixer": "^10.4.21",
     "concurrently": "^9.2.0",
+    "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "tailwindcss": "^4.1.11"
-  },
-  "dependencies": {
-    "@popperjs/core": "^2.11.8",
-    "dotenv": "^17.0.1",
-    "gsap": "3.13.0",
-    "pg": "^8.16.3",
-    "three": "0.177.0",
-    "tippy.js": "^6.3.7"
   }
 }
