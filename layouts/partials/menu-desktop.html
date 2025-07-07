@@ -1,0 +1,11 @@
+{{ $page := .page }}
+{{ $menuID := .menuID }}
+{{ $allEntries := index site.Menus $menuID }}
+
+{{ with $allEntries }}
+<nav class="w-full  h-full overflow-y-hidden overflow-x-hidden px-0 lg:px-4 py-2 lg:py-0 mx-[15px] lg:mx-0 rounded-xl">
+  <ul class="flex flex-col h-full gap-2 justify-evenly items-center [&>*:nth-child(8)]:lg:hidden [&>*:nth-child(9)]:lg:hidden">
+    {{ partial "inline/menu/walk.html" (dict "page" $page "menuEntries" . "mode" "desktop") }}
+  </ul>
+</nav>
+{{ end }}

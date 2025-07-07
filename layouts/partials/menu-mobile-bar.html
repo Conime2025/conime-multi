@@ -1,0 +1,13 @@
+{{ $page := .page }}
+{{ $menuID := .menuID }}
+{{ $allEntries := index site.Menus $menuID }}
+
+{{ $bottomItems := where $allEntries "Identifier" "in" (slice "animeBtn" "reviewBtn" "homeBtn" "notifBtn" "moreBtn") }}
+
+{{ with $bottomItems }}
+<nav class="bg-gray-900 text-white border-t border-gray-800">
+  <ul class="flex justify-around items-center py-1">
+    {{ partial "inline/menu/walk.html" (dict "page" $page "menuEntries" . "mode" "mobile") }}
+  </ul>
+</nav>
+{{ end }}
