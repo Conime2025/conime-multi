@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
     "./layouts/**/*.html",
     "./content/**/*.md",
@@ -51,6 +51,16 @@ export default {
     { pattern: /uppercase/ },
     { pattern: /line-clamp-(1|2|3|4)/ },
     { pattern: /break-words/ },
+
+    // === Text color utilities ===
+    { pattern: /text-gray-(100|200|300|400|500|600|700|800|900|950)/ },
+    { pattern: /dark:text-gray-(100|200|300|400|500|600|700|800|900|950)/ },
+    { pattern: /hover:text-gray-(200|300|600)/ },
+    { pattern: /dark:hover:text-gray-(800|900)/ },
+    { pattern: /text-conime-/ },
+    { pattern: /dark:text-conime-/ },
+    { pattern: /hover:text-conime-/ },
+    { pattern: /dark:hover:text-conime-/ },
 
     // === Background colors (including dark mode) ===
     { pattern: /bg-conime-/ },
