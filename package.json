@@ -9,7 +9,7 @@
   "dev:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch",
   "dev:hugo": "hugo server -D",
   "prebuild": "node fetch-popular-from-neon.js",
-  "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --minify",
+  "build:css": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --minify",
   "build:site": "hugo --minify",
   "build": "npm run build:css && npm run build:site"
 },

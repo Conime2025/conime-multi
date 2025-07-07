@@ -8,6 +8,8 @@
   HUGO_ENV = "production"
   HUGO_VERSION = "0.130.0"
   NODE_VERSION = "20"
+  NPM_FLAGS = "--include=dev"
+
 
 
 [dev]
