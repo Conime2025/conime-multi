@@ -4,8 +4,11 @@
   functions = "functions"
 
 [context.production.environment]
+  NODE_ENV = "production"
+  HUGO_ENV = "production"
   HUGO_VERSION = "0.130.0"
   NODE_VERSION = "20"
+
 
 [dev]
   functions = "functions"

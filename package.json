@@ -8,7 +8,7 @@
     "predev": "node fetch-popular-from-neon.js",
     "dev": "concurrently \"npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch\" \"hugo server -D\"",
     "prebuild": "node fetch-popular-from-neon.js",
-    "build": "hugo --minify",
+    "build": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --minify && hugo --minify",
     "dev:hugo": "hugo server -D",
     "dev:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch"
   },

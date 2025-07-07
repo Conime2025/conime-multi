@@ -11,7 +11,7 @@ export default {
       pattern: /data-aos/,
     },
     {
-      pattern: /fade-/,
+     pattern: /fade-(up|down|left|right)/,
     },
     {
       pattern: /zoom-/,
