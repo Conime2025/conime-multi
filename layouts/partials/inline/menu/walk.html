@@ -39,13 +39,22 @@
   {{- $buttonIdentifiers := slice "notifBtn" "moreBtn" "lessBtn" }}
   {{- $isButton := in $buttonIdentifiers $entry.Identifier }}
 
+  {{- /* suffix for unique id */ -}}
+  {{- $idSuffix := "-lg" }}
+  {{- if eq $mode "mobile" }}
+    {{- $idSuffix = "-mobile" }}
+  {{- else if eq $mode "modal" }}
+    {{- $idSuffix = "-modal" }}
+  {{- end }}
+  {{- $finalId := printf "%s%s" $entry.Identifier $idSuffix }}
+
   {{- if $isButton }}
     <li class="w-full group">
-      <button type="button" class="{{ $entry.Identifier }} z-[999] {{ $baseClass }}">
+      <button type="button" id="{{ $finalId }}" class="z-[999] {{ $baseClass }}">
         <span class="block w-6 h-6 group-hover:scale-110 transition duration-500 ease-in-out">
           {{ with .Params.svg }}{{ . | safeHTML }}{{ end }}
         </span>
-        <span class="{{ if eq $mode "mobile" }}text-[0.6rem]{{ else if eq $mode "modal" }}text-sm{{ else }}text-base{{ end }} text-center">
+        <span class="{{ if eq $mode "mobile" }}text-[0.6rem]{{ else if eq $mode "modal" }}text-sm{{ else }}text-base{{ end }} z-10 text-center">
           {{ $name }}
         </span>
         {{ if eq $entry.Identifier "notifBtn" }}
@@ -61,22 +70,13 @@
     </li>
   {{- else }}
     <li class="w-full group">
-      <a href="{{ $entry.URL }}"class="{{ $entry.Identifier }} z-[999] {{ $baseClass }}">
+      <a href="{{ $entry.URL }}" class="z-[999] {{ $baseClass }}">
         <span class="block w-6 h-6 group-hover:scale-110 transition duration-500 ease-in-out">
           {{ with .Params.svg }}{{ . | safeHTML }}{{ end }}
         </span>
         <span class="{{ if eq $mode "mobile" }}text-[0.6rem]{{ else if eq $mode "modal" }}text-sm{{ else }}text-base{{ end }} text-center">
           {{ $name }}
         </span>
-        {{ if eq $entry.Identifier "notifBtn" }}
-          <div class="notifBadge absolute hidden top-2 lg:top-3 left-[38px] lg:left-[24px]">
-            <div class="relative flex justify-center items-center">
-              <div class="w-3 h-3 opacity-0 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
-              <div class="w-[10px] h-[10px] absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
-              <div class="w-2 h-2 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
-            </div>
-          </div>
-        {{ end }}
       </a>
     </li>
   {{- end }}

@@ -3,10 +3,41 @@
 {{ $allEntries := index site.Menus $menuID }}
 
 {{ with $allEntries }}
-<div id="mobileMenuModal" class="fixed inset-0 bg-black/80 hidden z-50">
+<div id="mobileMenuModal" class="fixed inset-0 bg-black/80 hidden lg:hidden z-[999] lg:-z-[999]">
   <div class="bg-gray-900 text-white rounded-t-xl p-4">
     <ul class="grid grid-cols-3 gap-4">
-      {{ partial "inline/menu/walk.html" (dict "page" $page "menuEntries" . "mode" "modal") }}
+      {{ range . }}
+        {{ $idSuffix := "-modal" }}
+        {{ $isNotif := eq .Identifier "notifBtn" }}
+        {{ if in (slice "notifBtn" "moreBtn" "lessBtn") .Identifier }}
+          <li class="w-full group">
+            <button type="button" id="{{ .Identifier }}{{ $idSuffix }}" class="flex flex-col items-center justify-center gap-2 p-3 rounded-lg hover:bg-gray-800 transition duration-300 text-gray-300">
+              <span class="block w-6 h-6 group-hover:scale-110 transition duration-500 ease-in-out">
+                {{ with .Params.svg }}{{ . | safeHTML }}{{ end }}
+              </span>
+              <span class="text-sm text-center">{{ .Name }}</span>
+              {{ if $isNotif }}
+                <div class="notifBadge absolute hidden top-2 left-[38px]">
+                  <div class="relative flex justify-center items-center">
+                    <div class="w-3 h-3 opacity-0 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
+                    <div class="w-[10px] h-[10px] absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
+                    <div class="w-2 h-2 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
+                  </div>
+                </div>
+              {{ end }}
+            </button>
+          </li>
+        {{ else }}
+          <li class="w-full group">
+            <a href="{{ .URL | safeURL }}" class="flex flex-col items-center justify-center gap-2 p-3 rounded-lg hover:bg-gray-800 transition duration-300 text-gray-300">
+              <span class="block w-6 h-6 group-hover:scale-110 transition duration-500 ease-in-out">
+                {{ with .Params.svg }}{{ . | safeHTML }}{{ end }}
+              </span>
+              <span class="text-sm text-center">{{ .Name }}</span>
+            </a>
+          </li>
+        {{ end }}
+      {{ end }}
     </ul>
     <button class="closeMobileMenu mt-4 px-4 py-2 bg-gray-800 rounded">Close</button>
   </div>

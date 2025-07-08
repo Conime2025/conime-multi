@@ -1,7 +1,7 @@
 +++
 title = "Dragon Ball Xenoverse 2 Hadirkan Dragon Ball DAIMA Pack dengan Goku SS4 & Vegeta SS3"
 slug = "dragon-ball-xenoverse-2-daima-pack-20250522"
-date = 2025-05-22T06:00:00+07:00
+date = 2025-07-09T00:00:00+07:00
 author = "Koni si Co-Bot"
 draft = false
 nameGame = "Dragon Ball Xenoverse 2"

@@ -9,7 +9,7 @@
 <body data-page-type="{{ .Kind }}" class="flex flex-col demo-3
   font-poppins text-base font-normal dark:font-light
   inset-0 w-screen min-h-screen h-full
-  bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200
+  bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-300
   {{ if eq .Kind " 404" }} overflow-hidden {{ else }} overflow-y-auto overscroll-y-auto overflow-style-custom-y overflow-x-hidden {{ end }}
   transition duration-300 ease-in-out">
 
@@ -50,52 +50,33 @@
 
   </header>
 
-  <div class="flex gap-2 w-full h-auto relative">
+  <div class="flex gap-2 w-full h-full relative">
     <!-- Main menu -->
-    <div id="main-menu2" class="fixed hidden pb-[env(safe-area-inset-bottom)] lg:top-20 bottom-0 left-0 z-[999]
+    <div id="main-menu" class="fixed pb-[env(safe-area-inset-bottom)] lg:top-20 bottom-0 left-0 z-[999]
          lg:w-[20%] xl:w-[15%] w-full h-fit lg:h-[calc(100vh-theme(space.40))]
          bg-white dark:bg-gray-900 lg:bg-white/50 lg:dark:bg-gray-900/80
          lg:backdrop-blur
          border-r border-gray-300 dark:border-gray-800/50
-         lg:hidden  flex-row lg:flex-col justify-center items-center
+         flex flex-row lg:flex-col justify-center items-center
          {{ if .IsHome }}hidden{{ else }}flex{{ end }}">
 
-      {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-      {{ partial "notif-modal.html" . }}
+<!-- Sidebar Desktop -->
+{{ partial "menu-desktop.html" (dict "menuID" "main" "page" .) }}
 
+<!-- Mobile Bottom Bar -->
+{{ partial "menu-mobile-bar.html" (dict "menuID" "main" "page" .) }}
+
+<!-- Mobile Modal Menu -->
+{{ partial "menu-mobile-modal.html" (dict "menuID" "main" "page" .) }}
+
+
+
+
+<!--
+      {{ partial "menu.html" (dict "menuID" "main" "page" .) }} -->
+      {{ partial "notif-modal.html" . }}
     </div>
     <!-- Konten Utama -->
-
-<!-- Main menu -->
-<div id="main-menu" class="z-[999]">
-
-  <!-- Mobile Bottom Bar -->
-  <div class="fixed bottom-0 left-0 w-full block lg:hidden bg-white dark:bg-gray-900 border-t border-gray-300 dark:border-gray-800 z-[999]">
-    {{ partial "menu-mobile-bar.html" (dict "menuID" "main" "page" .) }}
-  </div>
-
-  <!-- Mobile Modal Menu -->
-  <div class="block lg:hidden z-[999]">
-    {{ partial "menu-mobile-modal.html" (dict "menuID" "main" "page" .) }}
-  </div>
-
-  <!-- Desktop Sidebar -->
-  <div class="hidden lg:flex fixed lg:top-20 bottom-0 left-0
-              lg:w-[20%] xl:w-[15%] h-fit lg:h-[calc(100vh-theme(space.40))]
-              bg-white dark:bg-gray-900 lg:bg-white/50 lg:dark:bg-gray-900/80
-              lg:backdrop-blur
-              border-r border-gray-300 dark:border-gray-800/50
-              flex-col justify-start items-start z-[999]">
-    {{ partial "menu-desktop.html" (dict "menuID" "main" "page" .) }}
-  </div>
-
-  {{ partial "notif-modal.html" . }}
-
-</div>
-
-
-
-
     <main
       class="overflow-hidden relative mt-20 ml-0 lg:ml-[20%] xl:ml-[15%] p-3 sm:px-16 md:px-16 lg:px-20 h-fit min-h-screen-20 w-full lg:w-[85%]">
 
