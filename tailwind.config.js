@@ -114,6 +114,12 @@ module.exports = {
     { pattern: /pb-/ },
     { pattern: /mb-/ },
     { pattern: /gap-/ },
+    'scale-95',
+    'scale-100',
+    'opacity-0',
+    'opacity-100',
+    'translate-y-0',
+    'translate-y-6',
   ],
 
   theme: {
