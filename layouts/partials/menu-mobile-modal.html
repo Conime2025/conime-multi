@@ -1,52 +1,25 @@
-{{ $page := .page }}
 {{ $menuID := .menuID }}
 {{ $allEntries := index site.Menus $menuID }}
 
-{{ with $allEntries }}
-<div id="mobileMenuModal" class="fixed inset-0 bg-black/80 w-full h-screen scale-95 hidden -z-[999] opacity-0 translate-y-10  transition-all justify-center items-end duration-300 ease-out lg:hidden">
-
-  <div id="mobile-modal-container" class="relative opacity-100  bg-gray-900 transition duration-300 ease-in-out text-white w-[90%] rounded-xl bottom-8 p-4">
+{{ if $allEntries }}
+<div id="mobileMenuModal" class="fixed inset-0 text-gray-700 dark:text-gray-400 bg-black/80 w-full h-screen scale-95 hidden -z-[999] opacity-0 translate-y-10 transition-all justify-center items-end duration-300 ease-out pb-16 lg:hidden">
+  <div id="mobile-modal-container" class="relative opacity-100 bg-gray-900 transition duration-300 ease-in-out w-[90%] rounded-xl p-4">
     <div id="btnCloseMobileMenu" class="closeMobileMenu w-fit h-fit group absolute right-2 top-2 p-0 flex gap-x-2 justify-center items-center shadow-none md:shadow-xl shadow-gray-950/10 lg:shadow-gray-950/20 bg-gray-100 hover:bg-gray-300 dark:bg-gray-950/20 hover:dark:bg-gray-900 rounded-full">
       <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9.16998 14.83L14.83 9.17004" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M14.83 14.83L9.16998 9.17004" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M9.16998 14.83L14.83 9.17004" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14.83 14.83L9.16998 9.17004" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </div>
-
     <ul class="grid grid-cols-3 gap-1 mt-10">
-      {{ range . }}
-        {{ if eq .Identifier "moreBtn" }}
-          {{ continue }}
-        {{ end }}
-
-        {{ $idSuffix := "-modal" }}
-        {{ $isNotif := eq .Identifier "notifBtn" }}
-
-        {{ if $isNotif }}
-          <li class="w-full group flex items-center justify-center">
-            <button type="button" id="{{ .Identifier }}{{ $idSuffix }}" class="relative flex flex-col items-center justify-center gap-1 text-[0.65rem] py-1 px-2 text-gray-300 group-hover:text-conime-500 transition duration-300">
-              <span class="block w-6 h-6 group-hover:scale-110 transition duration-500 ease-in-out">
-                {{ with .Params.svg }}{{ . | safeHTML }}{{ end }}
-              </span>
-              <span class="text-[0.6rem] text-center">{{ .Name }}</span>
-              <div class="notifBadge absolute hidden top-2 left-[38px]">
-                <div class="relative flex justify-center items-center">
-                  <div class="w-3 h-3 opacity-0 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
-                  <div class="w-[10px] h-[10px] absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
-                  <div class="w-2 h-2 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
-                </div>
-              </div>
-            </button>
-          </li>
-        {{ else }}
-          <li class="w-full group flex items-center justify-center">
-            <a href="{{ .URL | safeURL }}" class="relative flex flex-col items-center justify-center gap-1 text-[0.65rem] py-1 px-2 text-gray-300 group-hover:text-conime-500 transition duration-300">
-              <span class="block w-6 h-6 group-hover:scale-110 transition duration-500 ease-in-out">
-                {{ with .Params.svg }}{{ . | safeHTML }}{{ end }}
-              </span>
-              <span class="text-[0.6rem] text-center">{{ .Name }}</span>
-            </a>
-          </li>
+      {{ range $allEntries }}
+        {{ if ne .Identifier "moreBtn" }}
+          {{ partial "navitem.html" (dict
+            "item" .
+            "idSuffix" "-modal"
+            "classes" "relative flex flex-col items-center justify-center gap-1 text-[0.65rem] py-1 px-2 bg-gray-300/0 dark:bg-gray-950/0 hover:bg-gray-300 hover:dark:bg-gray-800/50 text-gray-700 dark:text-gray-400 hover:text-conime-400 dark:hover:text-conime-500 transition duration-300"
+            "liClasses" "flex items-center justify-center"
+            "notifBadgePosition" "top-1 left-[36px]"
+          ) }}
         {{ end }}
       {{ end }}
     </ul>

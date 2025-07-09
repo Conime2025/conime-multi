@@ -122,6 +122,7 @@ module.exports = {
     'translate-y-6',
      'z-[999]',
      '-z-[999]',
+     '!top-[6px]',
   ],
 
   theme: {
