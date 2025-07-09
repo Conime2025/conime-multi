@@ -3,12 +3,12 @@
 {{ $allEntries := index site.Menus $menuID }}
 
 {{ with $allEntries }}
-<nav id="navDesktop" class="w-full h-full hidden lg:block overflow-y-hidden overflow-x-hidden px-0 lg:px-4 py-2 lg:py-0 mx-[15px] lg:mx-0 rounded-xl">
+<nav id="navDesktop" class="w-full h-full -z-[999] lg:z-[999] hidden lg:block overflow-y-hidden overflow-x-hidden px-0 lg:px-4 py-2 lg:py-0 mx-[15px] lg:mx-0 rounded-xl">
   <ul class="flex flex-col h-full gap-6 justify-center items-center [&>*:nth-child(8)]:lg:hidden [&>*:nth-child(9)]:lg:hidden">
     {{ range . }}
       {{ $idSuffix := "-lg" }}
       {{ $isNotif := eq .Identifier "notifBtn" }}
-      {{ if in (slice "notifBtn" "moreBtn" "lessBtn") .Identifier }}
+      {{ if in (slice "notifBtn" "moreBtn") .Identifier }}
         <li class="w-full group">
           <button type="button" id="{{ .Identifier }}{{ $idSuffix }}" class="relative flex flex-row justify-start items-center lg:px-3 sm:py-3 lg:gap-4 w-full text-base rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300 text-gray-700 dark:text-gray-300">
             <span class="block w-6 h-6 group-hover:scale-110 transition duration-500 ease-in-out">

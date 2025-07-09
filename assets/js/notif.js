@@ -183,14 +183,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const openModal = () => {
     notifModal?.classList.remove("hidden");
     requestAnimationFrame(() => {
-      notifModal?.classList.add("scale-100", "opacity-100", "translate-y-0");
-      notifModal?.classList.remove("scale-95", "opacity-0", "translate-y-6");
+      notifModal?.classList.add("scale-100", "opacity-100", "translate-y-0", "z-[999]");
+      notifModal?.classList.remove("scale-95", "opacity-0", "translate-y-10", "-z-[999]");
     });
   };
 
   const closeModal = () => {
-    notifModal?.classList.add("scale-95", "opacity-0", "translate-y-6");
-    notifModal?.classList.remove("scale-100", "opacity-100", "translate-y-0");
+    notifModal?.classList.add("scale-95", "opacity-0", "translate-y-10", "-z-[999]");
+    notifModal?.classList.remove("scale-100", "opacity-100", "translate-y-0", "z-[999]");
     setTimeout(() => notifModal?.classList.add("hidden"), 300);
   };
 

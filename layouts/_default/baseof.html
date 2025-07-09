@@ -63,18 +63,20 @@
 <!-- Sidebar Desktop -->
 {{ partial "menu-desktop.html" (dict "menuID" "main" "page" .) }}
 
-<!-- Mobile Bottom Bar -->
-{{ partial "menu-mobile-bar.html" (dict "menuID" "main" "page" .) }}
 
 <!-- Mobile Modal Menu -->
 {{ partial "menu-mobile-modal.html" (dict "menuID" "main" "page" .) }}
+<!-- Mobile Bottom Bar -->
+{{ partial "menu-mobile-bar.html" (dict "menuID" "main" "page" .) }}
 
 
 
+
+    {{ partial "notif-modal.html" . }}
 
 <!--
       {{ partial "menu.html" (dict "menuID" "main" "page" .) }} -->
-      {{ partial "notif-modal.html" . }}
+
     </div>
     <!-- Konten Utama -->
     <main

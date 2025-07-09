@@ -5,12 +5,12 @@
 {{ $bottomItems := where $allEntries "Identifier" "in" (slice "animeBtn" "reviewBtn" "homeBtn" "notifBtn" "moreBtn") }}
 
 {{ with $bottomItems }}
-<nav id="navMobile" class="bg-gray-900 w-full px-6 gap-1 block lg:hidden z-[999] lg:-z-[999] text-white border-t border-gray-800">
+<nav id="navMobile" class="bg-gray-900 w-full px-6 gap-1 block lg:hidden z-[666] lg:-z-[999] text-white border-t border-gray-800">
   <ul class="flex justify-center items-center py-1">
     {{ range . }}
       {{ $idSuffix := "-mobile" }}
       {{ $isNotif := eq .Identifier "notifBtn" }}
-      {{ if in (slice "notifBtn" "moreBtn" "lessBtn") .Identifier }}
+      {{ if in (slice "notifBtn" "moreBtn") .Identifier }}
         <li class="w-full group flex items-center justify-center">
           <button type="button" id="{{ .Identifier }}{{ $idSuffix }}" class="relative flex flex-col items-center justify-center gap-1 text-[0.65rem] py-1 px-2 text-gray-300 group-hover:text-conime-500 transition duration-300">
             <span class="block w-6 h-6 group-hover:scale-110 transition duration-500 ease-in-out">
