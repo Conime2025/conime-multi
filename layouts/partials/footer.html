@@ -5,7 +5,7 @@
   {{ partial "notif-data.html" . }}
 {{ end }}
 
-{{ if site.IsServer }}
+{{ if hugo.IsServer }}
 {{ if eq hugo.Environment "development" }}
   {{ partial "_safelist.html" . }}
 {{ end }}
@@ -48,7 +48,7 @@
 <script defer>
   tippy('[data-tippy-content]');
 </script>
-{{ if site.IsServer }}
+{{ if hugo.IsServer }}
 {{ with resources.Get "js/three.min.js" }}
   {{ $min := . | resources.Minify }}
   <script src="{{ $min.RelPermalink }}" defer></script>
