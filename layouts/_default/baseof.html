@@ -45,8 +45,8 @@
   {{ end }}
 
   <header
-    class="w-full z-[1000] min-h-12 max-h-20 h-20 {{ if .IsHome }}hidden{{ else }}flex{{ end }} fixed left-0 top-0 right-0  bg-white dark:bg-gray-900 lg:bg-white/50 lg:dark:bg-gray-900/80 lg:backdrop-blur  text-gray-800 dark:text-gray-100 transition duration-300 ease-in-out px-6 sm:24 lg:px-[15%] py-2 lg:py-4 flex-row justify-between items-center">
-    {{ partial "header.html" (dict "page" .) }}
+    class="w-full z-[1000] min-h-12 max-h-20 h-20 {{ if .IsHome }}flex {{ else }}flex{{ end }} fixed left-0 top-0 right-0  bg-white dark:bg-gray-900 lg:bg-white/50 lg:dark:bg-gray-900/80 lg:backdrop-blur  text-gray-800 dark:text-gray-100 transition duration-300 ease-in-out px-6 sm:24 lg:px-[15%] py-2 lg:py-4 flex-row justify-between items-center">
+    {{ partial "header.html" . }}
 
   </header>
 
@@ -58,7 +58,7 @@
          lg:backdrop-blur
          border-r border-gray-300 dark:border-gray-800/50
          flex flex-row lg:flex-col justify-center items-center
-         {{ if .IsHome }}hidden{{ else }}flex{{ end }}">
+         {{ if .IsHome }}flex {{ else }}flex{{ end }}">
 
 <!-- Sidebar Desktop -->
 {{ partial "menu-desktop.html" (dict "menuID" "main" "page" .) }}
@@ -92,7 +92,7 @@
 
 
   <footer
-  class="pb-[env(safe-area-inset-bottom)] text-sm ml-0 sm:ml-auto mx-auto lg:ml-[20%] xl:ml-[15%] mt-12 sm:mt-6 {{ if .IsHome }}hidden{{ else }}block{{ end }} relative text-gray-800 dark:text-gray-100 transition duration-300 ease-in-out px-4 sm:px-6 lg:px-12">
+  class="pb-[env(safe-area-inset-bottom)] text-sm ml-0 sm:ml-auto mx-auto lg:ml-[20%] xl:ml-[15%] mt-12 sm:mt-6 {{ if .IsHome }} block{{ else }}block{{ end }} relative text-gray-800 dark:text-gray-100 transition duration-300 ease-in-out px-4 sm:px-6 lg:px-12">
 
   <div class="z-10 border-t border-conime-500 dark:border-conime-500 pt-6 sm:pt-6">
 

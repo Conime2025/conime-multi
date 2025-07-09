@@ -1,5 +1,6 @@
-{{ $page := .page }}
-<a href="/"  {{ if $page.IsHome }}
+{{ $page := . }}
+
+<a href="/"  {{ if .IsHome }}
 
  data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000" {{ end }} data-tippy-content="Logo CoNime" class="flex relative items-center group">
 <div class="flex sm:hidden">  <svg class="w-auto h-12 flex dark:hidden" viewBox="0 0 336 336" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,9 +34,9 @@
 </a>
 
 <nav class="flex justify-center items-center space-x-2 md:space-x-4">
-  {{ range $page.Site.Menus.header }}
+  {{ range .Site.Menus.header }}
  {{ $isActive := eq $.RelPermalink .URL }}
-<a  {{ if $page.IsHome }}
+<a  {{ if $.IsHome }}
 
  data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000" {{ end }} href="{{ .URL }}" id="{{ .Identifier }}" data-tippy-content="{{ .Name }}"
   class="p-2 md:p-3 relative justify-center group items-center rounded-xl backdrop-blur-sm transition
@@ -57,7 +58,10 @@
   </a>
   {{ end }}
 
-  <div  {{ if $page.IsHome }}
+
+
+
+  <div  {{ if .IsHome }}
 
  data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000" {{ end }} id="theme-toggle">
   <div  data-tippy-content="Light Mode" class="p-2 hidden dark:flex md:p-3 group relative justify-center items-center dark:bg-gray-950/0 bg-gray-300/0 hover:bg-gray-300 hover:dark:bg-gray-800/50 backdrop-blur-sm hover:text-conime-400 text-gray-700 dark:text-gray-400 dark:hover:text-conime-500  rounded-xl">  <span class="hidden  dark:flex w-6 h-6 md:w-6 md:h-6 group-hover:text-conime-400 text-gray-700 dark:text-gray-400 dark:group-hover:text-conime-500 justify-center   items-center">
@@ -83,6 +87,47 @@
         Mode</span>
     </span></div>
   </div>
+
+
+
+{{ if .IsTranslated }}
+  <ul class="flex space-x-2">
+    {{ range .Translations }}
+      <li>
+        <a href="{{ .RelPermalink }}">
+          {{ if eq .Lang "id" }}
+            <!-- Bendera Indonesia -->
+            <svg class="w-6 h-4" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+              <rect width="3" height="1" y="0" fill="#FF0000"/>
+              <rect width="3" height="1" y="1" fill="#FFFFFF"/>
+            </svg>
+          {{ else if eq .Lang "en" }}
+            <!-- Bendera Inggris -->
+            <svg class="w-6 h-4" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+              <clipPath id="t">
+                <path d="M0,0 v30 h60 v-30 z"/>
+              </clipPath>
+              <clipPath id="s">
+                <path d="M30,15 h30 v15 h-30 z"/>
+              </clipPath>
+              <g clip-path="url(#t)">
+                <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+                <path d="M0,0 l60,30 M60,0 l-60,30" stroke="#FFF" stroke-width="6"/>
+                <path d="M0,0 l60,30 M60,0 l-60,30" stroke="#C8102E" stroke-width="4" clip-path="url(#s)"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#FFF" stroke-width="10"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+              </g>
+            </svg>
+          {{ end }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
+
+
+
+
 {{ if hugo.IsServer }}
  <button class="absolute bottom-10 right-10 z-[9999]" onclick="sessionStorage.removeItem('loadingShown'); location.reload();">
   🔄

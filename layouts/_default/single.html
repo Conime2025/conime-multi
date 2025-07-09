@@ -17,6 +17,7 @@
 <!-- Layout untuk posts (artikel berita/review) -->
 <div class="relative rounded-xl mx-auto py-4 grid grid-cols-1 lg:grid-cols-12 gap-4">
 
+
   <main class="col-span-12 lg:col-span-8 w-full">
     {{ if and (hasPrefix .RelPermalink "/posts/") .IsPage }}
     {{ $segments := (split .RelPermalink "/") }}
