@@ -4,10 +4,17 @@
 {{ $isButton := in (slice "notifBtn" "moreBtn") $item.Identifier }}
 {{ $classes := .classes | default "" }}
 {{ $liClasses := .liClasses | default "" }}
-{{ $notifBadgePosition := .notifBadgePosition | default " " }}
+{{ $notifBadgePosition := .notifBadgePosition | default "  left-[38px]" }}
+
+
+
 
 {{ if $item }}
-<li class="w-full group {{ $liClasses }}">
+<li class="w-full group
+
+  group-hover:bg-conime-500 group-hover:dark:bg-conime-500 group-hover:text-white group-hover:dark:text-white
+
+  {{ $liClasses }}">
   {{ if $isButton }}
     <button type="button" id="{{ $item.Identifier }}{{ $idSuffix }}" class="{{ $classes }}">
       <span class="block w-6 h-6 group-hover:scale-110 transition duration-500 ease-in-out">
@@ -26,7 +33,7 @@
     </button>
   {{ else }}
     {{ with $item.URL }}
-      <a href="{{ . | safeURL }}" id="{{ $item.Identifier }}{{ $idSuffix }}"  class="{{ $classes }}">
+      <a href="{{ . | safeURL }}" class="{{ $classes }}">
         <span class="block w-6 h-6 group-hover:scale-110 transition duration-500 ease-in-out">
           {{ with $item.Params.svg }}{{ . | safeHTML }}{{ end }}
         </span>
