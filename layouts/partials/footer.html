@@ -80,6 +80,13 @@
   <script src="{{ $min.RelPermalink }}" defer></script>
 {{ end }}
 
+
+{{ with resources.Get "js/more.js" }}
+  {{ $min := . | resources.Minify }}
+  <script src="{{ $min.RelPermalink }}" defer></script>
+{{ end }}
+
+
 {{ with resources.Get "js/popular-umami.js" }}
   {{ $min := . | resources.Minify }}
   <script src="{{ $min.RelPermalink }}" defer></script>

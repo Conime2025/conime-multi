@@ -50,7 +50,7 @@
 
   </header>
 
-  <div class="flex gap-2 w-full h-auto relative">
+  <div class="flex gap-2 w-full h-full relative">
     <!-- Main menu -->
     <div id="main-menu" class="fixed pb-[env(safe-area-inset-bottom)] lg:top-20 bottom-0 left-0 z-[999]
          lg:w-[20%] xl:w-[15%] w-full h-fit lg:h-[calc(100vh-theme(space.40))]
@@ -60,8 +60,22 @@
          flex flex-row lg:flex-col justify-center items-center
          {{ if .IsHome }}hidden{{ else }}flex{{ end }}">
 
-      {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-      {{ partial "notif-modal.html" . }}
+<!-- Sidebar Desktop -->
+{{ partial "menu-desktop.html" (dict "menuID" "main" "page" .) }}
+
+
+<!-- Mobile Modal Menu -->
+{{ partial "menu-mobile-modal.html" (dict "menuID" "main" "page" .) }}
+<!-- Mobile Bottom Bar -->
+{{ partial "menu-mobile-bar.html" (dict "menuID" "main" "page" .) }}
+
+
+
+
+    {{ partial "notif-modal.html" . }}
+
+<!--
+      {{ partial "menu.html" (dict "menuID" "main" "page" .) }} -->
 
     </div>
     <!-- Konten Utama -->

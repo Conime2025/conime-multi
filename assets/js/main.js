@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
   document.addEventListener("DOMContentLoaded", () => {
-    const nav = document.getElementById('navMenuLeft');
+    const nav = document.querySelector('.navMenuLeft');
     setTimeout(() => {
       nav.classList.add('md:overflow-y-auto', 'overflow-style-custom-y');
     }, 2000);
@@ -78,8 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // ========== Menu Expand ==========
-const moreBtn = document.getElementById('moreBtn');
-const navList = document.getElementById('navList');
+const moreBtn = document.querySelector('.moreBtn');
+const navList = document.querySelector('.navList');
 
 let expanded = false;
 

@@ -1,0 +1,42 @@
+{{ $page := .page }}
+{{ $menuID := .menuID }}
+{{ $allEntries := index site.Menus $menuID }}
+
+{{ with $allEntries }}
+<nav id="navDesktop" class="w-full h-full -z-[999] lg:z-[999] hidden lg:block overflow-y-hidden overflow-x-hidden px-0 lg:px-4 py-2 lg:py-0 mx-[15px] lg:mx-0 rounded-xl">
+  <ul class="flex flex-col h-full gap-6 justify-center items-center [&>*:nth-child(8)]:lg:hidden [&>*:nth-child(9)]:lg:hidden">
+    {{ range . }}
+      {{ $idSuffix := "-lg" }}
+      {{ $isNotif := eq .Identifier "notifBtn" }}
+      {{ if in (slice "notifBtn" "moreBtn") .Identifier }}
+        <li class="w-full group">
+          <button type="button" id="{{ .Identifier }}{{ $idSuffix }}" class="relative flex flex-row justify-start items-center lg:px-3 sm:py-3 lg:gap-4 w-full text-base rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300 text-gray-700 dark:text-gray-300">
+            <span class="block w-6 h-6 group-hover:scale-110 transition duration-500 ease-in-out">
+              {{ with .Params.svg }}{{ . | safeHTML }}{{ end }}
+            </span>
+            <span class="text-base text-center">{{ .Name }}</span>
+            {{ if $isNotif }}
+              <div class="notifBadge absolute hidden top-2 lg:top-3 left-[24px]">
+                <div class="relative flex justify-center items-center">
+                  <div class="w-3 h-3 opacity-0 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
+                  <div class="w-[10px] h-[10px] absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
+                  <div class="w-2 h-2 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
+                </div>
+              </div>
+            {{ end }}
+          </button>
+        </li>
+      {{ else }}
+        <li class="w-full group">
+          <a href="{{ .URL | safeURL }}" class="relative flex flex-row justify-start items-center lg:px-3 sm:py-3 lg:gap-4 w-full text-base rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300 text-gray-700 dark:text-gray-300">
+            <span class="block w-6 h-6 group-hover:scale-110 transition duration-500 ease-in-out">
+              {{ with .Params.svg }}{{ . | safeHTML }}{{ end }}
+            </span>
+            <span class="text-base text-center">{{ .Name }}</span>
+          </a>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</nav>
+{{ end }}

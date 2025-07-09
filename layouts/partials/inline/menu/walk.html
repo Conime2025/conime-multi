@@ -1,0 +1,84 @@
+{{- define "partials/inline/menu/walk.html" }}
+{{- $page := .page }}
+{{- $entries := .menuEntries }}
+{{- $mode := .mode | default "desktop" }}
+
+{{- range $index, $entry := $entries }}
+  {{- $attrs := dict "href" ($entry.URL | safeURL) }}
+  {{- if $page.IsMenuCurrent $entry.Menu $entry }}
+    {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
+  {{- else if $page.HasMenuCurrent $entry.Menu $entry }}
+    {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
+  {{- end }}
+
+  {{- $isActive := in ($attrs.class | default "") "active" }}
+  {{- $isAncestor := in ($attrs.class | default "") "ancestor" }}
+
+  {{- $name := $entry.Name }}
+  {{- with $entry.Identifier }}
+    {{- with T . }}
+      {{- $name = . }}
+    {{- end }}
+  {{- end }}
+
+  {{- $baseClass := "" }}
+  {{- if eq $mode "mobile" }}
+    {{- $baseClass = "relative flex flex-col items-center justify-center gap-1 text-[0.65rem] py-1 px-2" }}
+  {{- else if eq $mode "modal" }}
+    {{- $baseClass = "flex flex-col items-center justify-center gap-2 p-3 rounded-lg hover:bg-gray-800 transition duration-300" }}
+  {{- else }}
+    {{- $baseClass = "relative flex flex-row justify-start items-center lg:max-w-full lg:max-h-full lg:px-3 sm:py-3 lg:h-fit lg:gap-4 w-full text-base rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300" }}
+  {{- end }}
+
+  {{- if or $isActive $isAncestor }}
+    {{- $baseClass = printf "%s bg-conime-500 dark:bg-conime-500 hover:!bg-conime-600 hover:dark:!bg-conime-400 text-white group-hover:text-white" $baseClass }}
+  {{- else }}
+    {{- $baseClass = printf "%s text-gray-700 dark:text-gray-300 group-hover:text-conime-500" $baseClass }}
+  {{- end }}
+
+  {{- $buttonIdentifiers := slice "notifBtn" "moreBtn" "lessBtn" }}
+  {{- $isButton := in $buttonIdentifiers $entry.Identifier }}
+
+  {{- /* suffix for unique id */ -}}
+  {{- $idSuffix := "-lg" }}
+  {{- if eq $mode "mobile" }}
+    {{- $idSuffix = "-mobile" }}
+  {{- else if eq $mode "modal" }}
+    {{- $idSuffix = "-modal" }}
+  {{- end }}
+  {{- $finalId := printf "%s%s" $entry.Identifier $idSuffix }}
+
+  {{- if $isButton }}
+    <li class="w-full group">
+      <button type="button" id="{{ $finalId }}" class="z-[999] {{ $baseClass }}">
+        <span class="block w-6 h-6 group-hover:scale-110 transition duration-500 ease-in-out">
+          {{ with .Params.svg }}{{ . | safeHTML }}{{ end }}
+        </span>
+        <span class="{{ if eq $mode "mobile" }}text-[0.6rem]{{ else if eq $mode "modal" }}text-sm{{ else }}text-base{{ end }} z-10 text-center">
+          {{ $name }}
+        </span>
+        {{ if eq $entry.Identifier "notifBtn" }}
+          <div class="notifBadge absolute hidden top-2 lg:top-3 left-[38px] lg:left-[24px]">
+            <div class="relative flex justify-center items-center">
+              <div class="w-3 h-3 opacity-0 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
+              <div class="w-[10px] h-[10px] absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
+              <div class="w-2 h-2 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
+            </div>
+          </div>
+        {{ end }}
+      </button>
+    </li>
+  {{- else }}
+    <li class="w-full group">
+      <a href="{{ $entry.URL }}" class="z-[999] {{ $baseClass }}">
+        <span class="block w-6 h-6 group-hover:scale-110 transition duration-500 ease-in-out">
+          {{ with .Params.svg }}{{ . | safeHTML }}{{ end }}
+        </span>
+        <span class="{{ if eq $mode "mobile" }}text-[0.6rem]{{ else if eq $mode "modal" }}text-sm{{ else }}text-base{{ end }} text-center">
+          {{ $name }}
+        </span>
+      </a>
+    </li>
+  {{- end }}
+{{- end }}
+{{- end }}
