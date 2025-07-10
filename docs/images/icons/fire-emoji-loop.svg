@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Fire emoji animated SVG (looping) -->
+<svg width="128" height="128" viewBox="0 0 100 100"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- Radial gradient for the flame -->
+    <radialGradient id="fireGrad" cx="50%" cy="60%" r="60%" fx="50%" fy="70%">
+      <stop offset="0%"  stop-color="#fff4a3"/>
+      <stop offset="40%" stop-color="#ffd246"/>
+      <stop offset="70%" stop-color="#ff9b00"/>
+      <stop offset="100%" stop-color="#ff5e00"/>
+    </radialGradient>
+
+    <!-- Slight glow -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Group that is animated -->
+  <g filter="url(#glow)" transform-origin="50 65">
+    <!-- Outer flame -->
+    <path fill="url(#fireGrad)" d="
+      M50 5
+      C40 20 32 35 35 50
+      C38 65 48 75 50 85
+      C52 75 62 65 65 50
+      C68 35 60 20 50 5 Z" />
+
+    <!-- Inner highlight -->
+    <path fill="#fff7c0" opacity="0.7" d="
+      M50 30
+      C45 40 45 55 50 65
+      C55 55 55 40 50 30 Z" />
+
+    <!-- Scale & sway animation -->
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0 0; 1 -1; 0 0; -1 -1; 0 0"
+                      dur="1s"
+                      repeatCount="indefinite"/>
+    <animateTransform attributeName="transform"
+                      additive="sum"
+                      type="scale"
+                      values="1 1; 1.05 0.95; 1 1; 1.05 0.95; 1 1"
+                      dur="1s"
+                      repeatCount="indefinite"/>
+  </g>
+</svg>
