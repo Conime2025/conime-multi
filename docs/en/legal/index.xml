@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Legals on CoNime</title>
-    <link>https://conime.id/en/legal/</link>
+    <link>https://conime2025.github.io/conime-multi/en/legal/</link>
     <description>Recent content in Legals on CoNime</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <atom:link href="https://conime.id/en/legal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://conime2025.github.io/conime-multi/en/legal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Disclaimer</title>
-      <link>https://conime.id/disclaimer/</link>
+      <link>https://conime2025.github.io/conime-multi/disclaimer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://conime.id/disclaimer/</guid>
+      <guid>https://conime2025.github.io/conime-multi/disclaimer/</guid>
       <description>CoNime adalah portal informasi yang mengulas budaya pop visual dari berbagai negara, termasuk anime, komik, manhwa, donghua, film, game, dan karya lokal dari Indonesia. Kami tidak berafiliasi dengan pemilik konten resmi atau merek dagang mana pun yang disebutkan. Seluruh gambar, video, dan kutipan adalah hak cipta dari pemilik aslinya.&#xA;Setiap bocoran, prediksi, atau konten buatan penggemar ditampilkan semata-mata untuk tujuan hiburan dan bukan merupakan referensi resmi. Kami berupaya menyajikan informasi yang akurat, namun tidak dapat menjamin bahwa seluruh konten selalu benar dan terbaru.</description>
     </item>
     <item>
       <title>Kebijakan Privasi</title>
-      <link>https://conime.id/privacy-policy/</link>
+      <link>https://conime2025.github.io/conime-multi/privacy-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://conime.id/privacy-policy/</guid>
+      <guid>https://conime2025.github.io/conime-multi/privacy-policy/</guid>
       <description>Privasi Anda penting bagi kami. CoNime tidak mengumpulkan data pribadi tanpa izin Anda. Jika Anda menghubungi kami melalui formulir, informasi yang Anda berikan hanya akan digunakan untuk keperluan komunikasi.&#xA;Situs ini menampilkan iklan dari pihak ketiga, termasuk Google AdSense, yang mungkin menggunakan cookie untuk menampilkan iklan yang relevan. Anda dapat menonaktifkan cookie melalui pengaturan browser Anda.&#xA;Dengan menggunakan situs ini, Anda menyetujui kebijakan privasi ini.</description>
     </item>
     <item>
       <title>Ketentuan Layanan</title>
-      <link>https://conime.id/terms-of-service/</link>
+      <link>https://conime2025.github.io/conime-multi/terms-of-service/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://conime.id/terms-of-service/</guid>
+      <guid>https://conime2025.github.io/conime-multi/terms-of-service/</guid>
       <description>Dengan mengakses CoNime , Anda menyetujui untuk menggunakan konten secara bertanggung jawab dan tidak untuk tujuan ilegal atau merugikan.&#xA;Dilarang menyalin atau menyebarluaskan konten dari situs ini tanpa izin. Kami berhak mengubah atau menghentikan sebagian layanan kapan pun tanpa pemberitahuan.&#xA;Sebagian konten di situs ini dibuat dengan bantuan AI sebagai alat pendukung penulisan. Semua konten tetap melalui proses editorial oleh tim manusia. Jika Anda tidak menyetujui ketentuan ini, mohon untuk tidak menggunakan situs kami.</description>
     </item>
     <item>
       <title>Tentang Kami</title>
-      <link>https://conime.id/about-us/</link>
+      <link>https://conime2025.github.io/conime-multi/about-us/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://conime.id/about-us/</guid>
+      <guid>https://conime2025.github.io/conime-multi/about-us/</guid>
       <description>CoNime adalah portal berita daring yang menyajikan informasi dan ulasan seputar karya budaya pop visual dari berbagai negara, termasuk Jepang (anime, manga), Korea (manhwa, K-drama), China (donghua), Barat (film &amp;amp; game), serta karya orisinal dari Indonesia seperti webtoon, film animasi, dan komik lokal.&#xA;Kami menghadirkan berita terkini, review episode, rekomendasi, dan opini menarik yang dikurasi untuk pembaca Indonesia. Seluruh konten kami ditulis secara kolaboratif menggunakan bantuan AI (seperti ChatGPT), kemudian disunting oleh editor manusia untuk memastikan kualitas dan orisinalitas.</description>
     </item>
   </channel>
