@@ -64,6 +64,21 @@
   {{ warnf "❌ File css/main.css tidak ditemukan!" }}
 {{ end }}
 
+
+<!-- CSS -->
+{{ $css := resources.Get "css/main.css" }}
+{{ if $css }}
+  {{ if eq hugo.Environment "development" }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  {{ else }}
+    {{ $css = $css | resources.PostCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+  {{ end }}
+{{ else }}
+  {{ warnf "❌ File css/main.css tidak ditemukan!" }}
+{{ end }}
+<link rel="stylesheet" href="https://conime2025.github.io/conime-multi/css/main.css" media="print">
+
 <!-- Ikon -->
 <link rel="icon" href="/images/logo_conime_square.png" type="image/png">
 <link rel="apple-touch-icon" href="/images/logo_conime_square.png">

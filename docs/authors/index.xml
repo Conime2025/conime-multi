@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on CoNime</title>
-    <link>https://conime2025.github.io/authors/</link>
+    <link>https://conime2025.github.io/conime-multi/authors/</link>
     <description>Recent content in Authors on CoNime</description>
     <generator>Hugo</generator>
     <language>id-ID</language>
-    <atom:link href="https://conime2025.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://conime2025.github.io/conime-multi/authors/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
