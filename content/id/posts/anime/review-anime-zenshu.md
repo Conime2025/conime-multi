@@ -8,7 +8,7 @@ draft = false
 
 summary = "Anime *Zenshuu* menghadirkan kisah unik tentang Natsuko Hirose, seorang animator muda yang terjebak dalam dunia film favoritnya. Dengan visual memukau, musik yang menghidupkan suasana, dan kisah cinta pertama yang menggemaskan, serial ini berhasil menciptakan pengalaman yang emosional dan penuh kejutan."
 
-synopsis = """
+lead = """
 <strong>Zenshuu</strong> bercerita tentang Natsuko Hirose, seorang animator berbakat yang tiba-tiba terjebak dalam dunia film favoritnya, <em>A Tale of Perishing</em>. Di sana, ia bertemu Luke Braveheart dan harus menghadapi konflik yang menguji kreativitas dan keberaniannya.
 """
 

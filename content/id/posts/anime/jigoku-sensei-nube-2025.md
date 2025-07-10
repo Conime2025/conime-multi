@@ -8,7 +8,7 @@ draft = false
 
 summary = "Anime reboot 'Jigoku Sensei Nube' resmi tayang mulai 2 Juli 2025 di TV Asahi dengan spesial satu jam. Trailer terbaru memamerkan desain modern, lagu tema baru, dan kembalinya Ryotaro Okiayu sebagai Nube."
 
-synopsis = "Anime horor klasik Shonen Jump ini mengikuti Meisuke Nueno, guru SD dengan tangan iblis yang melindungi murid-muridnya dari yokai. Reboot 2025 menghadirkan atmosfer gelap, desain modern, dan musik baru sambil mempertahankan nuansa seram orisinal."
+lead = "Anime horor klasik Shonen Jump ini mengikuti Meisuke Nueno, guru SD dengan tangan iblis yang melindungi murid-muridnya dari yokai. Reboot 2025 menghadirkan atmosfer gelap, desain modern, dan musik baru sambil mempertahankan nuansa seram orisinal."
 
 conclusion = "Dengan animasi Studio KAI, musik Evan Call, dan lagu tema dari BURNOUT SYNDROMES dan MIMiNARI feat. Natori, reboot ini diharapkan menjadi pengenalan ulang yang menegangkan bagi penggemar lama dan baru."
 

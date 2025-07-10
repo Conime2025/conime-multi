@@ -28,21 +28,21 @@
 
 {{ if gt (len $subset) 0 }}
 <div class="w-full h-fit">
-  <h2 class="text-xl uppercase tracking-[.3em] lg:tracking-[.4em] border-b border-gray-300 dark:border-gray-800/50 pb-2 mb-4">
-    Popular News
+  <h2 class="text-xl uppercase {{ if eq .Lang "id" }}tracking-[.1em] lg:tracking-[.3em]{{ else }}tracking-[.3em] lg:tracking-[.4em]{{ end }} border-b border-gray-300 dark:border-gray-800/50 pb-2 mb-4">
+    {{ if eq .Lang "id" }}Artikel Populer{{ else }}Popular Articles{{ end }}
   </h2>
 
   <div id="popular-container" data-title-size="text-xl" class="flex flex-col gap-4">
     {{ range $i, $page := $subset }}
-      <li class="relative popular-html flex flex-col col-span-2 w-full h-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-900/60 hover:dark:bg-gray-800/50 overflow-hidden rounded  transition duration-300 ease-in-out">
+      <li class="relative popular-html flex flex-col col-span-2 w-full h-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-900/60 hover:dark:bg-gray-800/50 overflow-hidden  rounded   transition duration-300 ease-in-out">
         <a href="{{ $page.RelPermalink }}" class="bg-cover w-full h-full overflow-hidden transition duration-500 ease-in-out">
           {{ with $page.Params.image }}
-            <img loading="lazy" src="{{ . }}" alt="Gambar {{ $page.Title }}" class="w-full h-[360px] object-cover rounded-t brightness-75 hover:brightness-100 transition duration-300 ease-in-out" />
+            <img loading="lazy" src="{{ . }}" alt="Gambar {{ $page.Title }}" class="w-full h-[360px] object-cover  rounded -t brightness-75 hover:brightness-100 transition duration-300 ease-in-out" />
           {{ end }}
         </a>
 
         <!-- Bagian teks -->
-        <div class="w-full lg:w-[70%] h-[60%] lg:h-[70%] group absolute bottom-0 left-0 rounded-tr transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 hover:dark:bg-gray-800">
+        <div class="w-full lg:w-[70%] h-[60%] lg:h-[70%] group absolute bottom-0 left-0  rounded -tr transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 hover:dark:bg-gray-800">
           <h2 class="w-fit inline-block lg:hidden"> —0{{ add $i 1 }}</h2>
           <h2 class="w-[80%] lg:w-full h-fit title-popular text-xl line-clamp-3 opacity-100 lg:opacity-0 group-hover:lg:opacity-100 group-hover:z-10 transition duration-500 ease-in-out">
             <a href="{{ $page.RelPermalink }}" class="hover:underline break-words" data-tippy-content="{{ $page.Title }}">{{ $page.Title }}</a>
@@ -57,7 +57,7 @@
           <p class="bottom-4 items-end justify-end w-full left-6 z-10 text-xl h-full flex-1 flex gap-0 opacity-100 lg:opacity-0 group-hover:lg:opacity-100 group-hover:z-10 transition duration-500 ease-in-out">
             <span>—</span>{{ partial "dateNew.html" $page }}
           </p>
-          <h2 class="absolute inset-0 text-gray-500 dark:text-gray-900 text-5xl w-1 h-1 lg:w-full lg:h-full flex items-center justify-center font-bold opacity-0 lg:opacity-100 dark:lg:opacity-100 group-hover:lg:opacity-0 group-hover:-z-10 transition duration-500 ease-in-out">
+          <h2 class="absolute inset-0 text-gray-400 dark:text-gray-800 text-5xl w-1 h-1 lg:w-full lg:h-full flex items-center justify-center font-bold opacity-0 lg:opacity-100 dark:lg:opacity-100 group-hover:lg:opacity-0 group-hover:-z-10 transition duration-500 ease-in-out">
             #{{ add $i 1 }}
           </h2>
         </div>

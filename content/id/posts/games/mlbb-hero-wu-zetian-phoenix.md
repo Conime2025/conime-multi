@@ -8,7 +8,7 @@ nameGame = "Mobile Legends: Bang Bang"
 
 summary = "Mobile Legends: Bang Bang resmi merilis hero terbaru Wu Zetian, sang Phoenix Empress, dengan kekuatan sihir area, crowd control, dan ultimate berskala global. Hero ini bisa didapatkan gratis selama event 696, mulai 18 Juni 2025."
 
-synopsis = "Wu Zetian hadir di Mobile Legends: Bang Bang sebagai mage Phoenix Empress dengan kekuatan sihir area, crowd control, dan ultimate berskala global yang mendukung rekan satu tim dan mendominasi pertempuran."
+lead = "Wu Zetian hadir di Mobile Legends: Bang Bang sebagai mage Phoenix Empress dengan kekuatan sihir area, crowd control, dan ultimate berskala global yang mendukung rekan satu tim dan mendominasi pertempuran."
 
 conclusion = """<p>Kehadiran <strong>Wu Zetian</strong> sebagai hero mage terbaru memperkuat peran kontrol area dan sihir burst di Land of Dawn. Dengan kisah yang menyentuh dan skill ultimate berskala global, Wu Zetian tak hanya tampil megah dalam gameplay, tapi juga sebagai simbol kekuatan dan kebangkitan dalam semesta MLBB.</p>"""
 

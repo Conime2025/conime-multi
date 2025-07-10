@@ -15,8 +15,7 @@
 
 {{ else }}
 <!-- Layout untuk posts (artikel berita/review) -->
-<div class="relative rounded mx-auto py-4 grid grid-cols-1 lg:grid-cols-12 gap-4">
-
+<div class="relative  rounded -xl mx-auto py-4 grid grid-cols-1 lg:grid-cols-12 gap-4">
 
   <main class="col-span-12 lg:col-span-8 w-full">
     {{ if and (hasPrefix .RelPermalink "/posts/") .IsPage }}
@@ -24,22 +23,22 @@
     {{ $section := index $segments 2 }}
     <nav aria-label="Breadcrumb" class="text-sm">
       <ol
-        class="list-none flex flex-wrap justify-start items-center gap-2 font-light dark:font-extralight text-gray-800 dark:text-gray-600">
-        <li><a href="/" class="hover:underline">Home</a></li>
+        class="list-none flex flex-wrap justify-start items-center gap-2 font-light dark:font-extralight text-gray-800 dark:text-gray-500">
+        <li><a href="/" class="hover:underline">{{ if eq .Lang "id" }}Beranda{{ else }}Home{{ end }}</a></li>
         <li><svg class="w-2 h-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8.91003 19.9201L15.43 13.4001C16.2 12.6301 16.2 11.3701 15.43 10.6001L8.91003 4.08008"
               stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
               stroke-linejoin="round" />
           </svg>
         </li>
-        <li><a href="/posts/" class="hover:underline">Posts</a></li>
+        <li><a href="/posts/" class="hover:underline">{{ if eq .Lang "id" }}Tulisan{{ else }}Posts{{ end }}</a></li>
         <li><svg class="w-2 h-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8.91003 19.9201L15.43 13.4001C16.2 12.6301 16.2 11.3701 15.43 10.6001L8.91003 4.08008"
               stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
               stroke-linejoin="round" />
           </svg>
         </li>
-        <li><a href="/posts/{{ $section }}/" class="hover:underline capitalize">{{ $section }}</a></li>
+        <li><a href="/posts/{{ $section }}/" class="hover:underline capitalize">{{ i18n $section }}</a></li>
         <li><svg class="w-2 h-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8.91003 19.9201L15.43 13.4001C16.2 12.6301 16.2 11.3701 15.43 10.6001L8.91003 4.08008"
               stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
@@ -64,7 +63,7 @@
 
       <!-- Info Meta Artikel -->
       <div
-        class="text-lg flex flex-row items-end justify-between font-light dark:font-extralight text-gray-800 dark:text-gray-600 mb-4">
+        class="text-lg flex flex-row items-end justify-between font-light dark:font-extralight text-gray-800 dark:text-gray-500 mb-4">
         <div class="flex w-fit flex-col justify-start items-start">
           <label class="flex flex-row text-sm items-center">
             <h2 class="flex justify-between gap-4 flex-1 line-clamp-1 uppercase">
@@ -91,18 +90,18 @@
         {{ partial "share-modal.html" . }}
       </div>
 
-      <!-- SINOPSIS / RINGKASAN -->
-      {{ if .Page.Params.synopsis }}
+      <!-- Lead/Pembuka -->
+      {{ if .Page.Params.lead }}
       <div class="italic font-normal dark:font-light leading-8 [&>p]:my-3 mb-4">
-        <p>{{ .Page.Params.synopsis | safeHTML }}</p>
+        <p>{{ .Page.Params.lead | safeHTML }}</p>
       </div>
       {{ end }}
 
       <!-- Gambar Utama -->
       {{ with .Params.image }}
-      <figure class="w-full flex-col mb-4 bg-gray-200 dark:bg-gray-900/20 backdrop-blur-sm rounded">
+      <figure class="w-full flex-col mb-4 bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm  rounded -3xl">
         <img src="{{ . | relURL }}"  width="1200" height="800" alt="Gambar {{ $.Title }}"
-          class="post-img h-96 sm:h-auto w-full rounded object-cover" />
+          class="post-img h-96 sm:h-auto w-full  rounded -3xl object-cover" />
         <figcaption class="text-sm font-light dark:font-extralight text-left italic flex flex-wrap gap-0 px-4 py-4">
           {{ with $.Params.imageTitle }}
           <span class="block">{{ . }}</span>
@@ -114,7 +113,7 @@
             {{ $total := len . }}
             {{ range $index, $source := . }}
             {{ if and (gt $index 0) (eq $index (sub $total 1)) }} and {{ else if gt $index 0 }}, {{ end }}
-            <a href="{{ $source.url }}" data-tippy-content="{{ $source.url }}"
+            <a href="{{ $source.url }}" data-tippy-content="{{ $source.name }}"
               class="hover:underline underline-offset-4             hover:text-conime-400 hover:dark:text-conime-500 inline"
               target="_blank" rel="noopener             noreferrer">{{ $source.name }}</a>
             {{ end }}. Used for editorial purposes only.

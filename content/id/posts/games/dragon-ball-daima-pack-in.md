@@ -7,7 +7,7 @@ draft = false
 nameGame = "Dragon Ball Xenoverse 2"
 summary = "Dragon Ball DAIMA Pack untuk Dragon Ball Xenoverse 2 kini tersedia, menambahkan karakter Super Saiyan 4 Goku (DAIMA) dan Super Saiyan 3 Vegeta (DAIMA), plus kostum, aksesoris, parallel quest, Super Souls, dan loading screen baru."
 
-synopsis = "Dragon Ball Xenoverse 2 merilis DAIMA Pack dengan dua karakter transformasi baru, kostum tambahan, dan misi eksklusif untuk memperluas pengalaman Time Patrol."
+lead = "Dragon Ball Xenoverse 2 merilis DAIMA Pack dengan dua karakter transformasi baru, kostum tambahan, dan misi eksklusif untuk memperluas pengalaman Time Patrol."
 
 conclusion = """<p>Dengan kehadiran <strong>Super Saiyan 4 Goku (DAIMA)</strong> dan <strong>Super Saiyan 3 Vegeta (DAIMA)</strong>, serta berbagai bahan tambahan seperti kostum, Super Souls, dan Parallel Quests, <strong>Dragon Ball Xenoverse 2</strong> mendapat dorongan konten baru yang cukup signifikan. Update ini semakin memperkaya pengalaman Time Patroller dan mendukung komunitasnya terus berkembang.</p>"""
 

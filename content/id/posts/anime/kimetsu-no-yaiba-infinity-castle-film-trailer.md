@@ -8,7 +8,7 @@ draft = false
 
 summary = "Aniplex dan Ufotable merilis trailer utama untuk trilogi film 'Demon Slayer: Kimetsu no Yaiba – Infinity Castle', menampilkan pertarungan terakhir melawan Kibutsuji Muzan yang dijadwalkan rilis mulai 2025."
 
-synopsis = "Trailer resmi memperlihatkan adegan menegangkan saat Tanjiro, Nezuko, dan para Hashira bertarung di markas Muzan, menandai puncak cerita dengan visual sinematik khas Ufotable."
+lead = "Trailer resmi memperlihatkan adegan menegangkan saat Tanjiro, Nezuko, dan para Hashira bertarung di markas Muzan, menandai puncak cerita dengan visual sinematik khas Ufotable."
 
 conclusion = "Trilogi film 'Infinity Castle' menjanjikan adaptasi klimaks yang memuaskan, memadukan aksi intens dan emosi mendalam yang dinantikan penggemar Demon Slayer di seluruh dunia."
 

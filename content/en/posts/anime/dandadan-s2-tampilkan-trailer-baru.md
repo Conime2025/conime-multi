@@ -8,7 +8,7 @@ draft = false
 
 summary = "Anime 'Dandadan' mengumumkan Season 2 tayang mulai 3 Juli 2025. Trailer terbaru menampilkan aksi intens, suasana absurd, dan lagu tema resmi dengan komentar penyanyi."
 
-synopsis = "Anime 'Dandadan' Season 2 resmi tayang mulai 3 Juli 2025 dengan trailer baru yang menegaskan nuansa horor kocak, adegan aksi intens, dan lagu tema baru dari Aina the End serta WurtS."
+lead = "Anime 'Dandadan' Season 2 resmi tayang mulai 3 Juli 2025 dengan trailer baru yang menegaskan nuansa horor kocak, adegan aksi intens, dan lagu tema baru dari Aina the End serta WurtS."
 
 conclusion = "Dengan promosi trailer dan video opening/ending yang sudah dirilis resmi, Dandadan Season 2 memamerkan karakter, konflik supranatural, dan humor aneh khas manganya untuk menyambut musim panas 2025."
 

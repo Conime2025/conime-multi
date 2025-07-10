@@ -40,10 +40,29 @@
 
 
 
+
+<!-- SINOPSIS -->
+{{ with .Page.Params.synopsis }}
+<h2 class="font-medium uppercase tracking-wide">
+  {{ if $.Page.Params.nameMovie }}
+    Sinopsis {{ $.Page.Params.nameMovie }}
+  {{ else if $.Page.Params.nameAnime }}
+    Sinopsis {{ $.Page.Params.nameAnime }}
+  {{ else if $.Page.Params.nameComic }}
+    Sinopsis {{ $.Page.Params.nameComic }}
+  {{ else if $.Page.Params.nameGame }}
+    Sinopsis {{ $.Page.Params.nameGame }}
+  {{ end }}
+</h2>
+<div class="text-gray-800 dark:text-gray-100 my-4 [&>p]:my-3">
+  {{ . | safeHTML }}
+</div>
+{{ end }}
+
 <!-- KESIMPULAN -->
 {{ with .Page.Params.conclusion }}
-<h2 class="font-medium uppercase tracking-wide">Kesimpulan :</h2>
-<div class="border-l-4 border-gray-400 dark:border-gray-600 pl-4 italic text-gray-800 dark:text-gray-300 my-4 [&>p]:my-3">
+<h2 class="font-medium uppercase tracking-wide">Kesimpulan</h2>
+<div class="text-gray-800 dark:text-gray-100 my-4 [&>p]:my-3">
   {{ . | safeHTML }}
 </div>
 {{ end }}
@@ -92,7 +111,7 @@
   {{ if gt $index 0 }}
   {{ if eq $index (sub $total 1) }} dan {{ else }}, {{ end }}
   {{ end }}
-  <a href="{{ $source.url }}" target="_blank" data-tippy-content="{{ $source.url }}"
+  <a href="{{ $source.url }}" target="_blank" data-tippy-content="{{ $source.name }}"
     class="hover:underline underline-offset-4 hover:text-conime-400 hover:dark:text-conime-500 inline" rel="noopener noreferrer">{{ $source.name }}</a>
   {{ end }}.
 </p>
@@ -101,7 +120,7 @@
 <!-- VIDEO TERKAIT -->
 {{ with .Page.Params.videos }}
 {{ range . }}
-<div class="w-full h-fit flex flex-col mb-4 bg-gray-200 dark:bg-gray-900/20 backdrop-blur-sm rounded">
+<div class="w-full h-fit flex flex-col mb-4 bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm  rounded -3xl">
   <iframe width="auto" height="315px" src="{{ .url | safeURL }}" data-tippy-content="Tonton {{ .title | default "YouTube video player" }}" frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
   </iframe>

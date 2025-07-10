@@ -39,103 +39,69 @@
       fill="currentColor" />
   </svg>
   <span
-    class="absolute left-1/2 -translate-x-1/2 min-w-20 w-fit top-12 p-2 text-xs bg-gray-200 dark:bg-gray-900/50 backdrop-blur-sm text-gray-800 dark:text-gray-400 opacity-0 group-hover:opacity-0 transition delay-100  duration-500 ease-in-out shadow-xl shadow-gray-950/10 lg:shadow-gray-950/20 rounded-2xl hover:rounded hidden md:flex items-center justify-center">
+    class="absolute left-1/2 -translate-x-1/2 min-w-20 w-fit top-12 p-2 text-xs bg-gray-200 dark:bg-gray-900/50 backdrop-blur-sm text-gray-800 dark:text-gray-400 opacity-0 group-hover:opacity-0 transition delay-100  duration-500 ease-in-out  rounded -2xl group-hover: rounded  hidden md:flex items-center justify-center">
     CoNime
   </span>
 </a>
 
 <nav class="flex justify-center items-center space-x-2 md:space-x-4">
-  {{ range .Site.Menus.header }}
-  {{ $isActive := eq $.RelPermalink .URL }}
-  <div data-tippy-content="{{ .Name }}"  {{ if $.IsHome }} data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000" {{ end }}  class="p-2 md:p-3 relative justify-center group items-center rounded-2xl hover:rounded backdrop-blur-sm transition delay-100 duration-500 ease-in-out
-
-      bg-gray-300/0 dark:bg-gray-900/0 hover:bg-gray-300 hover:dark:bg-gray-800/50 text-gray-800 dark:text-gray-400 hover:text-conime-400 dark:hover:text-conime-500
-   ">
-  <a href="{{ .URL }}"
-    id="{{ .Identifier }}" class="w-full h-full group" >
+  {{ range $page.Site.Menus.header }}
+ {{ $isActive := eq $.RelPermalink .URL }}
+<a  {{ if $page.IsHome }} data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000" {{ end }} href="{{ .URL }}" id="{{ .Identifier }}" data-tippy-content="{{ .Name }}"
+  class="p-2 md:p-3 relative justify-center group items-center  rounded  backdrop-blur-sm transition delay-500  duration-1000 ease-in-out
+      bg-gray-300/0 dark:bg-gray-950/0 hover:bg-gray-300 hover:dark:bg-gray-800/50 text-gray-800 dark:text-gray-400 hover:text-conime-400 dark:hover:text-conime-500">
 
     {{ with .Params.svg }}
-    <span class="flex w-6 h-6 md:w-6 md:h-6 group-hover:scale-110  transition duration-500 ease-in-out"
-      aria-hidden="true">{{ . | safeHTML }}</span>
+    <span class="flex w-6 h-6 md:w-6 md:h-6 group-hover:scale-110  transition duration-500 ease-in-out" aria-hidden="true">{{ . | safeHTML }}</span>
     {{ end }}
 
     <span
-      class="absolute left-1/2 -translate-x-1/2 min-w-20 w-fit top-14 p-2 text-xs bg-gray-200 dark:bg-gray-900/50 backdrop-blur-sm text-gray-800 dark:text-gray-400 opacity-0 group-hover:opacity-0 transition delay-100  duration-500 ease-in-out shadow-xl shadow-gray-950/10 lg:shadow-gray-950/20 rounded-2xl hover:rounded hidden md:flex items-center justify-center">
+      class="absolute left-1/2 -translate-x-1/2 min-w-20 w-fit top-14 p-2 text-xs bg-gray-200 dark:bg-gray-950/50 backdrop-blur-sm text-gray-800 dark:text-gray-400 opacity-0 group-hover:opacity-0 transition delay-500  duration-1000 ease-in-out   rounded  hidden md:hidden items-center justify-center">
       {{ .Name }}
     </span>
 
   </a>
-  </div>
   {{ end }}
 
+  <div  {{ if $page.IsHome }}
 
-
-
-  <div {{ if .IsHome }} data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000" {{ end }} id="theme-toggle">
-    <div data-tippy-content="Light Mode"
-      class="p-2 hidden dark:flex md:p-3 group relative justify-center items-center dark:bg-gray-900/0 bg-gray-300/0 hover:bg-gray-300 hover:dark:bg-gray-800/50 backdrop-blur-sm hover:text-conime-400 text-gray-800 dark:text-gray-400 dark:hover:text-conime-500  rounded-2xl hover:rounded delay-100 duration-500 ease-in-out">
-      <span
-        class="hidden  dark:flex w-6 h-6 md:w-6 md:h-6 group-hover:text-conime-400 text-gray-800 dark:text-gray-400 dark:group-hover:text-conime-500 justify-center   items-center">
-        <svg class="group-hover:scale-110  w-8 h-8 md:w-6 md:h-6 transition duration-500 ease-in-out"
-          viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M12 18.5C15.5899 18.5 18.5 15.5899 18.5 12C18.5 8.41015 15.5899 5.5 12 5.5C8.41015 5.5 5.5 8.41015 5.5 12C5.5 15.5899 8.41015 18.5 12 18.5Z"
-            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          <path
-            d="M19.14 19.14L19.01 19.01M19.01 4.99L19.14 4.86L19.01 4.99ZM4.86 19.14L4.99 19.01L4.86 19.14ZM12 2.08V2V2.08ZM12 22V21.92V22ZM2.08 12H2H2.08ZM22 12H21.92H22ZM4.99 4.99L4.86 4.86L4.99 4.99Z"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg><span
-          class="absolute left-1/2 -translate-x-1/2 min-w-24 w-fit top-14 p-2 text-xs bg-gray-200 dark:bg-gray-900/50 backdrop-blur-sm  text-gray-800 dark:text-gray-400 opacity-0 group-hover:opacity-0 shadow-xl shadow-gray-950/10 lg:shadow-gray-950/20    rounded-2xl hover:rounded  transition delay-100 duration-500  ease-in-out hidden md:flex items-center justify-center ">Light
-          Mode</span>
-      </span>
-    </div>
-    <div data-tippy-content="Dark Mode"
-      class="p-2 flex dark:hidden md:p-3 group relative justify-center items-center dark:bg-gray-900/0 bg-gray-300/0 hover:bg-gray-300 hover:dark:bg-gray-800/50 backdrop-blur-sm hover:text-conime-400 text-gray-800 dark:text-gray-400 dark:hover:text-conime-500  rounded-2xl hover:rounded delay-100 duration-500 ease-in-out">
-      <span
-        class="flex dark:hidden w-6 h-6 md:w-6 md:h-6 group-hover:text-conime-400 text-gray-800 dark:text-gray-400 dark:hover:text-conime-500 justify-center   items-center">
-        <svg class="group-hover:scale-110  w-8 h-8 md:w-6 md:h-6 transition duration-500 ease-in-out"
-          viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M2.03009 12.42C2.39009 17.57 6.76009 21.76 11.9901 21.99C15.6801 22.15 18.9801 20.43 20.9601 17.72C21.7801 16.61 21.3401 15.87 19.9701 16.12C19.3001 16.24 18.6101 16.29 17.8901 16.26C13.0001 16.06 9.00009 11.97 8.98009 7.13996C8.97009 5.83996 9.24009 4.60996 9.73009 3.48996C10.2701 2.24996 9.62009 1.65996 8.37009 2.18996C4.41009 3.85996 1.70009 7.84996 2.03009 12.42Z"
-            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-        <span
-          class="absolute left-1/2 -translate-x-1/2 min-w-24 w-fit top-14 p-2 text-xs bg-gray-200 dark:bg-gray-900/50 backdrop-blur-sm  text-gray-800 dark:text-gray-400 opacity-0 group-hover:opacity-0 transition delay-100 duration-500  ease-in-out  shadow-xl shadow-gray-950/10 lg:shadow-gray-950/20    rounded-2xl hover:rounded  hidden md:flex items-center justify-center ">Dark
-          Mode</span>
-      </span>
-    </div>
+ data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000" {{ end }} id="theme-toggle">
+  <div  data-tippy-content="{{ if eq .Lang "id" }}Mode Terang{{ else }}Light Mode{{ end }}" class="p-2 hidden dark:flex md:p-3 group relative justify-center items-center dark:bg-gray-950/0 bg-gray-300/0 hover:bg-gray-300 hover:dark:bg-gray-800/50 backdrop-blur-sm hover:text-conime-400 text-gray-800 dark:text-gray-400 dark:hover:text-conime-500  rounded ">  <span class="hidden  dark:flex w-6 h-6 md:w-6 md:h-6 group-hover:text-conime-400 text-gray-800 dark:text-gray-400 dark:group-hover:text-conime-500 justify-center   items-center">
+      <svg class="group-hover:scale-110  w-8 h-8 md:w-6 md:h-6 transition duration-500 ease-in-out"   viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12 18.5C15.5899 18.5 18.5 15.5899 18.5 12C18.5 8.41015 15.5899 5.5 12 5.5C8.41015 5.5 5.5 8.41015 5.5 12C5.5 15.5899 8.41015 18.5 12 18.5Z"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path
+          d="M19.14 19.14L19.01 19.01M19.01 4.99L19.14 4.86L19.01 4.99ZM4.86 19.14L4.99 19.01L4.86 19.14ZM12 2.08V2V2.08ZM12 22V21.92V22ZM2.08 12H2H2.08ZM22 12H21.92H22ZM4.99 4.99L4.86 4.86L4.99 4.99Z"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><span
+        class="absolute left-1/2 -translate-x-1/2 min-w-24 w-fit top-14 p-2 text-xs bg-gray-200 dark:bg-gray-950/50 backdrop-blur-sm  text-gray-800 dark:text-gray-400 opacity-0 group-hover:opacity-0 transition delay-500 duration-1000 ease-in-out rounded  hidden md:hidden items-center justify-center ">Light
+        Mode</span>
+    </span></div>
+    <div data-tippy-content="{{ if eq .Lang "id" }}Mode Gelap{{ else }}Dark Mode{{ end }}" class="p-2 flex dark:hidden md:p-3 group relative justify-center items-center dark:bg-gray-950/0 bg-gray-300/0 hover:bg-gray-300 hover:dark:bg-gray-800/50 backdrop-blur-sm hover:text-conime-400 text-gray-800 dark:text-gray-400 dark:hover:text-conime-500  rounded ">
+    <span class="flex dark:hidden w-6 h-6 md:w-6 md:h-6 group-hover:text-conime-400 text-gray-800 dark:text-gray-400 dark:hover:text-conime-500 justify-center   items-center">
+      <svg class="group-hover:scale-110  w-8 h-8 md:w-6 md:h-6 transition duration-500 ease-in-out" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M2.03009 12.42C2.39009 17.57 6.76009 21.76 11.9901 21.99C15.6801 22.15 18.9801 20.43 20.9601 17.72C21.7801 16.61 21.3401 15.87 19.9701 16.12C19.3001 16.24 18.6101 16.29 17.8901 16.26C13.0001 16.06 9.00009 11.97 8.98009 7.13996C8.97009 5.83996 9.24009 4.60996 9.73009 3.48996C10.2701 2.24996 9.62009 1.65996 8.37009 2.18996C4.41009 3.85996 1.70009 7.84996 2.03009 12.42Z"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg><span
+        class="absolute left-1/2 -translate-x-1/2 min-w-24 w-fit top-14 p-2 text-xs bg-gray-200 dark:bg-gray-950/50 backdrop-blur-sm  text-gray-800 dark:text-gray-400 opacity-0 group-hover:opacity-0 transition delay-500 duration-1000  ease-in-out rounded  hidden md:hidden items-center justify-center ">
+        Dark Mode </span>
+    </span></div>
   </div>
-
 
 
   {{ if .IsTranslated }}
   <ul class="flex space-x-2">
     {{ range .Translations }}
-    <li>
-      <a href="{{ .RelPermalink }}">
+    <li class="w-fit h-fit flex items-center justify-center p-2 overflow-hidden bg-cover">
+      <a href="{{ .RelPermalink }}" class="w-fit h-fit flex items-center justify-center">
         {{ if eq .Lang "id" }}
         <!-- Bendera Indonesia -->
-        <svg class="w-6 h-4" viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
-          <rect width="3" height="1" y="0" fill="#FF0000" />
-          <rect width="3" height="1" y="1" fill="#FFFFFF" />
-        </svg>
+        <img src="/images/icons/id.webp" alt="Bendera Indonesia" class="w-6 h-4  rounded  hover:scale-110 transition delay-100 duration-500 ease-in-out md:w-6 md:h-6 object-cover">
         {{ else if eq .Lang "en" }}
         <!-- Bendera Inggris -->
-        <svg class="w-6 h-4" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
-          <clipPath id="t">
-            <path d="M0,0 v30 h60 v-30 z" />
-          </clipPath>
-          <clipPath id="s">
-            <path d="M30,15 h30 v15 h-30 z" />
-          </clipPath>
-          <g clip-path="url(#t)">
-            <path d="M0,0 v30 h60 v-30 z" fill="#012169" />
-            <path d="M0,0 l60,30 M60,0 l-60,30" stroke="#FFF" stroke-width="6" />
-            <path d="M0,0 l60,30 M60,0 l-60,30" stroke="#C8102E" stroke-width="4" clip-path="url(#s)" />
-            <path d="M30,0 v30 M0,15 h60" stroke="#FFF" stroke-width="10" />
-            <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6" />
-          </g>
-        </svg>
+       <img src="/images/icons/en.webp" alt="Bendera Indonesia" class="w-6 h-4  rounded  hover:scale-110 transition delay-100 duration-500 ease-in-out md:w-6 md:h-6 object-cover">
         {{ end }}
       </a>
     </li>

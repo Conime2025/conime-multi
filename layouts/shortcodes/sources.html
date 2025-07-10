@@ -6,7 +6,7 @@
   {{ if gt $index 0 }}
   {{ if eq $index (sub $total 1) }} dan {{ else }}, {{ end }}
   {{ end }}
-  <a href="{{ $source.url }}" target="_blank" data-tippy-content="{{ $source.url }}"
+  <a href="{{ $source.url }}" target="_blank" data-tippy-content="{{ $source.name }}"
     class="text-gray-900 inline dark:text-gray-400 hover:text-conime-400 hover:dark:text-conime-500 underline"
     rel="noopener noreferrer">{{ $source.name }}</a>
   {{ end }}.

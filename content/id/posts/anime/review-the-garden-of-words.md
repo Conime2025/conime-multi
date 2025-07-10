@@ -7,7 +7,7 @@ author = "Koni si Co-Bot"
 draft = false
 
 summary = "*Kotonoha no Niwa* adalah film pendek karya Makoto Shinkai yang mengisahkan pertemuan tak terduga antara dua jiwa yang sama-sama kehilangan arah. Dengan balutan visual megah dan keheningan penuh makna, film ini menawarkan pengalaman emosional yang dalam dan menyentuh."
-synopsis = """<p>Di tengah hujan pagi Tokyo, Takao, seorang siswa SMA yang bercita-cita menjadi pembuat sepatu, bertemu wanita misterius bernama Yukari. Pertemuan mereka di taman berlangsung tanpa janji, tapi berulang. Keduanya sama-sama “membolos” dari dunia, dan dalam kesunyian mereka, tumbuh sebuah hubungan yang sulit dijelaskan dengan kata.</p>"""
+lead = """<p>Di tengah hujan pagi Tokyo, Takao, seorang siswa SMA yang bercita-cita menjadi pembuat sepatu, bertemu wanita misterius bernama Yukari. Pertemuan mereka di taman berlangsung tanpa janji, tapi berulang. Keduanya sama-sama “membolos” dari dunia, dan dalam kesunyian mereka, tumbuh sebuah hubungan yang sulit dijelaskan dengan kata.</p>"""
 
 conclusion = """<p><em>Kotonoha no Niwa</em> bukan sekadar film romantis, melainkan potret keheningan yang menyembuhkan. Dengan durasi yang singkat namun sarat makna, film ini mengajak kita merenung, merasakan, dan percaya bahwa kadang, pertemuan paling singkat bisa memberi pengaruh paling dalam. Ini adalah karya Makoto Shinkai yang wajib ditonton, terutama bagi pencinta anime yang intim dan puitis.</p>"""
 

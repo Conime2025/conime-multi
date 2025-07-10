@@ -8,7 +8,7 @@ nameAnime = "Rooster Fighter"
 
 summary = "Manga aksi-komedi 'Rooster Fighter' karya Shū Sakuratani resmi dikonfirmasi mendapat adaptasi anime. Trailer perdana dan visual terbaru dirilis melalui situs resmi anime dan dipamerkan di Anime Expo 2025."
 
-synopsis = """<p><strong>Rooster Fighter</strong> mengikuti Keiji, ayam jago petarung yang berkeliling Jepang membasmi monster raksasa demi balas dendam. Adaptasi anime ini menjanjikan aksi shounen intens dengan sentuhan komedi absurd khas manga aslinya.</p>"""
+lead = """<p><strong>Rooster Fighter</strong> mengikuti Keiji, ayam jago petarung yang berkeliling Jepang membasmi monster raksasa demi balas dendam. Adaptasi anime ini menjanjikan aksi shounen intens dengan sentuhan komedi absurd khas manga aslinya.</p>"""
 
 image = "/images/anime/rooster-fighter-anime-teaser.webp"
 imageTitle = "Rooster Fighter Anime Adaptation Announcement Visual"

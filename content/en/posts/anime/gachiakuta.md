@@ -9,7 +9,7 @@ draft = false
 
 summary = "Anime Gachiakuta akan tayang 6 Juli 2025. PV utama, lagu tema oleh Paledusk dan DUSTCELL, serta pemutaran global di 15 negara telah diumumkan."
 
-synopsis = "Anime Gachiakuta siap menembus pasar global lewat pemutaran perdana di berbagai negara dan menghadirkan tema musikal yang emosional."
+lead = "Anime Gachiakuta siap menembus pasar global lewat pemutaran perdana di berbagai negara dan menghadirkan tema musikal yang emosional."
 
 
 image = "/images/anime/gachiakuta-world-takeover.webp"

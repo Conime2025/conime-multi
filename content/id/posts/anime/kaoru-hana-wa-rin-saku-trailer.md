@@ -8,7 +8,7 @@ nameAnime = "Kaoru Hana wa Rin to Saku"
 
 summary = "Anime Kaoru Hana wa Rin to Saku merilis teaser PV resmi beserta visual karakter untuk penayangan Juli 2025. Adaptasi manga karya Saka Mikami ini diproduksi oleh CloverWorks."
 
-synopsis = """<p>Anime <strong>Kaoru Hana wa Rin to Saku</strong> merilis teaser PV dan visual baru untuk penayangan Juli 2025. CloverWorks membagikan detail produksi serta jadwal penayangan melalui situs resmi dan kanal YouTube.</p>"""
+lead = """<p>Anime <strong>Kaoru Hana wa Rin to Saku</strong> merilis teaser PV dan visual baru untuk penayangan Juli 2025. CloverWorks membagikan detail produksi serta jadwal penayangan melalui situs resmi dan kanal YouTube.</p>"""
 
 image = "/images/anime/kaoru-hana-official-visual.webp"
 imageTitle = "Official Visual for Kaoru Hana wa Rin to Saku Anime"

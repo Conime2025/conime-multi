@@ -8,7 +8,7 @@ nameAnime = "Mushoku Tensei: Jobless Reincarnation"
 
 summary = "Mushoku Tensei: Jobless Reincarnation resmi mengumumkan Season 3 yang akan tayang pada 2026. Teaser PV pertama diperlihatkan di Anime Expo 2025 dan dirilis melalui kanal resmi TOHO animation."
 
-synopsis = """<p><strong>Mushoku Tensei Season 3</strong> dipastikan tayang pada <em>2026</em>. Melanjutkan akhir emosional Season 2, Rudeus Greyrat menghadapi drama baru dan petualangan yang lebih menantang. Adaptasi ini akan memulai cerita dari volume 13 light novel dengan janji konflik, karakter baru, dan perkembangan hubungan keluarga.</p>"""
+lead = """<p><strong>Mushoku Tensei Season 3</strong> dipastikan tayang pada <em>2026</em>. Melanjutkan akhir emosional Season 2, Rudeus Greyrat menghadapi drama baru dan petualangan yang lebih menantang. Adaptasi ini akan memulai cerita dari volume 13 light novel dengan janji konflik, karakter baru, dan perkembangan hubungan keluarga.</p>"""
 image = "/images/anime/mushoku-tensei-season-3-teaserpv.webp"
 imageTitle = "Rudeus Greyrat in Mushoku Tensei Season 3 Teaser PV"
 

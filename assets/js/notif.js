@@ -59,11 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const timeAgo = getTimeAgo(post.dataset.date);
 
       newNotifs.push(`
-        <a href="${slug}" class="notif-item bg-gray-200 dark:bg-gray-800/20 rounded p-3 relative block transition hover:bg-gray-200 dark:hover:bg-gray-800 ${isRead ? 'opacity-75 dark:opacity-50' : ''}" data-url="${slug}" data-date="${post.dataset.date}">
+        <a href="${slug}" class="notif-item bg-gray-200 dark:bg-gray-800/20  rounded  p-3 relative block transition hover:bg-gray-200 dark:hover:bg-gray-800 ${isRead ? 'opacity-75 dark:opacity-50' : ''}" data-url="${slug}" data-date="${post.dataset.date}">
           <div class="flex justify-end badge">
-            <div class="flex relative justify-center items-center rounded-full">
-              <div class="w-3 h-3 opacity-50 rounded-full ${badgeClass}"></div>
-              <div class="w-2 h-2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full ${badgeClass}"></div>
+            <div class="flex relative justify-center items-center  rounded -full">
+              <div class="w-3 h-3 opacity-50  rounded -full ${badgeClass}"></div>
+              <div class="w-2 h-2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  rounded -full ${badgeClass}"></div>
             </div>
           </div>
           <h2 class="line-clamp-2 w-[80%] text-sm font-light dark:font-extralight text-gray-900 dark:text-white">${title}</h2>

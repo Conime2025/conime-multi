@@ -8,7 +8,7 @@ draft = false
 
 summary = "Trailer terbaru Superman dari DC menghadirkan berbagai elemen menarik, termasuk wawancara Lois dan Clark, aksi Krypto, serta kehadiran Engineer sebagai ancaman baru."
 
-synopsis = "Trailer Superman memperlihatkan konflik batin Clark Kent dalam menyeimbangkan warisan Kryptonian dengan kehidupannya sebagai manusia di Bumi. Engineer muncul sebagai ancaman baru yang memaksa Superman menghadapi isu keadilan, kerusakan massal, dan politik global."
+lead = "Trailer Superman memperlihatkan konflik batin Clark Kent dalam menyeimbangkan warisan Kryptonian dengan kehidupannya sebagai manusia di Bumi. Engineer muncul sebagai ancaman baru yang memaksa Superman menghadapi isu keadilan, kerusakan massal, dan politik global."
 
 conclusion = """<p>Trailer terbaru <em>Superman</em> memberikan berbagai petunjuk mengenai <strong>alur cerita, karakter pendukung, dan konflik utama</strong> yang akan hadir dalam film ini. Dengan wawancara emosional antara Lois dan Clark, aksi menegangkan dari Engineer dan Krypto, serta referensi tersembunyi yang menghubungkan film ini dengan sejarah panjang DC Universe, antusiasme terhadap film <em>Superman</em> semakin tinggi.</p>"""
 

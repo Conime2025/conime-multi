@@ -8,7 +8,7 @@ draft = false
 
 summary = "Adaptasi film live-action Under Ninja, berdasarkan manga karya Kengo Hanazawa, resmi diumumkan dengan Kento Yamazaki dan Minami Hamabe sebagai pemeran utama. Film dijadwalkan rilis 24 Januari 2025."
 
-synopsis = """<p>Di dunia modern yang tampak damai, organisasi ninja rahasia masih beroperasi secara diam-diam di bawah perintah pemerintah Jepang. Kurō Kumogakure, seorang ninja pemula yang pengangguran, tiba-tiba ditugaskan untuk misi besar—melindungi negara dari ancaman asing. Dengan kemampuan bertarung unik dan pendekatan santainya, Kurō terjebak dalam perang bayangan antara ninja, agen rahasia, dan organisasi global.</p>"""
+lead = """<p>Di dunia modern yang tampak damai, organisasi ninja rahasia masih beroperasi secara diam-diam di bawah perintah pemerintah Jepang. Kurō Kumogakure, seorang ninja pemula yang pengangguran, tiba-tiba ditugaskan untuk misi besar—melindungi negara dari ancaman asing. Dengan kemampuan bertarung unik dan pendekatan santainya, Kurō terjebak dalam perang bayangan antara ninja, agen rahasia, dan organisasi global.</p>"""
 
 
 conclusion = """<p>Dengan jajaran cast papan atas dan tim produksi berpengalaman, adaptasi ini terlihat menjanjikan. Penonton yang menikmati anime atau manga <em>Under Ninja</em> pasti tak sabar menantikan aksi ninja modern di layar lebar. Nantikan update selanjutnya—terutama trailer dan BTS akting para pemain!</p>"""

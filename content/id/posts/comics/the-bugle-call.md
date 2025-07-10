@@ -8,7 +8,7 @@ draft = false
 
 summary = "VIZ Media resmi merilis *The Bugle Call: Song of War* volume 1, manga fantasi karya Mozuku Sora dan Higoro Toumori yang memadukan musik, strategi, dan kekuatan supranatural."
 
-synopsis = "The Bugle Call: Song of War Vol. 1 menghadirkan Luca, bugler muda yang terjebak dalam perang global memperebutkan Spires kuno dan kekuatan magis."
+lead = "The Bugle Call: Song of War Vol. 1 menghadirkan Luca, bugler muda yang terjebak dalam perang global memperebutkan Spires kuno dan kekuatan magis."
 
 conclusion = "Dengan visual memukau dan dunia yang penuh intrik, The Bugle Call: Song of War Vol. 1 menghadirkan kisah fantasi epik tentang pengorbanan, musik, dan pertarungan demi masa depan."
 

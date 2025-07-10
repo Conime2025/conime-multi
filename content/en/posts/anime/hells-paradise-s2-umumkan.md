@@ -8,7 +8,7 @@ nameAnime = "Hell’s Paradise (Jigokuraku)"
 
 summary = "Hell’s Paradise (Jigokuraku) resmi memastikan Season 2 tayang Januari 2026. Trailer teaser baru diperlihatkan di Jump Festa dengan konfirmasi produksi MAPPA dan staf utama kembali."
 
-synopsis = """<p><strong>Hell’s Paradise Season 2</strong> dipastikan tayang mulai <em>Januari 2026</em>. Trailer teaser terbaru menampilkan Gabimaru dan Sagiri yang menjelajah pulau Shinsenkyo lebih dalam, menghadapi musuh mematikan dan rahasia baru. Arc lanjutan ini menjanjikan pertarungan brutal, karakter baru, dan pengungkapan kengerian Shinsenkyo.</p>"""
+lead = """<p><strong>Hell’s Paradise Season 2</strong> dipastikan tayang mulai <em>Januari 2026</em>. Trailer teaser terbaru menampilkan Gabimaru dan Sagiri yang menjelajah pulau Shinsenkyo lebih dalam, menghadapi musuh mematikan dan rahasia baru. Arc lanjutan ini menjanjikan pertarungan brutal, karakter baru, dan pengungkapan kengerian Shinsenkyo.</p>"""
 
 image = "/images/anime/hells-paradise-season-2-teaser.webp"
 imageTitle = "Hell's Paradise Season 2 Official Teaser Visual"

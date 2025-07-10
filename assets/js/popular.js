@@ -28,12 +28,12 @@
         const image = meta?.image || "/images/default.png";
 
         html += `
-          <li class="rounded overflow-hidden">
+          <li class=" rounded  overflow-hidden">
             <a href="${item.url}">
               <img src="${image}" alt="${title}" class="w-full h-[300px] object-cover" />
               <div class="p-4">
                 <h3 class="font-bold text-xl">${title}</h3>
-                <p>— Popular</p>
+                <p class="border">— Popular</p>
               </div>
             </a>
           </li>`;

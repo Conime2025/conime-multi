@@ -1,9 +1,4 @@
-baseURL = "https://conime2025.github.io/conime-multi/"
-publishDir = "docs"
-relativeURLs = true
-canonifyURLs = false
-
-
+baseURL = "https://conime.id/"
 languageCode = "id-ID"
 defaultContentLanguage = "id"
 defaultContentLanguageInSubdir = false

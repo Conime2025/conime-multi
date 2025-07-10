@@ -8,7 +8,7 @@ draft = false
 
 summary = "Marvel Comics resmi merilis *Death of the Silver Surfer #1*, komik baru yang menampilkan perjalanan terakhir Norrin Radd. Ditulis Greg Pak dengan ilustrasi Sumit Kumar."
 
-synopsis = "Death of the Silver Surfer #1 memulai kisah gelap penuh konflik saat Surfer kembali ke Bumi yang dilanda perang, menghadapi musuh baru yang ingin merebut kekuatan kosmiknya."
+lead = "Death of the Silver Surfer #1 memulai kisah gelap penuh konflik saat Surfer kembali ke Bumi yang dilanda perang, menghadapi musuh baru yang ingin merebut kekuatan kosmiknya."
 
 conclusion = "Dengan visual memukau dan ketegangan yang terjaga, Death of the Silver Surfer #1 menjadi awal epik dari akhir perjalanan Norrin Radd yang wajib diikuti penggemar Marvel."
 

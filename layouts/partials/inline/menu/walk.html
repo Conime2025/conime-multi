@@ -25,9 +25,9 @@
   {{- if eq $mode "mobile" }}
     {{- $baseClass = "relative flex flex-col items-center justify-center gap-1 text-[0.65rem] py-1 px-2" }}
   {{- else if eq $mode "modal" }}
-    {{- $baseClass = "flex flex-col items-center justify-center gap-2 p-3 rounded hover:bg-gray-800 transition duration-300" }}
+    {{- $baseClass = "flex flex-col items-center justify-center gap-2 p-3  rounded  hover:bg-gray-800 transition duration-300" }}
   {{- else }}
-    {{- $baseClass = "relative flex flex-row justify-start items-center lg:max-w-full lg:max-h-full lg:px-3 sm:py-3 lg:h-fit lg:gap-4 w-full text-base rounded hover:bg-gray-200 dark:hover:bg-gray-800 transition duration-300" }}
+    {{- $baseClass = "relative flex flex-row justify-start items-center lg:max-w-full lg:max-h-full lg:px-3 sm:py-3 lg:h-fit lg:gap-4 w-full text-base  rounded  hover:bg-gray-200 dark:hover:bg-gray-800 transition duration-300" }}
   {{- end }}
 
   {{- if or $isActive $isAncestor }}
@@ -60,9 +60,9 @@
         {{ if eq $entry.Identifier "notifBtn" }}
           <div class="notifBadge absolute hidden top-2 lg:top-3 left-[38px] lg:left-[24px]">
             <div class="relative flex justify-center items-center">
-              <div class="w-3 h-3 opacity-0 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
-              <div class="w-[10px] h-[10px] absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
-              <div class="w-2 h-2 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 animate-pulse rounded-full bg-conime-500 dark:bg-conime-600"></div>
+              <div class="w-3 h-3 opacity-0 animate-pulse  rounded -full bg-conime-500 dark:bg-conime-600"></div>
+              <div class="w-[10px] h-[10px] absolute opacity-0 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 animate-pulse  rounded -full bg-conime-500 dark:bg-conime-600"></div>
+              <div class="w-2 h-2 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 animate-pulse  rounded -full bg-conime-500 dark:bg-conime-600"></div>
             </div>
           </div>
         {{ end }}

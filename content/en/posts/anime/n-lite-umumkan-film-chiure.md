@@ -7,7 +7,7 @@ draft = false
 nameAnime = "Chiure: Child of the Sea"
 summary = "Studio N-Lite resmi mengumumkan film animasi original *Chiure: Child of the Sea*, disutradarai dan ditulis oleh Daisuke Igarashi. Film dijadwalkan rilis di Jepang pada 2026, dengan teaser visual yang menampilkan nuansa surealis dan fantasi."
 
-synopsis = """<p><strong>Chiure: Child of the Sea</strong> adalah film animasi original dari N-Lite, dijadwalkan rilis pada 2026 di Jepang. Disutradarai dan ditulis oleh Daisuke Igarashi, film ini menampilkan desain karakter dan latar yang kaya detail, dengan atmosfer surealis dan tema manusia yang mendalam.</p>"""
+lead = """<p><strong>Chiure: Child of the Sea</strong> adalah film animasi original dari N-Lite, dijadwalkan rilis pada 2026 di Jepang. Disutradarai dan ditulis oleh Daisuke Igarashi, film ini menampilkan desain karakter dan latar yang kaya detail, dengan atmosfer surealis dan tema manusia yang mendalam.</p>"""
 
 
 image = "/images/anime/chiure-child-of-the-sea.webp"

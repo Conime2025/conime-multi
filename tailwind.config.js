@@ -80,9 +80,9 @@ module.exports = {
     { pattern: /border-gray-(300|400|600|800)/ },
     { pattern: /border-red-500/ },
 
-    // === Rounded corners and shadow ===
-    { pattern: /rounded/ },
-    { pattern: /rounded-(t|tr|xl)/ },
+    // ===  rounded  corners and shadow ===
+    { pattern: / rounded / },
+    { pattern: / rounded -(t|tr|xl)/ },
     { pattern: /shadow/ },
     { pattern: /shadow-lg/ },
     { pattern: /dark:shadow-gray-950/ },

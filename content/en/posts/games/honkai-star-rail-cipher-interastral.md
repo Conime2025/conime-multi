@@ -8,7 +8,7 @@ nameGame = "Honkai: Star Rail"
 
 summary = "HoYoverse merilis episode spesial Interastral Peace Entertainment bertajuk 'Cipher: Kaya Raya dari Segala Arah!', yang menyoroti Cipher dan karakter unik 'Roh Pencuri' Bartholos dalam gaya presentasi kocak dan satir."
 
-synopsis = "Episode khusus Honkai: Star Rail berjudul Cipher: Kaya Raya dari Segala Arah! menghadirkan sketsa satir yang memperkenalkan Cipher dan Bartholos dengan humor khas dan gaya variety show."
+lead = "Episode khusus Honkai: Star Rail berjudul Cipher: Kaya Raya dari Segala Arah! menghadirkan sketsa satir yang memperkenalkan Cipher dan Bartholos dengan humor khas dan gaya variety show."
 
 conclusion = """<p>Dengan gaya humor khas dan presentasi seperti variety show, episode <strong>“Mendekati Star Rail”</strong> memperkenalkan Cipher dengan cara yang berbeda dan menghibur. Meski kalah telak dalam 'pertandingan aerodinamika' melawan Bartholos, kehadiran Cipher menjadi sorotan dalam versi terbaru <strong>Honkai: Star Rail</strong>.</p>"""
 

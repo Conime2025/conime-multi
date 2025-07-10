@@ -8,7 +8,7 @@ draft = false
 
 summary = "Film *Belle* (Ryuu to Sobakasu no Hime) karya Mamoru Hosoda menggabungkan visual memukau, musik yang menyentuh, dan cerita emosional yang menggali tema kehilangan, identitas, dan keberanian untuk menyembuhkan luka."
 
-synopsis = """<p><strong>Belle</strong> adalah kisah tentang Suzu Naito, seorang remaja pedesaan yang kehilangan 'suara' setelah kematian ibunya. Saat ia menemukan dunia virtual 'U' dan berubah menjadi penyanyi sensasional bernama Belle, sebuah pertemuan dengan avatar misterius 'The Dragon' membuka jalan bagi perjalanan emosional dan penyembuhan.</p>"""
+lead = """<p><strong>Belle</strong> adalah kisah tentang Suzu Naito, seorang remaja pedesaan yang kehilangan 'suara' setelah kematian ibunya. Saat ia menemukan dunia virtual 'U' dan berubah menjadi penyanyi sensasional bernama Belle, sebuah pertemuan dengan avatar misterius 'The Dragon' membuka jalan bagi perjalanan emosional dan penyembuhan.</p>"""
 
 conclusion = """<p><em>Belle</em> adalah pengalaman sinematik yang mendalam — bukan sekadar visual CGI dan musik yang enak didengar, tetapi kisah tentang kerentanan, solidaritas, dan cinta—baik itu persahabatan maupun asmara. Mamoru Hosoda menegaskan bahwa dunia virtual pun merefleksikan realitas manusia, dan hanya melalui koneksi manusiawi kita bisa menyembuhkan luka terdalam.</p>"""
 

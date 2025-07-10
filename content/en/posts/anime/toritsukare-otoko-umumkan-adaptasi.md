@@ -8,7 +8,7 @@ draft = false
 
 summary = "Bandai Namco Filmworks resmi mengumumkan adaptasi film anime dari novel 'Toritsukare Otoko' karya Shinji Ishii. Film musikal ini dijadwalkan tayang di Jepang pada musim gugur 2025."
 
-synopsis = "Film anime Toritsukare Otoko diumumkan untuk tayang musim gugur 2025, menghadirkan kisah musikal penuh warna dengan karakter Giuseppe dan Pechka."
+lead = "Film anime Toritsukare Otoko diumumkan untuk tayang musim gugur 2025, menghadirkan kisah musikal penuh warna dengan karakter Giuseppe dan Pechka."
 
 conclusion = "Adaptasi ini menjanjikan pengalaman musikal yang menyentuh dan penuh warna, dengan tema pengorbanan dan empati yang layak dinantikan di musim gugur 2025."
 

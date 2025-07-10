@@ -8,7 +8,7 @@ draft = false
 
 summary = "VIZ Media resmi merilis *Dr. Stone* volume 27, menghadirkan babak baru petualangan sains saat Senku dan timnya berusaha membangun mesin waktu setelah menerima pesan misterius dari masa depan."
 
-synopsis = "Dr. Stone Volume 27 menghadirkan tantangan ambisius membangun mesin waktu demi mengungkap pesan misterius dari masa depan yang mengguncang Stone World."
+lead = "Dr. Stone Volume 27 menghadirkan tantangan ambisius membangun mesin waktu demi mengungkap pesan misterius dari masa depan yang mengguncang Stone World."
 
 conclusion = "Dengan eksplorasi ilmiah yang mendalam dan ilustrasi memukau, Dr. Stone Volume 27 menandai langkah besar Senku dan timnya menuju misteri baru yang menegangkan."
 

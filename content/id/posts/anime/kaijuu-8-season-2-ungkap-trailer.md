@@ -8,7 +8,7 @@ nameAnime = "Kaiju No. 8"
 
 summary = "Kaiju No. 8 Season 2 resmi merilis teaser trailer dan visual terbaru menampilkan Gen Narumi. Studio Production I.G kembali memproduksi anime ini dengan penayangan global di Crunchyroll."
 
-synopsis = """<p><strong>Kaiju No. 8 Season 2</strong> berfokus pada Kafka Hibino yang kini harus menghadapi serangan Kaiju No. 9 yang kian cerdas dan mematikan. Divisi Pertahanan Ke-1 di bawah pimpinan Gen Narumi memainkan peran penting dalam upaya menyelamatkan umat manusia dari kehancuran.</p>"""
+lead = """<p><strong>Kaiju No. 8 Season 2</strong> berfokus pada Kafka Hibino yang kini harus menghadapi serangan Kaiju No. 9 yang kian cerdas dan mematikan. Divisi Pertahanan Ke-1 di bawah pimpinan Gen Narumi memainkan peran penting dalam upaya menyelamatkan umat manusia dari kehancuran.</p>"""
 
 
 image = "/images/anime/kaiju-no-8-season-2.webp"

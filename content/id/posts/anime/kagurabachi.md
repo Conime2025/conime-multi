@@ -8,7 +8,7 @@ draft = false
 
 summary = "CyberAgent dan Shochiku mengumumkan adaptasi anime dari *Kagurabachi*, manga aksi populer karya Takeru Hokazono. Produksi oleh CygamesPictures dijadwalkan menghadirkan duel sihir dan balas dendam yang mendebarkan."
 
-synopsis = "Anime <strong>Kagurabachi</strong> resmi diumumkan sebagai proyek adaptasi baru oleh CyberAgent dan Shochiku, diproduksi oleh CygamesPictures dengan cerita balas dendam yang kelam dan penuh sihir."
+lead = "Anime <strong>Kagurabachi</strong> resmi diumumkan sebagai proyek adaptasi baru oleh CyberAgent dan Shochiku, diproduksi oleh CygamesPictures dengan cerita balas dendam yang kelam dan penuh sihir."
 
 
 image = "/images/anime/kagurabachi-anime-announcement.webp"

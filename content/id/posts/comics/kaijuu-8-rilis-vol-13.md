@@ -8,7 +8,7 @@ draft = false
 
 summary = "VIZ Media resmi merilis *Kaiju No. 8* volume 13, menghadirkan aksi intens saat Kafka menghadapi ancaman baru dari Kaiju No. 9 di kota Tachikawa."
 
-synopsis = "Kaiju No. 8 Volume 13 membawa pertarungan sengit Kafka melawan Kaiju No. 9 yang menculik Mina Ashiro, dengan ancaman daikaiju baru di seluruh kota."
+lead = "Kaiju No. 8 Volume 13 membawa pertarungan sengit Kafka melawan Kaiju No. 9 yang menculik Mina Ashiro, dengan ancaman daikaiju baru di seluruh kota."
 
 conclusion = "Dengan ilustrasi dinamis dan alur menegangkan, Kaiju No. 8 Volume 13 menghadirkan aksi epik dan pengungkapan baru yang mengguncang dunia Kaiju."
 

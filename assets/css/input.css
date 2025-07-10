@@ -111,12 +111,12 @@
   /* Tippy.js styling */
   .tippy-box {
     background-color: #111827 !important; /* gray-900 */
-    color: #f3f4f6; /* gray-100 */
+    color: #f3f4f6 !important; /* gray-100 */
     font-size: 0.875rem;
   }
   .dark .tippy-box {
-    background-color: #1f2937 !important; /* gray-800 */
-    color: #f3f4f6;
+    background-color: #2f3b4b !important; /* gray-800 */
+    color: #f3f4f6 !important;
   }
 
 
@@ -140,7 +140,7 @@
   box-shadow: none !important;
 }
 .dark .tippy-box > .tippy-arrow::before {
-  color: #1f2937 !important; /* Tailwind gray-800 */
+  color:  #2f3b4b !important; /* Tailwind gray-800 */
 }
 
 /* Tooltip di bawah (arrow di atas mengarah ke atas) */
@@ -245,7 +245,7 @@
   input[type="checkbox"]:after {
     display: none;
     content: "\e5ca";
-    font-family: "Material Symbols Rounded";
+    font-family: "Material Symbols  rounded ";
     font-size: 0.8rem;
     background-color: #030712;
     color: white;

@@ -8,7 +8,7 @@ draft = false
 
 summary = "Marvel Studios dan Hollywood Records resmi merilis *The Fantastic Four: First Steps Main Theme*, musik utama dari film *The Fantastic Four: First Steps*. Lagu ini dikomposisi oleh Michael Giacchino dan tersedia di berbagai platform streaming."
 
-synopsis = """<p><strong>The Fantastic Four: First Steps Main Theme</strong> adalah komposisi musik utama dari film <em>The Fantastic Four: First Steps</em>, yang akan tayang pada <strong>25 Juli 2025</strong>. Lagu ini mencerminkan nuansa retro-futuristik tahun 1960-an, sesuai dengan tema film yang mengangkat perjalanan awal Marvel’s First Family. Michael Giacchino, pemenang Oscar dan Grammy, menciptakan musik ini sebagai penghormatan kepada semangat optimisme dan eksplorasi ilmiah yang menjadi ciri khas Fantastic Four.</p>"""
+lead = """<p><strong>The Fantastic Four: First Steps Main Theme</strong> adalah komposisi musik utama dari film <em>The Fantastic Four: First Steps</em>, yang akan tayang pada <strong>25 Juli 2025</strong>. Lagu ini mencerminkan nuansa retro-futuristik tahun 1960-an, sesuai dengan tema film yang mengangkat perjalanan awal Marvel’s First Family. Michael Giacchino, pemenang Oscar dan Grammy, menciptakan musik ini sebagai penghormatan kepada semangat optimisme dan eksplorasi ilmiah yang menjadi ciri khas Fantastic Four.</p>"""
 
 conclusion = """<p>Dengan aransemen yang megah dan atmosfer yang khas, <strong>The Fantastic Four: First Steps Main Theme</strong> membawa pendengar ke dunia penuh petualangan dan inovasi. Lagu ini tersedia untuk streaming di berbagai platform digital, sementara versi vinyl <em>Galactic Blue</em> dapat dipesan sebelum rilis pada 25 Juli.</p>"""
 

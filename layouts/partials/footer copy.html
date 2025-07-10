@@ -110,11 +110,11 @@ const renderPopular = (items, label = "Popular This Week", isFallback = false) =
     const link = meta.permalink || item.url || "#";
 
     html += `
-      <li class="relative popular-html flex flex-col col-span-2 w-full h-full bg-gradient-to-br from-white dark:from-gray-900 via-gray-50 dark:via-gray-950 to-gray-300 dark:to-gray-950 overflow-hidden rounded  transition duration-300 ease-in-out">
+      <li class="relative popular-html flex flex-col col-span-2 w-full h-full bg-gradient-to-br from-white dark:from-gray-900 via-gray-50 dark:via-gray-950 to-gray-300 dark:to-gray-950 overflow-hidden  rounded   transition duration-300 ease-in-out">
         <a href="${link}" class="bg-cover w-full h-full overflow-hidden transition duration-500 ease-in-out">
-          <img loading="lazy" src="${image}" alt="Gambar ${title}" class="w-full h-[360px] object-cover rounded-t brightness-75 hover:brightness-100 transition duration-300 ease-in-out" />
+          <img loading="lazy" src="${image}" alt="Gambar ${title}" class="w-full h-[360px] object-cover  rounded -t brightness-75 hover:brightness-100 transition duration-300 ease-in-out" />
         </a>
-        <div class="w-[70%] h-[70%] absolute bottom-0 left-0 rounded-tr transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-gradient-to-br from-white dark:from-gray-900 via-gray-50 dark:via-gray-950 to-gray-300 dark:to-gray-950">
+        <div class="w-[70%] h-[70%] absolute bottom-0 left-0  rounded -tr transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-gradient-to-br from-white dark:from-gray-900 via-gray-50 dark:via-gray-950 to-gray-300 dark:to-gray-950">
           <h2 class="w-full h-fit text-2xl line-clamp-3 ${isFallback ? '' : 'opacity-0 group-hover:opacity-100 group-hover:z-10'} transition duration-500 ease-in-out">
             <a href="${link}" class="hover:underline break-words">${title}</a>
           </h2>

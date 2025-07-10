@@ -8,7 +8,7 @@ nameAnime = "My Hero Academia: Vigilantes"
 
 summary = "My Hero Academia: Vigilantes resmi mengumumkan anime Season 2 yang akan tayang pada 2026. Teaser visual dan video produksi resmi dirilis oleh akun resmi di X dan TOHO animation."
 
-synopsis = "Teaser resmi memperlihatkan visual Koichi Haimawari dan mengonfirmasi Season 2 akan tayang pada 2026. Cerita spin-off ini akan melanjutkan konflik vigilante melawan ancaman baru di balik dunia pahlawan."
+lead = "Teaser resmi memperlihatkan visual Koichi Haimawari dan mengonfirmasi Season 2 akan tayang pada 2026. Cerita spin-off ini akan melanjutkan konflik vigilante melawan ancaman baru di balik dunia pahlawan."
 
 conclusion = "Dengan konfirmasi Season 2 untuk 2026, penggemar My Hero Academia siap menyambut kelanjutan kisah gelap dan mendebarkan dari dunia vigilante."
 

@@ -8,7 +8,7 @@ draft = false
 
 summary = "VIZ Media resmi merilis volume ke-18 dari *Chainsaw Man*, menampilkan konflik baru antara Denji, Nayuta, dan organisasi Chainsaw Man Church yang berusaha menguasai dunia."
 
-synopsis = "Volume 18 membawa babak baru penuh aksi dan ketegangan, saat Denji dan Nayuta menghadapi ancaman Chainsaw Man Church yang semakin kuat."
+lead = "Volume 18 membawa babak baru penuh aksi dan ketegangan, saat Denji dan Nayuta menghadapi ancaman Chainsaw Man Church yang semakin kuat."
 
 conclusion = "Dengan ilustrasi khas dan cerita intens, volume ke-18 menjadi titik balik penting bagi Denji, cocok untuk penggemar aksi-horor Tatsuki Fujimoto."
 
