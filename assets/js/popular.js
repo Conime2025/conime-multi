@@ -28,7 +28,7 @@
         const image = meta?.image || "/images/default.png";
 
         html += `
-          <li class="rounded overflow-hidden shadow">
+          <li class="rounded overflow-hidden">
             <a href="${item.url}">
               <img src="${image}" alt="${title}" class="w-full h-[300px] object-cover" />
               <div class="p-4">
@@ -48,4 +48,4 @@
         popularContainer.innerHTML = fallbackContent.innerHTML;
       }
     });
-  } 
+  }

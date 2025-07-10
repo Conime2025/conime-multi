@@ -14,19 +14,19 @@
 
     <ul class="flex flex-col gap-4 md:gap-3">
       {{ range $subset }}
-         <li  class="relative group  flex flex-col h-fit w-full rounded-3xl overflow-hidden z-10 shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40">
+         <li  class="relative group  flex flex-col h-fit w-full rounded overflow-hidden z-10 ">
 
           <!-- Bagian gambar -->
           <div class="w-full flex-1">
             <a href="{{ .RelPermalink }}">
               <img loading="lazy" src="{{ .Params.image | default "/images/default.png" }}" alt="Gambar {{ .Title }}"
-                class="w-full h-[300px] object-cover rounded-3xl brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
+                class="w-full h-[300px] object-cover rounded brightness-75 hover:brightness-100 transition duration-500 ease-in-out" />
             </a>
           </div>
 
 
           <!-- Bagian teks -->
-         <div class="absolute bottom-0 left-auto top-0 right-0 w-[70%] h-full opacity-100 transition duration-500 ease-in-out  flex-1 font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
+         <div class="absolute bottom-0 left-auto top-0 right-0 w-[70%] h-full opacity-100 transition duration-500 ease-in-out  flex-1 font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 hover:dark:bg-gray-800">
         <h2 class="w-full h-fit text-xl line-clamp-4">
           <a href="{{ .RelPermalink }}" class="hover:underline break-words" data-tippy-content="{{ .Title }}">{{ .Title }}</a>
         </h2>

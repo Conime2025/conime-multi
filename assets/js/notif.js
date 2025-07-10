@@ -55,11 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (diff < 86400) {
       const isUnread = !isRead;
       if (isUnread) unreadCount++;
-      const badgeClass = isUnread ? "bg-conime-500 dark:bg-conime-500" : "bg-gray-600 dark:bg-gray-700";
+      const badgeClass = isUnread ? "bg-conime-500 dark:bg-conime-500" : "bg-gray-600 dark:bg-gray-800";
       const timeAgo = getTimeAgo(post.dataset.date);
 
       newNotifs.push(`
-        <a href="${slug}" class="notif-item bg-gray-100 dark:bg-gray-800/20 rounded p-3 relative block transition hover:bg-gray-200 dark:hover:bg-gray-800 ${isRead ? 'opacity-75 dark:opacity-50' : ''}" data-url="${slug}" data-date="${post.dataset.date}">
+        <a href="${slug}" class="notif-item bg-gray-200 dark:bg-gray-800/20 rounded p-3 relative block transition hover:bg-gray-200 dark:hover:bg-gray-800 ${isRead ? 'opacity-75 dark:opacity-50' : ''}" data-url="${slug}" data-date="${post.dataset.date}">
           <div class="flex justify-end badge">
             <div class="flex relative justify-center items-center rounded-full">
               <div class="w-3 h-3 opacity-50 rounded-full ${badgeClass}"></div>
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
       item.classList.add("opacity-75", "dark:opacity-50");
       item.querySelectorAll(".badge div").forEach(dot => {
         dot.classList.remove("bg-conime-500", "dark:bg-conime-500");
-        dot.classList.add("bg-gray-600", "dark:bg-gray-700");
+        dot.classList.add("bg-gray-600", "dark:bg-gray-800");
       });
 
       document.querySelector(`.fire-new[data-url="${slug}"]`)?.classList.add("opacity-0", "hidden");
@@ -158,14 +158,14 @@ document.addEventListener("DOMContentLoaded", () => {
         item.classList.add("opacity-75", "dark:opacity-50");
         item.querySelectorAll(".badge div").forEach(dot => {
           dot.classList.remove("bg-conime-500", "dark:bg-conime-500");
-          dot.classList.add("bg-gray-600", "dark:bg-gray-700");
+          dot.classList.add("bg-gray-600", "dark:bg-gray-800");
         });
         fireEl?.classList.add("opacity-0", "hidden");
       } else if (!isOld) {
         localStorage.removeItem(`notif-read:${slug}`);
         item.classList.remove("opacity-75", "dark:opacity-50");
         item.querySelectorAll(".badge div").forEach(dot => {
-          dot.classList.remove("bg-gray-600", "dark:bg-gray-700");
+          dot.classList.remove("bg-gray-600", "dark:bg-gray-800");
           dot.classList.add("bg-conime-500", "dark:bg-conime-500");
         });
         fireEl?.classList.remove("opacity-0", "hidden");

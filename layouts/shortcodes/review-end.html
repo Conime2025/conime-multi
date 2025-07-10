@@ -26,7 +26,7 @@
 {{ $relatedFiltered := where $relatedCombined "RelPermalink" "ne" $currentPage.RelPermalink }}
 
 {{ if ge (len $relatedFiltered) 2 }}
-<div class="border-l-4 border-conime-500 dark:border-conime-500 pl-4 text-gray-700 dark:text-gray-300 my-4">
+<div class="border-l-4 border-conime-500 dark:border-conime-500 pl-4 text-gray-800 dark:text-gray-300 my-4">
   <div class="h-full p-0">
     <p class="font-medium my-0">Also read:</p>
     {{ $second := index $relatedFiltered 1 }}
@@ -43,7 +43,7 @@
 <!-- KESIMPULAN -->
 {{ with .Page.Params.conclusion }}
 <h2 class="font-medium uppercase tracking-wide">Kesimpulan :</h2>
-<div class="border-l-4 border-gray-400 dark:border-gray-600 pl-4 italic text-gray-700 dark:text-gray-300 my-4 [&>p]:my-3">
+<div class="border-l-4 border-gray-400 dark:border-gray-600 pl-4 italic text-gray-800 dark:text-gray-300 my-4 [&>p]:my-3">
   {{ . | safeHTML }}
 </div>
 {{ end }}
@@ -101,7 +101,7 @@
 <!-- VIDEO TERKAIT -->
 {{ with .Page.Params.videos }}
 {{ range . }}
-<div class="w-full h-fit flex flex-col mb-4 bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm rounded-3xl">
+<div class="w-full h-fit flex flex-col mb-4 bg-gray-200 dark:bg-gray-900/20 backdrop-blur-sm rounded">
   <iframe width="auto" height="315px" src="{{ .url | safeURL }}" data-tippy-content="Tonton {{ .title | default "YouTube video player" }}" frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
   </iframe>

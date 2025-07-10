@@ -13,6 +13,7 @@
   --color-conime-800: #75011b;
   --color-conime-900: #630318;
   --color-conime-950: #5c0317;
+  --color-gray-925: #0A1120
 }
 
 /* =============== CUSTOM FONTS =============== */
@@ -338,7 +339,7 @@
     @apply uppercase tracking-wide my-3;
   }
   .content-article blockquote {
-    @apply border-l-4 border-gray-400 dark:border-gray-600 pl-4 italic text-gray-700 dark:text-gray-100 my-4;
+    @apply border-l-4 border-gray-400 dark:border-gray-600 pl-4 italic text-gray-800 dark:text-gray-100 my-4;
   }
 
   .content-article ul {

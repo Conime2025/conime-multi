@@ -16,10 +16,10 @@
 
 <li  {{ if $page.IsHome }}
   data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000"{{ end }} class="group relative w-full flex justify-start items-start">
-  <a class="bg-white/0 text-gray-700 dark:text-gray-400 transition-colors duration-500 ease-in-out"
+  <a class="bg-gray-200/0 text-gray-800 dark:text-gray-400 transition-colors duration-500 ease-in-out"
     {{- range $k, $v :=$attrs }} {{- with $v }} {{- printf " %s=%q" $k $v | safeHTMLAttr }} {{- end }} {{- end }}>
     <span
-      class="w-fit pr-2 text-sm text-gray-700 dark:text-gray-400 group-hover:text-conime-400 group-hover:dark:text-conime-500 transition duration-500 ease-in-out">
+      class="w-fit pr-2 text-sm text-gray-800 dark:text-gray-400 group-hover:text-conime-400 group-hover:dark:text-conime-500 transition duration-500 ease-in-out">
       {{ $name }}
     </span>
   </a>

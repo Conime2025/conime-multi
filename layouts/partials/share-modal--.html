@@ -1,8 +1,8 @@
 {{ with . }}
 <div id="shareModal"
-  class="fixed hidden left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-white dark:bg-gray-900 text-gray-800 dark:text-white p-6 rounded-2xl w-[320px] md:w-[440px] shadow-none md:shadow-xl shadow-gray-950/10 lg:shadow-gray-950/20">
+  class="fixed hidden left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-gray-200 dark:bg-gray-900 text-gray-900 dark:text-white p-6 rounded w-[320px] md:w-[440px] shadow-none md:shadow-xl shadow-gray-950/10 lg:shadow-gray-950/20">
   <div id="closeModal"
-    class="w-fit h-fit group absolute right-4 top-4 p-0 flex gap-x-2 justify-center items-center shadow-none md:shadow-xl shadow-gray-950/10 lg:shadow-gray-950/20 bg-gray-100 hover:bg-gray-300 dark:bg-gray-950/20 hover:dark:bg-gray-900 rounded-full">
+    class="w-fit h-fit group absolute right-4 top-4 p-0 flex gap-x-2 justify-center items-center shadow-none md:shadow-xl shadow-gray-950/10 lg:shadow-gray-950/20 bg-gray-200 hover:bg-gray-300 dark:bg-gray-900/20 hover:dark:bg-gray-800 rounded-full">
     <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M9.16998 14.83L14.83 9.17004" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
       <path d="M14.83 14.83L9.16998 9.17004" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -11,7 +11,7 @@
 
   <h3 class="text-md font-medium mb-4">Share</h3>
 
-  <div class="flex text-gray-800 dark:text-gray-100 justify-start md:justify-between items-center gap-4 md:gap-3 overflow-x-auto overscroll-auto scrollbar-hide px-2 my-6">
+  <div class="flex text-gray-900 dark:text-gray-100 justify-start md:justify-between items-center gap-4 md:gap-3 overflow-x-auto overscroll-auto scrollbar-hide px-2 my-6">
     <!-- Facebook -->
     <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink | urlquery }}" target="_blank" rel="noopener" class="flex flex-col items-center text-xs">
       <div class="flex text-gray-300 bg-[#3b5998] hover:bg-[#1b3772] mb-2 p-3 rounded-full justify-center items-center">
@@ -70,12 +70,12 @@
 
   <div class="flex text-gray-300 bg-gray-300 dark:bg-gray-800 rounded overflow-hidden">
     <input type="text" id="shareLink" value="{{ .Permalink }}" readonly
-      class="bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm placeholder:text-gray-700 placeholder:dark:text-gray-300 text-gray-900 dark:text-white px-3 py-2 w-full text-sm outline-none" />
+      class="bg-gray-200 dark:bg-gray-900/20 backdrop-blur-sm placeholder:text-gray-800 placeholder:dark:text-gray-300 text-gray-900 dark:text-white px-3 py-2 w-full text-sm outline-none" />
     <button onclick="copyShareLink()" class="bg-conime-500 dark:bg-conime-500 text-white hover:bg-conime-500 dark:hover:bg-conime-400 text-sm px-4">
       Copy
     </button>
   </div>
-  <span id="popup-copy" class="absolute -top-2 hidden left-1/2 -translate-x-1/2 min-w-20 w-fit p-3 bg-gray-200 dark:bg-gray-900/50 backdrop-blur-sm text-gray-800 dark:text-gray-400 transition duration-300 ease-in-out shadow-none md:shadow-xl shadow-gray-950/10 lg:shadow-gray-950/20 rounded">
+  <span id="popup-copy" class="absolute -top-2 hidden left-1/2 -translate-x-1/2 min-w-20 w-fit p-3 bg-gray-200 dark:bg-gray-900/50 backdrop-blur-sm text-gray-900 dark:text-gray-400 transition duration-300 ease-in-out shadow-none md:shadow-xl shadow-gray-950/10 lg:shadow-gray-950/20 rounded">
     Link copied successfully!
   </span>
 </div>

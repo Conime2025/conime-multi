@@ -9,7 +9,7 @@
     {{ range first 10 site.Taxonomies.tags.ByCount }}
     <li class="mb-2">
       <a href="{{ "/tags/" | relLangURL }}{{ .Name | urlize }}"
-        class="capitalize px-2 py-1 text-conime-400 dark:text-conime-500 bg-conime-100 dark:bg-gray-950/20 rounded hover:underline text-lg font-light dark:font-extralight transition duration-300 ease-in-out">
+        class="capitalize px-2 py-1 text-conime-400 dark:text-conime-500 bg-conime-100 dark:bg-gray-900/20 rounded hover:underline text-lg font-light dark:font-extralight transition duration-300 ease-in-out">
         {{ .Name }} ({{ .Count }})
       </a>
     </li>

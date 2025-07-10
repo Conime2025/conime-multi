@@ -5,11 +5,11 @@
 {{- $title := .Get "title" | default "" -}}
 
 
-<figure class="w-full flex flex-col my-4 bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm rounded-3xl overflow-hidden">
+<figure class="w-full flex flex-col my-4 bg-gray-200 dark:bg-gray-900/20 backdrop-blur-sm rounded overflow-hidden">
   {{ if not $image }}
     <img src="/images/default.png" alt="{{ $alt }}" class="post-img h-auto w-full rounded-t-3xl object-cover" />
   {{ end }}
-  <img loading="lazy" src="{{ $image | relURL }}"  width="1200" height="800" alt="{{ $alt }}" class="post-img  h-auto w-full rounded-3xl  object-cover" />
+  <img loading="lazy" src="{{ $image | relURL }}"  width="1200" height="800" alt="{{ $alt }}" class="post-img  h-auto w-full rounded  object-cover" />
   <figcaption class="text-sm font-light dark:font-extralight text-left italic flex flex-col gap-0 px-4 py-4">
     {{ if $title }}
   <span class="block">{{ $title }}</span>

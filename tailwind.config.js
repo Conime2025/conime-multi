@@ -73,7 +73,7 @@ module.exports = {
     { pattern: /bg-white/ },
     { pattern: /dark:bg-white/ },
     { pattern: /dark:bg-gray-900/ },
-    { pattern: /dark:bg-gray-950/ },
+    { pattern: /dark:bg-gray-900/ },
 
     // === Border utilities ===
     { pattern: /border/ },

@@ -2,15 +2,15 @@
 {{ $allEntries := index site.Menus $menuID }}
 
 {{ if $allEntries }}
-<nav id="navDesktop" class="w-full h-full text-gray-700 dark:text-gray-400 -z-[999] lg:z-[999] hidden lg:block overflow-y-hidden overflow-x-hidden px-0 lg:px-4 py-2 lg:py-0 mx-[15px] lg:mx-0 rounded-xl">
-  <ul class="flex flex-col h-full gap-4 justify-center items-center [&>*:nth-child(8)]:lg:hidden [&>*:nth-child(9)]:lg:hidden">
+<nav id="navDesktop" class="w-full h-full text-gray-800 dark:text-gray-400 -z-[999] lg:z-[999] hidden lg:block overflow-y-hidden overflow-x-hidden px-0 lg:px-4 py-2 lg:py-2 mx-[15px] lg:mx-0 rounded">
+  <ul class="flex flex-col h-full gap-3 justify-center items-center [&>*:nth-child(8)]:lg:hidden [&>*:nth-child(9)]:lg:hidden">
     {{ range $allEntries }}
 
       {{ if ne .Identifier "moreBtn" }}
         {{ partial "navitem.html" (dict
           "item" .
           "idSuffix" "-lg"
-          "classes" "relative flex flex-row justify-start items-center lg:px-4 lg:py-4 lg:gap-4 w-full rounded-xl bg-gray-300/0 dark:bg-gray-950/0 hover:bg-gray-300 hover:dark:bg-gray-800/50 text-gray-700 dark:text-gray-400 hover:text-conime-400 dark:hover:text-conime-500 transition duration-300"
+          "classes" "relative flex flex-row justify-start items-center lg:px-4 lg:py-4 lg:gap-4 w-full rounded bg-gray-300/0 dark:bg-gray-900/0 hover:bg-gray-300 hover:dark:bg-gray-800/50 text-gray-800 dark:text-gray-400 hover:text-conime-400 dark:hover:text-conime-500 transition duration-300"
           "liClasses" ""
           "notifBadgePosition" "!top-[12px] !left-[28px]"
         ) }}

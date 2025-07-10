@@ -10,7 +10,7 @@
     {{ range $name, $taxonomy := site.Taxonomies.categories }}
     <li class="mb-2">
       <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}"
-        class="capitalize px-2 py-1 text-conime-400 dark:text-conime-500 bg-conime-100 dark:bg-gray-950/20 rounded hover:underline text-lg font-light dark:font-extralight transition duration-300 ease-in-out">
+        class="capitalize px-2 py-1 text-conime-400 dark:text-conime-500 bg-conime-100 dark:bg-gray-900/20 rounded hover:underline text-lg font-light dark:font-extralight transition duration-300 ease-in-out">
         {{ $name }} ({{ len $taxonomy }})
       </a>
     </li>

@@ -25,15 +25,15 @@
   {{- if eq $mode "mobile" }}
     {{- $baseClass = "relative flex flex-col items-center justify-center gap-1 text-[0.65rem] py-1 px-2" }}
   {{- else if eq $mode "modal" }}
-    {{- $baseClass = "flex flex-col items-center justify-center gap-2 p-3 rounded-lg hover:bg-gray-800 transition duration-300" }}
+    {{- $baseClass = "flex flex-col items-center justify-center gap-2 p-3 rounded hover:bg-gray-800 transition duration-300" }}
   {{- else }}
-    {{- $baseClass = "relative flex flex-row justify-start items-center lg:max-w-full lg:max-h-full lg:px-3 sm:py-3 lg:h-fit lg:gap-4 w-full text-base rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition duration-300" }}
+    {{- $baseClass = "relative flex flex-row justify-start items-center lg:max-w-full lg:max-h-full lg:px-3 sm:py-3 lg:h-fit lg:gap-4 w-full text-base rounded hover:bg-gray-200 dark:hover:bg-gray-800 transition duration-300" }}
   {{- end }}
 
   {{- if or $isActive $isAncestor }}
     {{- $baseClass = printf "%s bg-conime-500 dark:bg-conime-500 hover:!bg-conime-600 hover:dark:!bg-conime-400 text-white group-hover:text-white" $baseClass }}
   {{- else }}
-    {{- $baseClass = printf "%s text-gray-700 dark:text-gray-300 group-hover:text-conime-500" $baseClass }}
+    {{- $baseClass = printf "%s text-gray-800 dark:text-gray-300 group-hover:text-conime-500" $baseClass }}
   {{- end }}
 
   {{- $buttonIdentifiers := slice "notifBtn" "moreBtn" "lessBtn" }}

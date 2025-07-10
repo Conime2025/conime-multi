@@ -31,7 +31,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     lastViewed.forEach(item => {
       const li = document.createElement("li");
-      li.className = "relative flex flex-1 justify-start items-center group gap-x-0 w-full h-full bg-cover overflow-hidden rounded-md bg-white dark:bg-gray-950 ";
+      li.className = "relative flex flex-1 justify-start items-center group gap-x-0 w-full h-full bg-cover overflow-hidden rounded bg-gray-200 dark:bg-gray-900 ";
       const imageSrc = item.image || "/images/default.png";
 
       li.innerHTML = `

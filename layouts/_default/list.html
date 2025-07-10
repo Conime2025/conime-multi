@@ -24,7 +24,7 @@
     {{/* Grid List Post */}}
     <ul class="gap-3 col-span-1 lg:col-span-3 grid grid-cols-1 lg:grid-cols-3 [&>*:nth-child(1)]:lg:col-span-2 [&>*:nth-child(7)]:lg:col-span-2 [&>*:nth-child(11)]:lg:col-span-2 [&>*:nth-child(18)]:lg:col-span-2">
       {{ range $sorted }}
-        <div class="relative col-span-1 lg:col-span-1 flex flex-col w-full h-[360px] rounded-3xl overflow-hidden z-10 shadow-lg shadow-gray-700/20 dark:shadow-gray-950/20">
+        <div class="relative col-span-1 lg:col-span-1 flex flex-col w-full h-[360px] rounded overflow-hidden z-10">
 
           {{/* Gambar Artikel */}}
           <a href="{{ .RelPermalink }}" class="w-full h-full overflow-hidden bg-cover">
@@ -37,7 +37,7 @@
           </a>
 
           {{/* Teks Artikel */}}
-         <div class="w-[70%] h-[60%] absolute bottom-0 left-0 rounded-tr-3xl transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
+         <div class="w-[70%] h-[60%] absolute bottom-0 left-0 rounded-tr transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start p-4 bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 hover:dark:bg-gray-800">
               <h2 class="w-full h-fit text-2xl">
                 <a href="{{ .RelPermalink }}" data-tippy-content="{{ .Title }}" class="hover:underline break-words line-clamp-4">{{ .Title }}</a>
               </h2>
@@ -114,17 +114,17 @@
       {{/* Grid List Konten Artikel */}}
       <ul class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-3 md:[&>*:nth-child(1)]:col-span-4 md:[&>*:nth-child(8)]:col-span-4 md:[&>*:nth-child(13)]:col-span-4 md:[&>*:nth-child(18)]:col-span-4 md:[&>*:nth-child(20)]:col-span-4">
         {{ range $pages }}
-          <li class="relative group flex flex-col col-span-2 w-full h-full bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900 overflow-hidden rounded-xl shadow-lg shadow-gray-700/40 dark:shadow-gray-950/40 transition duration-300 ease-in-out {{ if eq $.RelPermalink "/posts/" }}col-span-2 shadow-gray-700/0 dark:shadow-gray-950/0 bg-gradient-to-br from-white/0 via-gray-50/0 to-gray-300/0 dark:from-gray-900/0 dark:via-gray-950/0 dark:to-gray-950/0{{ end }}">
+          <li class="relative group flex flex-col col-span-2 w-full h-full bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 hover:dark:bg-gray-800 overflow-hidden rounded  transition duration-300 ease-in-out {{ if eq $.RelPermalink "/posts/" }}col-span-2 shadow-gray-700/0 dark:shadow-gray-950/0 bg-gradient-to-br from-white/0 via-gray-50/0 to-gray-300/0 dark:from-gray-900/0 dark:via-gray-950/0 dark:to-gray-950/0{{ end }}">
 
             {{/* Gambar Artikel */}}
             <a href="{{ .RelPermalink }}" class="bg-cover w-full h-full overflow-hidden transition duration-500 ease-in-out">
               {{ with .Params.image }}
-                <img loading="lazy" src="{{ . }}" alt="Gambar {{ $.Title }}" class="w-full h-[360px] object-cover rounded-t-xl {{ if eq $.RelPermalink "/posts/" }}opacity-80 blur-lg brightness-100{{ end }} brightness-75 hover:brightness-100 transition duration-300 ease-in-out" />
+                <img loading="lazy" src="{{ . }}" alt="Gambar {{ $.Title }}" class="w-full h-[360px] object-cover rounded-t {{ if eq $.RelPermalink "/posts/" }}opacity-80 blur-lg brightness-100{{ end }} brightness-75 hover:brightness-100 transition duration-300 ease-in-out" />
               {{ end }}
             </a>
 
             {{/* Info Teks Artikel */}}
-            <div class="w-[70%] h-[70%] absolute bottom-0 left-0 rounded-tr-3xl transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start p-4 bg-white dark:bg-gray-950 hover:bg-gray-300 hover:dark:bg-gray-900">
+            <div class="w-[70%] h-[70%] absolute bottom-0 left-0 rounded-tr transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start p-4 bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 hover:dark:bg-gray-800">
               <h2 class="w-full h-fit {{ if eq $.RelPermalink "/posts/" }} text-4xl justify-center items-center {{ else }} text-2xl {{ end }} line-clamp-4">
                 <a href="{{ .RelPermalink }}" data-tippy-content="{{ .Title }}" class="hover:underline break-words line-clamp-4">{{ .Title }}</a>
               </h2>
