@@ -13,7 +13,8 @@
   --color-conime-800: #75011b;
   --color-conime-900: #630318;
   --color-conime-950: #5c0317;
-  --color-gray-925: #0A1120
+  --color-gray-925: #0A1120;
+  --color-gray-850: #151D2F;
 }
 
 /* =============== CUSTOM FONTS =============== */
@@ -108,6 +109,16 @@
 }
 
 @layer components {
+
+.bg-darklight {
+  @apply  bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-300;
+  @apply transition duration-500 ease-in-out;
+}
+.bg-darklight-card {
+  @apply bg-white dark:bg-gray-850 hover:bg-gray-100 hover:dark:bg-gray-800 text-gray-900 dark:text-gray-300;
+  @apply transition duration-500 ease-in-out;
+}
+
   /* Tippy.js styling */
   .tippy-box {
     background-color: #111827 !important; /* gray-900 */

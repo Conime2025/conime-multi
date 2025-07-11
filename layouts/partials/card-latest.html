@@ -3,17 +3,14 @@
 
 <div
     class="relative flex flex-col w-full h-[360px] p-[0px]  rounded  overflow-hidden z-10">
-    <div
-        class="absolute inset-0 bg-gradient-to-br hidden from-conime-400 via-white to-conime-400 dark:from-conime-500 dark:via-gray-900 dark:to-conime-500 animate-spin delay-500 transition ease-in-out !duration-[10000s] z-0">
-    </div>
+
     <div class="label-new hidden opacity-0 w-fit h-fit transition duration-300 ease-in-out absolute left-0 top-0 z-20"
         data-url="{{ $page.RelPermalink }}">
         <div
             class="absolute tracking-[.6em] lg:tracking-[.5em] -left-20 top-4 shadow-xl shadow-gray-950/20 dark:shadow-gray-950/30 w-60 bg-conime-500 dark:bg-conime-500 text-white p-2 text-xl uppercase font-light flex items-center justify-center z-20 -rotate-45">
-            New</div>
+            {{ if eq $page.Lang "id" }}Baru{{ else }}New{{ end }}</div>
     </div>
-    <div class="fire-new hidden opacity-0 absolute transition duration-300 ease-in-out right-4 top-4 z-20 bg-gray-950 dark:bg-gray-900  rounded  w-fit h-fit p-2"
-        data-url="{{ $page.RelPermalink }}">
+    <div class="fire-new hidden opacity-0 absolute bg-darklight-card right-4 top-4 z-20 rounded  w-fit h-fit p-2" data-url="{{ $page.RelPermalink }}">
         <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000" class="flex items-center justify-center relative" data-tippy-content="New">
             <!-- SVG -->
              <svg class="svg1 opacity-0 animate-flicker origin-top w-8 h-8" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +36,7 @@
 
     <!-- Bagian teks -->
     <div
-        class="w-full h-[55%] z-10 font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-gray-200 hover:bg-gray-300 dark:bg-gray-900 hover:dark:bg-gray-800">
+        class="w-full h-[55%] z-10 font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-darklight-card">
 
         <h2 data-aos="fade-up" data-aos-delay="{{ mul $i 150 }}" data-aos-duration="2000" class="w-full h-fit line-clamp-3">
             <a href="{{ $page.RelPermalink }}" class="hover:underline break-words h-50 text-2xl"

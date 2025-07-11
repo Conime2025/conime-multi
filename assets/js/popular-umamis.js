@@ -26,11 +26,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     data.forEach((item, i) => {
       html += `
-        <li class="relative popular-html flex flex-col w-full h-full bg-gray-200 hover:bg-gray-300 dark:bg-gray-900/60 hover:dark:bg-gray-800/50 overflow-hidden  rounded   transition duration-300 ease-in-out">
+        <li class="relative popular-html flex flex-col w-full h-full bg-darklight-card overflow-hidden  rounded">
           <a href="${item.url}" class="bg-cover w-full h-full overflow-hidden transition duration-500 ease-in-out">
             <img loading="lazy" src="/images/default.jpg" alt="Popular News ${i + 1}" class="w-full h-[360px] object-cover  rounded -t brightness-75 hover:brightness-100 transition duration-300 ease-in-out" />
           </a>
-          <div class="w-full lg:w-[70%] h-[60%] lg:h-[70%] group absolute bottom-0 left-0  rounded -tr transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 hover:dark:bg-gray-800">
+          <div class="w-full lg:w-[70%] h-[60%] lg:h-[70%] group absolute bottom-0 left-0  rounded-tr font-light dark:font-extralight flex flex-col items-start justify-start gap-2 p-4 bg-darklight-card">
             <h2 class="w-fit inline-block lg:hidden">—0${i + 1}</h2>
             <h2 class="w-[80%] lg:w-full h-fit text-2xl line-clamp-3">
               <a href="${item.url}" class="hover:underline break-words">${item.url}</a>
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             <p class="bottom-4 items-end justify-end w-full text-xl flex-1 flex gap-0">
               <span>Views:</span> ${item.views}
             </p>
-            <h2 class="absolute inset-0 text-gray-500 dark:text-gray-900 text-5xl w-1 h-1 lg:w-full lg:h-full flex items-center justify-center font-bold opacity-0 lg:opacity-100 dark:lg:opacity-100 group-hover:lg:opacity-0 transition duration-500 ease-in-out">
+            <h2 class="absolute inset-0 text-gray-500 dark:text-gray-700 text-5xl w-1 h-1 lg:w-full lg:h-full flex items-center justify-center font-bold opacity-0 lg:opacity-100 dark:lg:opacity-100 group-hover:lg:opacity-0 transition duration-500 ease-in-out">
               #${i + 1}
             </h2>
           </div>
