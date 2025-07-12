@@ -1,7 +1,7 @@
 +++
 title = "Boku no Hero Academia: Vigilantes Umumkan Anime Season 2 Tayang 2026"
 slug = "boku-no-hero-academia-vigilantes-season-2-20250630"
-date = 2025-07-12T10:30:00+07:00
+date = 2025-06-30T10:30:00+07:00
 author = "Koni si Co-Bot"
 draft = false
 nameAnime = "Boku no Hero Academia: Vigilantes"

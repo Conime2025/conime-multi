@@ -8,7 +8,11 @@ nameAnime = "Kaoru Hana wa Rin to Saku"
 
 summary = "Anime Kaoru Hana wa Rin to Saku merilis teaser PV resmi beserta visual karakter untuk penayangan Juli 2025. Adaptasi manga karya Saka Mikami ini diproduksi oleh CloverWorks."
 
-lead = """<p>Anime <strong>Kaoru Hana wa Rin to Saku</strong> merilis teaser PV dan visual baru untuk penayangan Juli 2025. CloverWorks membagikan detail produksi serta jadwal penayangan melalui situs resmi dan kanal YouTube.</p>"""
+lead = "Anime Kaoru Hana wa Rin to Saku merilis teaser PV dan visual baru untuk penayangan Juli 2025. CloverWorks membagikan detail produksi serta jadwal penayangan melalui situs resmi dan kanal YouTube."
+
+conclusion = "Dengan animasi lembut khas CloverWorks, musik oleh Moeki Harada, serta lagu tema dari Keina Suda dan SennaRin, Kaoru Hana wa Rin to Saku diharapkan menjadi adaptasi romansa remaja yang hangat dan memikat penonton musim panas ini."
+
+synopsis = "Kaoru Hana wa Rin to Saku menceritakan Rintarō Tsumugi dan Kaoruko Waguri, dua siswa SMA dari sekolah rival yang perlahan menjalin hubungan lembut dan canggung. Berlatarkan kehidupan sehari-hari dan tradisi keluarga, cerita ini menonjolkan nuansa romansa realistis khas remaja Jepang."
 
 image = "/images/anime/kaoru-hana-official-visual.webp"
 imageTitle = "Official Visual for Kaoru Hana wa Rin to Saku Anime"
@@ -31,37 +35,37 @@ url = "https://kaoruhana-anime.com/news/?article_id=68044"
 [[sources]]
 name = "Kaoru Hana Official News 2025/06/06"
 url = "https://kaoruhana-anime.com/news/?article_id=67911"
-
 +++
-CloverWorks bersama Aniplex resmi merilis **Teaser PV** untuk adaptasi anime *Kaoru Hana wa Rin to Saku*, yang dijadwalkan tayang pada Juli 2025. Trailer ini menampilkan interaksi Rintarō Tsumugi dan Kaoruko Waguri dengan visual musim panas yang segar dan menenangkan.
 
-Visual resmi yang dirilis melalui situs anime menampilkan suasana kota modern, murid-murid sekolah rival, serta gerbang sekolah penuh bunga sakura yang menegaskan tema romansa remaja yang lembut.
+CloverWorks bersama Aniplex resmi merilis **teaser PV** untuk adaptasi anime *Kaoru Hana wa Rin to Saku*, yang dijadwalkan tayang **Juli 2025**. Trailer ini memperlihatkan interaksi lembut dan canggung antara **Rintarō Tsumugi** dan **Kaoruko Waguri**, dengan latar visual musim panas yang segar dan menenangkan.
+
+Visual resmi yang dirilis di situs anime menampilkan latar kota modern, siswa dari sekolah rival, hingga gerbang sekolah yang dihiasi bunga sakura, menegaskan tema romansa remaja yang hangat dan realistis.
 
 {{< related-auto >}}
 
 ### Detail Produksi
-- Studio: CloverWorks
-- Sutradara: Miyuki Kuroki (supervisi Haruka Tsuzuki)
-- Penulis Seri: Rino Yamazaki
-- Musik: Moeki Harada
-- Penayangan: Juli 2025 di Jepang (Tokyo MX, MBS, AT-X, BS11) dan global via Netflix
+- **Studio Produksi**: CloverWorks
+- **Sutradara**: Miyuki Kuroki (supervisi Haruka Tsuzuki)
+- **Komposisi Seri**: Rino Yamazaki
+- **Musik**: Moeki Harada
+- **Penayangan**: Juli 2025 di Jepang (Tokyo MX, MBS, AT-X, BS11) dan global via Netflix
 
-Anime ini diadaptasi dari manga karya Saka Mikami (Magazine Pocket / Kodansha), dengan 17 volume hingga Juni 2025, dan penjualan lebih dari 4,3 juta eksemplar.
+Anime ini diadaptasi dari manga karya **Saka Mikami** (Magazine Pocket / Kodansha) dengan **17 volume** hingga Juni 2025, dan lebih dari **4,3 juta kopi terjual**.
 
-> “Teaser PV menonjolkan animasi lembut khas CloverWorks serta interaksi realistis antar-karakter. Penonton disuguhi tema slice-of-life dengan nuansa hangat khas cerita cinta remaja.”
+> “Teaser PV menonjolkan animasi halus khas CloverWorks serta interaksi karakter yang realistis. Penonton disuguhi cerita slice-of-life dengan nuansa hangat yang sesuai dengan kisah cinta remaja.”
 
-### Tema Lagu (Opening & Ending)
+### Lagu Tema (Opening & Ending)
 Bersamaan dengan perilisan teaser PV, staf resmi juga mengumumkan lagu tema untuk anime ini:
 
-- **Opening (OP):** "ラブレター" (*Love Letter*) dinyanyikan oleh *Keina Suda*
-- **Ending (ED):** "こんな好きになるなんて" (*Konna Suki ni Naru Nante*) dinyanyikan oleh *SennaRin*
+- **Opening (OP):** "ラブレター" (*Love Letter*) oleh **Keina Suda**
+- **Ending (ED):** "こんな好きになるなんて" (*Konna Suki ni Naru Nante*) oleh **SennaRin**
 
-Foto-foto artis resmi juga dirilis melalui halaman berita resmi. CloverWorks menekankan kolaborasi dengan musisi yang dikenal lewat nuansa vokal yang lembut dan lirik emosional untuk mendukung tema romansa remaja dalam anime.
+Foto-foto artis resmi juga dirilis melalui laman berita resmi. CloverWorks menekankan kerja sama dengan musisi yang dikenal berkat vokal lembut dan lirik emosional, mendukung suasana romansa remaja yang ingin disampaikan anime ini.
 
 > Sumber gambar dan informasi: [Kaoru Hana Official News 2025/06/06](https://kaoruhana-anime.com/news/?article_id=67911)
 
 ### Teaser PV Resmi
-Video berdurasi sekitar 1 menit lebih ini  menampilkan keseharian Rintarō dan Kaoruko, interaksi kikuk antara siswa sekolah rival, serta adegan menawan di sekitar toko kue keluarga Tsumugi.
+Video berdurasi sekitar satu menit ini memperlihatkan keseharian Rintarō dan Kaoruko, interaksi kikuk antar siswa dari sekolah rival, serta adegan manis di sekitar toko kue keluarga Tsumugi.
 
 {{< youtube
     url="https://www.youtube.com/embed/wMDwbC-cAQg"
@@ -79,11 +83,11 @@ Berikut cuplikan visual resmi yang dirilis melalui situs kaoruhana-anime.com:
   sources="Kaoru Hana Official Site,https://kaoruhana-anime.com/news/"
 >}}
 
-Visual menunjukkan kontras antara dunia perkotaan modern dan suasana sekolah menengah atas Jepang dengan latar bunga sakura yang melambangkan keindahan masa muda.
+Visual ini memadukan suasana kota modern dengan nuansa khas sekolah menengah Jepang, dihiasi bunga sakura yang melambangkan keindahan masa muda yang singkat dan emosional.
 
 ### Jadwal dan Penayangan
-- Jepang: Mulai Juli 2025
-- Streaming Global: Netflix (tanggal spesifik per negara belum diumumkan)
-- Update terbaru tersedia di [situs resmi](https://kaoruhana-anime.com/news/)
+- **Jepang**: Mulai Juli 2025
+- **Streaming Global**: Netflix (tanggal spesifik tiap negara belum diumumkan)
+- Info dan pembaruan terbaru tersedia di [situs resmi](https://kaoruhana-anime.com/news/)
 
 {{< content-end >}}

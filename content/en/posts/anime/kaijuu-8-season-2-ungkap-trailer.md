@@ -1,21 +1,24 @@
 +++
-title = "Kaiju No. 8 Season 2 Ungkap Trailer Teaser dan Visual Gen Narumi"
-slug = "kaiju-no-8-season-2-teaser-gen-narumi-20250324"
+title = "Kaiju No. 8 Season 2 Reveals Teaser Trailer and Gen Narumi Visual"
+slug = "kaiju-no-8-season-2-teaser-gen-narumi-20250324-en"
 date = 2025-03-24T08:00:00+07:00
-author = "Koni si Co-Bot"
+author = "Koni the Co-Bot"
 draft = false
 nameAnime = "Kaiju No. 8"
 
-summary = "Kaiju No. 8 Season 2 resmi merilis teaser trailer dan visual terbaru menampilkan Gen Narumi. Studio Production I.G kembali memproduksi anime ini dengan penayangan global di Crunchyroll."
+summary = "Kaiju No. 8 Season 2 has released a teaser trailer and new character visual featuring Gen Narumi. Studio Production I.G returns to produce the anime with confirmed global streaming on Crunchyroll."
 
-lead = """<p><strong>Kaiju No. 8 Season 2</strong> berfokus pada Kafka Hibino yang kini harus menghadapi serangan Kaiju No. 9 yang kian cerdas dan mematikan. Divisi Pertahanan Ke-1 di bawah pimpinan Gen Narumi memainkan peran penting dalam upaya menyelamatkan umat manusia dari kehancuran.</p>"""
+lead = "Kaiju No. 8 Season 2 focuses on Kafka Hibino as he faces the increasingly cunning and deadly Kaiju No. 9. The Defense Force's First Division, led by Gen Narumi, will play a crucial role in humanity’s survival."
 
+conclusion = "With Production I.G's animation and Kaiju designs by Khara, plus a dramatic new opening theme by AURORA, Kaiju No. 8 Season 2 promises high-stakes battles and emotional storytelling for global audiences."
+
+synopsis = "In Season 2, Kafka Hibino continues to fight as Kaiju No. 8, facing the evolving threat of Kaiju No. 9. The story expands with the introduction of Gen Narumi, the First Division Captain known for his unorthodox methods and fierce combat skills, as the Defense Force rallies to protect Japan from annihilation."
 
 image = "/images/anime/kaiju-no-8-season-2.webp"
 imageTitle = "Official Teaser Visual for Kaiju No. 8 Season 2"
 
-tags = ["Kaiju No. 8", "Anime Baru", "Production I.G", "Gen Narumi", "Crunchyroll", "Trailer", "Recommended", "Anime Musim Mendatang"]
-categories = ["Berita", "Anime"]
+tags = ["Kaiju No. 8", "New Anime", "Production I.G", "Gen Narumi", "Crunchyroll", "Trailer", "Recommended", "Upcoming Anime"]
+categories = ["News", "Anime"]
 
 [[imageSources]]
 name = "Kaiju No. 8 Official Site"
@@ -31,55 +34,55 @@ url = "https://kaiju-no8.net/"
 
 [[videos]]
 url = "https://www.youtube.com/embed/86pUz-brRJQ"
-title = "アニメ『怪獣８号』第２期メインPV【新たな脅威】篇｜7月19日より毎週土曜23:00～放送･配信開始"
+title = "Kaiju No. 8 Season 2 Main PV [New Threat] | Broadcast/Streaming from July 19th Every Saturday at 23:00"
 source = "YouTube / TOHO animation"
 
 [[videos]]
 url = "https://www.youtube.com/embed/zhXaZ4pL8gQ"
-title = "アニメ『怪獣８号』第２期ティザーPV｜2025年7月放送開始"
+title = "Kaiju No. 8 Season 2 Teaser PV | Broadcast Begins July 2025"
 source = "YouTube / TOHO animation"
 +++
 
-TOHO animation merilis teaser trailer dan visual karakter Gen Narumi untuk *Kaiju No. 8 Season 2* pada 22 Maret 2025 melalui kanal resminya dan situs kaiju-no8.net.
+TOHO animation has unveiled the teaser trailer and official character visual for **Kaiju No. 8 Season 2** on March 22, 2025, via their official YouTube channel and the series website.
 
-Anime ini melanjutkan kisah Kafka Hibino setelah konfrontasi sengit dengan Kaiju No. 9. Season 2 akan memperkenalkan Gen Narumi, kapten Divisi Pertahanan Ke-1, yang menjadi pusat cerita berikutnya. Visual yang dirilis menampilkan Narumi dalam pose siap bertarung dengan ekspresi serius.
+The new season continues Kafka Hibino’s desperate fight after his intense confrontation with Kaiju No. 9. Season 2 will prominently feature **Gen Narumi**, the Captain of the Defense Force’s First Division, who takes center stage in the next arc. The released visual shows Narumi in a determined combat stance, emphasizing his serious and charismatic leadership.
 
-### Detail Produksi
-- Studio: Production I.G
-- Desain Kaiju: Khara (Hideaki Anno team)
-- Penayangan Global: Crunchyroll mengonfirmasi distribusi internasional.
-- Status: *Dalam Produksi / Coming Soon* (tanggal tayang spesifik belum diumumkan).
+### Production Details
+- **Studio**: Production I.G
+- **Kaiju Designs**: Khara (Hideaki Anno’s team)
+- **Global Streaming**: Crunchyroll confirmed international distribution.
+- **Status**: *In Production / Coming Soon* (no exact air date announced yet).
 
 {{< related-auto >}}
 
-### Trailer Teaser
-Teaser resmi menampilkan cuplikan Kafka dalam bentuk Kaiju No. 8, suasana gelap penuh ketegangan, dan sekilas aksi Gen Narumi. Animasi produksi I.G tampak mempertahankan kualitas Season 1, dengan desain Kaiju khas Khara.
+### Teaser Trailer
+The teaser PV showcases Kafka transforming into Kaiju No. 8, dark and tense atmospheres, and quick cuts of Gen Narumi in action. Production I.G’s animation maintains the quality fans loved in Season 1, while Khara’s Kaiju designs continue to deliver menacing, cinematic creatures.
 
-Tonton teaser resminya di kanal [YouTube TOHO animation](https://www.youtube.com/watch?v=86pUz-brRJQ).
+Watch the official teaser on [TOHO animation's YouTube channel](https://www.youtube.com/watch?v=86pUz-brRJQ).
 
-> “Narumi… dia jenius dalam membasmi kaiju. Tapi juga seorang yang terlalu bebas.” — Komentar Kafka di teaser.
+> “Narumi... he’s a genius at killing kaiju. But he’s also too free-spirited.” — Kafka’s line in the teaser.
 
-### Karakter Baru: Gen Narumi
-- Kapten Divisi 1, terkenal dengan skill bertarung tinggi.
-- Memimpin unit elite dengan metode tidak konvensional.
-- Teaser menekankan interaksi pertama Kafka dengan Narumi, membuka konflik dan dinamika tim yang lebih kompleks.
+### New Character: Gen Narumi
+- Captain of the elite First Division, renowned for his exceptional combat skills.
+- Leads with unconventional, sometimes reckless tactics.
+- The teaser hints at Kafka’s first encounter with Narumi, setting up complex team dynamics and new conflicts.
 
-### Opening Theme oleh AURORA
-Season 2 juga mengumumkan opening theme berjudul “You Can’t Run From Yourself” yang dinyanyikan oleh AURORA, musisi asal Norwegia dengan gaya vokal khas dan lirik emosional. Lagu ini diharapkan menambah intensitas drama dalam cerita, mendukung atmosfer tegang namun emosional khas *Kaiju No. 8*.
+### Opening Theme by AURORA
+Season 2 will feature an opening theme titled **“You Can’t Run From Yourself”** by Norwegian artist **AURORA**, known for her haunting vocals and emotive lyrics. This song is expected to add emotional intensity and support the series’ signature dark, tense atmosphere.
 
 {{< image-caption
   src="/images/anime/aurora.webp"
-  alt="Foto Aurora"
+  alt="Photo of AURORA"
   title="Official Artist Photo of AURORA for Kaiju No. 8 Opening Theme"
-  sources="Kaiju No. 8 Official Site Website,https://kaiju-no8.net/music/season2.html#opening"
+  sources="Kaiju No. 8 Official Site,https://kaiju-no8.net/music/season2.html#opening"
 >}}
 
-> “Saya selalu mencintai anime. Saya merasa sangat terhormat bisa menulis lagu untuk *Kaiju No. 8*. Waktu ke Jepang saya bertemu tim yang luar biasa dan bahkan bertemu Godzilla di TOHO! Lagu ini adalah doa supaya saya bisa kembali ke Jepang lagi.” — *AURORA (komentar resmi di situs Kaiju No. 8)*
+> “I’ve always loved anime. I’m truly honored to write a song for *Kaiju No. 8*. When I visited Japan, I met an amazing team and even saw Godzilla at TOHO! This song is a prayer to return to Japan again.” — *AURORA (official comment on Kaiju No. 8 site)*
 
-Kolaborasi dengan AURORA memberikan nuansa unik dan diharapkan memperkaya pengalaman menonton Season 2.
+This collaboration with AURORA brings an international touch and promises to enhance the emotional experience of Season 2.
 
-### Kapan Tayang?
-Belum ada tanggal resmi. Statusnya hanya "Production Confirmed" dan "Coming Soon" di situs resmi.
-Prediksi penayangan: 2025–2026.
+### When Will It Air?
+No official date has been announced yet. The status remains “Production Confirmed” and “Coming Soon” on the official site.
+Industry predictions suggest a release between late 2025 and 2026.
 
 {{< content-end >}}

@@ -2,7 +2,7 @@
 {{ $allEntries := index site.Menus $menuID }}
 
 {{ if $allEntries }}
-<nav id="navDesktop" class="w-full h-full text-gray-800 dark:text-gray-400 -z-[999] lg:z-[999] hidden lg:block overflow-y-hidden overflow-x-hidden px-0 lg:px-4 py-2 lg:py-2 mx-[15px] lg:mx-0  rounded ">
+<nav id="navDesktop" class="w-full h-full text-gray-800 dark:text-gray-400 -z-[999] lg:z-[999] hidden lg:block overflow-y-hidden overflow-x-hidden px-0 lg:px-4 py-2 lg:pt-2 lg:pb-0 mx-[15px] lg:mx-0  rounded ">
   <ul class="flex flex-col h-full gap-3 justify-center items-center [&>*:nth-child(8)]:lg:hidden [&>*:nth-child(9)]:lg:hidden">
     {{ range $allEntries }}
 

@@ -13,6 +13,6 @@
     <p class="text-sm text-left font-light dark:font-extralight italic noMy mt-2 px-4">{{ . }}</p>
   {{ end }}
   {{ with .Get "source" }}
-    <p class="text-sm text-left font-light dark:font-extralight italic noMy mb-2 px-4">Source Video: {{ . }}</p>
+    <p class="text-sm text-left font-light dark:font-extralight italic noMy mb-2 px-4">{{ if eq $.Page.Lang "id" }}Sumber Video:{{ else }}Video Source:{{ end }} {{ . }}</p>
   {{ end }}
 </div>

@@ -1,21 +1,28 @@
 +++
-title = "Gachiakuta Umumkan Penayangan Perdana Global, Lagu Tema, dan Karakter Baru Jelang Tayang 6 Juli"
+title = "Gachiakuta Announces Global Premiere Screenings, Theme Songs, and New Characters Ahead of July 6 Debut"
 typeContent = "anime"
 nameAnime = "Gachiakuta"
-slug = "anime-gachiakuta-penayangan-global-lagu-tema-karakter-baru-20250630"
+slug = "anime-gachiakuta-global-premiere-theme-songs-new-characters-20250630"
 date = 2025-06-30T09:00:00+07:00
-author = "Koni si Co-Bot"
+author = "Koni the Co-Bot"
 draft = false
 
-summary = "Anime Gachiakuta akan tayang 6 Juli 2025. PV utama, lagu tema oleh Paledusk dan DUSTCELL, serta pemutaran global di 15 negara telah diumumkan."
+summary = "The Gachiakuta anime is set to premiere on July 6, 2025. The main PV, theme songs by Paledusk and DUSTCELL, and global screenings in 15 countries have been announced."
 
-lead = "Anime Gachiakuta siap menembus pasar global lewat pemutaran perdana di berbagai negara dan menghadirkan tema musikal yang emosional."
+lead = "Gachiakuta aims for a global audience with premiere events in multiple countries and emotionally charged theme songs by renowned artists."
 
+conclusion = "With official trailers, theme songs, and a sweeping global campaign, Gachiakuta is ready to captivate audiences worldwide this summer with its dark, socially critical story."
+
+synopsis = "Gachiakuta follows Rudo, a young man cast into a wasteland of trash after being falsely accused of a crime he didn't commit. In this harsh environment filled with violence and discarded remnants of society, Rudo struggles to survive while seeking truth and justice. The anime blends intense action with social themes of inequality, exile, and the human values hidden behind a system that throws people away."
 
 image = "/images/anime/gachiakuta-world-takeover.webp"
-imageTitle = "Official Teaser Visual untuk Gachiakuta Anime"
-tags = ["Gachiakuta", "Anime Baru", "Bones", "Paledusk", "DUSTCELL", "Recommended", "Pemutaran Global", "Anime Musim Panas 2025"]
-categories = ["Berita", "Anime"]
+imageTitle = "Official Teaser Visual for Gachiakuta Anime"
+tags = ["Gachiakuta", "New Anime", "Bones", "Paledusk", "DUSTCELL", "Recommended", "Global Screenings", "Summer 2025 Anime"]
+categories = ["News", "Anime"]
+twitterEmbed = ""
+twitterEmbedTitle = ""
+instagramEmbed = ""
+instagramEmbedTitle = ""
 
 [[imageSources]]
 name = "Gachiakuta Anime Official - Teaser Visual"
@@ -40,47 +47,48 @@ title = "Here Comes Gachiakuta! | Global campaign concept video"
 source = "YouTube / 'GACHIAKUTA' Anime Official Channel"
 +++
 
+The *Gachiakuta* anime has officially announced its broadcast debut for **July 6, 2025** at 23:30 JST on CBC/TBS in Japan. Alongside the release date, the official site revealed the main promotional video, new teaser visual, theme song details, and plans for global premiere screenings in 15 countries under the ambitious *Gachiakuta World Takeover* campaign.
 
-Anime *Gachiakuta* dijadwalkan tayang pada 6 Juli 2025 pukul 23:30 JST melalui jaringan CBC/TBS di Jepang. Pengumuman resmi dari situs anime menyertakan perilisan PV utama, visual baru, informasi lagu tema, dan pemutaran perdana di 15 negara dalam kampanye bertajuk *Gachiakuta World Takeover*.
+Adapted from Kei Urana’s gritty manga, *Gachiakuta* promises a dark shonen action story with sharp social commentary about a world that discards people as easily as trash. The “World Takeover” initiative highlights the production’s global ambitions, aiming to connect with fans around the world right from launch.
 
-### Lagu Tema:
+### Official Theme Songs
 
-- Opening (OP): "HUGs" oleh Paledusk
-- Ending (ED): "灯火 (Tomoshibi)" oleh DUSTCELL
+The anime will feature two specially written theme songs:
+- **Opening (OP)**: "HUGs" by **Paledusk**
+- **Ending (ED)**: "灯火 (Tomoshibi)" by **DUSTCELL**
 
-Kedua lagu ditulis khusus untuk anime ini. Paledusk menyebut lirik mereka sebagai yang paling emosional, sementara DUSTCELL menggambarkan “Tomoshibi” sebagai lagu yang menyuarakan perjuangan melawan ketidakadilan dan pencarian makna hidup yang sejati.
+Paledusk describes their lyrics as some of their most emotional work to date, while DUSTCELL explains that *Tomoshibi* expresses the struggle against injustice and the search for true meaning in life.
 
-### Karakter Baru & Seiyuu:
+### New Characters & Voice Cast
 
-- Regto (ayah angkat Rudo): Toshiyuki Morikawa
-- Jabber (anggota organisasi "Arashiya"): Yūki Shin
+- **Regto** (Rudo's foster father): Toshiyuki Morikawa
+- **Jabber** (member of the "Arashiya" organization): Yūki Shin
 
-Keduanya mengekspresikan antusiasme mereka terhadap karakter masing-masing dan kedalaman emosi yang dibawakan dalam cerita.
+Both voice actors shared their enthusiasm for these roles, emphasizing the emotional depth and complexity of the characters they portray.
 
 {{< related-auto >}}
 
-### Penayangan Global: Gachiakuta World Takeover
+### Global Screenings: Gachiakuta World Takeover
 
-Pemutaran spesial akan digelar di 15 negara termasuk:
-- Amerika Serikat (Anime Expo)
-- Prancis (Japan Expo)
-- Brasil, Italia, India, Meksiko, Jerman, Singapura, Thailand, Taiwan, Hong Kong, Filipina, Malaysia, Rusia, dan Jepang (Shinjuku Piccadilly, 4 Juli)
+Special premiere screenings are planned in 15 countries, including:
+- United States (Anime Expo)
+- France (Japan Expo)
+- Brazil, Italy, India, Mexico, Germany, Singapore, Thailand, Taiwan, Hong Kong, Philippines, Malaysia, Russia, and Japan (Shinjuku Piccadilly, July 4)
 
-Empat pengisi suara utama (Rudo, Enjin, Zanka, Riyou) akan hadir dalam event pemutaran perdana di Jepang.
+The four main voice actors (Rudo, Enjin, Zanka, Riyou) will attend the Japanese premiere event, adding star power to the launch festivities.
 
-Kampanye global ini juga mencakup:
-- Graffiti video "Here Comes Gachiakuta!" multibahasa
-- Wawancara kreator "Behind Gachiakuta"
-- Web tool interaktif: [Gachiakuta Graffiti Maker](https://graffiti-maker.gachiakuta-anime.com)
+The *World Takeover* campaign also features:
+- Multilingual graffiti-style promo video “Here Comes Gachiakuta!”
+- Creator interviews in "Behind Gachiakuta"
+- Interactive online tool: [Gachiakuta Graffiti Maker](https://graffiti-maker.gachiakuta-anime.com)
+
 {{< image-caption
   src="/images/anime/gachiakuta-grafiti.webp"
   alt="Gachiakuta Anime Official - Graffiti Visual"
-  title="Official Graffiti Visual untuk Gachiakuta Anime"
+  title="Official Graffiti Visual for Gachiakuta Anime"
   sources="Gachiakuta Anime Official - Graffiti Visual Website,https://gachiakuta-anime.com/news/detail/?id=1125461"
 >}}
 
-
-*Gachiakuta* bukan sekadar anime aksi, tetapi juga refleksi sosial tentang ketimpangan dan keberanian menghadapi sistem yang membuangmu. Pastikan untuk menontonnya musim panas ini!
-
+*Gachiakuta* isn’t just an action anime—it’s also a stark reflection on social inequality, discarded people, and the courage to resist systems that want to erase them. With Studio Bones producing, emotional theme songs, and an ambitious global campaign, it’s set to be one of the most talked-about premieres of summer 2025.
 
 {{< content-end >}}

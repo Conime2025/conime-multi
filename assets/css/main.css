@@ -1416,6 +1416,10 @@
     --tw-tracking: .3em;
     letter-spacing: .3em;
   }
+  .tracking-\[\.4em\] {
+    --tw-tracking: .4em;
+    letter-spacing: .4em;
+  }
   .tracking-\[\.6em\] {
     --tw-tracking: .6em;
     letter-spacing: .6em;
@@ -2455,14 +2459,19 @@
       padding-inline: 15%;
     }
   }
-  .lg\:py-2 {
-    @media (width >= 64rem) {
-      padding-block: calc(var(--spacing) * 2);
-    }
-  }
   .lg\:py-4 {
     @media (width >= 64rem) {
       padding-block: calc(var(--spacing) * 4);
+    }
+  }
+  .lg\:pt-2 {
+    @media (width >= 64rem) {
+      padding-top: calc(var(--spacing) * 2);
+    }
+  }
+  .lg\:pb-0 {
+    @media (width >= 64rem) {
+      padding-bottom: calc(var(--spacing) * 0);
     }
   }
   .lg\:text-base {

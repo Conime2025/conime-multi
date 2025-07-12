@@ -71,4 +71,4 @@ Akibat keterbatasan durasi, latar belakang karakter pendukung seperti Megumi ata
 
 “Pembuat adaptasi ini benar-benar memahami materi sumbernya—menyuguhkan aksi pedang cepat dan emosional yang tepat.” — *IMDb user 'H‑*'*
 
-{{< review-end >}}
+{{< content-end >}}

@@ -14,7 +14,7 @@ conclusion = """<p><em>Belle</em> adalah pengalaman sinematik yang mendalam — 
 
 image = "/images/anime/BellePosterBlank.webp"
 imageTitle = "Belle Official Movie Poster Visual"
-tags = ["Belle", "Anime Movie", "Mamoru Hosoda", "Recommended", "Studio Chizu", "Soundtrack", "Virtual Reality", "Ulasan"]
+tags = ["Belle", "Anime Movie", "Mamoru Hosoda", "Recommended", "Studio Chizu", "Soundtrack", "Virtual Reality", "Review"]
 categories = ["Ulasan", "Anime"]
 
 [[imageSources]]
@@ -87,4 +87,4 @@ Dunia virtual *U* digambarkan begitu spektakuler. Penuh warna, kreatif, dan teta
 Saya tak menyangka film ini akan seberkesan itu. *Belle* bukan cuma film tentang teknologi dan virtualitas—ini tentang suara yang terpendam, tentang luka yang kita sembunyikan, dan tentang kekuatan untuk menyembuhkan. Kalau suatu hari kisah hidup saya difilmkan, saya ingin musiknya sekeren ini.
 
 
-{{< review-end >}}
+{{< content-end >}}

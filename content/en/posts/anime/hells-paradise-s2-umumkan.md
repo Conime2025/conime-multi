@@ -1,20 +1,24 @@
 +++
-title = "Hell’s Paradise (Jigokuraku) Season 2 Umumkan Jadwal Tayang Januari 2026"
-slug = "hells-paradise-season-2-januari-2026-20250630"
+title = "Jigokuraku (Hell’s Paradise) Season 2 Confirms January 2026 Premiere"
+slug = "jigokuraku-season-2-january-2026-20250630-en"
 date = 2025-06-30T08:00:00+07:00
-author = "Koni si Co-Bot"
+author = "Koni the Co-Bot"
 draft = false
-nameAnime = "Hell’s Paradise (Jigokuraku)"
+nameAnime = "Jigokuraku"
 
-summary = "Hell’s Paradise (Jigokuraku) resmi memastikan Season 2 tayang Januari 2026. Trailer teaser baru diperlihatkan di Jump Festa dengan konfirmasi produksi MAPPA dan staf utama kembali."
+summary = "Jigokuraku (Hell’s Paradise) officially confirms Season 2 for January 2026. A new teaser trailer was shown at Jump Festa with MAPPA's production and main staff returning."
 
-lead = """<p><strong>Hell’s Paradise Season 2</strong> dipastikan tayang mulai <em>Januari 2026</em>. Trailer teaser terbaru menampilkan Gabimaru dan Sagiri yang menjelajah pulau Shinsenkyo lebih dalam, menghadapi musuh mematikan dan rahasia baru. Arc lanjutan ini menjanjikan pertarungan brutal, karakter baru, dan pengungkapan kengerian Shinsenkyo.</p>"""
+lead = "Jigokuraku (Hell’s Paradise) Season 2 is confirmed for January 2026. The latest teaser trailer shows Gabimaru and Sagiri delving deeper into Shinsenkyo, facing deadly new enemies and uncovering dark secrets."
+
+conclusion = "With the broadcast date confirmed, an official teaser, and a major Jump Festa reveal, Jigokuraku is ready to deliver another intense and brutal chapter in January 2026."
+
+synopsis = "In Season 2, Gabimaru and Sagiri continue their deadly journey deeper into the terrifying island of Shinsenkyo. As they pursue the Elixir of Life, they face immortal beings known as Tensen, deadly yokai, and dark conspiracies behind the prisoners’ mission. This new season promises brutal battles, chilling mysteries, and emotional character development as the truth behind Shinsenkyo unfolds."
 
 image = "/images/anime/hells-paradise-season-2-teaser.webp"
-imageTitle = "Hell's Paradise Season 2 Official Teaser Visual"
+imageTitle = "Jigokuraku Season 2 Official Teaser Visual"
 
-tags = ["Hell's Paradise", "Jigokuraku", "Anime Baru", "MAPPA", "Anime Musim Mendatang"]
-categories = ["Berita", "Anime"]
+tags = ["Jigokuraku", "Hell's Paradise", "New Anime", "MAPPA", "Upcoming Anime"]
+categories = ["News", "Anime"]
 
 [[imageSources]]
 name = "Jigokuraku Anime Official"
@@ -26,47 +30,47 @@ url = "https://www.crunchyroll.com/news/latest/2024/12/21/hells-paradise-season-
 
 [[videos]]
 url = "https://www.youtube.com/embed/QyEDvQFWH3E"
-title = "Hell’s Paradise TV Anime Season 2 Teaser PV / January 2026 Broadcast"
+title = "Jigokuraku TV Anime Season 2 Teaser PV / January 2026 Broadcast"
 source = "YouTube / TWIN ENGINE"
 +++
 
-MAPPA dan Crunchyroll resmi mengumumkan **Hell’s Paradise Season 2** akan tayang pada **Januari 2026**. Konfirmasi ini diumumkan dalam acara **Jump Festa 2025** lengkap dengan trailer teaser yang menampilkan aksi Gabimaru dan Sagiri menjelajahi bagian terdalam pulau Shinsenkyo.
+MAPPA and Crunchyroll have officially confirmed **Jigokuraku Season 2** for **January 2026**. The announcement was made during **Jump Festa 2025**, featuring a new teaser trailer showcasing Gabimaru and Sagiri venturing deeper into the island of Shinsenkyo.
 
-### Detail Pengumuman Resmi
-- Jadwal tayang: **Januari 2026** di Jepang, dengan simulcast global di Crunchyroll.
-- Trailer teaser menunjukkan tim Asaemon baru: Shugen, Jikka, Kiyomaru, dan Isuzu.
-- Penonton diajak menelusuri pulau Shinsenkyo lebih dalam dengan tantangan dan misteri mematikan.
-- Studio Produksi: MAPPA (melanjutkan produksi sejak Season 1).
+Adapted from Yuji Kaku’s dark manga, Jigokuraku follows condemned criminals and executioners sent to a mysterious island to find the Elixir of Life. But on this deadly island, they encounter immortal beings called Tensen, terrifying yokai, and a chilling conspiracy testing their morals and humanity.
+
+### Official Announcement Details
+- Premiere: **January 2026** in Japan with global simulcast on Crunchyroll.
+- Teaser trailer reveals new Asaemon characters: Shugen, Jikka, Kiyomaru, Isuzu.
+- Atmosphere is darker than ever, with new enemies, challenges, and hidden secrets on Shinsenkyo.
+- Production Studio: MAPPA (returning from Season 1).
 
 > “Season 2 confirmed for January 2026 broadcast.” — [Crunchyroll](https://www.crunchyroll.com/news/latest/2024/12/21/hells-paradise-season-2-premieres-january-2026-crunchyroll-stream)
 
-### Cuplikan Teaser Resmi
-Teaser PV menampilkan atmosfer suram, pertarungan sengit, dan visual pulau yang semakin mengerikan. Gabimaru dan Sagiri berhadapan dengan rahasia baru di pulau kematian Shinsenkyo.
+### Teaser Highlights
+The PV showcases the series’ grim tone, intense battle sequences, and the island’s horrifying visuals. Gabimaru and Sagiri confront deadly secrets lurking deeper within the island.
 
-> “Bertahan hidup bukan lagi pilihan. Ini adalah takdir.” — Kutipan dalam teaser PV.
+> “Survival is no longer a choice. It's destiny.” — Quote from the teaser PV.
 
-### Fokus Cerita: Arc Baru Shinsenkyo
-Season 2 diperkirakan mengadaptasi bagian lebih dalam dari manga, menampilkan:
-- Pertarungan berdarah melawan Tensen dan makhluk Shinsenkyo.
-- Konspirasi di balik pengiriman narapidana ke pulau tersebut.
-- Karakter-karakter Asaemon baru dengan latar cerita unik.
+### Story Focus: New Shinsenkyo Arc
+Season 2 is expected to adapt a darker, deeper part of the manga, featuring:
+- Bloody battles against Tensen and other monstrous beings.
+- The chilling truth behind the prisoners’ mission.
+- New Asaemon characters with complex motivations and backstories.
 
 {{< related-auto >}}
 
-### Komentar Resmi & Produksi
-Studio MAPPA mengonfirmasi kembalinya staf utama:
-- Sutradara: Kaori Makita
-- Komposisi Seri: Akira Kindaichi
-- Desain Karakter: Akitsugu Hisagi
-- Musik: Yoshiaki Dewa
+### Official Comments & Production
+Studio MAPPA has confirmed returning main staff:
+- Director: Kaori Makita
+- Series Composition: Akira Kindaichi
+- Character Design: Akitsugu Hisagi
+- Music: Yoshiaki Dewa
 
-Pengisi suara utama dari season pertama juga dipastikan kembali. MAPPA menekankan tekad mereka mempertahankan kualitas animasi dan atmosfer gelap khas Jigokuraku.
+The main voice cast will also return. MAPPA emphasizes their commitment to maintaining the dark, intense atmosphere and high-quality animation fans expect from Jigokuraku.
 
-> “Please look forward to more updates!” — [Jigokuraku Anime Official](https://jigokuraku.com/)
-
-### Kapan Tayang?
-- Jadwal resmi: **Januari 2026**.
-- Penayangan global: **Simulcast di Crunchyroll**.
-- Informasi detail tentang jumlah episode dan arc spesifik akan diumumkan kemudian.
+### Release Schedule
+- Official premiere: **January 2026**.
+- Global streaming: **Simulcast on Crunchyroll**.
+- Details on episode count and specific arcs will be announced later.
 
 {{< content-end >}}

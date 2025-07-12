@@ -12,6 +12,8 @@ lead = "Anime horor klasik Shonen Jump ini mengikuti Meisuke Nueno, guru SD deng
 
 conclusion = "Dengan animasi Studio KAI, musik Evan Call, dan lagu tema dari BURNOUT SYNDROMES dan MIMiNARI feat. Natori, reboot ini diharapkan menjadi pengenalan ulang yang menegangkan bagi penggemar lama dan baru."
 
+synopsis = "Jigoku Sensei Nube (2025) menceritakan Meisuke Nueno, guru SD berhati hangat yang memiliki tangan iblis untuk menyegel yokai. Dalam reboot ini, Nube kembali menghadapi serangkaian kasus supranatural yang mengancam murid-muridnya, dengan cerita yang lebih gelap, desain modern, dan nuansa horor khas Shonen Jump yang diadaptasi untuk penonton masa kini."
+
 image = "/images/anime/jigoku-sensei-nube-2025-key-visual.webp"
 imageTitle = "Key Visual Resmi Jigoku Sensei Nube 2025"
 
@@ -35,7 +37,9 @@ name = "YouTube 東映アニメーション公式"
 url = "https://www.youtube.com/watch?v=s94P7jmEspQ"
 +++
 
-Anime horor legendaris *Jigoku Sensei Nube* kembali dalam bentuk reboot modern yang tayang perdana **2 Juli 2025**. Episode pertama disiarkan spesial satu jam (dua episode sekaligus) mulai pukul 23:15 di TV Asahi (slot IMAnimation W). Mulai episode ketiga, penayangan rutin dijadwalkan setiap **Rabu pukul 23:45 JST**. Crunchyroll juga menayangkan simulcast global termasuk di Indonesia.
+Anime horor legendaris *Jigoku Sensei Nube* siap kembali dalam bentuk reboot modern yang tayang perdana **2 Juli 2025**. Episode pertama akan hadir sebagai siaran spesial satu jam (dua episode sekaligus) mulai pukul 23:15 JST di TV Asahi (slot IMAnimation W). Setelah itu, mulai episode ketiga, jadwal tayang reguler berlangsung setiap **Rabu pukul 23:45 JST**. Crunchyroll juga sudah mengonfirmasi penayangan simulcast global, termasuk di Indonesia.
+
+Reboot 2025 ini menegaskan niat untuk memikat dua generasi: para penggemar lama yang rindu atmosfer horor klasik Shonen Jump, dan penonton baru yang mengharapkan produksi modern dengan narasi gelap. Studio KAI menjanjikan animasi yang lebih sinematik, desain karakter yang diperbarui tapi setia pada aslinya, dan nuansa menegangkan yang lebih matang.
 
 > **Terjemahan Poster Resmi**
 > - *2025 新アニメ化決定* = "Anime Baru Ditetapkan 2025"
@@ -52,26 +56,29 @@ Anime horor legendaris *Jigoku Sensei Nube* kembali dalam bentuk reboot modern y
   - **Cour 1**: Juli–September 2025 (12 episode)
   - **Cour 2**: Musim dingin 2026
 
-### Lagu Tema
-- **Opening Theme**: 「鬼灯」 (*Hoozuki*) oleh BURNOUT SYNDROMES
-- **Ending Theme**: 「朱く染めて」 (*Akaku Somete*) oleh MIMiNARI feat. なとり (Natori)
+### Lagu Tema Resmi
+- **Opening Theme**: 「鬼灯」 (*Hoozuki*) oleh **BURNOUT SYNDROMES**
+- **Ending Theme**: 「朱く染めて」 (*Akaku Somete*) oleh **MIMiNARI feat. なとり (Natori)**
+
+Kedua lagu tema dijanjikan akan menangkap suasana horor dan dramatis khas *Nube*, dengan lirik yang mendalami sisi gelap manusia dan dunia yokai.
 
 ### Pengisi Suara Utama
-- Ryotaro Okiayu sebagai **Meisuke Nueno (Nube)**
-- Toshiyuki Morikawa sebagai **Kyousuke Tamamo**
+- **Ryotaro Okiayu** sebagai **Meisuke Nueno (Nube)**
+- **Toshiyuki Morikawa** sebagai **Kyousuke Tamamo**
+
+Kembalinya Ryotaro Okiayu di peran utama dipuji sebagai salah satu daya tarik nostalgia, mengingat perannya ikonik di adaptasi klasik 1990-an.
 
 {{< related-auto >}}
 
-Trailer terbaru menampilkan suasana horor kelam, tangan iblis legendaris, dan desain modern yang setia pada nuansa asli manga. Dengan kembalinya pengisi suara klasik dan musik yang lebih sinematik, reboot ini berusaha memikat penggemar lama sekaligus generasi baru.
+Trailer terbaru memperlihatkan tangan iblis Nube yang legendaris, murid-murid yang diteror yokai, serta suasana sekolah yang berubah menjadi medan pertarungan supranatural. Desain modern tapi setia pada manganya, musik latar mencekam, dan warna gelap mendominasi untuk membangun ketegangan.
+
+Dengan dukungan animasi Studio KAI, komposisi musik oleh Evan Call, dan partisipasi band populer seperti BURNOUT SYNDROMES, reboot ini tidak hanya sekadar remake, tapi juga pengenalan ulang yang serius bagi generasi baru.
 
 {{< youtube
 url = "https://www.youtube.com/embed/s94P7jmEspQ"
 title = "Trailer Resmi 'Jigoku Sensei Nube' 2025"
 source = "YouTube / 東映アニメーション公式" >}}
 
-Penggemar dapat mengikuti pembaruan terbaru melalui situs resmi dan akun X untuk informasi karakter tambahan, klip spesial, dan detail penayangan global lebih lanjut.
-
-Untuk info lengkap, kunjungi:
-- Situs resmi: [nube-anime.com](https://nube-anime.com/news/)
+Penonton bisa menantikan lebih banyak info karakter tambahan, cuplikan khusus, dan detail distribusi internasional melalui situs resmi dan akun X resmi mereka.
 
 {{< content-end >}}

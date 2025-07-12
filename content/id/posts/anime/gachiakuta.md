@@ -11,11 +11,18 @@ summary = "Anime Gachiakuta akan tayang 6 Juli 2025. PV utama, lagu tema oleh Pa
 
 lead = "Anime Gachiakuta siap menembus pasar global lewat pemutaran perdana di berbagai negara dan menghadirkan tema musikal yang emosional."
 
+conclusion = "Dengan peluncuran trailer, lagu tema resmi, dan kampanye global di berbagai negara, Gachiakuta siap memukau penonton musim panas 2025 dengan kisah aksi gelap yang penuh kritik sosial."
+
+synopsis = "Gachiakuta mengikuti Rudo, seorang pemuda yang dibuang ke dunia limbah setelah dituduh melakukan kejahatan yang tidak dilakukannya. Di tengah lingkungan keras yang penuh kekerasan dan sampah, Rudo berjuang untuk bertahan hidup sambil mencari kebenaran dan keadilan. Anime ini memadukan aksi intens dengan tema sosial tentang ketimpangan, pengasingan, dan nilai kemanusiaan di balik sistem yang membuang mereka."
 
 image = "/images/anime/gachiakuta-world-takeover.webp"
 imageTitle = "Official Teaser Visual untuk Gachiakuta Anime"
 tags = ["Gachiakuta", "Anime Baru", "Bones", "Paledusk", "DUSTCELL", "Recommended", "Pemutaran Global", "Anime Musim Panas 2025"]
 categories = ["Berita", "Anime"]
+twitterEmbed = ""
+twitterEmbedTitle = ""
+instagramEmbed = ""
+instagramEmbedTitle = ""
 
 [[imageSources]]
 name = "Gachiakuta Anime Official - Teaser Visual"
@@ -40,38 +47,41 @@ title = "Here Comes Gachiakuta! | Global campaign concept video"
 source = "YouTube / 'GACHIAKUTA' Anime Official Channel"
 +++
 
+Anime *Gachiakuta* resmi mengumumkan jadwal tayang perdana pada **6 Juli 2025** pukul 23:30 JST di jaringan CBC/TBS Jepang. Bersamaan dengan itu, PV utama, visual teaser baru, informasi lagu tema, serta kampanye pemutaran global di 15 negara dalam program *Gachiakuta World Takeover* juga diungkap.
 
-Anime *Gachiakuta* dijadwalkan tayang pada 6 Juli 2025 pukul 23:30 JST melalui jaringan CBC/TBS di Jepang. Pengumuman resmi dari situs anime menyertakan perilisan PV utama, visual baru, informasi lagu tema, dan pemutaran perdana di 15 negara dalam kampanye bertajuk *Gachiakuta World Takeover*.
+Adaptasi dari manga karya Kei Urana ini menjanjikan aksi shonen gelap penuh intensitas sekaligus kritik sosial tentang dunia yang membuang orang-orangnya ke dalam limbah. Kampanye “World Takeover” sendiri menegaskan ambisi anime ini untuk menjangkau audiens internasional sejak hari pertama.
 
-### Lagu Tema:
+### Lagu Tema Resmi
 
-- Opening (OP): "HUGs" oleh Paledusk
-- Ending (ED): "灯火 (Tomoshibi)" oleh DUSTCELL
+Anime ini akan menampilkan dua lagu tema khusus:
+- **Opening (OP)**: "HUGs" oleh **Paledusk**
+- **Ending (ED)**: "灯火 (Tomoshibi)" oleh **DUSTCELL**
 
-Kedua lagu ditulis khusus untuk anime ini. Paledusk menyebut lirik mereka sebagai yang paling emosional, sementara DUSTCELL menggambarkan “Tomoshibi” sebagai lagu yang menyuarakan perjuangan melawan ketidakadilan dan pencarian makna hidup yang sejati.
+Paledusk menyebut lirik mereka sebagai karya paling emosional yang mereka buat, sementara DUSTCELL menjelaskan bahwa *Tomoshibi* adalah lagu tentang melawan ketidakadilan dan menemukan makna sejati dalam hidup.
 
-### Karakter Baru & Seiyuu:
+### Karakter Baru & Seiyuu
 
-- Regto (ayah angkat Rudo): Toshiyuki Morikawa
-- Jabber (anggota organisasi "Arashiya"): Yūki Shin
+- **Regto** (ayah angkat Rudo): Toshiyuki Morikawa
+- **Jabber** (anggota organisasi "Arashiya"): Yūki Shin
 
-Keduanya mengekspresikan antusiasme mereka terhadap karakter masing-masing dan kedalaman emosi yang dibawakan dalam cerita.
+Keduanya berbagi antusiasme mengenai karakter mereka, menekankan emosi mendalam dan nuansa kompleks dalam cerita.
 
 {{< related-auto >}}
 
 ### Penayangan Global: Gachiakuta World Takeover
 
-Pemutaran spesial akan digelar di 15 negara termasuk:
+Pemutaran perdana spesial akan diadakan di 15 negara, termasuk:
 - Amerika Serikat (Anime Expo)
 - Prancis (Japan Expo)
 - Brasil, Italia, India, Meksiko, Jerman, Singapura, Thailand, Taiwan, Hong Kong, Filipina, Malaysia, Rusia, dan Jepang (Shinjuku Piccadilly, 4 Juli)
 
-Empat pengisi suara utama (Rudo, Enjin, Zanka, Riyou) akan hadir dalam event pemutaran perdana di Jepang.
+Empat seiyuu utama (Rudo, Enjin, Zanka, Riyou) dijadwalkan hadir di acara premiere di Jepang, menambah daya tarik acara ini.
 
-Kampanye global ini juga mencakup:
-- Graffiti video "Here Comes Gachiakuta!" multibahasa
+Kampanye global *World Takeover* juga mencakup:
+- Video graffiti multibahasa “Here Comes Gachiakuta!”
 - Wawancara kreator "Behind Gachiakuta"
 - Web tool interaktif: [Gachiakuta Graffiti Maker](https://graffiti-maker.gachiakuta-anime.com)
+
 {{< image-caption
   src="/images/anime/gachiakuta-grafiti.webp"
   alt="Gachiakuta Anime Official - Graffiti Visual"
@@ -79,8 +89,6 @@ Kampanye global ini juga mencakup:
   sources="Gachiakuta Anime Official - Graffiti Visual Website,https://gachiakuta-anime.com/news/detail/?id=1125461"
 >}}
 
-
-*Gachiakuta* bukan sekadar anime aksi, tetapi juga refleksi sosial tentang ketimpangan dan keberanian menghadapi sistem yang membuangmu. Pastikan untuk menontonnya musim panas ini!
-
+*Gachiakuta* bukan hanya anime aksi, tapi juga refleksi sosial tentang ketimpangan, sampah masyarakat, dan keberanian menghadapi sistem yang menyingkirkan mereka. Dengan produksi Studio Bones, lagu tema emosional, dan kampanye global masif, serial ini menjadi salah satu tayangan paling dinanti musim panas 2025.
 
 {{< content-end >}}

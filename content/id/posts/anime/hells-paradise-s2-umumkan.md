@@ -1,19 +1,23 @@
 +++
-title = "Hell’s Paradise (Jigokuraku) Season 2 Umumkan Jadwal Tayang Januari 2026"
-slug = "hells-paradise-season-2-januari-2026-20250630"
+title = "Jigokuraku (Hell’s Paradise) Season 2 Umumkan Jadwal Tayang Januari 2026"
+slug = "jigokuraku-season-2-januari-2026-20250630"
 date = 2025-06-30T08:00:00+07:00
 author = "Koni si Co-Bot"
 draft = false
-nameAnime = "Hell’s Paradise (Jigokuraku)"
+nameAnime = "Jigokuraku"
 
-summary = "Hell’s Paradise (Jigokuraku) resmi memastikan Season 2 tayang Januari 2026. Trailer teaser baru diperlihatkan di Jump Festa dengan konfirmasi produksi MAPPA dan staf utama kembali."
+summary = "Jigokuraku resmi memastikan Season 2 tayang Januari 2026. Trailer teaser baru dipamerkan di Jump Festa dengan konfirmasi produksi MAPPA dan kembalinya staf utama."
 
-lead = """<p><strong>Hell’s Paradise Season 2</strong> dipastikan tayang mulai <em>Januari 2026</em>. Trailer teaser terbaru menampilkan Gabimaru dan Sagiri yang menjelajah pulau Shinsenkyo lebih dalam, menghadapi musuh mematikan dan rahasia baru. Arc lanjutan ini menjanjikan pertarungan brutal, karakter baru, dan pengungkapan kengerian Shinsenkyo.</p>"""
+lead = "Jigokuraku (Hell’s Paradise) Season 2 dipastikan tayang mulai Januari 2026. Trailer teaser terbaru menampilkan Gabimaru dan Sagiri yang menjelajah lebih dalam ke pulau Shinsenkyo, menghadapi musuh mematikan dan rahasia baru."
+
+conclusion = "Dengan konfirmasi jadwal tayang, teaser resmi, dan kampanye promosi di Jump Festa, Jigokuraku siap menghadirkan lanjutan kisah gelap dan brutal yang menegangkan pada Januari 2026."
+
+synopsis = "Di Season 2, Gabimaru dan Sagiri kembali menghadapi kengerian pulau Shinsenkyo yang makin dalam dan mematikan. Melanjutkan misi untuk menemukan Elixir of Life, mereka menghadapi Tensen, yokai mematikan, dan konspirasi gelap yang mengungkap tujuan sebenarnya dari pengiriman narapidana ke pulau itu. Season baru ini menjanjikan pertarungan brutal, misteri yang terkuak, serta drama emosional yang memperdalam karakter-karakternya."
 
 image = "/images/anime/hells-paradise-season-2-teaser.webp"
-imageTitle = "Hell's Paradise Season 2 Official Teaser Visual"
+imageTitle = "Jigokuraku Season 2 Official Teaser Visual"
 
-tags = ["Hell's Paradise", "Jigokuraku", "Anime Baru", "MAPPA", "Anime Musim Mendatang"]
+tags = ["Jigokuraku", "Hell's Paradise", "Anime Baru", "MAPPA", "Anime Musim Mendatang"]
 categories = ["Berita", "Anime"]
 
 [[imageSources]]
@@ -26,30 +30,32 @@ url = "https://www.crunchyroll.com/news/latest/2024/12/21/hells-paradise-season-
 
 [[videos]]
 url = "https://www.youtube.com/embed/QyEDvQFWH3E"
-title = "Hell’s Paradise TV Anime Season 2 Teaser PV / January 2026 Broadcast"
+title = "Jigokuraku TV Anime Season 2 Teaser PV / January 2026 Broadcast"
 source = "YouTube / TWIN ENGINE"
 +++
 
-MAPPA dan Crunchyroll resmi mengumumkan **Hell’s Paradise Season 2** akan tayang pada **Januari 2026**. Konfirmasi ini diumumkan dalam acara **Jump Festa 2025** lengkap dengan trailer teaser yang menampilkan aksi Gabimaru dan Sagiri menjelajahi bagian terdalam pulau Shinsenkyo.
+MAPPA dan Crunchyroll resmi mengumumkan **Jigokuraku Season 2** akan tayang pada **Januari 2026**. Pengumuman ini diungkap dalam acara **Jump Festa 2025**, lengkap dengan trailer teaser baru yang menampilkan Gabimaru dan Sagiri yang menembus bagian terdalam pulau Shinsenkyo.
+
+Adaptasi manga karya Yuji Kaku ini melanjutkan kisah gelap tentang para narapidana dan algojo yang dikirim mencari Elixir of Life. Namun di pulau penuh misteri ini, mereka malah dihadapkan pada makhluk abadi Tensen, yokai menakutkan, dan konspirasi mengerikan yang menantang moralitas mereka.
 
 ### Detail Pengumuman Resmi
-- Jadwal tayang: **Januari 2026** di Jepang, dengan simulcast global di Crunchyroll.
-- Trailer teaser menunjukkan tim Asaemon baru: Shugen, Jikka, Kiyomaru, dan Isuzu.
-- Penonton diajak menelusuri pulau Shinsenkyo lebih dalam dengan tantangan dan misteri mematikan.
+- Jadwal tayang: **Januari 2026** di Jepang dengan simulcast global di Crunchyroll.
+- Trailer teaser memperlihatkan Asaemon baru: Shugen, Jikka, Kiyomaru, Isuzu.
+- Atmosfer semakin suram dengan tantangan, musuh baru, dan rahasia gelap pulau Shinsenkyo.
 - Studio Produksi: MAPPA (melanjutkan produksi sejak Season 1).
 
 > “Season 2 confirmed for January 2026 broadcast.” — [Crunchyroll](https://www.crunchyroll.com/news/latest/2024/12/21/hells-paradise-season-2-premieres-january-2026-crunchyroll-stream)
 
 ### Cuplikan Teaser Resmi
-Teaser PV menampilkan atmosfer suram, pertarungan sengit, dan visual pulau yang semakin mengerikan. Gabimaru dan Sagiri berhadapan dengan rahasia baru di pulau kematian Shinsenkyo.
+Teaser PV menegaskan nuansa suram, adegan pertarungan brutal, dan visual pulau yang semakin menakutkan. Gabimaru dan Sagiri dihadapkan pada rahasia mematikan yang menanti di kedalaman pulau.
 
 > “Bertahan hidup bukan lagi pilihan. Ini adalah takdir.” — Kutipan dalam teaser PV.
 
 ### Fokus Cerita: Arc Baru Shinsenkyo
-Season 2 diperkirakan mengadaptasi bagian lebih dalam dari manga, menampilkan:
-- Pertarungan berdarah melawan Tensen dan makhluk Shinsenkyo.
-- Konspirasi di balik pengiriman narapidana ke pulau tersebut.
-- Karakter-karakter Asaemon baru dengan latar cerita unik.
+Season 2 diperkirakan mengadaptasi bagian lanjutan manga yang lebih gelap, dengan:
+- Pertarungan sengit melawan Tensen dan makhluk Shinsenkyo.
+- Pengungkapan konspirasi di balik pengiriman narapidana.
+- Karakter Asaemon baru dengan motif dan latar kompleks.
 
 {{< related-auto >}}
 
@@ -60,13 +66,11 @@ Studio MAPPA mengonfirmasi kembalinya staf utama:
 - Desain Karakter: Akitsugu Hisagi
 - Musik: Yoshiaki Dewa
 
-Pengisi suara utama dari season pertama juga dipastikan kembali. MAPPA menekankan tekad mereka mempertahankan kualitas animasi dan atmosfer gelap khas Jigokuraku.
-
-> “Please look forward to more updates!” — [Jigokuraku Anime Official](https://jigokuraku.com/)
+Pengisi suara utama juga dipastikan kembali. MAPPA menegaskan komitmen mereka untuk mempertahankan kualitas animasi dan atmosfer gelap khas Jigokuraku.
 
 ### Kapan Tayang?
 - Jadwal resmi: **Januari 2026**.
 - Penayangan global: **Simulcast di Crunchyroll**.
-- Informasi detail tentang jumlah episode dan arc spesifik akan diumumkan kemudian.
+- Informasi jumlah episode dan detail arc akan diumumkan kemudian.
 
 {{< content-end >}}

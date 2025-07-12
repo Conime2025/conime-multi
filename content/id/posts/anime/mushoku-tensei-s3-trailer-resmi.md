@@ -8,13 +8,17 @@ nameAnime = "Mushoku Tensei: Jobless Reincarnation"
 
 summary = "Mushoku Tensei: Jobless Reincarnation resmi mengumumkan Season 3 yang akan tayang pada 2026. Teaser PV pertama diperlihatkan di Anime Expo 2025 dan dirilis melalui kanal resmi TOHO animation."
 
-lead = """<p><strong>Mushoku Tensei Season 3</strong> dipastikan tayang pada <em>2026</em>. Melanjutkan akhir emosional Season 2, Rudeus Greyrat menghadapi drama baru dan petualangan yang lebih menantang. Adaptasi ini akan memulai cerita dari volume 13 light novel dengan janji konflik, karakter baru, dan perkembangan hubungan keluarga.</p>"""
+lead = "Mushoku Tensei Season 3 dipastikan tayang pada 2026. Melanjutkan akhir emosional Season 2, Rudeus Greyrat menghadapi drama baru dan tantangan lebih berat saat adaptasi memasuki volume 13 light novel."
+
+conclusion = "Season 3 menjanjikan kelanjutan cerita yang lebih emosional dan dewasa, dengan Studio Bind menghadirkan animasi berkualitas tinggi untuk saga baru yang sangat dinanti penggemar di seluruh dunia."
+
+synopsis = "Season 3 dari Mushoku Tensei: Jobless Reincarnation melanjutkan cerita dari volume 13 light novel. Rudeus Greyrat membangun keluarga bersama Sylphy, menghadapi trauma masa lalu, mengemban tanggung jawab baru, dan bertemu musuh berbahaya dalam petualangan isekai yang emosional dan kompleks."
+
 image = "/images/anime/mushoku-tensei-season-3-teaserpv.webp"
-imageTitle = "Rudeus Greyrat in Mushoku Tensei Season 3 Teaser PV"
+imageTitle = "Rudeus Greyrat dalam Mushoku Tensei Season 3 Teaser PV"
 
 tags = ["Mushoku Tensei", "Anime Baru", "Isekai", "Studio Bind", "Anime Musim Mendatang"]
 categories = ["Berita", "Anime"]
-
 
 [[imageSources]]
 name = "TOHO animation Official YouTube"
@@ -29,21 +33,21 @@ name = "Anime Expo 2025 Announcement"
 url = "https://mushokutensei.jp/news/250704_1/"
 +++
 
-Situs resmi **Mushoku Tensei: Jobless Reincarnation** mengonfirmasi bahwa anime **Season 3** akan tayang pada **2026**. Bersamaan dengan pengumuman ini, teaser PV pertama resmi dirilis setelah diputar perdana di **Anime Expo 2025**.
+Situs resmi **Mushoku Tensei: Jobless Reincarnation** mengonfirmasi bahwa **Season 3** akan tayang pada **2026**. Bersamaan dengan pengumuman ini, **teaser PV pertama** resmi dirilis setelah pemutaran perdananya di **Anime Expo 2025** di Los Angeles.
 
 ### Detail Pengumuman Resmi
 - Judul resmi: **無職転生Ⅲ ～異世界行ったら本気だす～** (*Mushoku Tensei III ~Isekai Ittara Honki Dasu~*).
 - Status: **Production Confirmed**, tayang **2026** di Jepang.
 - Studio: **Studio Bind** (melanjutkan produksi dari Season 1 & 2).
 - Sumber cerita: mulai **volume 13** light novel karya Rifujin na Magonote.
-- Penayangan perdana teaser: **Anime Expo 2025 (Los Angeles)**, kemudian dirilis publik melalui YouTube TOHO animation.
+- Pemutaran perdana teaser: **Anime Expo 2025 (Los Angeles)**, lalu dirilis publik melalui YouTube TOHO animation.
 
 > “2026年放送決定！ティザーPV解禁！” (*2026 broadcast confirmed! Teaser PV released!*) — [mushokutensei.jp](https://mushokutensei.jp/news/250706_1/)
 
-Season 3 menjanjikan lanjutan drama yang lebih kompleks dan petualangan mendalam dalam kehidupan Rudeus Greyrat.
+Season 3 menjanjikan drama lebih kompleks dan petualangan mendalam dalam hidup Rudeus Greyrat.
 
 ### Cuplikan Teaser Resmi
-Teaser PV menampilkan kombinasi adegan keluarga penuh kehangatan dan pertempuran sengit. Terlihat momen Rudeus bersama Sylphy, Roxy, anak mereka Lucy, ibunya Zenith, Lilia, serta saudara Norn dan Aisha. Juga muncul Orsted, karakter kuat dan misterius, serta siluet karakter baru yang memicu spekulasi penggemar.
+Teaser PV memperlihatkan kombinasi adegan keluarga penuh kehangatan dan pertarungan yang menegangkan. Terlihat momen Rudeus bersama Sylphy, anak mereka Lucy, ibunya Zenith, Lilia, dan saudara-saudaranya Norn serta Aisha. Karakter kuat dan misterius Orsted juga muncul, bersama siluet karakter baru yang memicu spekulasi penggemar.
 
 {{< youtube
 url = "https://www.youtube.com/embed/SUZNsBQP4uI"
@@ -55,16 +59,16 @@ source = "YouTube / TOHO animation" >}}
 ### Fokus Cerita: Volume 13 dan Arc Baru
 Season 3 akan memulai adaptasi dari **volume 13 light novel**:
 - Melanjutkan kisah setelah Rudeus membangun keluarga bersama Sylphy.
-- Trauma kehilangan Paul dan penyelamatan Zenith membayangi.
+- Trauma kehilangan Paul dan penyelamatan Zenith yang masih membayangi.
 - Dinamika keluarga baru, termasuk membesarkan Lucy.
-- Muncul karakter penting seperti Orsted dan karakter-karakter baru yang belum pernah muncul di anime.
-- Konflik internal dan tantangan lebih berat yang akan mengguncang keputusan Rudeus.
+- Kemunculan Orsted dan karakter-karakter baru yang belum pernah muncul di anime.
+- Konflik internal dan tantangan lebih berat yang mengguncang keputusan Rudeus.
 
 ### Komentar Resmi & Produksi
 Situs resmi menegaskan:
-- **Season 3** sudah masuk tahap produksi penuh.
-- Jadwal detail penayangan (bulan dan tanggal) akan diumumkan kemudian.
-- Teaser PV dirilis untuk memanaskan antusiasme penonton global.
+- **Season 3** sudah dalam tahap produksi penuh.
+- Detail jadwal tayang (bulan dan tanggal) akan diumumkan kemudian.
+- Teaser PV dirilis untuk membangkitkan antusiasme penonton global.
 
 > “続報をお楽しみにお待ちください。” (*Mohon nantikan kabar berikutnya.*) — [mushokutensei.jp](https://mushokutensei.jp/news/250706_1/)
 
@@ -73,7 +77,7 @@ Situs resmi menegaskan:
 ### Kapan Tayang?
 - Status: **2026 broadcast confirmed**.
 - Bulan dan tanggal resmi: belum diumumkan.
-- Platform: Penayangan TV Jepang + simulcast global di **Crunchyroll** (dipastikan akan menyiarkan seperti Season 2).
-- Informasi detail lebih lanjut akan dirilis di situs resmi dan media sosial Mushoku Tensei.
+- Platform: Penayangan TV Jepang + **simulcast global di Crunchyroll** (seperti Season 2).
+- Info detail lebih lanjut akan dibagikan melalui situs resmi dan media sosial Mushoku Tensei.
 
 {{< content-end >}}
