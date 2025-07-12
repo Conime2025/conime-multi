@@ -115,9 +115,15 @@
   @apply transition duration-500 ease-in-out;
 }
 .bg-darklight-card {
-  @apply bg-white dark:bg-gray-850 hover:bg-gray-100 hover:dark:bg-gray-800 text-gray-900 dark:text-gray-300;
+  @apply bg-white dark:bg-gray-800 lg:dark:bg-gray-850 hover:bg-gray-100 hover:dark:bg-gray-700 lg:hover:dark:bg-gray-800 text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-200;
   @apply transition duration-500 ease-in-out;
 }
+
+.bg-darklight-modal {
+  @apply bg-white dark:bg-gray-800 lg:dark:bg-gray-850 text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-200;
+  @apply transition duration-500 ease-in-out;
+}
+
 
   /* Tippy.js styling */
   .tippy-box {

@@ -84,7 +84,7 @@ timeZone = "Asia/Jakarta"
     [[languages.id.menu.main]]
       name = "Ulasan"
       identifier = "reviewBtn"
-      pageRef = "/categories/review/"
+      pageRef = "/categories/ulasan/"
       weight = 6
       [languages.id.menu.main.params]
         svg = """<svg class="w-6 h-6 md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -263,7 +263,8 @@ weight = 80
     min = "0.116.0"
 
 [outputs]
-home = ["HTML"]
+home = ["HTML", "RSS", "404"]
+
 
 [markup]
   [markup.goldmark]

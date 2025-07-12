@@ -3,13 +3,14 @@
   {{/* =====================================================
        Bagian 1 - Halaman /posts/
        ===================================================== */}}
-  {{ if eq .RelPermalink "/posts/" }}
+  {{ if or (eq .RelPermalink "/posts/") (eq .RelPermalink "/en/posts/") }}
+
 
   <div class="mx-0 grid grid-cols-1 lg:grid-cols-3 py-0 md:py-4 gap-4">
 
     {{/* Judul Section Atas */}}
     <h2 class="col-span-1 lg:col-span-3 text-lg font-medium border-b uppercase border-gray-300 dark:border-gray-800/50 pb-2 mb-4">
-      All Posts
+     {{ if eq .Lang "id" }}Semua Artikel{{ else }} All Articles{{ end }}
     </h2>
 
     {{/* Ambil semua halaman di section posts, urutkan desc */}}
@@ -18,7 +19,7 @@
 
     {{/* Tampilkan total jika lebih dari 10 */}}
     {{ if gt (len $sorted) 10 }}
-      <p class="col-span-1 lg:col-span-3">Total Posts: {{ len $sorted }}</p>
+      <p class="col-span-1 lg:col-span-3">{{ if eq .Lang "id" }}Total Artikel:{{ else }} Total Articles:{{ end }} {{ len $sorted }}</p>
     {{ end }}
 
     {{/* Grid List Post */}}
@@ -37,7 +38,7 @@
           </a>
 
           {{/* Teks Artikel */}}
-         <div class="w-[70%] h-[60%] absolute bottom-0 left-0  rounded-tr transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start p-4 bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 hover:dark:bg-gray-800">
+         <div class="w-[70%] h-[60%] absolute bottom-0 left-0  rounded-tr bg-darklight-card font-light dark:font-extralight flex flex-col items-start justify-start p-4">
               <h2 class="w-full h-fit text-2xl">
                 <a href="{{ .RelPermalink }}" data-tippy-content="{{ .Title }}" class="hover:underline break-words line-clamp-4">{{ .Title }}</a>
               </h2>
@@ -105,16 +106,16 @@
 
       {{/* Judul kategori atau tag jika di halaman itu */}}
       <h2 class="text-lg font-medium border-b uppercase border-gray-300 dark:border-gray-800/50 pb-2 mb-4 hidden{{ if in .Permalink "/categories/" }}flex{{ end }}">
-        Category: {{ .Title }}
+      {{ if eq .Lang "id"}}Kategori:{{ else }}Category:{{ end }} {{ .Title }}
       </h2>
       <h2 class="text-lg font-medium border-b uppercase border-gray-300 dark:border-gray-800/50 pb-2 mb-4 hidden{{ if in .Permalink "/tags/" }}flex{{ end }}">
-        Tags: #{{ .Title }}
+       {{ if eq .Lang "id"}}Tag:{{ else }}Tags:{{ end }} #{{ .Title }}
       </h2>
 
       {{/* Grid List Konten Artikel */}}
       <ul class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-3 md:[&>*:nth-child(1)]:col-span-4 md:[&>*:nth-child(8)]:col-span-4 md:[&>*:nth-child(13)]:col-span-4 md:[&>*:nth-child(18)]:col-span-4 md:[&>*:nth-child(20)]:col-span-4">
         {{ range $pages }}
-          <li class="relative group flex flex-col col-span-2 w-full h-full bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 hover:dark:bg-gray-800 overflow-hidden  rounded   transition duration-300 ease-in-out {{ if eq $.RelPermalink "/posts/" }}col-span-2 shadow-gray-700/0 dark:shadow-gray-950/0 bg-gradient-to-br from-white/0 via-gray-50/0 to-gray-300/0 dark:from-gray-900/0 dark:via-gray-950/0 dark:to-gray-950/0{{ end }}">
+          <li class="relative group flex flex-col col-span-2 w-full h-full overflow-hidden  rounded bg-darklight-card {{ if eq $.RelPermalink "/posts/" }}col-span-2 shadow-gray-700/0 dark:shadow-gray-950/0 bg-gradient-to-br from-white/0 via-gray-50/0 to-gray-300/0 dark:from-gray-900/0 dark:via-gray-950/0 dark:to-gray-950/0{{ end }}">
 
             {{/* Gambar Artikel */}}
             <a href="{{ .RelPermalink }}" class="bg-cover w-full h-full overflow-hidden transition duration-500 ease-in-out">
@@ -124,7 +125,7 @@
             </a>
 
             {{/* Info Teks Artikel */}}
-            <div class="w-[70%] h-[70%] absolute bottom-0 left-0  rounded-tr transition duration-500 ease-in-out font-light dark:font-extralight flex flex-col items-start justify-start p-4 bg-gray-200 dark:bg-gray-900 hover:bg-gray-300 hover:dark:bg-gray-800">
+            <div class="w-[70%] h-[70%] absolute bottom-0 left-0  rounded-tr  font-light dark:font-extralight flex flex-col items-start justify-start p-4 bg-darklight-card">
               <h2 class="w-full h-fit {{ if eq $.RelPermalink "/posts/" }} text-4xl justify-center items-center {{ else }} text-2xl {{ end }} line-clamp-4">
                 <a href="{{ .RelPermalink }}" data-tippy-content="{{ .Title }}" class="hover:underline break-words line-clamp-4">{{ .Title }}</a>
               </h2>

@@ -13,8 +13,8 @@ conclusion = """<p><em>Kotonoha no Niwa</em> bukan sekadar film romantis, melain
 
 image = "/images/anime/kotonoha_no_niwa.webp"
 imageTitle = "Kotonoha no Niwa Official Movie Visual"
-tags = ["Makoto Shinkai", "Romantis", "Drama", "Kana Hanazawa", "Puisi", "Review"]
-categories = ["Review", "Anime"]
+tags = ["Makoto Shinkai", "Romantis", "Drama", "Kana Hanazawa", "Puisi", "Ulasan"]
+categories = ["Ulasan", "Anime"]
 
 [[sources]]
 name = "Wikipedia – Kotonoha no Niwa"

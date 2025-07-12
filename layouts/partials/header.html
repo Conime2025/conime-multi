@@ -1,6 +1,6 @@
 {{ $page := . }}
 
-<a href="/" {{ if .IsHome }} data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000" {{ end }}
+<a href="{{ .Site.Home.RelPermalink }}" {{ if .IsHome }} data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000" {{ end }}
   data-tippy-content="Logo CoNime" class="flex relative items-center group">
   <div class="flex sm:hidden"> <svg class="w-auto h-12 flex dark:hidden" viewBox="0 0 336 336" fill="none"
       xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +39,7 @@
       fill="currentColor" />
   </svg>
   <span
-    class="absolute left-1/2 -translate-x-1/2 min-w-20 w-fit top-12 p-2 text-xs bg-gray-200 dark:bg-gray-900/50 backdrop-blur-sm text-gray-800 dark:text-gray-400 opacity-0 group-hover:opacity-0 transition delay-100  duration-500 ease-in-out  rounded -2xl group-hover: rounded  hidden md:flex items-center justify-center">
+    class="absolute left-1/2 -translate-x-1/2 min-w-20 w-fit top-12 p-2 text-xs bg-gray-200 dark:bg-gray-900/50 backdrop-blur-sm text-gray-800 dark:text-gray-400 opacity-0 group-hover:opacity-0 transition delay-100  duration-500 ease-in-out   group-hover: rounded  hidden md:flex items-center justify-center">
     CoNime
   </span>
 </a>
@@ -95,15 +95,18 @@
   <ul class="flex space-x-2">
     {{ range .Translations }}
     <li class="w-fit h-fit flex items-center justify-center p-2 overflow-hidden bg-cover">
-      <a href="{{ .RelPermalink }}" class="w-fit h-fit flex items-center justify-center">
+      <a href="{{ .RelPermalink }}" class="w-fit h-fit flex gap-2 items-center justify-center">
         {{ if eq .Lang "id" }}
         <!-- Bendera Indonesia -->
-        <img src="/images/icons/id.webp" alt="Bendera Indonesia" class="w-6 h-4  rounded  hover:scale-110 transition delay-100 duration-500 ease-in-out md:w-6 md:h-6 object-cover">
+        <img src="/images/icons/id.webp" alt="Bendera Indonesia" class="w-6 h-4  rounded  hover:scale-110 transition delay-100 duration-500 ease-in-out object-cover">
+        <span>ID</span>
         {{ else if eq .Lang "en" }}
         <!-- Bendera Inggris -->
-       <img src="/images/icons/en.webp" alt="Bendera Indonesia" class="w-6 h-4  rounded  hover:scale-110 transition delay-100 duration-500 ease-in-out md:w-6 md:h-6 object-cover">
+       <img src="/images/icons/en.webp" alt="Bendera Indonesia" class="w-6 h-4  rounded  hover:scale-110 transition delay-100 duration-500 ease-in-out object-cover">
+       <span>EN</span>
         {{ end }}
       </a>
+
     </li>
     {{ end }}
   </ul>

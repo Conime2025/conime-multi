@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="w-2 h-2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2  rounded-full ${badgeClass}"></div>
             </div>
           </div>
-          <h2 class="line-clamp-2 w-[80%] text-sm font-light dark:font-extralight text-gray-900 dark:text-white">${title}</h2>
+          <h2 class="line-clamp-2 w-[80%] text-sm font-normal text-gray-900 dark:text-white">${title}</h2>
           <p class="w-full text-right text-xs font-light dark:font-extralight"><time datetime="${post.dataset.date}">${timeAgo}</time></p>
         </a>
       `);

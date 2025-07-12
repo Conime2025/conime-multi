@@ -1,20 +1,26 @@
 +++
-title = "My Hero Academia: Vigilantes Umumkan Anime Season 2 Tayang 2026"
-slug = "my-hero-academia-vigilantes-season-2-20250630"
-date = 2025-06-30T10:30:00+07:00
+title = "Boku no Hero Academia: Vigilantes Umumkan Anime Season 2 Tayang 2026"
+slug = "boku-no-hero-academia-vigilantes-season-2-20250630"
+date = 2025-07-12T10:30:00+07:00
 author = "Koni si Co-Bot"
 draft = false
-nameAnime = "My Hero Academia: Vigilantes"
+nameAnime = "Boku no Hero Academia: Vigilantes"
 
-summary = "My Hero Academia: Vigilantes resmi mengumumkan anime Season 2 yang akan tayang pada 2026. Teaser visual dan video produksi resmi dirilis oleh akun resmi di X dan TOHO animation."
+summary = "Anime Boku no Hero Academia: Vigilantes resmi mengumumkan Season 2 yang akan tayang pada 2026. Pengumuman disertai perilisan teaser visual dan video produksi dari akun resmi di X dan TOHO animation."
 
-lead = "Teaser resmi memperlihatkan visual Koichi Haimawari dan mengonfirmasi Season 2 akan tayang pada 2026. Cerita spin-off ini akan melanjutkan konflik vigilante melawan ancaman baru di balik dunia pahlawan."
+lead = "Teaser resmi menampilkan visual Koichi Haimawari dan mengonfirmasi Season 2 untuk 2026. Cerita spin-off ini berlanjut dengan konflik para vigilante menghadapi ancaman baru di balik dunia pahlawan."
 
-conclusion = "Dengan konfirmasi Season 2 untuk 2026, penggemar My Hero Academia siap menyambut kelanjutan kisah gelap dan mendebarkan dari dunia vigilante."
+synopsis = """
+"Vigilante: Boku no Hero Academia Illegals" Season 2 melanjutkan kisah para pahlawan tanpa lisensi yang beroperasi di bayang-bayang masyarakat. Koichi Haimawari (The Crawler) menghadapi tantangan baru ketika kejahatan meningkat dan para Villain makin berbahaya. Dengan bantuan mentor misterius Knuckleduster, dia harus melindungi kota sambil bergulat dengan konsekuensi menjadi vigilante. Musim kedua ini menjanjikan aksi intens, perkembangan karakter mendalam, dan cerita gelap khas prekuel BnHA.
+"""
+
+
+conclusion = "Dengan kepastian Season 2 pada 2026, penggemar Boku no Hero Academia bisa menantikan kisah spin-off yang lebih gelap dan menegangkan."
+
 
 image = "/images/anime/vigilantes-season2-teaser.webp"
 
-tags = ["My Hero Academia", "Vigilantes", "Anime Baru", "Bones", "Crunchyroll", "Anime Musim Mendatang"]
+tags = ["Boku no Hero Academia", "Vigilantes", "Anime Baru", "Bones", "Crunchyroll", "Anime Musim Mendatang"]
 categories = ["Berita", "Anime"]
 
 twitterEmbed = "https://x.com/vigilante_mha/status/1939691980172476906"
@@ -45,14 +51,13 @@ title = "第2期制作決定映像｜TVアニメ『ヴィジランテ -僕のヒ
 source = "YouTube / TOHO animation"
 +++
 
-**My Hero Academia: Vigilantes** resmi mengumumkan **Season 2** yang akan tayang pada **2026**. Pengumuman ini disampaikan melalui akun resmi anime di X dan diiringi perilisan teaser visual baru. Selain itu, TOHO animation membagikan video produksi resmi yang menegaskan konfirmasi musim kedua.
+**Boku no Hero Academia: Vigilantes** resmi mengumumkan **Season 2** yang dijadwalkan tayang pada **2026**. Informasi ini disampaikan melalui akun resmi di X dengan peluncuran teaser visual terbaru. Selain itu, TOHO animation merilis video produksi resmi yang menegaskan konfirmasi musim kedua.
 
 ### Detail Pengumuman Resmi
-- Judul resmi: *TVアニメ『ヴィジランテ -僕のヒーローアカデミア ILLEGALS-』第2期*
-  (*TV Anime "Vigilante: My Hero Academia ILLEGALS" Season 2.*)
+- Judul resmi: *TVアニメ『ヴィジランテ -僕のヒーローアカデミア ILLEGALS-』第2期* (*TV Anime "Vigilante: Boku no Hero Academia ILLEGALS" Season 2*)
 - Jadwal tayang: **2026** di Jepang.
-- Distribusi internasional: **Streaming di Crunchyroll** di Amerika, Eropa, Afrika, Oseania, Timur Tengah, dan CIS.
-- Teaser visual menampilkan Koichi “Crawler” Haimawari dengan atmosfer lebih gelap.
+- Distribusi internasional: **Streaming di Crunchyroll** untuk Amerika, Eropa, Afrika, Oseania, Timur Tengah, dan CIS.
+- Teaser visual menampilkan Koichi “Crawler” Haimawari dengan nuansa lebih gelap.
 
 > “第2期2026年放送決定！ティザービジュアル公開！”
 >
@@ -60,27 +65,27 @@ source = "YouTube / TOHO animation"
 > — [Vigilantes Anime Official](https://x.com/vigilante_mha/status/1939691980172476906)
 
 ### Cuplikan Teaser Resmi
-Video produksi resmi dari TOHO animation memperlihatkan highlight adegan aksi, narasi dramatis, dan konfirmasi tulisan “2026年放送決定.” Visual teaser menekankan ancaman baru yang mengintai di balik kehidupan sehari-hari.
+Video produksi resmi dari TOHO animation menampilkan adegan aksi intens, narasi dramatis, dan konfirmasi “2026年放送決定.” Visual teaser menekankan hadirnya ancaman baru yang mengintai di balik kehidupan sehari-hari.
 
 > “忍び寄る 新たな脅威 日常の裏側で 闘いは続く——”
 >
 > (*Ancaman baru mendekat. Pertarungan terus berlanjut di balik keseharian.*)
 
-### Fokus Cerita: Vigilantes Spin-Off
-Adaptasi ini melanjutkan kisah spin-off manga karya Hideyuki Furuhashi dan Betten Court:
-- Berlatar sebelum cerita utama My Hero Academia.
-- Mengikuti Koichi Haimawari (Crawler) sebagai vigilante tanpa lisensi.
-- Menampilkan karakter-karakter seperti Knuckleduster, Pop☆Step, dan versi muda Eraser Head.
+### Fokus Cerita: Spin-Off Vigilantes
+Adaptasi ini melanjutkan cerita spin-off manga karya Hideyuki Furuhashi dan Betten Court:
+- Berlatar sebelum cerita utama Boku no Hero Academia.
+- Mengisahkan Koichi Haimawari (Crawler), vigilante tanpa lisensi.
+- Menampilkan karakter seperti Knuckleduster, Pop☆Step, dan Eraser Head versi muda.
 
 {{< related-auto >}}
 
 ### Produksi dan Staf
-Season pertama diadaptasi oleh Studio Bones dengan sutradara Kenichi Suzuki. Komposisi seri oleh Yosuke Kuroda, desain karakter oleh Takahiko Yoshida, dan musik oleh Yuki Hayashi, Shogo Yamashiro, dan Yuki Furuhashi. Staf inti diharapkan kembali untuk musim kedua.
+Season pertama diproduksi oleh Studio Bones dengan sutradara Kenichi Suzuki, komposisi seri oleh Yosuke Kuroda, desain karakter oleh Takahiko Yoshida, dan musik oleh Yuki Hayashi, Shogo Yamashiro, serta Yuki Furuhashi. Staf inti diharapkan kembali untuk musim kedua.
 
-### Kapan Tayang?
-- Jadwal resmi: **2026**.
-- Penayangan global melalui Crunchyroll.
-- Info detail tentang jumlah episode, tanggal pasti, dan arc manga yang diadaptasi akan diumumkan kemudian di situs resmi dan akun sosial mereka.
+### Jadwal Tayang
+- Tayang resmi: **2026**.
+- Distribusi global melalui Crunchyroll.
+- Detail jumlah episode, tanggal pasti, dan arc manga yang diadaptasi akan diumumkan kemudian di situs resmi dan akun media sosial mereka.
 
 > “続報をお楽しみに！”
 >

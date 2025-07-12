@@ -24,7 +24,8 @@
     <nav aria-label="Breadcrumb" class="text-sm">
       <ol
         class="list-none flex flex-wrap justify-start items-center gap-2 font-light dark:font-extralight text-gray-800 dark:text-gray-500">
-        <li><a href="/" class="hover:underline">{{ if eq .Lang "id" }}Beranda{{ else }}Home{{ end }}</a></li>
+        <li><a href="{{ " /" | relLangURL }}" class="hover:underline">{{ if eq .Lang "id" }}Beranda{{ else }}Home{{ end
+            }}</a></li>
         <li><svg class="w-2 h-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8.91003 19.9201L15.43 13.4001C16.2 12.6301 16.2 11.3701 15.43 10.6001L8.91003 4.08008"
               stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
@@ -100,7 +101,7 @@
       <!-- Gambar Utama -->
       {{ with .Params.image }}
       <figure class="w-full flex-col mb-4 bg-gray-100 dark:bg-gray-950/20 backdrop-blur-sm  rounded -3xl">
-        <img src="{{ . | relURL }}"  width="1200" height="800" alt="Gambar {{ $.Title }}"
+        <img src="{{ . | relURL }}" width="1200" height="800" alt="Gambar {{ $.Title }}"
           class="post-img h-96 sm:h-auto w-full  rounded -3xl object-cover" />
         <figcaption class="text-sm font-light dark:font-extralight text-left italic flex flex-wrap gap-0 px-4 py-4">
           {{ with $.Params.imageTitle }}
@@ -109,17 +110,23 @@
 
           {{ with $.Params.imageSources }}
           <span>
-            Image:
+            {{ if eq $.Lang "id"}}Gambar:{{ else }}Image:{{ end }}
             {{ $total := len . }}
             {{ range $index, $source := . }}
             {{ if and (gt $index 0) (eq $index (sub $total 1)) }} and {{ else if gt $index 0 }}, {{ end }}
             <a href="{{ $source.url }}" data-tippy-content="{{ $source.name }}"
-              class="hover:underline underline-offset-4             hover:text-conime-400 hover:dark:text-conime-500 inline"
-              target="_blank" rel="noopener             noreferrer">{{ $source.name }}</a>
-            {{ end }}. Used for editorial purposes only.
-            {{ else }}
-            <span>Image used for illustration purposes only.</span>
-            {{ end }}
+              class="hover:underline underline-offset-4 hover:text-conime-400 hover:dark:text-conime-500 inline"
+              target="_blank" rel="noopener noreferrer">{{ $source.name }}</a>
+            {{ end }}.
+            {{ if eq $.Lang "id" }}Digunakan hanya untuk keperluan editorial.{{ else }}Used for editorial purposes
+            only.{{ end }}
+          </span>
+          {{ else }}
+          <span>
+            {{ if eq $.Lang "id" }}Gambar digunakan hanya untuk keperluan editorial.{{ else }}Image used for editorial
+            purposes only.{{ end }}
+          </span>
+          {{ end }}
 
         </figcaption>
       </figure>
@@ -185,7 +192,7 @@
   </main>
 
   <!-- Sidebar -->
-  <aside    class="col-span-12 w-full lg:col-span-4 space-y-8 py-6 md:py-0">
+  <aside class="col-span-12 w-full lg:col-span-4 space-y-8 py-6 md:py-0">
     {{ partial "last-viewed.html" . }}
     {{ partial "popular.html" . }}
     {{ partial "suggested.html" . }}

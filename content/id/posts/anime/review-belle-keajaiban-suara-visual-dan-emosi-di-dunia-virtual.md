@@ -14,8 +14,8 @@ conclusion = """<p><em>Belle</em> adalah pengalaman sinematik yang mendalam — 
 
 image = "/images/anime/BellePosterBlank.webp"
 imageTitle = "Belle Official Movie Poster Visual"
-tags = ["Belle", "Anime Movie", "Mamoru Hosoda", "Recommended", "Studio Chizu", "Soundtrack", "Virtual Reality", "Review"]
-categories = ["Review", "Anime"]
+tags = ["Belle", "Anime Movie", "Mamoru Hosoda", "Recommended", "Studio Chizu", "Soundtrack", "Virtual Reality", "Ulasan"]
+categories = ["Ulasan", "Anime"]
 
 [[imageSources]]
 name = "Fandom Wiki - Belle (Movie)"

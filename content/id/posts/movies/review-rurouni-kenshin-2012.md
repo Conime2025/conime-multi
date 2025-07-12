@@ -15,8 +15,8 @@ image = "/images/movies/rurouni_kenshin_2012.webp"
 imageTitle = "Poster Resmi Rurouni Kenshin (2012)"
 
 
-tags = ["Rurouni Kenshin", "Live‑Action", "Samurai", "Takeru Satō", "Emi Takei", "Review"]
-categories = ["Review", "Film"]
+tags = ["Rurouni Kenshin", "Live‑Action", "Samurai", "Takeru Satō", "Emi Takei", "Ulasan"]
+categories = ["Ulasan", "Film"]
 
 [[sources]]
 name = "IMDb – Rurouni Kenshin Part I: Origins"

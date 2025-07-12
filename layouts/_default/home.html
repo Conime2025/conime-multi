@@ -108,11 +108,14 @@
         {{ $found := false }}
 
         {{ range site.RegularPages }}
-          {{ if eq (trim .RelPermalink "/") $target }}
-            {{ $popularPages = $popularPages | append . }}
-            {{ $found = true }}
-          {{ end }}
-        {{ end }}
+  {{ $rel := trim .RelPermalink "/" }}
+  {{ $relNoLang := replaceRE "^([a-z]{2}/)?" "" $rel }}
+  {{ if eq $relNoLang $target }}
+    {{ $popularPages = $popularPages | append . }}
+    {{ $found = true }}
+  {{ end }}
+{{ end }}
+
 
         {{ if not $found }}
           <p class="text-red-500 text-sm">⚠️ Tidak ketemu di Hugo: {{ . }}</p>
@@ -461,6 +464,10 @@
       {{ end }}
 
 
+{{ $categoryName := "review" }}
+{{ if eq .Lang "id" }}
+  {{ $categoryName = "ulasan" }}
+{{ end }}
 
       {{ $discoverPosts := slice }}
       {{ range site.RegularPages }}
@@ -468,7 +475,8 @@
       {{ range .Params.categories }}
       {{ $lowerCategories = $lowerCategories | append (lower .) }}
       {{ end }}
-      {{ if in $lowerCategories "review" }}
+      {{ if in $lowerCategories $categoryName }}
+
       {{ $discoverPosts = $discoverPosts | append . }}
       {{ end }}
       {{ end }}
@@ -480,7 +488,8 @@
       {{ $img1 := index $discoverPosts 1 }}
       {{ $img2 := index $discoverPosts 2 }}
       {{ $img3 := index $discoverPosts 3 }}
-      {{ $discoverPage := site.GetPage "/categories/review" }}
+      {{ $discoverPage := site.GetPage (printf "/categories/%s" $categoryName) }}
+
  <div class="relative group flex flex-col justify-center left-10 w-[90%] h-auto">
         <div data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000"
           class="relative flex flex-col w-full h-[360px]  rounded  z-10 bg-darklight-card">

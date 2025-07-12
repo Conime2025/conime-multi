@@ -28,9 +28,9 @@
 {{ if ge (len $relatedFiltered) 2 }}
 <div class="border-l-4 border-conime-500 dark:border-conime-500 pl-4 text-gray-800 dark:text-gray-300 my-4">
   <div class="h-full p-0">
-    <p class="font-medium my-0">Also read:</p>
+    <p class="font-medium my-0">{{ if eq .Page.Lang "id" }}Baca juga:{{ else }}Also read:{{ end }}</p>
     {{ $second := index $relatedFiltered 1 }}
-    <a href="{{ $second.RelPermalink }}" data-tippy-content="Baca juga: '{{ $second.Title }}'"
+    <a href="{{ $second.RelPermalink }}" data-tippy-content="{{ if eq .Page.Lang "id" }}Baca juga:{{ else }}Also read:{{ end }} '{{ $second.Title }}'"
       class="text-conime-400 dark:text-conime-500 font-normal dark:font-light hover:underline line-clamp-2">
       {{ $second.Title }}
     </a>
@@ -45,13 +45,13 @@
 {{ with .Page.Params.synopsis }}
 <h2 class="font-medium uppercase tracking-wide">
   {{ if $.Page.Params.nameMovie }}
-    Sinopsis {{ $.Page.Params.nameMovie }}
+    {{ if eq $.Page.Lang "id" }}Sinopsis{{ else }}Synopsis{{ end }} {{ $.Page.Params.nameMovie }}
   {{ else if $.Page.Params.nameAnime }}
-    Sinopsis {{ $.Page.Params.nameAnime }}
+    {{ if eq $.Page.Lang "id" }}Sinopsis{{ else }}Synopsis{{ end }} {{ $.Page.Params.nameAnime }}
   {{ else if $.Page.Params.nameComic }}
-    Sinopsis {{ $.Page.Params.nameComic }}
+    {{ if eq $.Page.Lang "id" }}Sinopsis{{ else }}Synopsis{{ end }} {{ $.Page.Params.nameComic }}
   {{ else if $.Page.Params.nameGame }}
-    Sinopsis {{ $.Page.Params.nameGame }}
+    {{ if eq $.Page.Lang "id" }}Sinopsis{{ else }}Synopsis{{ end }} {{ $.Page.Params.nameGame }}
   {{ end }}
 </h2>
 <div class="text-gray-800 dark:text-gray-100 my-4 [&>p]:my-3">
@@ -61,7 +61,7 @@
 
 <!-- KESIMPULAN -->
 {{ with .Page.Params.conclusion }}
-<h2 class="font-medium uppercase tracking-wide">Kesimpulan</h2>
+<h2 class="font-medium uppercase tracking-wide">{{ if eq $.Page.Lang "id" }}Kesimpulan{{ else }}Conclusion{{ end }}</h2>
 <div class="text-gray-800 dark:text-gray-100 my-4 [&>p]:my-3">
   {{ . | safeHTML }}
 </div>

@@ -27,9 +27,9 @@
 {{ if gt (len $relatedFiltered) 0 }}
   <div class="border-l-4 border-conime-500 dark:border-conime-500 pl-4 text-gray-800 dark:text-gray-300 my-4">
     <div class="h-full p-0">
-      <p class="font-medium my-0">Also read:</p>
+      <p class="font-medium my-0">{{ if eq .Page.Lang "id" }}Baca juga:{{ else }}Also read:{{ end }}</p>
     {{ range first 1 $relatedFiltered }}
-      <a href="{{ .RelPermalink }}"  data-tippy-content="Baca juga: '{{ .Title }}'" class="text-conime-400 dark:text-conime-500 font-normal dark:font-light hover:underline line-clamp-2">
+      <a href="{{ .RelPermalink }}"  data-tippy-content="{{ if eq .Page.Lang "id" }}Baca juga:{{ else }}Also read:{{ end }} '{{ .Title }}'" class="text-conime-400 dark:text-conime-500 font-normal dark:font-light hover:underline line-clamp-2">
         {{ .Title }}
       </a>
     {{ end }}

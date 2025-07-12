@@ -75,6 +75,11 @@
   <script src="{{ $min.RelPermalink }}" defer></script>
 {{ end }}
 
+{{ with resources.Get "js/notif-auto.js" }}
+  {{ $min := . | resources.Minify }}
+  <script src="{{ $min.RelPermalink }}" defer></script>
+{{ end }}
+
 {{ with resources.Get "js/last-view.js" }}
   {{ $min := . | resources.Minify }}
   <script src="{{ $min.RelPermalink }}" defer></script>
@@ -93,7 +98,7 @@
 {{ end }}
 
 <!-- ============= KHUSUS HOMEPAGE ============= -->
-{{ if eq .RelPermalink "/" }}
+{{ if .IsHome }}
   {{ with resources.Get "js/loading-animation.js" }}
     {{ $min := . | resources.Minify }}
     <script src="{{ $min.RelPermalink }}" defer></script>

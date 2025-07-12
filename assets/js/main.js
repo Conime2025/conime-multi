@@ -77,47 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// ========== Menu Expand ==========
-const moreBtn = document.querySelector('.moreBtn');
-const navList = document.querySelector('.navList');
-
-let expanded = false;
-
-moreBtn.addEventListener('click', () => {
-  expanded = !expanded;
-
-  if (expanded) {
-    // Expand: tampilkan semua
-    navList.classList.remove(
-      'flex-row',
-      'lg:flex-col',
-      'justify-between',
-      '[&>*:nth-child(3)]:hidden',
-      '[&>*:nth-child(4)]:hidden',
-      '[&>*:nth-child(5)]:hidden',
-      '[&>*:nth-child(1)]:order-5'
-
-    );
-    navList.classList.add('flex-wrap', 'justify-start', '[&>*:nth-child(1)]:order-3');
-
-
-  } else {
-    // Collapse: sembunyikan lagi
-    navList.classList.remove('flex-wrap', 'justify-start', '[&>*:nth-child(1)]:order-3');
-    navList.classList.add('flex-row', 'justify-between', '[&>*:nth-child(1)]:order-5');
-
-    navList.classList.add(
-      '[&>*:nth-child(3)]:hidden',
-      '[&>*:nth-child(4)]:hidden',
-      '[&>*:nth-child(5)]:hidden'
-    );
-
-  }
-});
-
-
-
-
 // ========== NONAKTIFKAN FITUR LAIN (DIBIARKAN UNTUK REFERENSI) ==========
 
 // ====== AUTO SCROLL ======

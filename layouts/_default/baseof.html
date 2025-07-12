@@ -10,7 +10,7 @@
   font-poppins text-base font-normal dark:font-light
   inset-0 w-screen min-h-screen h-full bg-darklight
 
-  {{ if eq .Kind " 404" }} overflow-hidden {{ else }} overflow-y-auto overscroll-y-auto overflow-style-custom-y overflow-x-hidden {{ end }} ">
+  {{ if eq .Kind "404" }} overflow-hidden {{ else }} overflow-y-auto overscroll-y-auto overflow-style-custom-y overflow-x-hidden {{ end }} ">
 
 
   {{ if eq .Kind "404" }}
@@ -18,10 +18,10 @@
   {{ else }}
 
 
-  {{ if eq .RelPermalink "/" }}
+ {{ if .IsHome }}
   <!--Loading Animasi-->
   <div id="loading-screen"
-    class="fixed inset-0 z-[999999] h-screen w-screen flex opacity-100   ease-in-out items-center justify-center ">
+    class="fixed inset-0 z-[999999] bg-darklight h-screen w-screen flex opacity-100   ease-in-out items-center justify-center ">
     <div class="gooey-container fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
       <div class="dot dot1"></div>
       <div class="dot dot2"></div>
@@ -44,18 +44,18 @@
   {{ end }}
 
   <header
-    class="w-full z-[1000] min-h-12 max-h-20 h-20 {{ if .IsHome }}flex {{ else }}flex{{ end }} fixed left-0 top-0 right-0 bg-darklight px-6 sm:24 lg:px-[15%] py-2 lg:py-4 flex-row justify-between items-center">
+    class="w-full z-[1000] min-h-12 max-h-20 h-20 {{ if .IsHome }}hidden {{ else }}flex{{ end }} fixed left-0 top-0 right-0 bg-darklight px-6 sm:24 lg:px-[15%] py-2 lg:py-4 flex-row justify-between items-center">
     {{ partial "header.html" . }}
 
   </header>
 
   <div class="flex gap-2 w-full h-full relative">
     <!-- Main menu -->
-    <div id="main-menu" class="fixed pb-[env(safe-area-inset-bottom)] lg:top-20 bottom-0 left-0 z-[999]
-         lg:w-[20%] xl:w-[15%] w-full h-fit lg:h-[calc(100vh-theme(space.40))]
-         bg-darklight border-r border-gray-300 dark:border-gray-800/50
-         flex flex-row lg:flex-col justify-center items-center
-         {{ if .IsHome }}flex {{ else }}flex{{ end }}">
+   <div id="main-menu" class="fixed pb-[env(safe-area-inset-bottom)] lg:top-20 bottom-0 left-0 z-[999]
+         lg:w-[20%] xl:w-[15%] w-full h-fit lg:h-[calc(100vh-theme(space.40))] bg-darklight
+         lg:backdrop-blur
+         border-r border-gray-300 dark:border-gray-800/50 flex-row lg:flex-col justify-center items-center
+         {{ if .IsHome }} hidden {{ else }}flex{{ end }}">
 
 <!-- Sidebar Desktop -->
 {{ partial "menu-desktop.html" (dict "menuID" "main" "page" .) }}
@@ -66,10 +66,8 @@
 <!-- Mobile Bottom Bar -->
 {{ partial "menu-mobile-bar.html" (dict "menuID" "main" "page" .) }}
 
-
-
-
-    {{ partial "notif-modal.html" . }}
+{{ partial "notif-modal.html" . }}
+{{ partial "notif-modal-auto.html" . }}
 
 <!--
       {{ partial "menu.html" (dict "menuID" "main" "page" .) }} -->

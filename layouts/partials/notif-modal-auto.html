@@ -1,0 +1,38 @@
+{{ with . }}
+<div id="notifModalAuto"
+ class="fixed left-1/2 -translate-x-1/2  lg:mx-4 lg:!left-[100%] xl:!left-[100%] lg:!transform lg:translate-x-0 bottom-16 lg:-bottom-16 -z-[999]  bg-darklight-modal border border-gray-300 dark:border-gray-800/50 p-6 rounded-2xl w-[320px] md:w-[440px] scale-95 opacity-0 translate-y-10">
+  <div
+    class="w-fit h-fit closeModal group absolute right-4 top-4 p-0 flex gap-x-2 justify-center items-center bg-darklight-card rounded-full">
+    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none">
+      <path d="M9.17 14.83L14.83 9.17M14.83 14.83L9.17 9.17" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </div>
+
+  <div class="flex pr-12 justify-between items-center mb-4">
+    <h3 class="text-md font-medium">Notification</h3>
+   <div class="hidden gap-3 items-center cursor-pointer mark-all-read">
+  <span id="textMark" class="text-sm hidden md:inline" >Mark all as read</span>
+  <div id="toggleTrack" class="w-12 h-6 bg-gray-300 dark:bg-gray-950/30 z-10 rounded-full flex items-center justify-center px-1  transition-all duration-500 easy-in-out">
+    <div id="toggleBall" class="w-4 mx-1 h-4 -translate-x-[85%] rounded-full bg-conime-500 dark:bg-conime-500 transition duration-300 easy-in-out"></div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="notif-container2 font-normal flex flex-col gap-4 overflow-y-auto overflow-style-custom-y max-h-[300px] px-2 my-6">
+    <!-- Notifikasi akan dimasukkan lewat JS -->
+    {{ if eq .Site.Language.Lang "id" }}
+    <h2 class="text-lg font-bold">Selamat Datang di CoNime!</h2>
+    <p class="text-sm text-gray-600 dark:text-gray-300">
+      Senang sekali bisa menyambutmu di sini. Temukan anime, komik, film, dan game favoritmu bersama kami!
+    </p>
+  {{ else }}
+    <h2 class="text-lg font-bold">Welcome to CoNime!</h2>
+    <p class="text-sm text-gray-600 dark:text-gray-300">
+      We're so glad to have you here. Explore your favorite anime, comics, movies, and games with us!
+    </p>
+  {{ end }}
+  </div>
+</div>
+{{ end }}

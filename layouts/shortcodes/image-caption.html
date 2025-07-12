@@ -15,7 +15,7 @@
   <span class="block">{{ $title }}</span>
 {{ end }}
 <span>
-    Image:
+    {{ if eq .Page.Lang "id" }}Gambar:{{ else }}Image:{{ end }}
     {{ if $sources }}
       {{ $list := split $sources ";" }}
       {{ range $index, $item := $list }}
@@ -31,7 +31,7 @@
     {{ if $studio }}
       Image © Studio {{ $studio }}.
     {{ end }}
-    Used for editorial purposes only.
+    {{ if eq .Page.Lang "id" }}Digunakan hanya untuk keperluan editorial.{{ else }}Used for editorial purposes only.{{ end }}
     </span>
     </span>
   </figcaption>

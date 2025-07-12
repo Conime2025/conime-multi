@@ -11,15 +11,18 @@
   {{ $segments := split $target "/" }}
   {{ if and (eq (index $segments 0) "posts") (gt (len $segments) 2) }}
 
-    {{ range site.RegularPages }}
-      {{ if eq (trim .RelPermalink "/") $target }}
-        {{ $popularPages = $popularPages | append . }}
-        {{ $found = true }}
-      {{ end }}
-    {{ end }}
+   {{ range site.RegularPages }}
+  {{ $rel := trim .RelPermalink "/" }}
+  {{ $relNoLang := replaceRE "^([a-z]{2}/)?" "" $rel }}
+  {{ if eq $relNoLang $target }}
+    {{ $popularPages = $popularPages | append . }}
+    {{ $found = true }}
+  {{ end }}
+{{ end }}
+
 
     {{ if not $found }}
-      <p class="text-red-500 text-sm">⚠️ Tidak ketemu di Hugo: {{ . }}</p>
+      <p class="text-red-500 text-sm">⚠️⚠️ Tidak ketemu di Hugo: {{ . }}</p>
     {{ end }}
   {{ end }}
 {{ end }}
@@ -28,7 +31,7 @@
 
 {{ if gt (len $subset) 0 }}
 <div class="w-full h-fit">
-  <h2 class="text-xl uppercase {{ if eq .Lang "id" }}tracking-[.1em] lg:tracking-[.3em]{{ else }}tracking-[.3em] lg:tracking-[.4em]{{ end }} border-b border-gray-300 dark:border-gray-800/50 pb-2 mb-4">
+  <h2 class="text-xl uppercase {{ if eq .Lang "id" }}tracking-[.1em] lg:tracking-[.3em]{{ else }}tracking-[.3em] lg:tracking-[.3em]{{ end }} border-b border-gray-300 dark:border-gray-800/50 pb-2 mb-4">
     {{ if eq .Lang "id" }}Artikel Populer{{ else }}Popular Articles{{ end }}
   </h2>
 
