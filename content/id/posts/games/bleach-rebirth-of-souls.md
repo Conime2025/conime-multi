@@ -37,20 +37,28 @@ title = "BLEACH Rebirth of Souls」キャラクタームービー #34｜黒崎�
 source = "YouTube / Bandai Namco Entertainment"
 +++
 
+Bandai Namco resmi mengumumkan update besar untuk *Bleach: Rebirth of Souls*, menghadirkan **Ranked Matchmaking Mode** dan DLC **Ichigo Kurosaki (Thousand-Year Blood War Arc)**. Update ini memperkuat posisi game ini sebagai salah satu judul fighting berbasis anime yang kompetitif dengan konten baru yang menarik.
 
-Bandai Namco resmi mengumumkan update besar untuk *Bleach: Rebirth of Souls*, menghadirkan Ranked Matchmaking Mode dan DLC Ichigo Kurosaki (Thousand-Year Blood War Arc).
+
 
 ### Fitur Baru dalam Update
-- Ranked Matchmaking Mode: Pemain bisa bertanding secara kompetitif dalam sistem peringkat.
-- DLC Ichigo Kurosaki (Thousand-Year Blood War Arc): Hadir dengan teknik baru seperti *Getsuga Jujisho* dan transformasi *Merged Hollow Form*.
-- Platform: PlayStation 4, PlayStation 5, Xbox Series X|S, PC (Steam).
-- Tanggal Rilis: 10 Juni untuk pemilik Season Pass, 17 Juni untuk semua pemain.
+- **Ranked Matchmaking Mode**: Pemain bisa bertarung online dengan sistem peringkat resmi, menghadirkan tantangan baru yang lebih kompetitif.
+- **DLC Ichigo Kurosaki (Thousand-Year Blood War Arc)**: Menampilkan jurus baru seperti *Getsuga Jujisho* dan transformasi *Merged Hollow Form*, memberikan gaya bertarung yang lebih brutal.
+- **Platform**: PlayStation 4, PlayStation 5, Xbox Series X|S, PC (Steam).
+- **Tanggal Rilis**: 10 Juni untuk pemilik Season Pass, 17 Juni untuk semua pemain.
 
-{{< related-auto >}}
+
 
 ### Ranked Matchmaking Mode
-Mode ini memungkinkan pemain bertarung secara online dengan sistem peringkat, memberikan tantangan baru bagi komunitas game fighting.
+Mode ini menghadirkan sistem peringkat resmi untuk pertarungan online, mendorong komunitas untuk terus berlatih dan bersaing lebih serius. Pemain bisa mengukur kemampuan mereka melawan lawan setara, sambil merasakan ketegangan yang lebih nyata dalam duel PvP.
 
-Pemain dapat melihat trailer resmi update ini di kanal [YouTube Bandai Namco](https://www.youtube.com/watch?v=5KG6lbPnKKQ) dan mengunjungi [situs resmi](https://en.bandainamcoent.eu/bleach/bleach-rebirth-of-souls) untuk informasi lebih lanjut.
+
+
+### DLC Ichigo Kurosaki (Thousand-Year Blood War Arc)
+Karakter DLC ini menghadirkan moveset baru yang lebih mematikan dan sinematik. Dengan animasi *Getsuga Jujisho* dan transformasi *Merged Hollow Form*, penggemar *Bleach* dapat merasakan kekuatan penuh Ichigo di medan tempur digital.
+
+
+
+Pemain dapat menonton trailer resmi update ini melalui kanal [YouTube Bandai Namco](https://www.youtube.com/watch?v=5KG6lbPnKKQ) dan mengunjungi [situs resmi](https://en.bandainamcoent.eu/bleach/bleach-rebirth-of-souls) untuk detail lebih lanjut dan pembaruan terkini.
 
 {{< content-end >}}

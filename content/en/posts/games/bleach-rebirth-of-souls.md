@@ -1,22 +1,22 @@
 +++
-title = "Bleach: Rebirth of Souls Hadirkan Mode Ranked dan DLC Ichigo Kurosaki (Thousand-Year Blood War)"
-slug = "bleach-rebirth-of-souls-ranked-mode-dlc-ichigo-20250609"
+title = "Bleach: Rebirth of Souls Adds Ranked Mode and Ichigo Kurosaki (Thousand-Year Blood War) DLC"
+slug = "bleach-rebirth-of-souls-ranked-mode-dlc-ichigo-20250609-en"
 date = 2025-06-09T08:00:00+07:00
-author = "Koni si Co-Bot"
+author = "Koni the Co-Bot"
 draft = false
 nameGame = "Bleach: Rebirth of Souls"
 
-summary = "Bandai Namco resmi mengumumkan update besar untuk Bleach: Rebirth of Souls, termasuk mode Ranked Matchmaking dan DLC Ichigo Kurosaki (Thousand-Year Blood War Arc). Pemilik Season Pass bisa mengaksesnya mulai 10 Juni, sementara perilisan umum dijadwalkan pada 17 Juni 2025."
+summary = "Bandai Namco has officially announced a major update for Bleach: Rebirth of Souls, including Ranked Matchmaking Mode and the Ichigo Kurosaki (Thousand-Year Blood War Arc) DLC. Season Pass holders can access it from June 10, while the general release is scheduled for June 17, 2025."
 
-lead = "Bleach: Rebirth of Souls menambah Ranked Mode dan DLC Ichigo Kurosaki untuk memperkuat persaingan online dan menghadirkan pengalaman pertarungan baru."
+lead = "Bleach: Rebirth of Souls adds Ranked Mode and Ichigo Kurosaki DLC to strengthen online competition and deliver a new fighting experience."
 
-conclusion = """<p>Dengan hadirnya mode <strong>Ranked Matchmaking</strong> dan DLC <strong>Ichigo Kurosaki</strong>, <strong>Bleach: Rebirth of Souls</strong> semakin memperkuat posisinya sebagai game fighting berbasis anime yang kompetitif. Pemain kini bisa menguji kemampuan mereka dalam pertarungan online, sementara penggemar <strong>Bleach</strong> dapat menikmati karakter terbaru dengan kekuatan penuh.</p>"""
+conclusion = """<p>With the addition of <strong>Ranked Matchmaking</strong> and <strong>Ichigo Kurosaki DLC</strong>, <strong>Bleach: Rebirth of Souls</strong> further cements its position as a competitive anime-based fighting game. Players can now test their skills online, while Bleach fans get to enjoy the latest character in full power.</p>"""
 
 image = "/images/games/bleach-rebirth-of-souls-ranked-mode-dlc.webp"
 imageTitle = "Bleach: Rebirth of Souls Ranked Mode and DLC Official Visual"
 
-tags = ["Bleach", "Rebirth of Souls", "Recommended", "Ichigo Kurosaki", "DLC", "Bandai Namco", "Tamsoft", "Game Fighting", "Ranked Mode"]
-categories = ["Berita", "Game"]
+tags = ["Bleach", "Rebirth of Souls", "Recommended", "Ichigo Kurosaki", "DLC", "Bandai Namco", "Tamsoft", "Fighting Game", "Ranked Mode"]
+categories = ["News", "Game"]
 
 [[imageSources]]
 name = "Bandai Namco Official Site"
@@ -28,29 +28,37 @@ url = "https://en.bandainamcoent.eu/bleach/bleach-rebirth-of-souls"
 
 [[videos]]
 url = "https://www.youtube.com/embed/5KG6lbPnKKQ"
-title = "BLEACH Rebirth of Souls】 DLC第1弾紹介映像｜黒崎一護【千年血戦篇"
+title = "BLEACH Rebirth of Souls】 DLC #1 Introduction Video｜Ichigo Kurosaki【Thousand-Year Blood War Arc】"
 source = "YouTube / Bandai Namco Entertainment"
 
 [[videos]]
 url = "https://www.youtube.com/embed/ALv_2Kyov04"
-title = "BLEACH Rebirth of Souls」キャラクタームービー #34｜黒崎一護【千年血戦篇"
+title = "BLEACH Rebirth of Souls Character Movie #34｜Ichigo Kurosaki【Thousand-Year Blood War Arc】"
 source = "YouTube / Bandai Namco Entertainment"
 +++
 
+Bandai Namco has officially announced a major update for *Bleach: Rebirth of Souls*, introducing **Ranked Matchmaking Mode** and the **Ichigo Kurosaki (Thousand-Year Blood War Arc)** DLC. This update strengthens the game’s status as a competitive anime-based fighting title with exciting new content for fans.
 
-Bandai Namco resmi mengumumkan update besar untuk *Bleach: Rebirth of Souls*, menghadirkan Ranked Matchmaking Mode dan DLC Ichigo Kurosaki (Thousand-Year Blood War Arc).
 
-### Fitur Baru dalam Update
-- Ranked Matchmaking Mode: Pemain bisa bertanding secara kompetitif dalam sistem peringkat.
-- DLC Ichigo Kurosaki (Thousand-Year Blood War Arc): Hadir dengan teknik baru seperti *Getsuga Jujisho* dan transformasi *Merged Hollow Form*.
-- Platform: PlayStation 4, PlayStation 5, Xbox Series X|S, PC (Steam).
-- Tanggal Rilis: 10 Juni untuk pemilik Season Pass, 17 Juni untuk semua pemain.
 
-{{< related-auto >}}
+### New Features in the Update
+- **Ranked Matchmaking Mode**: Players can fight online in an official ranked system, delivering a more competitive experience.
+- **Ichigo Kurosaki DLC (Thousand-Year Blood War Arc)**: Features new techniques like *Getsuga Jujisho* and the *Merged Hollow Form* transformation for a more brutal fighting style.
+- **Platforms**: PlayStation 4, PlayStation 5, Xbox Series X|S, PC (Steam).
+- **Release Dates**: June 10 for Season Pass holders, June 17 for all players.
+
+
 
 ### Ranked Matchmaking Mode
-Mode ini memungkinkan pemain bertarung secara online dengan sistem peringkat, memberikan tantangan baru bagi komunitas game fighting.
+This mode brings an official ranking system to online battles, challenging the community to practice harder and compete seriously. Players can test their skills against evenly matched opponents for a thrilling PvP experience.
 
-Pemain dapat melihat trailer resmi update ini di kanal [YouTube Bandai Namco](https://www.youtube.com/watch?v=5KG6lbPnKKQ) dan mengunjungi [situs resmi](https://en.bandainamcoent.eu/bleach/bleach-rebirth-of-souls) untuk informasi lebih lanjut.
+
+
+### Ichigo Kurosaki DLC (Thousand-Year Blood War Arc)
+This DLC character arrives with a new, deadly moveset and cinematic finishers. Fans of *Bleach* will love seeing Ichigo unleash *Getsuga Jujisho* and transform into his fearsome *Merged Hollow Form* on the digital battlefield.
+
+
+
+Players can watch the official update trailers on the [Bandai Namco YouTube channel](https://www.youtube.com/watch?v=5KG6lbPnKKQ) and visit the [official website](https://en.bandainamcoent.eu/bleach/bleach-rebirth-of-souls) for more details and future updates.
 
 {{< content-end >}}

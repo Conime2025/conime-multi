@@ -1,22 +1,24 @@
 +++
-title = "Kaiju No. 8 Volume 13 Rilis di VIZ, Kafka Hadapi Ancaman Baru"
+title = "Kaiju No. 8 Volume 13 Released on VIZ, Kafka Faces a New Threat"
 nameComic = "Kaiju No. 8"
-slug = "kaiju-no-8-volume-13-rilis-viz-20250604"
+slug = "kaiju-no-8-volume-13-release-viz-20250604-en"
 date = 2025-06-04T08:00:00+07:00
-author = "Koni si Co-Bot"
+author = "Koni the Co-Bot"
 draft = false
 
-summary = "VIZ Media resmi merilis *Kaiju No. 8* volume 13, menghadirkan aksi intens saat Kafka menghadapi ancaman baru dari Kaiju No. 9 di kota Tachikawa."
+summary = "VIZ Media officially releases *Kaiju No. 8* Volume 13, delivering intense action as Kafka faces a new threat from Kaiju No. 9 in Tachikawa City."
 
-lead = "Kaiju No. 8 Volume 13 membawa pertarungan sengit Kafka melawan Kaiju No. 9 yang menculik Mina Ashiro, dengan ancaman daikaiju baru di seluruh kota."
+lead = "Kaiju No. 8 Volume 13 brings a fierce battle as Kafka confronts Kaiju No. 9, who kidnaps Mina Ashiro, with new daikaiju threats emerging across the city."
 
-conclusion = "Dengan ilustrasi dinamis dan alur menegangkan, Kaiju No. 8 Volume 13 menghadirkan aksi epik dan pengungkapan baru yang mengguncang dunia Kaiju."
+synopsis = "Kaiju No. 8 Volume 13 follows Kafka's struggle to save Mina from Kaiju No. 9, who kidnaps her in the middle of a devastating attack on Tachikawa City, while new massive daikaiju threats emerge to challenge the Defense Force."
+
+conclusion = "With dynamic art and a tense storyline, Kaiju No. 8 Volume 13 delivers epic battles and new revelations that shake the world of Kaiju."
 
 image = "/images/comics/kaiju-no-8-vol13.webp"
 imageTitle = "Kaiju No. 8 Volume 13 Official Cover Art"
 
-tags = ["Kaiju No. 8", "Manga Baru", "VIZ Media", "Naoya Matsumoto", "Aksi", "Fantasi", "Rilis Manga"]
-categories = ["Berita", "Manga"]
+tags = ["Kaiju No. 8", "New Manga", "VIZ Media", "Naoya Matsumoto", "Action", "Fantasy", "Manga Release"]
+categories = ["News", "Manga"]
 
 [[imageSources]]
 name = "VIZ Media Official Page"
@@ -27,17 +29,33 @@ name = "VIZ Media Official Page"
 url = "https://www.viz.com/read/manga/kaiju-no-8-volume-13/product/8340"
 +++
 
+VIZ Media has officially released **Volume 13** of *Kaiju No. 8*, the action-fantasy manga by **Naoya Matsumoto**. This new volume features one of the most intense conflicts yet, forcing Kafka to face an increasingly dangerous enemy.
 
-VIZ Media resmi merilis volume ke-13 dari *Kaiju No. 8*, manga aksi-fantasi karya Naoya Matsumoto.
 
-### Pertempuran Sengit
-Mina Ashiro jatuh ke tangan Kaiju No. 9 setelah kemunculannya di Tachikawa. Kafka berusaha menyelamatkannya, tetapi serangan daikaiju di berbagai titik kota menghambat langkahnya. Di tengah kekacauan, sebuah entitas misterius yang belum pernah terlihat sebelumnya muncul, menambah ketegangan dalam pertempuran.
+
+### Official Release Details
+- **Title**: Kaiju No. 8 Volume 13
+- **Writer & Artist**: Naoya Matsumoto
+- **Publisher (EN)**: VIZ Media
+- **International Release**: June 2025
+
+
+
+### Story Focus for Volume 13
+- Mina Ashiro is kidnapped by Kaiju No. 9 during a sudden attack on Tachikawa City.
+- Kafka is determined to save her, even as new massive daikaiju attacks break out in multiple locations.
+- The volume emphasizes team strategy, moral dilemmas, and hidden betrayals amidst the chaos.
+
+
+
+### New Threats & Fierce Battles
+Kaiju No. 9 continues to tighten its grip with brutal, unexpected moves. As Kafka and his team fight back against massive daikaiju, a mysterious new entity emerges, increasing the stakes even further. This conflict becomes a major turning point for the future of the Kaiju world.
 
 {{< related-auto >}}
 
-### Ancaman Baru
-Kaiju No. 9 semakin memperkuat dominasinya, memaksa Kafka dan timnya menghadapi tantangan lebih besar. Dengan kekuatan baru yang belum sepenuhnya terungkap, pertempuran ini bisa menjadi titik balik bagi dunia Kaiju.
 
-Baca pratinjau gratis dan pre-order volume 13 di [halaman resmi VIZ](https://www.viz.com/read/manga/kaiju-no-8-volume-13/product/8340).
+
+### Additional Information & Pre-Order
+Read a free preview or pre-order Volume 13 on the [official VIZ page](https://www.viz.com/read/manga/kaiju-no-8-volume-13/product/8340) to support the official release.
 
 {{< content-end >}}

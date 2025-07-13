@@ -1,21 +1,24 @@
 +++
-title = "Dr. Stone Volume 27 Rilis di VIZ, Senku dan Tim Membangun Mesin Waktu"
+title = "Dr. Stone Volume 27 Released on VIZ, Senku and Team Begin Building a Time Machine"
 nameComic = "Dr. Stone"
-slug = "dr-stone-volume-27-rilis-viz-20250604"
+slug = "dr-stone-volume-27-release-viz-20250604-en"
 date = 2025-06-04T08:00:00+07:00
-author = "Koni si Co-Bot"
+author = "Koni the Co-Bot"
 draft = false
 
-summary = "VIZ Media resmi merilis *Dr. Stone* volume 27, menghadirkan babak baru petualangan sains saat Senku dan timnya berusaha membangun mesin waktu setelah menerima pesan misterius dari masa depan."
+summary = "VIZ Media officially releases *Dr. Stone* Volume 27, introducing a new science adventure arc as Senku and his team attempt to build a time machine after receiving a mysterious message from the future."
 
-lead = "Dr. Stone Volume 27 menghadirkan tantangan ambisius membangun mesin waktu demi mengungkap pesan misterius dari masa depan yang mengguncang Stone World."
+lead = "Dr. Stone Volume 27 brings an ambitious new challenge as Senku and his team aim to build a time machine to uncover a shocking message from the future that shakes the Stone World."
 
-conclusion = "Dengan eksplorasi ilmiah yang mendalam dan ilustrasi memukau, Dr. Stone Volume 27 menandai langkah besar Senku dan timnya menuju misteri baru yang menegangkan."
+synopsis = "Dr. Stone Volume 27 follows Senku and his team as they receive a mysterious message from the future. Determined to solve the mystery, they embark on the ambitious project of building a time machine, facing extreme scientific and moral challenges."
+
+conclusion = "With detailed scientific exploration and striking artwork, Dr. Stone Volume 27 marks a major step for Senku and his team toward an exciting new mystery."
 
 image = "/images/comics/dr-stone-vol27.webp"
 imageTitle = "Dr. Stone Volume 27 Official Cover Art"
-tags = ["Dr. Stone", "Manga Baru", "VIZ Media", "Riichiro Inagaki", "Boichi", "Petualangan", "Sains", "Rilis Manga"]
-categories = ["Berita", "Manga"]
+
+tags = ["Dr. Stone", "New Manga", "VIZ Media", "Riichiro Inagaki", "Boichi", "Adventure", "Science", "Manga Release"]
+categories = ["News", "Manga"]
 
 [[imageSources]]
 name = "VIZ Media Official Page"
@@ -26,17 +29,35 @@ name = "VIZ Media Official Page"
 url = "https://www.viz.com/read/manga/dr-stone-volume-27/product/8342"
 +++
 
+VIZ Media has officially released **Volume 27** of *Dr. Stone*, the science-adventure manga by **Riichiro Inagaki** and **Boichi**. This latest volume pushes Senku’s team into their most ambitious project yet: building a time machine.
 
-VIZ Media resmi merilis volume ke-27 dari *Dr. Stone*, manga petualangan sains karya Riichiro Inagaki dan Boichi.
 
-### Perjalanan Waktu Dimulai
-Senku dan timnya menerima pesan misterius dari masa depan, yang membuat mereka semakin yakin mesin waktu bisa menjadi kenyataan. Namun tantangan ilmiah dan moral yang muncul membuat proyek ini semakin kompleks.
+
+### Official Release Details
+- **Title**: Dr. Stone Volume 27
+- **Writer**: Riichiro Inagaki
+- **Illustrator**: Boichi
+- **Publisher (EN)**: VIZ Media
+- **International Release**: June 2025
+
+
+
+### Story Focus for Volume 27
+- Senku and his team receive a mysterious message believed to be from the future.
+- They become convinced that building a time machine is the key to saving the Stone World.
+- Extreme scientific challenges arise, including complex calculations, rare materials, and moral dilemmas.
+- The volume highlights team strategy and personal doubts among the characters.
+
+
+
+### Scientific Challenges & Future Mystery
+Who sent the message? What are the consequences of building a time machine for the Stone World? Volume 27 brings new tension with in-depth scientific discussion and moral dilemmas, inviting readers to speculate on Senku’s next moves.
 
 {{< related-auto >}}
 
-### Misteri Masa Depan
-Siapa sebenarnya yang mengirim pesan itu? Apa dampaknya bagi Stone World? Volume ini menghadirkan ketegangan baru dalam eksplorasi ilmiah Senku dan timnya.
 
-Baca pratinjau gratis dan pre-order volume 27 di [halaman resmi VIZ](https://www.viz.com/read/manga/dr-stone-volume-27/product/8342).
+
+### Additional Information & Pre-Order
+Read a free preview or pre-order from the [official VIZ page](https://www.viz.com/read/manga/dr-stone-volume-27/product/8342) to support the official release.
 
 {{< content-end >}}

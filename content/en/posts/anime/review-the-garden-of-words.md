@@ -1,24 +1,29 @@
 +++
-title = "Review Kotonoha no Niwa (2013): Keheningan yang Menghubungkan Dua Jiwa"
+title = "Review The Garden of Words (2013): Silence That Connects Two Souls"
 nameAnime = "Kotonoha no Niwa"
-slug = "review-kotonoha-no-niwa-20250617"
+slug = "review-the-garden-of-words-20250617-en"
 date = 2025-06-17T17:53:00+07:00
-author = "Koni si Co-Bot"
+author = "Koni the Co-Bot"
 draft = false
 
-summary = "*Kotonoha no Niwa* adalah film pendek karya Makoto Shinkai yang mengisahkan pertemuan tak terduga antara dua jiwa yang sama-sama kehilangan arah. Dengan balutan visual megah dan keheningan penuh makna, film ini menawarkan pengalaman emosional yang dalam dan menyentuh."
-lead = """<p>Di tengah hujan pagi Tokyo, Takao, seorang siswa SMA yang bercita-cita menjadi pembuat sepatu, bertemu wanita misterius bernama Yukari. Pertemuan mereka di taman berlangsung tanpa janji, tapi berulang. Keduanya sama-sama “membolos” dari dunia, dan dalam kesunyian mereka, tumbuh sebuah hubungan yang sulit dijelaskan dengan kata.</p>"""
+summary = "*The Garden of Words* is a short film by Makoto Shinkai about an unexpected meeting between two lost souls. With breathtaking visuals and meaningful silence, it delivers a deeply emotional and touching experience."
 
-conclusion = """<p><em>Kotonoha no Niwa</em> bukan sekadar film romantis, melainkan potret keheningan yang menyembuhkan. Dengan durasi yang singkat namun sarat makna, film ini mengajak kita merenung, merasakan, dan percaya bahwa kadang, pertemuan paling singkat bisa memberi pengaruh paling dalam. Ini adalah karya Makoto Shinkai yang wajib ditonton, terutama bagi pencinta anime yang intim dan puitis.</p>"""
+lead = """
+<p>On a rainy morning in Tokyo, Takao, a high school student who dreams of becoming a shoemaker, meets a mysterious woman named Yukari. Their encounters in the park happen without plans but keep repeating. Both are “skipping” the world in their own way, and in that quiet space, a relationship forms that words can barely explain.</p>
+"""
+
+conclusion = """
+<p><em>The Garden of Words</em> is more than just a romantic film—it's a portrait of healing through silence. With its short yet rich runtime, it invites us to reflect, to feel, and to believe that sometimes the briefest meetings can leave the deepest impact. It's a must-watch Shinkai work, especially for fans of intimate and poetic anime.</p>
+"""
 
 image = "/images/anime/kotonoha_no_niwa.webp"
 imageTitle = "Kotonoha no Niwa Official Movie Visual"
-tags = ["Makoto Shinkai", "Romantis", "Drama", "Kana Hanazawa", "Puisi", "Review"]
+tags = ["Makoto Shinkai", "Romance", "Drama", "Kana Hanazawa", "Poetic", "Review"]
 categories = ["Review", "Anime"]
 
 [[sources]]
-name = "Wikipedia – Kotonoha no Niwa"
-url = "https://id.wikipedia.org/wiki/Kotonoha_no_Niwa"
+name = "Wikipedia – The Garden of Words"
+url = "https://en.wikipedia.org/wiki/The_Garden_of_Words"
 
 [[imageSources]]
 name = "CoMix Wave Films – Official Scene"
@@ -27,76 +32,90 @@ studio = "CoMix Wave Films"
 
 [[videos]]
 url = "https://www.youtube.com/embed/udDIkl6z8X0"
-title = "言の葉の庭』 予告篇 'The Garden of Words' Trailer"
+title = "'The Garden of Words' Trailer"
 source = "YouTube / コミックス・ウェーブ・フィルム CoMix Wave Channel"
 +++
 
-### Informasi Film
-- Judul Internasional: *The Garden of Words*
-- Sutradara: Makoto Shinkai
-- Pemeran Utama:
+### Film Information
+- International Title: *The Garden of Words*
+- Director: Makoto Shinkai
+- Main Cast:
   - Takao Akizuki – Miyu Irino
   - Yukari Yukino – Kana Hanazawa
-- Durasi: 46 menit
-- Rilis Jepang: 31 Mei 2013
+- Duration: 46 minutes
+- Japan Release: 31 May 2013
 - Studio: CoMix Wave Films
-- Rating IMDb: 7.4/10
+- IMDb Rating: 7.4/10
 
-### Cerita yang Mengalir Pelan, Tapi Menyentuh
 
-Takao Akizuki adalah siswa SMA berusia 15 tahun yang bercita-cita menjadi pembuat sepatu. Ia sering menghabiskan pagi hari hujan di taman Shinjuku Gyoen, membolos kelas demi merancang sepatu impiannya. Di taman yang sunyi itulah ia bertemu Yukari Yukino, wanita dewasa misterius yang terlihat rapuh namun anggun, meminum bir dan makan cokelat sambil termenung.
 
-Takao dan Yukari tidak langsung saling mengenal. Mereka berbicara sedikit, berpisah dalam hening, dan kembali bertemu tanpa rencana. Lambat laun, taman hujan itu menjadi ruang perlindungan mereka—tempat dua jiwa yang sama-sama kehilangan arah saling menyembuhkan, meski tanpa definisi yang jelas tentang hubungan mereka.
+### A Slow but Moving Story
 
-Melalui puisi tanka klasik yang disisipkan Yukari, Takao perlahan menyadari bahwa wanita ini bukan orang sembarangan. Yukari ternyata adalah guru sastra Jepang klasik di sekolahnya yang menghilang karena tekanan dan gosip murid-murid. Keheningan mereka adalah bentuk komunikasi yang tak kasat mata, tapi terasa nyata dan menenangkan.
+Takao Akizuki is a 15-year-old high school student who dreams of becoming a shoemaker. He often spends rainy mornings at Shinjuku Gyoen Park, skipping class to design shoes. In that quiet park, he meets Yukari Yukino—a mysterious, fragile yet graceful older woman, quietly sipping beer and eating chocolate while lost in thought.
+
+Takao and Yukari don't immediately connect. Their conversations are sparse, their meetings end in silence, and they continue to encounter each other by chance. Over time, the rainy park becomes their sanctuary—a place where two lost souls can heal each other without needing to define what they are.
+
+Through the classic tanka poetry she shares, Takao slowly realizes Yukari is no ordinary woman. She’s actually his school’s classical literature teacher who disappeared under the weight of student rumors and personal pressure. Their shared silence becomes an unspoken form of communication—real and soothing.
 
 {{< image-caption
   src="/images/anime/kotonoha_no_niwa2.webp"
-  alt="Kotonoha no Niwa - Scene 1"
-  title="Kotonoha no Niwa Official Scene 1"
+  alt="The Garden of Words - Scene 1"
+  title="The Garden of Words Official Scene 1"
   sources="CoMix Wave Films – Official Scene Website,https://www.imdb.com/title/tt2591814/"
 >}}
 
 {{< related-auto >}}
 
-### Visual Terbaik dari Shinkai?
 
-Detail visual dalam *Kotonoha no Niwa* sungguh luar biasa. Dari tetesan hujan, daun basah, hingga bayangan air—semuanya digambarkan dengan ketelitian seperti lukisan hidup. Tak berlebihan jika menyebut ini sebagai film Shinkai paling indah secara visual.
+
+### Shinkai's Most Beautiful Visuals?
+
+The visual detail in *The Garden of Words* is simply stunning. From the raindrops and wet leaves to shimmering water reflections—it’s all drawn with the precision of a living painting. It wouldn’t be an exaggeration to call this Shinkai’s most visually beautiful film.
 
 {{< image-caption
   src="/images/anime/kotonoha_no_niwa3.webp"
-  alt="Kotonoha no Niwa - Scene 2"
-  title="Kotonoha no Niwa Official Scene 2"
+  alt="The Garden of Words - Scene 2"
+  title="The Garden of Words Official Scene 2"
   sources="CoMix Wave Films – Official Scene Website,https://www.imdb.com/title/tt2591814/"
 >}}
 
 {{< image-caption
   src="/images/anime/kotonoha_no_niwa4.webp"
-  alt="Kotonoha no Niwa - Scene 3"
-  title="Kotonoha no Niwa Official Scene 3"
+  alt="The Garden of Words - Scene 3"
+  title="The Garden of Words Official Scene 3"
   sources="CoMix Wave Films – Official Scene Website,https://www.imdb.com/title/tt2591814/"
 >}}
 
-### Musik dan Suara yang Mengikat Emosi
 
-Musik latar karya Daisuke Kashiwa mengalun tenang dan mengiringi suasana hening dalam film dengan pas. Lagu tema "Rain" versi Motohiro Hata menyentuh hati. Dan tentu saja, suara Kana Hanazawa sebagai Yukari menambah kesan emosional—menenangkan sekaligus rapuh.
 
-### Simbolisme dan Akhir yang Terbuka
+### Music and Voice That Bind Emotions
 
-Salah satu kekuatan *Kotonoha no Niwa* adalah penggunaan metafora yang halus namun kuat. Misalnya, kebiasaan Yukari menyentuh kakinya—yang awalnya terkesan sebagai cedera fisik—sebenarnya adalah gambaran dari ketidakmampuannya “melangkah” dalam hidup. Ia kehilangan pijakan sebagai guru dan pribadi. Di sisi lain, Takao hadir dengan keahlian dan cita-cita membuat sepatu, yang menjadi simbol bahwa ia membantu Yukari untuk “berjalan kembali”.
+The soundtrack by Daisuke Kashiwa flows gently, perfectly matching the film’s quiet mood. The theme song “Rain” by Motohiro Hata is especially moving. And of course, Kana Hanazawa’s voice as Yukari adds a layer of emotion—calm yet fragile.
 
-Menjelang akhir film, hubungan mereka menghadapi realitas yang tak bisa dihindari. Tak ada deklarasi cinta yang megah, tapi ada luapan perasaan yang tak bisa ditahan. Sebuah sore yang basah oleh badai menjadi saksi momen paling jujur dalam hidup mereka. Tapi seperti hujan yang datang dan pergi, pertemuan pun harus berpisah.
 
-Namun, cerita mereka belum benar-benar selesai. Ada sepatu yang belum dikenakan, ada janji diam-diam yang belum ditepati. Film ini menutup kisahnya dengan cara yang sederhana tapi menyisakan ruang harapan—cukup untuk membuat hati bertanya, "Apakah mereka akan bertemu lagi?"
 
-### Catatan Kecil
+### Symbolism and an Open Ending
 
-- Film ini hanya berdurasi 46 menit, sehingga tidak semua latar belakang karakter digali mendalam. Namun, justru karena singkatnya, film ini terasa seperti puisi visual yang padat makna.
+One of *The Garden of Words*’ strengths is its subtle yet strong use of metaphor. For example, Yukari’s habit of touching her foot, at first seeming like a physical injury, is actually a sign of her inability to “move forward” in life. She’s lost her footing as a teacher and a person. Meanwhile, Takao’s skill and dream of making shoes symbolize his desire to help her “walk again.”
 
-- Bagi yang lebih menyukai konflik besar dan dialog padat, *Kotonoha no Niwa* mungkin terasa terlalu sunyi atau lambat. Tapi bagi penikmat narasi reflektif dan visual kuat, film ini adalah permata.
+As the film nears its end, their relationship faces unavoidable reality. There’s no grand declaration of love, but there is an emotional outpouring that can’t be held back. A rainy, stormy afternoon becomes the most honest moment of their lives. But like the rain that comes and goes, their meeting also must end.
 
-### Kutipan Penonton
+Yet their story doesn’t feel truly finished. There are shoes left unworn, silent promises yet to be fulfilled. The film closes simply but leaves room for hope—enough to make us wonder, *“Will they meet again?”*
 
-> “Film ini seperti hujan pagi yang tenang—sunyi, lembut, tapi mengisi hati dengan sesuatu yang hangat.” — *IMDb user 'y‑*'*
+
+
+### Author's Note
+
+This film is only 46 minutes long, so it doesn’t dig deeply into every character’s background. But that brevity makes it feel like a compact visual poem—quiet, yet lingering.
+
+For viewers who prefer big conflicts and heavy dialogue, *The Garden of Words* might feel too slow. But to me, its silence and measured pace are what make it special—giving us space to reflect, sink into the rainy mood, and feel close to the characters’ quiet loneliness.
+
+Personally, I also really love Kana Hanazawa’s voice. Whenever she appears in anime—especially as the main character—I always fall for it. Here, her soft and fragile delivery suits the rainy, quiet atmosphere perfectly. It’s like a gentle whisper that calms you but goes straight to the heart.
+
+
+
+### Viewer Quote
+
+> “This film is like a quiet morning rain—silent, gentle, but it fills the heart with something warm.” — *IMDb user 'y‑'*
 
 {{< content-end >}}

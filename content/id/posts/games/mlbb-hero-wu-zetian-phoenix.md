@@ -63,7 +63,8 @@ Wu Zetian adalah mid-lane mage dengan potensi tinggi dalam crowd control, sustai
 ### Kisah Sang Empress
 Dulunya yatim piatu tanpa nama, Wu Zetian bangkit dari bawah hingga mengklaim kembali takdirnya sebagai pendiri Divine Capital. Dengan kehendak rakyat dan semangat phoenix, ia kembali sebagai simbol keteguhan, kebangkitan, dan persatuan.
 
-> “If destiny does not favor you, forge your own path through sheer will and effort.” – Wu Zetian
+> “Jika takdir tak berpihak padamu, tempa sendiri jalanmu dengan tekad dan usaha.” – Wu Zetian
+
 
 
 {{< content-end >}}

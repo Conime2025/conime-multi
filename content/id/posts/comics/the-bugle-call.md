@@ -10,6 +10,8 @@ summary = "VIZ Media resmi merilis *The Bugle Call: Song of War* volume 1, manga
 
 lead = "The Bugle Call: Song of War Vol. 1 menghadirkan Luca, bugler muda yang terjebak dalam perang global memperebutkan Spires kuno dan kekuatan magis."
 
+synopsis = "The Bugle Call: Song of War Vol. 1 menceritakan Luca, bugler muda yang terseret perang global untuk memperebutkan Spires kuno. Bersama Branch-hexed, ia menghadapi takdir kelam di dunia penuh musik dan sihir."
+
 conclusion = "Dengan visual memukau dan dunia yang penuh intrik, The Bugle Call: Song of War Vol. 1 menghadirkan kisah fantasi epik tentang pengorbanan, musik, dan pertarungan demi masa depan."
 
 image = "/images/comics/bugle-call-song-of-war-vol1.webp"
@@ -32,20 +34,35 @@ title = "Official Manga Trailer | The Bugle Call: Song of War, Vol. 1 | VIZ"
 source = "YouTube / VIZ Media"
 +++
 
+VIZ Media resmi merilis **volume pertama** dari *The Bugle Call: Song of War*, manga fantasi karya **Mozuku Sora** dan **Higoro Toumori**. Volume ini memadukan musik, strategi militer, dan sihir dalam latar dunia yang dipenuhi perang.
 
-VIZ Media resmi merilis volume pertama dari *The Bugle Call: Song of War*, manga fantasi karya Mozuku Sora dan Higoro Toumori.
 
-### Tentang Cerita
-Luca hanyalah seorang bugler yang ingin meninggalkan medan perang dan mengejar impian sebagai musisi sejati. Namun takdir berkata lain. Setelah diselamatkan oleh Pontiff, ia bergabung dengan kelompok Branch-hexed—manusia dengan kekuatan unik yang digunakan untuk melawan kekaisaran saingan.
+
+### Detail Rilis Resmi
+- **Judul**: The Bugle Call: Song of War Volume 1
+- **Penulis Cerita**: Mozuku Sora
+- **Ilustrator**: Higoro Toumori
+- **Penerbit (EN)**: VIZ Media
+- **Rilis Internasional**: Juni 2025
+
+
+
+### Fokus Cerita Volume 1
+Luca hanyalah seorang bugler muda yang bermimpi menjadi musisi sejati, tetapi takdir membawanya ke dalam perang global demi memperebutkan Spires kuno. Setelah diselamatkan oleh Pontiff, ia tidak punya pilihan selain bergabung dengan Branch-hexed—sekelompok manusia dengan kekuatan magis unik yang digunakan untuk melawan kekaisaran saingan. Volume ini menyoroti dilema moral, strategi militer, dan pengorbanan di tengah medan perang yang brutal.
+
+
+
+### Dunia & Intrik
+Dunia Arboral dipenuhi menara misterius bernama Spires, peninggalan peradaban maju yang menyimpan rahasia besar. Perebutan kendali atas Spires memicu konflik global yang brutal, memaksa Luca memainkan peran penting sebagai *muse of massacre* dalam perang yang tak bisa ia hindari.
+
+> “Bersiaplah untuk musik, strategi, pengorbanan, dan pertarungan berdarah di *The Bugle Call: Song of War, Vol. 1!*”
+> — [Trailer Resmi VIZ Media](https://www.youtube.com/watch?v=rugEcEReMmo)
 
 {{< related-auto >}}
 
-### Dunia yang Penuh Intrik
-Dunia Arboral dipenuhi menara kuno bernama Spires, peninggalan peradaban maju yang menyimpan rahasia besar. Perebutan kendali atas Spires memicu konflik global, memaksa Luca memainkan peran sebagai *muse of massacre* dalam perang yang tak bisa ia hindari.
 
-> “Prepare for music, strategy, sacrifice, and steel in *The Bugle Call: Song of War, Vol. 1!*”
-> — [VIZ Media Official Trailer](https://www.youtube.com/watch?v=rugEcEReMmo)
 
-Baca pratinjau gratis dan pre-order volume 1 di [halaman resmi VIZ](https://www.viz.com/manga-books/manga/bugle-call-song-of-war-volume-1/product/8376).
+### Informasi Tambahan & Pre-Order
+Baca pratinjau gratis atau lakukan pre-order volume 1 di [halaman resmi VIZ](https://www.viz.com/manga-books/manga/bugle-call-song-of-war-volume-1/product/8376) untuk mendukung rilisan resmi.
 
 {{< content-end >}}

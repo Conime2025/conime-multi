@@ -1,22 +1,22 @@
 +++
-title = "DC Ungkap Detail Baru dalam Trailer Superman"
+title = "DC Reveals New Details in Superman Trailer"
 nameMovie = "Superman"
 slug = "dc-superman-trailer-breakdown-20250520"
 date = 2025-05-20T18:22:00+07:00
-author = "Koni si Co-Bot"
+author = "Koni the Co-Bot"
 draft = false
 
-summary = "Trailer terbaru Superman dari DC menghadirkan berbagai elemen menarik, termasuk wawancara Lois dan Clark, aksi Krypto, serta kehadiran Engineer sebagai ancaman baru."
+summary = "DC’s latest Superman trailer showcases intriguing elements including an intense Lois and Clark interview, Krypto in action, and the arrival of Engineer as a new threat."
 
-lead = "Trailer Superman memperlihatkan konflik batin Clark Kent dalam menyeimbangkan warisan Kryptonian dengan kehidupannya sebagai manusia di Bumi. Engineer muncul sebagai ancaman baru yang memaksa Superman menghadapi isu keadilan, kerusakan massal, dan politik global."
+lead = "The Superman trailer highlights Clark Kent’s internal struggle to balance his Kryptonian heritage with his human life on Earth. Engineer emerges as a new adversary forcing Superman to confront issues of justice, mass destruction, and global politics."
 
-conclusion = """<p>Trailer terbaru <em>Superman</em> memberikan berbagai petunjuk mengenai <strong>alur cerita, karakter pendukung, dan konflik utama</strong> yang akan hadir dalam film ini. Dengan wawancara emosional antara Lois dan Clark, aksi menegangkan dari Engineer dan Krypto, serta referensi tersembunyi yang menghubungkan film ini dengan sejarah panjang DC Universe, antusiasme terhadap film <em>Superman</em> semakin tinggi.</p>"""
+conclusion = """<p>The new <em>Superman</em> trailer offers plenty of clues about the <strong>storyline, supporting characters, and main conflicts</strong> in the film. With an emotional interview between Lois and Clark, thrilling action featuring Engineer and Krypto, and subtle Easter eggs tying into DC’s rich history, anticipation for <em>Superman</em> continues to grow.</p>"""
 
 image = "/images/movies/superman-trailer-breakdown.webp"
 imageTitle = "DC Studios Superman Official Trailer Visual"
 
-tags = ["Superman", "DC Studios", "Lois Lane", "Krypto", "Engineer", "Film Superhero"]
-categories = ["Berita", "Film"]
+tags = ["Superman", "DC Studios", "Lois Lane", "Krypto", "Engineer", "Superhero Movie"]
+categories = ["News", "Film"]
 
 [[imageSources]]
 name = "DC Official Site"
@@ -27,22 +27,22 @@ name = "DC Official Site"
 url = "https://www.dc.com/blog/2025/05/14/all-the-amazing-things-we-found-in-the-superman-trailer"
 +++
 
-### Wawancara Lois dan Clark
+### Lois and Clark Interview
 
-Trailer *Superman* garapan DC Studios mengusung pendekatan unik dengan menjadikan wawancara antara Lois Lane dan Superman sebagai inti narasi. Dalam sesi tanya jawab yang intens, Lois sebagai jurnalis kritis mengajukan pertanyaan sulit yang menggali sisi moral Clark Kent.
+DC Studios’ *Superman* trailer takes a unique approach by centering on an intense interview between Lois Lane and Superman. As a sharp, relentless journalist, Lois asks Clark tough moral questions that dig deep into his values and responsibilities.
 
-Chemistry antara David Corenswet dan Rachel Brosnahan menciptakan kedalaman emosional yang kuat, memperlihatkan konflik batin Superman yang mengutamakan keselamatan umat manusia.
+The on-screen chemistry between David Corenswet and Rachel Brosnahan creates strong emotional weight, showcasing Superman’s inner conflict over protecting humanity while wrestling with his Kryptonian legacy.
 
 {{< image-caption
   src="/images/movies/20250514_DC_News_Interview.webp"
-  alt="Wawancara Lois dan Clark"
+  alt="Lois and Clark Interview"
   title="Lois & Clark Interview Scene from DC Official Trailer"
   sources="DC Official Site,https://www.dc.com/blog/2025/05/14/all-the-amazing-things-we-found-in-the-superman-trailer"
 >}}
 
-### Karakter dan Aksi dalam Trailer
+### Characters and Action in the Trailer
 
-#### Beberapa karakter mencuri perhatian:
+#### Notable characters featured:
 
 - Engineer
 - Mister Terrific
@@ -50,39 +50,39 @@ Chemistry antara David Corenswet dan Rachel Brosnahan menciptakan kedalaman emos
 - Guy Gardner
 - Hawkgirl
 - Metamorpho
-- Maxwell Lord (indikasi)
+- Maxwell Lord (hinted)
 
-### Easter Eggs dan Referensi Menarik
+### Easter Eggs and References
 
-Trailer *Superman* dipenuhi easter eggs yang mengisyaratkan dunia luas DC Studios:
+The *Superman* trailer is full of nods and Easter eggs that expand DC Studios’ world:
 
-- LordTech, perusahaan terkait Maxwell Lord, muncul pada alat perekam Lois Lane.
-- Big Belly Burger, restoran ikonik DC Universe, terlihat di Metropolis.
-- Logo Smallville Giants, tim sepak bola kampung halaman Clark, menghadirkan nostalgia bagi penggemar lama.
+- LordTech, linked to Maxwell Lord, appears on Lois Lane’s recorder.
+- Big Belly Burger, DC’s iconic fast-food chain, can be seen in Metropolis.
+- The Smallville Giants logo evokes nostalgia for Clark’s hometown roots.
 
 {{< related-auto >}}
 
-### Spekulasi dan Teori
+### Fan Speculation and Theories
 
-Penggemar menduga Metamorpho, yang terlihat dalam adegan penjara bersama Superman, mungkin memegang peran penting. Salah satu detail menonjol adalah tangannya yang tampak berlapis Kryptonite, mengingatkan pada pertarungan klasik di komik *Justice League*.
+Fans speculate that Metamorpho, seen in a prison scene with Superman, may play a critical role—his Kryptonite-like arm suggesting a classic *Justice League* comic battle.
 
-Selain itu, kemunculan logo LordTech bisa menjadi petunjuk keterlibatan Maxwell Lord dalam cerita, meski belum jelas apakah dia sekutu atau musuh Superman.
+Meanwhile, LordTech’s appearance hints at Maxwell Lord’s involvement in the story, though it’s unclear if he’ll be an ally or an enemy.
 
-### Jadwal Tayang
+### Release Date
 
-Film *Superman* dijadwalkan rilis di bioskop dan IMAX pada 11 Juli 2025.
-Tonton trailer lengkapnya di kanal resmi [DC Studios](https://www.dc.com).
+*Superman* is slated to premiere in theaters and IMAX on July 11, 2025.
+Watch the full trailer on the [DC Studios official channel](https://www.dc.com).
 
-### List Karakter Utama
+### Main Character List
 
 - Superman / Clark Kent – David Corenswet
 - Lois Lane – Rachel Brosnahan
-- Engineer – Belum diumumkan
+- Engineer – TBA
 - Krypto – —
-- Mister Terrific – Belum diumumkan
-- Guy Gardner – Belum diumumkan
-- Hawkgirl – Belum diumumkan
-- Metamorpho – Belum diumumkan
-- Maxwell Lord (indikasi) – Belum dikonfirmasi
+- Mister Terrific – TBA
+- Guy Gardner – TBA
+- Hawkgirl – TBA
+- Metamorpho – TBA
+- Maxwell Lord (hinted) – Not confirmed
 
 {{< content-end >}}

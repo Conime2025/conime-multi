@@ -1,19 +1,20 @@
 +++
-title = "Review Rurouni Kenshin (2012): Samurai Penebus Dosa dan Chemistry Mengena"
+title = "Review Rurouni Kenshin (2012): A Redeeming Samurai Tale with Strong Chemistry"
 nameMovie = "Rurouni Kenshin (Live‑Action 2012)"
 slug = "review-rurouni-kenshin-2012-liveaction-20250601"
 date = 2025-06-01T20:00:00+07:00
 author = "Koni si Co-Bot"
 draft = false
 
-summary = "Adaptasi live‑action manga populer, Rurouni Kenshin (2012) berhasil menghadirkan aksi samurai yang intens, chemistry kuat antar pemain, dan kisah penebusan yang emosional."
-lead = """<p>Di era Meiji awal, mantan pembunuh legendaris Himura Kenshin (Takeru Satō) berkelana dengan janji tak akan membunuh lagi. Ia tiba di Tokyo, bertemu Kaoru, dan mulai melindungi dojo serta penduduk dari sindikat kriminal—sehingga memulai perjalanan penebusan dan keadilan.</p>"""
+summary = "The 2012 live-action adaptation of the popular manga, Rurouni Kenshin, delivers intense samurai action, strong on-screen chemistry, and an emotional story of redemption."
+lead = """<p><em>Rurouni Kenshin (2012)</em> delivers stylish samurai action paired with an emotional redemption drama, confirming its status as one of the most successful manga-to-film adaptations.</p>"""
 
-conclusion = """<p><em>Rurouni Kenshin</em> live‑action 2012 menghadirkan adaptasi yang mengesankan: aksi pedang koreografi apik, chemistry pas antara Kenshin–Kaoru, serta konflik batin Kenshin yang menyentuh. Meskipun ada beberapa karakter jahat yang terkesan teatrikal, keseluruhan film berhasil membawa nuansa emosional dan pengabdian periode Meiji dengan baik.</p>"""
+synopsis = """Set in early Meiji Japan, former legendary assassin Himura Kenshin is known as the bloodthirsty Battōsai. After the war, he vows never to kill again and wanders seeking redemption. He arrives in Tokyo, meeting Kaoru, heir to a dojo threatened by the opium syndicate led by Kanryū Takeda. Kenshin defends the dojo and its people against criminals and hired killers, upholding his vow while confronting the haunting sins of his past."""
+
+conclusion = """<p>The 2012 live-action <em>Rurouni Kenshin</em> offers an impressive adaptation with sharp sword-fighting choreography, strong chemistry between Kenshin and Kaoru, and a touching portrayal of Kenshin's internal struggle. Though some villains come off a bit theatrical, the film succeeds in delivering emotional weight and a convincing Meiji-era backdrop.</p>"""
 
 image = "/images/movies/rurouni_kenshin_2012.webp"
-imageTitle = "Poster Resmi Rurouni Kenshin (2012)"
-
+imageTitle = "Official Poster for Rurouni Kenshin (2012)"
 
 tags = ["Rurouni Kenshin", "Live‑Action", "Samurai", "Takeru Satō", "Emi Takei", "Review"]
 categories = ["Review", "Film"]
@@ -23,8 +24,8 @@ name = "IMDb – Rurouni Kenshin Part I: Origins"
 url = "https://www.imdb.com/title/tt1979319/"
 
 [[sources]]
-name = "Wikipedia – Rurouni Kenshin (film 2012)"
-url = "https://id.wikipedia.org/wiki/Rurouni_Kenshin_(film_2012)"
+name = "Wikipedia – Rurouni Kenshin (2012 film)"
+url = "https://en.wikipedia.org/wiki/Rurouni_Kenshin_(film_2012)"
 
 [[imageSources]]
 name = "IMDb – Rurouni Kenshin"
@@ -32,43 +33,42 @@ url = "https://www.imdb.com/title/tt1979319/"
 studio = "Warner Bros. Japan"
 +++
 
-### Informasi Film
-- Judul Internasional: *Rurouni Kenshin Part I: Origins*
-- Sutradara: Keishi Ōtomo
-- Pemeran Utama:
+### Film Information
+- International Title: *Rurouni Kenshin Part I: Origins*
+- Director: Keishi Ōtomo
+- Main Cast:
   - Himura Kenshin – Takeru Satō
   - Kaoru Kamiya – Emi Takei
   - Sanosuke Sagara – Munetaka Aoki
   - Megumi Takani – Yū Aoi
-- Durasi: 135 menit
-- Rilis Jepang: 25 Agustus 2012
-- Pendapatan Dunia: ± $37,7 juta
-- Rating IMDb: 7.4/10 (30.000+ penilaian)
+- Duration: 135 minutes
+- Japan Release: August 25, 2012
+- Worldwide Gross: approx. $37.7 million
+- IMDb Rating: 7.4/10 (30,000+ ratings)
 
-### Kelebihan Film
+### Strengths of the Film
 
-1. Chemistry dan Casting
-Takeru Satō sangat cocok memerankan Kenshin. Bahkan kreator asli memuji pemilihannya. Emi Takei sebagai Kaoru juga tampil dengan karakter yang kuat namun lembut—mereka membentuk pasangan yang harmonis.
+1. **Casting and Chemistry**
+   Takeru Satō is perfectly cast as Kenshin—even the manga creator praised this choice. Emi Takei delivers a Kaoru who is strong yet gentle, making their partnership believable and compelling.
 
-2. Aksi Pedang yang Memukau
-Koreografi bertarung dalam film ini luar biasa. Gerakan cepat dan penuh gaya membuat pertarungan terasa nyata dan menyenangkan untuk ditonton.
+2. **Impressive Sword-Fighting Action**
+   The fight choreography is outstanding, with quick, stylish moves that feel authentic and thrilling to watch.
 
-3. Tema Penebusan dan Emosi
-Kenshin yang berjuang menebus masa lalunya sebagai Battōsai membawa beban emosional yang terasa dalam sepanjang film. Tanpa membunuh, ia tetap menjadi pelindung bagi yang lemah.
-
+3. **Themes of Redemption and Emotion**
+   Kenshin’s struggle to atone for his bloody past as Battōsai gives the film its emotional weight. He refuses to kill but remains a protector of the weak.
 
 {{< related-auto >}}
 
-### Catatan Kecil
+### Minor Notes
 
-- Penjahat yang Terlalu Teatrikal
-Beberapa karakter seperti Takeda Kanryū atau Jin-e terasa agak berlebihan, dengan gaya bicara dan tampilan yang dramatis.
+- **Overly Theatrical Villains**
+  Characters like Kanryū Takeda and Jin-e can feel a bit over-the-top with their dramatic acting and delivery.
 
-- Karakter Pendukung Kurang Mendalam
-Akibat keterbatasan durasi, latar belakang karakter pendukung seperti Megumi atau Sanosuke terasa lebih tipis dibanding versi manga/anime.
+- **Thin Supporting Characters**
+  Due to runtime constraints, supporting characters like Megumi and Sanosuke have less background than their manga/anime versions.
 
-### Kutipan Penonton
+### Viewer Quote
 
-“Pembuat adaptasi ini benar-benar memahami materi sumbernya—menyuguhkan aksi pedang cepat dan emosional yang tepat.” — *IMDb user 'H‑*'*
+> “The filmmakers truly understood the source material—delivering sword fights that are both fast and emotionally resonant.” — *IMDb user 'H-*'*
 
 {{< content-end >}}

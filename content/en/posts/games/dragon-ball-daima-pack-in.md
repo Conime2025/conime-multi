@@ -1,21 +1,22 @@
 +++
-title = "Dragon Ball Xenoverse 2 Hadirkan Dragon Ball DAIMA Pack dengan Goku SS4 & Vegeta SS3"
-slug = "dragon-ball-xenoverse-2-daima-pack-20250522"
+title = "Dragon Ball Xenoverse 2 Adds Dragon Ball DAIMA Pack with SS4 Goku & SS3 Vegeta"
+slug = "dragon-ball-xenoverse-2-daima-pack-20250522-en"
 date = 2025-05-22T13:00:00+07:00
-author = "Koni si Co-Bot"
+author = "Koni the Co-Bot"
 draft = false
 nameGame = "Dragon Ball Xenoverse 2"
-summary = "Dragon Ball DAIMA Pack untuk Dragon Ball Xenoverse 2 kini tersedia, menambahkan karakter Super Saiyan 4 Goku (DAIMA) dan Super Saiyan 3 Vegeta (DAIMA), plus kostum, aksesoris, parallel quest, Super Souls, dan loading screen baru."
 
-lead = "Dragon Ball Xenoverse 2 merilis DAIMA Pack dengan dua karakter transformasi baru, kostum tambahan, dan misi eksklusif untuk memperluas pengalaman Time Patrol."
+summary = "The Dragon Ball DAIMA Pack is now available for Dragon Ball Xenoverse 2, adding Super Saiyan 4 Goku (DAIMA) and Super Saiyan 3 Vegeta (DAIMA), plus new costumes, accessories, parallel quests, Super Souls, and loading screens."
 
-conclusion = """<p>Dengan kehadiran <strong>Super Saiyan 4 Goku (DAIMA)</strong> dan <strong>Super Saiyan 3 Vegeta (DAIMA)</strong>, serta berbagai bahan tambahan seperti kostum, Super Souls, dan Parallel Quests, <strong>Dragon Ball Xenoverse 2</strong> mendapat dorongan konten baru yang cukup signifikan. Update ini semakin memperkaya pengalaman Time Patroller dan mendukung komunitasnya terus berkembang.</p>"""
+lead = "Dragon Ball Xenoverse 2 releases the DAIMA Pack with two new transformation characters, extra costumes, and exclusive missions to expand the Time Patrol experience."
+
+conclusion = """<p>With the arrival of <strong>Super Saiyan 4 Goku (DAIMA)</strong> and <strong>Super Saiyan 3 Vegeta (DAIMA)</strong>, along with added costumes, Super Souls, and Parallel Quests, <strong>Dragon Ball Xenoverse 2</strong> gets a significant content boost. This update further enriches the Time Patroller experience and supports the game's ongoing community.</p>"""
 
 image = "/images/games/featured-image-dragon-ball-xenoverse-2-alt-art.webp"
 imageTitle = "Dragon Ball Xenoverse 2 DAIMA Pack Official Visual"
 
-tags = ["Dragon Ball", "Xenoverse 2", "Dragon Ball DAIMA", "DLC", "Bandai Namco", "Time Patrol", "Game Fighting"]
-categories = ["Berita", "Game"]
+tags = ["Dragon Ball", "Xenoverse 2", "Dragon Ball DAIMA", "DLC", "Bandai Namco", "Time Patrol", "Fighting Game"]
+categories = ["News", "Game"]
 
 [[imageSources]]
 name = "Bandai Namco Europe – DAIMA Pack DLC"
@@ -35,35 +36,34 @@ title = "DRAGON BALL Xenoverse 2 – Dragon Ball DAIMA Pack Launch Trailer"
 source = "YouTube / Bandai Namco Entertainment"
 +++
 
+*The Dragon Ball DAIMA Pack is now available for Dragon Ball Xenoverse 2, introducing two new characters, costumes, and exciting bonus content.*
 
-*Dragon Ball DAIMA Pack kini tersedia di Dragon Ball Xenoverse 2, hadirkan dua karakter baru, kostum, dan konten tambahan menarik.*
-
-### Karakter & Konten Baru
+### New Characters & Content
 - Super Saiyan 4 Goku (DAIMA)
 - Super Saiyan 3 Vegeta (DAIMA)
-- Kostum dan aksesori baru dari Goku, Vegeta, Panzy, dan Glorio
-- Parallel Quests untuk menguji kekuatan karakter DAIMA melawan musuh besar dari dunia Dragon Ball
-- Skill baru, Super Souls, dan ilustrasi loading screen
+- New costumes and accessories for Goku, Vegeta, Panzy, and Glorio
+- Parallel Quests to test DAIMA characters against classic Dragon Ball bosses
+- New skills, Super Souls, and loading screen illustrations
 
 {{< related-auto >}}
 
-### Update Gratis dan Paket Tambahan
-- Update gratis (tersedia hari ini):
+### Free Update and Additional Packs
+- **Free update (available now):**
   - Raid Boss Battles
-  - Kostum & item lobby
+  - New lobby costumes & items
   - Super Souls
-  - Loading screen baru
-  - Skill tambahan
-- Time Patrol Support Pack (berbayar):
-  - Item, skill, dan kostum pendukung untuk karakter utama
+  - New loading screens
+  - Additional skills
+- **Time Patrol Support Pack (paid):**
+  - Support items, skills, and costumes for your main character
 
-### Platform
-Tersedia untuk:
-PlayStation 4, PlayStation 5, Xbox One, Xbox Series X|S, Nintendo Switch, dan PC (Steam)
+### Platforms
+Available on:
+PlayStation 4, PlayStation 5, Xbox One, Xbox Series X|S, Nintendo Switch, and PC (Steam)
 
 {{< related-auto >}}
 
-### Tentang *Dragon Ball Xenoverse 2*
-Dirilis Oktober 2016, *Xenoverse 2* adalah RPG aksi dari Bandai Namco dan Dimps. Game ini dikenal dengan fitur kustomisasi karakter dan sistem *Time Patrol*. DLC DAIMA Pack memperluas konten cerita dan pertarungan secara signifikan.
+### About *Dragon Ball Xenoverse 2*
+Released in October 2016, *Xenoverse 2* is an action RPG by Bandai Namco and Dimps. The game is known for its character customization and Time Patrol system. The DAIMA Pack DLC significantly expands the story and combat experience.
 
 {{< content-end >}}

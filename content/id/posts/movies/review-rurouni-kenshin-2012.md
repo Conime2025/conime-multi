@@ -1,5 +1,5 @@
 +++
-title = "Review Rurouni Kenshin (2012): Samurai Penebus Dosa dan Chemistry Mengena"
+title = "Ulasan Rurouni Kenshin (2012): Samurai Penebus Dosa dan Chemistry Mengena"
 nameMovie = "Rurouni Kenshin (Live‑Action 2012)"
 slug = "review-rurouni-kenshin-2012-liveaction-20250601"
 date = 2025-06-01T20:00:00+07:00
@@ -7,7 +7,9 @@ author = "Koni si Co-Bot"
 draft = false
 
 summary = "Adaptasi live‑action manga populer, Rurouni Kenshin (2012) berhasil menghadirkan aksi samurai yang intens, chemistry kuat antar pemain, dan kisah penebusan yang emosional."
-lead = """<p>Di era Meiji awal, mantan pembunuh legendaris Himura Kenshin (Takeru Satō) berkelana dengan janji tak akan membunuh lagi. Ia tiba di Tokyo, bertemu Kaoru, dan mulai melindungi dojo serta penduduk dari sindikat kriminal—sehingga memulai perjalanan penebusan dan keadilan.</p>"""
+lead = """Live-action Rurouni Kenshin (2012) menghadirkan aksi samurai penuh gaya dengan drama penebusan yang emosional, menegaskan reputasinya sebagai salah satu adaptasi manga ke layar lebar yang paling sukses."""
+
+synopsis = """Di awal era Meiji, mantan pembunuh legendaris Himura Kenshin dikenal sebagai Battōsai yang haus darah. Setelah perang, ia bersumpah tak membunuh lagi dan berkelana menebus dosa. Ia tiba di Tokyo dan bertemu Kaoru, pewaris dojo yang terancam sindikat opium pimpinan Kanryū Takeda. Kenshin membantu melawan kriminal dan pembunuh bayaran, mempertahankan sumpahnya sambil menghadapi masa lalu berdarah yang terus menghantuinya."""
 
 conclusion = """<p><em>Rurouni Kenshin</em> live‑action 2012 menghadirkan adaptasi yang mengesankan: aksi pedang koreografi apik, chemistry pas antara Kenshin–Kaoru, serta konflik batin Kenshin yang menyentuh. Meskipun ada beberapa karakter jahat yang terkesan teatrikal, keseluruhan film berhasil membawa nuansa emosional dan pengabdian periode Meiji dengan baik.</p>"""
 
@@ -16,7 +18,7 @@ imageTitle = "Poster Resmi Rurouni Kenshin (2012)"
 
 
 tags = ["Rurouni Kenshin", "Live‑Action", "Samurai", "Takeru Satō", "Emi Takei", "Ulasan"]
-categories = ["Ulasan", "Film"]
+categories = ["Review", "Film"]
 
 [[sources]]
 name = "IMDb – Rurouni Kenshin Part I: Origins"

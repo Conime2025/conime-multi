@@ -1,22 +1,24 @@
 +++
-title = "Death of the Silver Surfer #1 Rilis di Marvel, Perjalanan Terakhir Norrin Radd Dimulai"
+title = "Death of the Silver Surfer #1 Releases at Marvel, The Final Journey of Norrin Radd Begins"
 nameComic = "Death of the Silver Surfer"
-slug = "death-of-the-silver-surfer-1-rilis-marvel-20250607"
+slug = "death-of-the-silver-surfer-1-release-marvel-20250607-en"
 date = 2025-06-07T08:00:00+07:00
-author = "Koni si Co-Bot"
+author = "Koni the Co-Bot"
 draft = false
 
-summary = "Marvel Comics resmi merilis *Death of the Silver Surfer #1*, komik baru yang menampilkan perjalanan terakhir Norrin Radd. Ditulis Greg Pak dengan ilustrasi Sumit Kumar."
+summary = "Marvel Comics officially releases *Death of the Silver Surfer #1*, a new comic marking the final journey of Norrin Radd. Written by Greg Pak with art by Sumit Kumar."
 
-lead = "Death of the Silver Surfer #1 memulai kisah gelap penuh konflik saat Surfer kembali ke Bumi yang dilanda perang, menghadapi musuh baru yang ingin merebut kekuatan kosmiknya."
+lead = "Death of the Silver Surfer #1 kicks off a dark, conflict-filled story as Surfer returns to a war-torn Earth to face a new enemy seeking his cosmic power."
 
-conclusion = "Dengan visual memukau dan ketegangan yang terjaga, Death of the Silver Surfer #1 menjadi awal epik dari akhir perjalanan Norrin Radd yang wajib diikuti penggemar Marvel."
+synopsis = "Death of the Silver Surfer #1 follows Norrin Radd returning to an Earth devastated by war. Facing a new enemy aiming to steal his cosmic power, Surfer must confront the consequences of protecting a dying world."
 
+conclusion = "With stunning visuals and sustained tension, Death of the Silver Surfer #1 launches an epic final arc of Norrin Radd that Marvel fans won't want to miss."
 
 image = "/images/comics/death-of-the-silver-surfer-1.webp"
 imageTitle = "Death of the Silver Surfer #1 Official Cover Art"
-tags = ["Death of the Silver Surfer", "Marvel Comics", "Silver Surfer", "Greg Pak", "Sumit Kumar", "Galactus", "Fantastic Four", "Rilis Komik"]
-categories = ["Berita", "Komik"]
+
+tags = ["Death of the Silver Surfer", "Marvel Comics", "Silver Surfer", "Greg Pak", "Sumit Kumar", "Galactus", "Fantastic Four", "Comic Release"]
+categories = ["News", "Comics"]
 
 [[imageSources]]
 name = "Marvel Comics Official Page"
@@ -27,17 +29,40 @@ name = "Marvel Comics Official Page"
 url = "https://www.marvel.com/comics/issue/123374/death_of_the_silver_surfer_2025_1"
 +++
 
+Marvel Comics has officially released **Death of the Silver Surfer #1**, marking the beginning of **Norrin Radd’s** final journey. Written by **Greg Pak** with art by **Sumit Kumar**, this debut issue brings the Silver Surfer back to an Earth ravaged by global war.
 
-Marvel Comics resmi merilis *Death of the Silver Surfer #1*, komik terbaru yang menandai babak terakhir perjalanan **Norrin Radd**. Ditulis oleh **Greg Pak** dengan ilustrasi **Sumit Kumar**, edisi ini membawa Surfer kembali ke Bumi yang hancur akibat perang.
 
-### **Perjalanan Terakhir Silver Surfer**
-Silver Surfer menjadi target besar di seluruh galaksi. Musuh baru berusaha merebut kekuatan kosmiknya, memaksa Surfer menghadapi konsekuensi berat untuk melindungi dunia yang hancur.
+
+### Official Release Details
+- **Title**: Death of the Silver Surfer #1
+- **Writer**: Greg Pak
+- **Artist**: Sumit Kumar
+- **Publisher**: Marvel Comics
+- **Release**: June 2025 (Marvel)
+
+
+
+### Story Focus
+- Norrin Radd returns to a devastated Earth after a massive war.
+- A new enemy emerges, seeking to steal the cosmic power of the Silver Surfer.
+- Surfer faces massive sacrifices to protect what's left of a dying world.
+- Themes of darkness and moral conflict define this epic final arc for Marvel’s iconic cosmic hero.
+
+
+
+### The Silver Surfer’s Final Journey
+The Silver Surfer is now a prime target across the galaxy. A new enemy is determined to take his cosmic power, forcing him to make brutal choices to defend the last remnants of life on Earth.
 
 {{< related-auto >}}
 
-### **Fantastic Four dan Galactus**
-Fantastic Four turut terlibat dalam konflik ini, sementara **Galactus**, mantan master Surfer, memegang peran misterius yang bisa mengubah jalannya pertempuran.
 
-Baca pratinjau gratis dan pre-order *Death of the Silver Surfer #1* di [halaman resmi Marvel](https://www.marvel.com/comics/issue/123374/death_of_the_silver_surfer_2025_1).
+
+### Fantastic Four and Galactus
+The **Fantastic Four** also appear in this conflict, while **Galactus**, the Surfer’s former master, plays a mysterious role that could reshape the outcome. Old alliances, betrayal, and sacrifice drive this dramatic confrontation.
+
+
+
+### Additional Information & Pre-Order
+Read a free preview or pre-order *Death of the Silver Surfer #1* on the [official Marvel page](https://www.marvel.com/comics/issue/123374/death_of_the_silver_surfer_2025_1) to support the official release.
 
 {{< content-end >}}

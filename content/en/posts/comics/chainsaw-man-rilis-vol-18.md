@@ -1,22 +1,24 @@
 +++
-title = "Chainsaw Man Volume 18 Rilis di VIZ, Denji dan Nayuta Hadapi Ancaman Chainsaw Man Church"
+title = "Chainsaw Man Volume 18 Releases on VIZ, Denji and Nayuta Face Threat from Chainsaw Man Church"
 nameComic = "Chainsaw Man"
-slug = "chainsaw-man-volume-18-rilis-viz-20250605"
+slug = "chainsaw-man-volume-18-release-viz-20250605-en"
 date = 2025-06-05T08:00:00+07:00
-author = "Koni si Co-Bot"
+author = "Koni the Co-Bot"
 draft = false
 
-summary = "VIZ Media resmi merilis volume ke-18 dari *Chainsaw Man*, menampilkan konflik baru antara Denji, Nayuta, dan organisasi Chainsaw Man Church yang berusaha menguasai dunia."
+summary = "VIZ Media officially releases the 18th volume of *Chainsaw Man*, featuring a new conflict between Denji, Nayuta, and the fanatic Chainsaw Man Church trying to control the world."
 
-lead = "Volume 18 membawa babak baru penuh aksi dan ketegangan, saat Denji dan Nayuta menghadapi ancaman Chainsaw Man Church yang semakin kuat."
+lead = "Volume 18 introduces a new arc full of action and tension as Denji and Nayuta confront the growing threat of the Chainsaw Man Church."
 
-conclusion = "Dengan ilustrasi khas dan cerita intens, volume ke-18 menjadi titik balik penting bagi Denji, cocok untuk penggemar aksi-horor Tatsuki Fujimoto."
+synopsis = "Chainsaw Man Volume 18 follows Denji and Nayuta as they become entangled in a deadly conflict with the Chainsaw Man Church, a fanatic organization that worships Chainsaw Man to take over the world. Brutal fights and emotional dilemmas drive this new arc."
 
+conclusion = "With Tatsuki Fujimoto's signature art and intense storytelling, Volume 18 is a crucial turning point for Denji, perfect for fans of action-horror manga."
 
 image = "/images/comics/chainsaw-man-vol18.webp"
 imageTitle = "Chainsaw Man Volume 18 Official Cover Visual"
-tags = ["Chainsaw Man", "Manga Baru", "VIZ Media", "Tatsuki Fujimoto", "Aksi", "Horor", "Rilis Manga"]
-categories = ["Berita", "Manga"]
+
+tags = ["Chainsaw Man", "New Manga", "VIZ Media", "Tatsuki Fujimoto", "Action", "Horror", "Manga Release"]
+categories = ["News", "Manga"]
 
 [[imageSources]]
 name = "VIZ Media Official Page"
@@ -27,17 +29,40 @@ name = "VIZ Media Official Page"
 url = "https://www.viz.com/read/manga/chainsaw-man-volume-18/product/8310"
 +++
 
+VIZ Media has officially released **Volume 18** of *Chainsaw Man*, the action-horror manga by **Tatsuki Fujimoto**. This new volume features a brutal conflict as Denji and Nayuta go up against the fanatic Chainsaw Man Church.
 
-VIZ Media resmi merilis volume ke-18 dari *Chainsaw Man*, manga aksi-horor karya Tatsuki Fujimoto. Dalam volume terbaru ini, Denji dan Nayuta berhadapan dengan Chainsaw Man Church, organisasi fanatik yang mengklaim memuja Chainsaw Man demi menguasai dunia.
 
-### Konflik Melawan Chainsaw Man Church
-Denji dan Nayuta terjebak dalam konflik mematikan ketika Chainsaw Man Church makin agresif menjalankan rencananya. Organisasi ini memiliki banyak pengikut fanatik dan agenda gelap untuk membentuk dunia sesuai keinginan mereka. Asa dan Fami juga berusaha membantu, tetapi kekuatan dan pengaruh Chainsaw Man Church makin sulit dibendung.
+
+### Volume Details & Release
+- **Title**: Chainsaw Man Volume 18
+- **Author & Illustrator**: Tatsuki Fujimoto
+- **Publisher (EN)**: VIZ Media
+- **Genres**: Action, Horror, Supernatural
+- **International Release**: June 2025 (VIZ Media)
+
+
+
+### Focus of Volume 18
+- Denji tries to live a normal life while caring for Nayuta, the reincarnation of the Control Devil.
+- The Chainsaw Man Church worships Chainsaw Man as a liberating god but hides a dark plan to reshape the world.
+- Nayuta warns Denji about the growing threat, sparking emotional tension between them.
+- Asa Mitaka and Fami also get involved, adding moral complexity and devil conflict.
+
+
+
+### The Battle Against the Chainsaw Man Church
+The Chainsaw Man Church grows increasingly aggressive, recruiting fanatic followers and using Chainsaw Man’s image to justify violence and chaos. Denji is forced to make impossible choices: fight to stop them or lose control of his own legacy.
 
 {{< related-auto >}}
 
-### Dunia yang Semakin Retak
-Saat rencana jahat Chainsaw Man Church memicu kekacauan global, Denji dihadapkan pada pilihan sulit yang bisa menentukan masa depan semua orang. Volume 18 menyajikan ketegangan brutal dan dilema emosional khas *Chainsaw Man*.
 
-Baca pratinjau gratis dan lakukan pre-order di [halaman resmi VIZ](https://www.viz.com/read/manga/chainsaw-man-volume-18/product/8310).
+
+### A World on the Brink
+As the Church’s sinister plans spread, the world teeters on the edge of destruction. Volume 18 delivers Fujimoto’s signature brutal tension, moral dilemmas, and intense action with dark, detailed artwork.
+
+
+
+### Additional Information & Pre-Order
+Read a free preview or pre-order on the [official VIZ page](https://www.viz.com/read/manga/chainsaw-man-volume-18/product/8310) to support the official release.
 
 {{< content-end >}}

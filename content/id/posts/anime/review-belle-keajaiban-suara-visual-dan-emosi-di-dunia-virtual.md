@@ -1,5 +1,5 @@
 +++
-title = "Review Belle: Keajaiban Suara, Visual, dan Emosi di Dunia Virtual"
+title = "Ulasan Ryuu to Sobakasu no Hime (Belle): Keajaiban Suara, Visual, dan Emosi di Dunia Virtual"
 nameAnime = "Ryuu to Sobakasu no Hime (Belle)"
 slug = "review-belle-anime-20250611"
 date = 2025-06-26T17:22:00+07:00
@@ -14,8 +14,8 @@ conclusion = """<p><em>Belle</em> adalah pengalaman sinematik yang mendalam — 
 
 image = "/images/anime/BellePosterBlank.webp"
 imageTitle = "Belle Official Movie Poster Visual"
-tags = ["Belle", "Anime Movie", "Mamoru Hosoda", "Recommended", "Studio Chizu", "Soundtrack", "Virtual Reality", "Review"]
-categories = ["Ulasan", "Anime"]
+tags = ["Belle", "Anime Movie", "Mamoru Hosoda", "Recommended", "Studio Chizu", "Soundtrack", "Virtual Reality", "Ulasan"]
+categories = ["Review", "Anime"]
 
 [[imageSources]]
 name = "Fandom Wiki - Belle (Movie)"
@@ -84,7 +84,7 @@ Dunia virtual *U* digambarkan begitu spektakuler. Penuh warna, kreatif, dan teta
 > “Saya kasih rating 8 bintang, tapi rasanya seperti 9. Karena Mamoru Hosoda benar-benar paham jiwa manusia seperti sedikit orang mampu.” — IMDb user 'J‑'*
 
 ### Catatan Penulis
-Saya tak menyangka film ini akan seberkesan itu. *Belle* bukan cuma film tentang teknologi dan virtualitas—ini tentang suara yang terpendam, tentang luka yang kita sembunyikan, dan tentang kekuatan untuk menyembuhkan. Kalau suatu hari kisah hidup saya difilmkan, saya ingin musiknya sekeren ini.
+Saya tak menyangka film ini akan seberkesan itu. *Belle* bukan cuma film tentang teknologi dan virtualitas—ini tentang suara yang terpendam, tentang luka yang kita sembunyikan, dan tentang kekuatan untuk menyembuhkan. Andai kisah hidup kita difilmkan, saya ingin musiknya sekeren ini.
 
 
 {{< content-end >}}

@@ -36,26 +36,21 @@ HoYoverse merilis program khusus Interastral Peace Entertainment berjudul:
 
 ### “Mendekati Star Rail — Cipher: Kaya Raya dari Segala Arah!”
 
-Program ini memperkenalkan Cipher dan rivalnya yang tak terduga, Tuan 'Roh Pencuri' Bartholos, dengan gaya komedi satir khas Honkai.
+Program ini memperkenalkan Cipher dan rivalnya yang tak terduga, Tuan "Roh Pencuri" Bartholos, dalam format variety show penuh humor satir khas Honkai. Bartholos bahkan menyinggung "kepalanya yang berbentuk tetesan air" sebagai keunggulan aerodinamika—sementara Cipher tak bisa membantah dan kalah telak dalam "kompetisi aerodinamika" ini.
 
 {{< related-auto >}}
+
 ### Ringkasan Episode
 
-> Entah kalian sadar atau tidak — kepala Tuan *Roh Pencuri* Bartholos ternyata berbentuk tetesan air, mengikuti prinsip aerodinamika.
-> Bandingkan dengan kepala Cipher, dan jawabannya jelas:
->
-> - Cipher: 0 poin
-> - Bartholos: 1 poin (menang aerodinamika)
-> - Bartholos menang telak tanpa perlawanan!
+Episode ini menghadirkan komedi ringan dengan komentar satir yang lucu, menampilkan sketsa konyol di mana Bartholos mengejek Cipher dengan skor imajiner: 0 poin untuk Cipher dan 1 poin untuk Bartholos. Semua disajikan dengan gaya kocak ala variety show, sambil tetap memberikan sedikit lore tentang kedua karakter.
 
-Episode ini menyajikan komedi ringan dan lore karakter dengan cara tidak biasa, membuatnya menjadi tayangan yang menghibur bagi pemain.
+Program ini bukan hanya hiburan semata, tapi juga cara unik HoYoverse memperkenalkan Cipher ke pemain Honkai: Star Rail dengan sentuhan humor dan presentasi berbeda.
 
 ### Pengisi Suara (CV Bahasa Inggris)
 
 - Owlbert — Bill Butts
 - "Roh Pencuri" Bartholos — Ann Konkle
 
-
-Saksikan programnya di platform resmi HoYoverse dan ikuti kisah Cipher dalam versi terbaru Honkai: Star Rail.
+Saksikan program lengkapnya di kanal resmi HoYoverse dan ikuti kisah Cipher dalam update terbaru Honkai: Star Rail.
 
 {{< content-end >}}

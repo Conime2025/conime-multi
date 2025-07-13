@@ -1,22 +1,24 @@
 +++
-title = "Toritsukare Otoko Umumkan Adaptasi Film Anime oleh Shin-Ei Animation, Tayang Musim Gugur 2025"
-slug = "toritsukare-otoko-anime-pengumuman-adaptasi-20241203"
+title = "Toritsukare Otoko Anime Film Announced by Shin-Ei Animation, Premieres Fall 2025"
+slug = "toritsukare-otoko-anime-announcement-20241203-en"
 date = 2024-12-03T08:00:00+07:00
-author = "Koni si Co-Bot"
+author = "Koni the Co-Bot"
 nameAnime = "Toritsukare Otoko"
 draft = false
 
-summary = "Bandai Namco Filmworks resmi mengumumkan adaptasi film anime dari novel 'Toritsukare Otoko' karya Shinji Ishii. Film musikal ini dijadwalkan tayang di Jepang pada musim gugur 2025."
+summary = "Bandai Namco Filmworks has officially announced an anime film adaptation of Shinji Ishii's novel 'Toritsukare Otoko.' This musical film is scheduled to premiere in Japan in Fall 2025."
 
-lead = "Film anime Toritsukare Otoko diumumkan untuk tayang musim gugur 2025, menghadirkan kisah musikal penuh warna dengan karakter Giuseppe dan Pechka."
+lead = "The Toritsukare Otoko anime film is set for Fall 2025 with its first teaser visual and video revealed, promising a colorful musical story about Giuseppe and Pechka."
 
-conclusion = "Adaptasi ini menjanjikan pengalaman musikal yang menyentuh dan penuh warna, dengan tema pengorbanan dan empati yang layak dinantikan di musim gugur 2025."
+synopsis = "Toritsukare Otoko follows Giuseppe, a man known for his obsessive personality that frightens those around him. In a colorful and imaginative musical world, he tries to heal Pechka’s wounded heart in a strange but sincere way."
 
+conclusion = "This adaptation promises a touching and colorful musical experience, with themes of sacrifice and empathy to look forward to in Fall 2025."
 
 image = "/images/anime/toritsukare-otoko.webp"
 imageTitle = "Toritsukare Otoko Official Teaser Visual"
-tags = ["Toritsukare Otoko", "Adaptasi Anime", "Film Musikal", "Berita Anime", "Recommended"]
-categories = ["Berita", "Anime"]
+
+tags = ["Toritsukare Otoko", "Anime Adaptation", "Musical Film", "Anime News", "Recommended"]
+categories = ["News", "Anime"]
 
 [[imageSources]]
 name = "Cinematoday.jp"
@@ -32,23 +34,46 @@ title = "映画『トリツカレ男』特報 ｜2025年秋公開"
 source = "YouTube / EMOTION Label Channel"
 +++
 
+Bandai Namco Filmworks has officially announced an **anime film adaptation** of *Toritsukare Otoko*, based on the musical novel by **Shinji Ishii**. The first teaser visual and video have been released via official channels, featuring Giuseppe and Pechka in a vivid, imaginative world.
 
-Film anime *Toritsukare Otoko* diangkat dari novel musikal karya Shinji Ishii, yang akan digarap oleh studio Shin-Ei Animation. Teaser visual dan video perdana telah dirilis, memperlihatkan karakter utama Giuseppe dan Pechka dalam dunia penuh warna dan imajinasi. Film ini dijadwalkan tayang pada musim gugur 2025 di Jepang.
+The film is slated to premiere in Japanese theaters in **Fall 2025**, highlighting themes of sacrifice, empathy, and human connection in a gentle musical format.
 
-### Detail Produksi:
-- Sutradara: Wataru Takahashi (*Crayon Shin-chan Movie: Nazo Meki! Hana no Tenkasu Gakuen*)
-- Penulis Naskah: Naoyuki Miura (*Summer Film ni Notte*)
-- Desain Karakter: Masatsugu Arakawa (*Fuujin Monogatari*)
-- Studio: Shin-Ei Animation
-- Distribusi: Bandai Namco Filmworks
 
-{{< related-auto >}}
 
-Film ini mengangkat tema pengorbanan dan empati dalam bentuk musikal yang lembut dan emosional. Giuseppe, yang dikenal karena sifat obsesifnya, berusaha menyembuhkan luka hati Pechka dengan cara yang unik dan penuh harapan.
+### Official Production Details
+- **Director**: Wataru Takahashi (*Crayon Shin-chan Movie: Nazo Meki! Hana no Tenkasu Gakuen*)
+- **Screenplay**: Naoyuki Miura (*Summer Film ni Notte*)
+- **Character Design**: Masatsugu Arakawa (*Fuujin Monogatari*)
+- **Production Studio**: Shin-Ei Animation
+- **Distribution**: Bandai Namco Filmworks
 
-Penggemar anime dan film musikal Jepang dapat mengunjungi situs resmi dan akun media sosial untuk pembaruan lebih lanjut:
 
-- Situs resmi: [toritsukareotoko-movie.com](https://toritsukareotoko-movie.com)
-- Twitter resmi: [@toritsukare_mv](https://twitter.com/toritsukare_mv)
+
+### Adaptation Story Focus
+- Giuseppe is a man known for his extreme obsession with one thing, making him frightening to those around him.
+- Pechka is a girl emotionally wounded, carrying the weight of her past.
+- Giuseppe tries to heal Pechka’s heart in a strange, unique, but sincere way.
+- The film is framed as a gentle musical with imaginative, colorful visuals emphasizing themes of sacrifice and empathy.
+
+
+
+### Official Teaser and Key Visual
+The teaser visual shows Giuseppe and Pechka in a world filled with vivid illustrations. The teaser video reveals a soft musical style paired with emotional tones, evoking the feeling of a modern fairy tale.
+
+{{< youtube
+url = "https://www.youtube.com/embed/baj4qmAIM1I"
+title = "映画『トリツカレ男』特報 ｜2025年秋公開"
+source = "YouTube / EMOTION Label Channel" >}}
+
+> *“A musical film exploring themes of sacrifice and empathy, delivered with colorful visuals and touching music.”*
+
+
+
+### Additional Information
+The film is adapted from the popular novel by Shinji Ishii. Further details on the official release date, full cast, and theme songs will be shared in future updates.
+
+For official updates, fans can follow:
+- Official site: [toritsukareotoko-movie.com](https://toritsukareotoko-movie.com)
+- Official Twitter: [@toritsukare_mv](https://twitter.com/toritsukare_mv)
 
 {{< content-end >}}
